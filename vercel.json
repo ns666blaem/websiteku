@@ -1,0 +1,24 @@
+{
+  "framework": "astro",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/facebook/",
+      "destination": "/?utm_source=facebook&utm_medium=social&utm_campaign=portfolio",
+      "permanent": false
+    },
+    {
+      "source": "/instagram/",
+      "destination": "/?utm_source=instagram&utm_medium=social&utm_campaign=portfolio",
+      "permanent": false
+    },
+    {
+      "source": "/linkedin/",
+      "destination": "/?utm_source=linkedin&utm_medium=social&utm_campaign=portfolio",
+      "permanent": false
+    }
+  ]
+}
