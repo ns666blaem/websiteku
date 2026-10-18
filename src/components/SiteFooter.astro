@@ -1,0 +1,9 @@
+---
+interface Props { caseStudy?: boolean; }
+const { caseStudy = false } = Astro.props;
+---
+{caseStudy ? (
+  <footer class="site-footer"><div class="shell footer-row"><span>© 2026 Nordy Sukmana · Performance Marketing Specialist</span><a href="/">Kembali ke halaman utama ↑</a></div></footer>
+) : (
+  <footer><p>© <span id="year"></span> Nordy Sukmana — Performance Marketing Specialist. Surabaya, Indonesia.</p></footer>
+)}

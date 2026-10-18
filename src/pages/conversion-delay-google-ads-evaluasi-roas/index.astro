@@ -1,0 +1,259 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyHeader from '../../components/CaseStudyHeader.astro';
+
+const canonical = 'https://nordy-sukmana.vercel.app/conversion-delay-google-ads-evaluasi-roas/';
+const image = 'https://nordy-sukmana.vercel.app/assets/brand/open-graph.png';
+const title = "Conversion Delay Google Ads, Jangan Terburu Menilai ROAS";
+const description = "ROAS setelah promo terlihat rendah? Pahami conversion delay Google Ads, perbedaan tanggal pelaporan, dan cara mengevaluasi budget dengan data yang cukup lengkap.";
+const faqItems = [
+  {
+    "question": "Apakah conversion bisa bertambah setelah promo selesai?",
+    "answer": "Bisa. Pelanggan dapat membeli setelah tanggal interaksi iklannya. Pada laporan berdasarkan waktu interaksi, tambahan tersebut dapat masuk ke periode promo."
+  },
+  {
+    "question": "Berapa hari harus menunggu sebelum mengevaluasi ROAS?",
+    "answer": "Tidak ada satu durasi yang tepat untuk semua bisnis. Gunakan riwayat jeda, volume conversion, dan kondisi pencatatan akun. Pemeriksaan operasional tetap dilakukan setiap hari."
+  },
+  {
+    "question": "Apakah ROAS yang naik setelah beberapa hari berarti optimasi berhasil?",
+    "answer": "Belum tentu. Kenaikan dapat berasal dari bertambahnya hasil yang tercatat untuk periode interaksi yang sama. Periksa tanggal perubahan campaign dan kelompok data yang dibandingkan."
+  },
+  {
+    "question": "Apakah semua penurunan conversion disebabkan delay?",
+    "answer": "Tidak. Audit juga permintaan, kualitas traffic, stok, checkout, tracking, dan perubahan tujuan conversion. Gunakan bukti untuk menentukan penyebabnya."
+  }
+];
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      '@id': `${canonical}#article`,
+      headline: title,
+      description,
+      url: canonical,
+      image: [image],
+      inLanguage: 'id-ID',
+      datePublished: '2026-09-11',
+      dateModified: '2026-09-11',
+      author: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      publisher: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      mainEntityOfPage: canonical,
+      articleSection: 'Google Ads dan Marketing Analytics',
+      about: ['Google Ads', 'Conversion Delay', 'Days to Conversion', 'Conversion Window', 'CPA', 'ROAS', 'Smart Bidding', 'Conversion Value'],
+      keywords: ['conversion delay Google Ads', 'cara membaca ROAS setelah promo', 'kapan evaluasi hasil Google Ads', 'perbedaan conversion time dan interaction time', 'cara mengecek days to conversion']
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://nordy-sukmana.vercel.app/#person',
+      name: 'Nordy Sukmana',
+      url: 'https://nordy-sukmana.vercel.app/',
+      jobTitle: 'Performance Marketing Specialist'
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {'@type': 'ListItem', position: 1, name: 'Portfolio', item: 'https://nordy-sukmana.vercel.app/'},
+        {'@type': 'ListItem', position: 2, name: 'Artikel', item: 'https://nordy-sukmana.vercel.app/artikel/'},
+        {'@type': 'ListItem', position: 3, name: 'Conversion Delay Google Ads', item: canonical}
+      ]
+    }
+  ]
+};
+
+const head = `<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${title}</title>
+<meta name="description" content="${description}">
+<meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0C1F4D"><link rel="canonical" href="${canonical}">
+<meta property="og:type" content="article"><meta property="og:locale" content="id_ID"><meta property="og:site_name" content="Portfolio Nordy Sukmana"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Nordy Sukmana, Performance Marketing Specialist">
+<meta property="article:published_time" content="2026-09-11"><meta property="article:modified_time" content="2026-09-11"><meta property="article:section" content="Google Ads dan Marketing Analytics">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${title}"><meta name="twitter:description" content="${description}"><meta name="twitter:image" content="${image}">
+<script type="application/ld+json">${JSON.stringify(structuredData)}</script>
+<link rel="icon" href="../assets/brand/nordy-mark.svg" type="image/svg+xml"><link rel="icon" href="../favicon.ico" sizes="any"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/case-study.css"><link rel="stylesheet" href="../assets/article.css">`;
+---
+<BaseLayout head={head}>
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+  <CaseStudyHeader />
+  <main id="main-content">
+    <header class="article-hero">
+      <div class="article-shell">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Portfolio</a><span aria-hidden="true">/</span><a href="../artikel/">Artikel</a></nav>
+        <span class="article-kicker">Google Ads · Marketing Analytics</span>
+        <h1>{title}</h1>
+        <p class="article-lede">Biaya iklan sudah tercatat, tetapi sebagian pembelian bisa datang belakangan. Pahami jeda conversion dan tentukan kapan hasil promo cukup lengkap untuk mengevaluasi ROAS.</p>
+        <div class="article-meta"><span>Nordy Sukmana</span><time datetime="2026-09-11">11 September 2026</time><span>8 menit baca</span></div>
+      </div>
+    </header>
+    <div class="article-shell article-layout">
+      <article class="article-body">
+        <section class="answer-summary" aria-labelledby="answer-summary-title">
+          <span>Jawaban singkat</span>
+<h2 id="answer-summary-title">Kapan ROAS setelah promo layak dievaluasi?</h2>
+<p>Conversion delay adalah jeda antara interaksi iklan dan conversion. Untuk mengevaluasi ROAS setelah promo, periksa riwayat jeda, gunakan dasar tanggal yang konsisten, dan cocokkan hasil dengan sistem penjualan. Tentukan waktu evaluasi berdasarkan pola bisnis, sambil tetap memantau pengeluaran dan masalah transaksi.</p>
+</section>
+<p>Promo 9.9 sudah lewat. Pada 11 September, tim mulai membuka laporan dan membandingkan hasil campaign dengan target. Biaya iklan sudah terlihat, tetapi jumlah pembelian belum memenuhi harapan.</p>
+<p>Apakah budget berikutnya harus langsung dikurangi?</p>
+<p>Sebelum menjawab, periksa apakah pelanggan yang datang dari iklan sudah memiliki cukup waktu untuk membeli. Sebagian orang memerlukan waktu untuk membandingkan produk, berdiskusi, atau menyelesaikan pembayaran.</p>
+<p>Setelah membahas persiapan promo melalui <a href="../seasonality-adjustment-google-ads-promo/">seasonality adjustment</a>, langkah berikutnya adalah menentukan kapan hasil campaign layak dinilai.</p>
+<h2>Apa itu conversion delay?</h2>
+<p><strong>Conversion delay adalah jeda antara interaksi iklan dan terjadinya conversion.</strong> Google menjelaskan bahwa laporan terbaru dapat terlihat lebih lemah karena biaya sudah tercatat, sementara sebagian conversion baru terjadi kemudian. Akibatnya, biaya per conversion sementara terlihat lebih tinggi. <a href="https://support.google.com/google-ads/answer/6239119?hl=en" target="_blank" rel="noopener noreferrer">Panduan conversion delay Google Ads</a>.</p>
+<p>Dalam evaluasi operasional, tanyakan juga apakah transaksi yang sudah terjadi telah masuk ke sistem pelaporan. Pelanggan yang belum membeli memerlukan pemeriksaan berbeda dari transaksi yang sudah dibayar tetapi belum tercatat.</p>
+<p>Jangan menggunakan alasan “masih ada delay” untuk menjelaskan semua penurunan. Periksa bukti dari alur pembelian dan data transaksi.</p>
+<h2>Tanggal klik dan tanggal pembelian menjawab pertanyaan berbeda</h2>
+<p>Google Ads menyediakan kolom standar yang mengaitkan conversion dengan waktu interaksi iklan, serta kolom <strong>Conversions (by conv. time)</strong> dan <strong>Conv. value (by conv. time)</strong> yang mengikuti waktu conversion terjadi. <a href="https://support.google.com/google-ads/answer/9549009?hl=en" target="_blank" rel="noopener noreferrer">Penjelasan kolom berdasarkan waktu conversion</a>.</p>
+<p>Sebagai ilustrasi sederhana, pelanggan mengeklik satu iklan pada 9 September dan membeli pada 11 September. Dengan asumsi conversion tersebut diatribusikan ke klik itu, pembacaannya menjadi:</p>
+<div class="table-wrap" role="region" aria-label="Perbedaan tanggal pelaporan conversion" tabindex="0"><table><caption>Perbedaan tanggal pelaporan conversion</caption>
+<thead>
+<tr>
+<th scope="col">Dasar pelaporan</th>
+<th scope="col">Tanggal pencatatan conversion</th>
+<th scope="col">Kegunaan</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Waktu interaksi iklan</td>
+<td>9 September</td>
+<td>Menilai hasil dari interaksi iklan pada periode tersebut</td>
+</tr>
+<tr>
+<td>Waktu conversion</td>
+<td>11 September</td>
+<td>Memeriksa conversion yang terjadi pada hari tersebut</td>
+</tr>
+</tbody></table></div>
+<p>Karena itu, laporan interaksi 9.9 dapat memperoleh tambahan conversion sesudah tanggal promo berakhir.</p>
+<p><strong>Rekomendasi analisis:</strong> hindari membagi nilai conversion berdasarkan tanggal pembelian dengan biaya iklan hari yang sama lalu menganggapnya sebagai ROAS dari kelompok klik yang sama. Pembelian hari ini dapat berasal dari interaksi sebelumnya.</p>
+<p>Untuk rapat evaluasi, beri nama laporan secara jelas: “hasil interaksi selama promo” atau “transaksi yang terjadi selama promo”. Pilihan ini menentukan makna angka yang dibahas.</p>
+<h2>Contoh: ROAS berubah ketika data bertambah</h2>
+<p>Angka berikut digunakan sebagai simulasi perhitungan untuk <strong>periode interaksi iklan yang sama</strong>, dengan pembelian sebagai conversion dan nilai transaksi sebagai conversion value.</p>
+<div class="table-wrap" role="region" aria-label="Simulasi ROAS dari periode interaksi yang sama" tabindex="0"><table><caption>Simulasi ROAS dari periode interaksi yang sama</caption>
+<thead>
+<tr>
+<th scope="col">Metrik</th>
+<th scope="col">Snapshot awal</th>
+<th scope="col">Snapshot berikutnya</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Biaya iklan periode promo</td>
+<td>Rp5.000.000</td>
+<td>Rp5.000.000</td>
+</tr>
+<tr>
+<td>Pembelian teratribusi yang sudah tercatat</td>
+<td>40</td>
+<td>60</td>
+</tr>
+<tr>
+<td>Nilai pembelian teratribusi</td>
+<td>Rp12.000.000</td>
+<td>Rp18.000.000</td>
+</tr>
+<tr>
+<td>Biaya per pembelian</td>
+<td>Rp125.000</td>
+<td>Rp83.333</td>
+</tr>
+<tr>
+<td>ROAS</td>
+<td>2,4x</td>
+<td>3,6x</td>
+</tr>
+</tbody></table></div>
+<p>Perhitungannya:</p>
+<ul>
+<li><strong>Biaya per pembelian = biaya iklan ÷ jumlah pembelian.</strong> </li>
+<li><strong>ROAS = nilai pembelian teratribusi ÷ biaya iklan.</strong></li>
+</ul>
+<p>Pada simulasi ini, biaya tetap karena periode interaksi yang dinilai tidak berubah. Jumlah pembelian dan nilainya bertambah dalam snapshot berikutnya.</p>
+<p>Perubahan tersebut belum membuktikan adanya peningkatan akibat optimasi baru. Tim sedang melihat hasil yang semakin lengkap dari periode yang sama.</p>
+<p>ROAS 3,6x juga belum cukup untuk menyatakan campaign menguntungkan. Periksa margin produk, diskon, pembatalan, dan biaya pemenuhan pesanan sesuai definisi profit bisnis.</p>
+<h2>Lima langkah evaluasi setelah promo</h2>
+<p>Langkah berikut merupakan kerangka kerja praktis yang bisa disesuaikan dengan volume transaksi dan siklus pembelian.</p>
+<h3>1. Tentukan conversion yang sedang dinilai</h3>
+<p>Tuliskan tindakan yang masuk ke laporan: pembelian, form, atau lead berkualitas. Pastikan definisinya konsisten dengan periode pembanding.</p>
+<p>Jika sasaran bisnis adalah penjualan, pisahkan pembelian dari tindakan seperti klik kontak. Mencampurkan keduanya membuat biaya per conversion sulit diterjemahkan menjadi biaya mendapatkan order.</p>
+<p>Untuk bisnis jasa, tambahkan status tindak lanjut dari CRM. Form masuk, konsultasi terlaksana, dan kontrak ditandatangani merupakan tahap yang berbeda.</p>
+<h3>2. Periksa riwayat Days to conversion</h3>
+<p>Pada tabel Campaigns, Ad groups, atau Search Keywords, pilih <strong>Segment → Conversions → Days to conversion</strong>. Google menyarankan periode historis yang berakhir setidaknya 30 hari sebelumnya, atau lebih lama jika conversion window lebih panjang, agar data pembanding cukup lengkap. Informasi delay juga dapat tersedia dalam laporan strategi bidding. <a href="https://support.google.com/google-ads/answer/6239119?hl=en" target="_blank" rel="noopener noreferrer">Cara memeriksa riwayat jeda conversion</a>.</p>
+<p>Gunakan distribusi tersebut untuk menyusun jadwal evaluasi. Perhatikan kapan sebagian besar conversion biasanya terkumpul dan apakah masih ada bagian yang datang jauh lebih lambat.</p>
+<p>Hindari memakai riwayat yang mencampurkan banyak perubahan produk, tujuan campaign, dan penawaran tanpa mencatat pengaruhnya.</p>
+<h3>3. Bedakan conversion delay dan conversion window</h3>
+<p><strong>Conversion window</strong> adalah batas waktu setelah interaksi iklan ketika conversion dapat dicatat di Google Ads. Batas ini memengaruhi conversion yang masuk ke laporan; transaksi di luar window tidak tercatat sebagai conversion dari interaksi tersebut. <a href="https://support.google.com/google-ads/answer/3123169?hl=en" target="_blank" rel="noopener noreferrer">Dokumentasi conversion windows</a>.</p>
+<p>Artinya, window 30 hari tidak berarti pelanggan umumnya memerlukan 30 hari untuk membeli. Jadwal evaluasi sebaiknya mempertimbangkan distribusi jeda aktual.</p>
+<p>Catat pengaturan window setiap conversion action. Jangan mengubahnya hanya untuk membuat hasil promo tampak lebih baik, karena perbandingan berikutnya perlu memperhitungkan perubahan definisi pengukuran.</p>
+<h3>4. Pisahkan pemeriksaan harian dan keputusan budget besar</h3>
+<p>Pada 11 September 2026, hasil 9.9 dapat diberi status sementara jika riwayat bisnis menunjukkan masih banyak conversion yang datang setelah dua hari.</p>
+<p>Namun, pemeriksaan operasional tetap berjalan:</p>
+<div class="table-wrap" role="region" aria-label="Tindakan evaluasi setelah promo" tabindex="0"><table><caption>Tindakan evaluasi setelah promo</caption>
+<thead>
+<tr>
+<th scope="col">Temuan</th>
+<th scope="col">Tindakan yang disarankan</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Pengeluaran melewati batas yang disepakati</td>
+<td>Kendalikan pengeluaran dan telusuri penyebab</td>
+</tr>
+<tr>
+<td>Checkout gagal atau produk utama habis</td>
+<td>Tangani kendala dan sesuaikan campaign terkait</td>
+</tr>
+<tr>
+<td>Transaksi backend normal, pencatatan conversion turun tajam</td>
+<td>Audit tracking dan pengiriman data</td>
+</tr>
+<tr>
+<td>Tidak ada gangguan, tetapi periode belum melewati jeda historis</td>
+<td>Jadwalkan evaluasi ulang</td>
+</tr>
+<tr>
+<td>Hasil tetap lemah setelah cukup waktu dan data</td>
+<td>Tinjau penawaran, traffic, biaya, serta alokasi budget</td>
+</tr>
+</tbody></table></div>
+<p>Tabel ini membantu membedakan tindakan yang mendesak dari keputusan yang membutuhkan bukti tambahan.</p>
+<h3>5. Cocokkan dengan penjualan yang tetap valid</h3>
+<p>Periksa pesanan dibayar, dibatalkan, dikembalikan, dan nilai transaksi setelah koreksi. Tetapkan perlakuan terhadap pajak, ongkir, dan diskon agar laporan konsisten.</p>
+<p>Google menyediakan conversion adjustments untuk memperbarui nilai conversion atau menariknya kembali. Implementasinya memerlukan persyaratan identifikasi transaksi dan prosedur yang sesuai. <a href="https://support.google.com/google-ads/answer/7686280?hl=en" target="_blank" rel="noopener noreferrer">Panduan penyesuaian conversion</a>.</p>
+<p>Jika checkout melewati penyedia pembayaran, gunakan <a href="../referral-payment-gateway-ga4/">panduan audit referral payment gateway di GA4</a> untuk memeriksa pencatatan transaksi.</p>
+<p>Untuk laporan internal, simpan tanggal pengambilan data dan alasan perubahan. Dengan begitu, selisih antara dua versi laporan dapat dijelaskan.</p>
+<h2>Cara menyampaikan hasil kepada pemilik bisnis</h2>
+<p>Gunakan penjelasan yang menyebut status data sekaligus keputusan berikutnya:</p>
+<blockquote>
+<p>“Laporan interaksi selama promo masih sementara. Pengeluaran sudah diperiksa, dan transaksi sedang dicocokkan dengan sistem toko. Evaluasi budget berikutnya mengikuti pola jeda pembelian historis, dengan tindakan segera jika ditemukan masalah checkout atau pengeluaran.”</p>
+</blockquote>
+<p>Tambahkan tanggal evaluasi berikutnya berdasarkan data akun. Hindari janji bahwa ROAS pasti membaik hanya karena menunggu.</p>
+<p>Jika hasil akhirnya tetap di bawah target, jelaskan temuan dan tindakan perbaikan secara spesifik. Menunggu data lengkap berguna untuk meningkatkan kualitas keputusan.</p>
+<h2>Checklist sebelum mengubah budget</h2>
+<ol class="checklist">
+<li>Periode interaksi dan waktu pengambilan laporan tercatat. </li>
+<li>Conversion action yang dibandingkan konsisten. </li>
+<li>Dasar tanggal pelaporan sudah dipahami. </li>
+<li>Riwayat Days to conversion telah diperiksa. </li>
+<li>Conversion window setiap tindakan diketahui. </li>
+<li>Tracking, pembayaran, dan ketersediaan produk sudah dicek. </li>
+<li>Pembatalan serta perubahan nilai transaksi diperhitungkan. </li>
+<li>Batas pengeluaran dan jadwal evaluasi berikutnya jelas.</li>
+</ol>
+
+<h2>Pertanyaan yang sering diajukan</h2>
+        {faqItems.map(item => <section class="faq-item"><h3>{item.question}</h3><p>{item.answer}</p></section>)}
+        <h2>Kesimpulan</h2>
+<p>Evaluasi pascapromo membutuhkan kejelasan tentang periode yang dinilai, waktu terjadinya conversion, dan kualitas transaksi. Dokumentasikan ketiganya agar keputusan budget dapat ditinjau kembali dengan dasar yang konsisten.</p>
+
+<div class="related-article"><span>Case study terkait</span><a href="../case-study/performance-analysis/">Pelajari analisis performa iklan lintas channel untuk membaca efisiensi, pelanggan, revenue, dan prioritas budget →</a></div>
+      </article>
+      <aside class="article-sidebar" aria-label="Informasi artikel">
+        <section class="side-card"><h2>Tentang penulis</h2><p><strong>Nordy Sukmana</strong> adalah Performance Marketing Specialist dengan pengalaman mengelola Meta Ads, Google Ads, tracking, analytics, dan marketing automation.</p><a class="back-link" href="../#about">Lihat profil</a></section>
+        <section class="side-card"><h2>Topik artikel</h2><ul><li>Conversion Delay</li><li>Evaluasi ROAS</li><li>Days to Conversion</li><li>Marketing Analytics</li></ul></section>
+        <section class="side-card"><h2>Sumber utama</h2><p>Dokumentasi Google Ads, ditinjau pada 11 September 2026.</p><a class="back-link" href="https://support.google.com/google-ads/answer/6239119?hl=en" target="_blank" rel="noopener noreferrer">Riwayat conversion delay ↗</a><a class="back-link" href="https://support.google.com/google-ads/answer/9549009?hl=en" target="_blank" rel="noopener noreferrer">Kolom waktu conversion ↗</a><a class="back-link" href="https://support.google.com/google-ads/answer/3123169?hl=en" target="_blank" rel="noopener noreferrer">Conversion window ↗</a><a class="back-link" href="https://support.google.com/google-ads/answer/7686280?hl=en" target="_blank" rel="noopener noreferrer">Penyesuaian conversion ↗</a></section>
+        <section class="side-card"><h2>Artikel sebelumnya</h2><p>Pahami kapan perubahan conversion rate saat promo perlu diantisipasi dengan seasonality adjustment.</p><a class="back-link" href="../seasonality-adjustment-google-ads-promo/">Baca panduan seasonality adjustment</a></section>
+      </aside>
+    </div>
+  </main>
+  <footer class="article-footer"><div class="article-shell"><span>© 2026 Nordy Sukmana</span><a href="../artikel/">Lihat semua artikel</a></div></footer>
+  <script is:inline src="/assets/analytics-loader.js"></script>
+</BaseLayout>

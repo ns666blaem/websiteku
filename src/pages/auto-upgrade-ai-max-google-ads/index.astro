@@ -1,0 +1,170 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyHeader from '../../components/CaseStudyHeader.astro';
+
+const canonical = 'https://nordy-sukmana.vercel.app/auto-upgrade-ai-max-google-ads/';
+const image = 'https://nordy-sukmana.vercel.app/assets/brand/open-graph.png';
+const faqItems = [
+  {
+    question: 'Apakah Dynamic Search Ads ikut dimigrasikan sekarang?',
+    answer: 'Tidak. Google menunda peningkatan otomatis Dynamic Search Ads hingga Februari 2027. Jadwal September 2026 tetap berlaku untuk Automatically Created Assets dan pengaturan broad match pada level campaign.'
+  },
+  {
+    question: 'Apakah AI Max otomatis mengaktifkan Final URL Expansion?',
+    answer: 'Tidak selalu. Migrasi dari Automatically Created Assets mengaktifkan Search Term Matching dan Text Customization, sedangkan migrasi dari broad match pada level campaign mengaktifkan Search Term Matching. Periksa panel pengaturan untuk memastikan status Final URL Expansion.'
+  },
+  {
+    question: 'Apakah AI Max dapat dinonaktifkan?',
+    answer: 'Ya. Google menyediakan pilihan untuk mematikan AI Max atau mengubah fitur di dalamnya. Namun, mematikannya tidak otomatis mengembalikan seluruh perilaku lama, terutama aturan prioritas keyword broad match.'
+  },
+  {
+    question: 'Berapa lama performa sebaiknya dievaluasi?',
+    answer: 'Google menyarankan menunggu setidaknya dua minggu setelah aktivasi. Sesuaikan periode evaluasi dengan jeda conversion dan volume data bisnis.'
+  },
+  {
+    question: 'Apakah AI Max menjamin conversion bertambah?',
+    answer: 'Tidak. Hasil dipengaruhi kualitas data, bidding, website, penawaran, persaingan, dan conversion tracking. Rata rata hasil platform tidak menjamin performa pada setiap akun.'
+  }
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      '@id': `${canonical}#article`,
+      headline: 'AI Max Mulai Aktif Otomatis di Google Ads pada September 2026',
+      description: 'Google mulai mengalihkan campaign Search tertentu ke AI Max pada September 2026. Pelajari dampaknya pada targeting, aset, tracking, dan reporting.',
+      url: canonical,
+      image: [image],
+      inLanguage: 'id-ID',
+      datePublished: '2026-09-03',
+      dateModified: '2026-09-03',
+      author: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      publisher: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      mainEntityOfPage: canonical,
+      articleSection: 'Google Ads dan Search Campaigns',
+      about: ['Google Ads', 'AI Max for Search campaigns', 'Search Term Matching', 'Text Customization', 'Final URL Expansion'],
+      keywords: ['auto upgrade AI Max Google Ads', 'audit AI Max Google Ads', 'migrasi broad match ke AI Max', 'laporan search term AI Max']
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://nordy-sukmana.vercel.app/#person',
+      name: 'Nordy Sukmana',
+      url: 'https://nordy-sukmana.vercel.app/',
+      jobTitle: 'Performance Marketing Specialist'
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {'@type': 'ListItem', position: 1, name: 'Portfolio', item: 'https://nordy-sukmana.vercel.app/'},
+        {'@type': 'ListItem', position: 2, name: 'Artikel', item: 'https://nordy-sukmana.vercel.app/artikel/'},
+        {'@type': 'ListItem', position: 3, name: 'AI Max Google Ads September 2026', item: canonical}
+      ]
+    }
+  ]
+};
+
+const head = `<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Max Aktif Otomatis di Google Ads pada September 2026</title>
+<meta name="description" content="Google mulai mengalihkan campaign Search tertentu ke AI Max pada September 2026. Pelajari dampaknya pada targeting, aset, tracking, dan reporting.">
+<meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0C1F4D"><link rel="canonical" href="${canonical}">
+<meta property="og:type" content="article"><meta property="og:locale" content="id_ID"><meta property="og:site_name" content="Portfolio Nordy Sukmana"><meta property="og:title" content="AI Max Mulai Aktif Otomatis di Google Ads"><meta property="og:description" content="Cara mengaudit targeting, aset, landing page, dan tracking setelah peningkatan otomatis AI Max."><meta property="og:url" content="${canonical}"><meta property="og:image" content="${image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Nordy Sukmana, Performance Marketing Specialist">
+<meta property="article:published_time" content="2026-09-03"><meta property="article:modified_time" content="2026-09-03"><meta property="article:section" content="Google Ads dan Search Campaigns">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="AI Max Mulai Aktif Otomatis di Google Ads"><meta name="twitter:description" content="Panduan audit campaign Search setelah peningkatan otomatis AI Max."><meta name="twitter:image" content="${image}">
+<script type="application/ld+json">${JSON.stringify(structuredData)}</script>
+<link rel="icon" href="../assets/brand/nordy-mark.svg" type="image/svg+xml"><link rel="icon" href="../favicon.ico" sizes="any"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/case-study.css"><link rel="stylesheet" href="../assets/article.css">`;
+---
+<BaseLayout head={head}>
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+  <CaseStudyHeader />
+  <main id="main-content">
+    <header class="article-hero"><div class="article-shell"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Portfolio</a><span aria-hidden="true">/</span><a href="../artikel/">Artikel</a></nav><span class="article-kicker">Google Ads · AI Max · Search Campaigns</span><h1>AI Max Mulai Aktif Otomatis di Google Ads pada September 2026</h1><p class="article-lede">Campaign Search dapat tetap memakai nama, budget, iklan, dan conversion goal yang sama, tetapi cara Google menemukan kueri serta menyusun asetnya bisa berubah setelah peningkatan otomatis.</p><div class="article-meta"><span>Nordy Sukmana</span><span>3 September 2026</span><span>8 sampai 9 menit baca</span></div></div></header>
+
+    <div class="article-shell article-layout">
+      <article class="article-body">
+        <section class="answer-summary" aria-labelledby="answer-summary-title"><span>Jawaban singkat</span><h2 id="answer-summary-title">Campaign apa yang otomatis berpindah ke AI Max?</h2><p>Mulai September 2026, Google mengalihkan campaign Search yang memakai Automatically Created Assets atau pengaturan broad match pada level campaign ke AI Max. Pengaturan akhirnya mengikuti fitur lama yang digunakan. Dynamic Search Ads tidak ikut pada tahap ini karena jadwalnya ditunda hingga Februari 2027.</p></section>
+
+        <p>AI Max bukan sekadar nama baru. Di dalamnya terdapat pengaturan yang dapat memperluas pencocokan kueri, membuat teks iklan, dan memilih landing page secara dinamis jika fitur terkait diaktifkan.</p>
+        <p>Peningkatan otomatis juga tidak berarti semua fitur langsung menyala pada setiap campaign. Langkah pertama yang tepat adalah memeriksa apa yang benar benar berubah, kemudian mencocokkannya dengan histori campaign.</p>
+
+        <h2>Apa yang berubah pada September 2026?</h2>
+        <p><a href="https://blog.google/products/ads-commerce/dsa-upgrade-to-ai-max-2026/" target="_blank" rel="noopener noreferrer">Pengumuman resmi Google Ads</a> menjelaskan bahwa campaign yang memakai Automatically Created Assets dan pengaturan broad match pada level campaign mulai dialihkan secara bertahap ke AI Max pada September 2026.</p>
+        <p>Google semula juga merencanakan migrasi Dynamic Search Ads pada September. Pembaruan tanggal 11 Juni 2026 kemudian menunda proses tersebut hingga Februari 2027.</p>
+        <div class="table-wrap" role="region" aria-label="Pemetaan fitur lama ke AI Max" tabindex="0"><table><thead><tr><th>Fitur lama</th><th>Pengaturan setelah migrasi</th><th>Jadwal</th></tr></thead><tbody><tr><td>Automatically Created Assets</td><td>Search Term Matching dan Text Customization aktif</td><td>Mulai September 2026</td></tr><tr><td>Broad match pada level campaign</td><td>Search Term Matching aktif</td><td>Mulai September 2026</td></tr><tr><td>Dynamic Search Ads</td><td>Migrasi ditunda</td><td>Mulai Februari 2027</td></tr></tbody></table></div>
+        <p>Campaign yang memenuhi syarat akan menerima notifikasi sebelum transisi. Karena peluncurannya bertahap, waktu perubahan dapat berbeda pada setiap akun.</p>
+
+        <h2>Apa sebenarnya AI Max?</h2>
+        <p><strong>AI Max adalah lapisan optimasi pada campaign Search, bukan jenis campaign baru.</strong> Fitur utamanya terbagi menjadi Search Term Matching dan Asset Optimization.</p>
+        <div class="update-timeline" aria-label="Komponen AI Max untuk Search campaigns"><div><span>Search Term Matching</span><p>Memperluas pencarian kueri relevan menggunakan broad match dan teknologi tanpa keyword.</p></div><div><span>Text Customization</span><p>Membuat headline dan description tambahan dari domain, landing page, iklan, keyword, dan aset yang tersedia.</p></div><div><span>Final URL Expansion</span><p>Mengarahkan pengguna ke halaman lain dalam domain yang dinilai lebih relevan jika fitur ini diaktifkan.</p></div></div>
+        <p><a href="https://support.google.com/google-ads/answer/15909989?hl=en" target="_blank" rel="noopener noreferrer">Panduan pengaturan AI Max</a> menjelaskan bahwa setiap komponen dapat dikelola melalui pengaturan campaign. Final URL Expansion tidak boleh diasumsikan aktif hanya karena campaign berpindah dari fitur lama.</p>
+
+        <h2>Mengapa peningkatan otomatis ini perlu diaudit?</h2>
+        <p>Dua campaign yang sama sama menampilkan status AI Max belum tentu memiliki jangkauan dan risiko yang sama. Campaign dari Automatically Created Assets dapat memakai Search Term Matching serta Text Customization, sedangkan campaign dari broad match pada level campaign hanya dipetakan ke Search Term Matching.</p>
+        <p>Ada pula perubahan pada prioritas keyword. Dalam pengaturan broad match lama, keyword broad tertentu diprioritaskan seolah versi exact juga tersedia. Setelah berpindah ke AI Max, perlakuan tersebut tidak lagi berlaku. Dampaknya dapat terlihat sebagai perpindahan traffic antar campaign atau ad group, bukan hanya kenaikan jumlah kueri.</p>
+        <div class="callout"><strong>Jangan menilai perubahan hanya dari CPA total.</strong> Periksa sumber pencocokan, search term, aset, landing page, dan kualitas conversion agar perpindahan traffic tidak tersembunyi dalam angka rata rata.</div>
+
+        <h2>Cara mengaudit campaign setelah berpindah ke AI Max</h2>
+        <h3>1. Buat daftar campaign yang terdampak</h3>
+        <p>Tambahkan kolom AI Max pada tabel campaign Search. Tandai campaign yang sebelumnya memakai Automatically Created Assets, broad match pada level campaign, brand controls, tracking template, atau bidding berbasis conversion.</p>
+        <p>Ekspor baseline sebelum migrasi atau sedekat mungkin dengan tanggal perubahan. Simpan cost, clicks, conversions, conversion value, CPA, ROAS, search terms, landing page, dan status aset.</p>
+
+        <h3>2. Periksa fitur yang benar benar aktif</h3>
+        <p>Buka panel AI Max dan catat status setiap komponen:</p>
+        <ul><li>Search Term Matching.</li><li>Text Customization.</li><li>Final URL Expansion.</li><li>Brand inclusion dan exclusion.</li><li>URL inclusion dan exclusion.</li></ul>
+        <p>Catatan ini membantu membedakan perubahan resmi sistem dari pengaturan yang mungkin diaktifkan manual oleh anggota tim.</p>
+
+        <h3>3. Audit search term dan sumber pencocokan</h3>
+        <p>Google menyediakan <strong>AI Max</strong> sebagai match type untuk traffic tambahan. Kolom Source membantu membedakan traffic yang berasal dari broad match expansion dan pencocokan tanpa keyword.</p>
+        <div class="report-preview" aria-label="Komponen laporan audit AI Max"><div class="report-preview__head"><img src="/assets/tools/googleads.svg" alt="" width="44" height="44"><div><span>AI Max audit</span><strong>Search terms dan landing pages</strong></div></div><div class="report-preview__grid"><span><strong>Search term</strong>Kueri yang memicu iklan</span><span><strong>Source</strong>Asal pencocokan traffic</span><span><strong>Headline</strong>Teks yang tampil kepada pengguna</span><span><strong>Landing page</strong>Halaman tujuan yang dipilih</span></div></div>
+        <p><a href="https://support.google.com/google-ads/answer/16470459?hl=en" target="_blank" rel="noopener noreferrer">Panduan reporting AI Max</a> menyediakan tampilan yang menghubungkan kueri, headline, dan landing page. Jangan hanya mencari kueri yang terlihat aneh, bandingkan biaya serta kualitas conversion pada setiap sumber traffic.</p>
+
+        <h3>4. Tinjau teks yang dibuat Google AI</h3>
+        <p>Gunakan kolom Added by pada laporan aset untuk menemukan headline dan description yang dibuat oleh Google AI. Periksa nama produk, harga, promo, wilayah layanan, gaya komunikasi, kebijakan industri, dan kesesuaiannya dengan landing page.</p>
+        <p>Jika teks tidak akurat, aset dapat dihapus. Perbaiki juga halaman sumber karena <a href="https://support.google.com/google-ads/answer/11259373?hl=en" target="_blank" rel="noopener noreferrer">Text Customization</a> menggunakan konten website sebagai salah satu bahan utama.</p>
+
+        <h3>5. Kendalikan landing page</h3>
+        <p>Jika Final URL Expansion aktif, buka landing pages report dan periksa kolom Selected by. Pastikan traffic tidak diarahkan ke halaman karier, artikel lama, kebijakan privasi, atau halaman yang tidak memiliki intent conversion.</p>
+        <p>Gunakan URL exclusion untuk halaman yang tidak layak menerima traffic berbayar. Perlu diingat, aset Responsive Search Ad yang dipasang pada posisi tertentu tidak digunakan jika Google memilih URL lain karena teksnya mungkin tidak sesuai dengan halaman baru.</p>
+
+        <h3>6. Uji tracking sampai ke conversion</h3>
+        <p>Landing page dinamis dapat menimbulkan masalah jika tracking template tidak kompatibel. Periksa auto tagging, parameter URL, penggunaan <code>{'{lpurl}'}</code>, redirect, halaman 404, event utama, nilai transaksi, mata uang, serta qualified lead dari CRM.</p>
+        <p>Traffic yang lebih luas tidak bernilai jika hasil akhirnya hanya menambah form spam atau conversion yang tidak memenuhi syarat.</p>
+        <div class="related-article"><span>Kualitas conversion</span><a href="../enhanced-conversions-for-leads-google-ads-2026/">Hubungkan Google Ads dengan qualified lead dari CRM →</a></div>
+
+        <h3>7. Beri waktu sebelum mengambil keputusan</h3>
+        <p>Google menyarankan menunggu setidaknya dua minggu setelah AI Max aktif sebelum melakukan perubahan besar. Periode tersebut memberi waktu bagi sistem untuk belajar dan menghasilkan laporan yang lebih layak dibandingkan.</p>
+        <div class="data-warning"><span>!</span><div><strong>Tetap tangani kesalahan teknis segera</strong><p>Masa pembelajaran bukan alasan untuk membiarkan halaman 404, klaim iklan yang keliru, pelanggaran brand, atau tracking yang terputus.</p></div></div>
+
+        <h2>Contoh evaluasi yang bertanggung jawab</h2>
+        <p>Contoh berikut bersifat ilustratif, bukan hasil campaign Nordy.</p>
+        <p>Sebuah bisnis jasa memiliki campaign non brand yang memakai Automatically Created Assets dan broad match pada level campaign. Setelah migrasi, Search Term Matching serta Text Customization aktif, sedangkan Final URL Expansion tetap tidak aktif.</p>
+        <p>Dalam dua minggu pertama, jumlah conversion naik, tetapi cost per qualified lead dari CRM memburuk. Search terms report menunjukkan sebagian traffic baru berasal dari intent edukasi yang masih berhubungan dengan layanan, tetapi belum siap membeli.</p>
+        <p>Tim tidak langsung menonaktifkan seluruh AI Max. Mereka memisahkan search term berdasarkan sumber, menambahkan negative keyword untuk intent yang jelas tidak relevan, memperbaiki copy agar kualifikasi layanan lebih tegas, lalu menguji kembali pengaturan lain.</p>
+        <p>Keputusan tersebut lebih kuat daripada menilai AI Max hanya dari jumlah conversion mentah.</p>
+        <div class="related-article"><span>Audit lanjutan</span><a href="../ask-advisor-google-ads-ga4-audit-campaign/">Gunakan Ask Advisor untuk menelusuri perubahan campaign dan laporan pendukung →</a></div>
+
+        <h2>Checklist audit AI Max</h2>
+        <ol class="checklist"><li>Identifikasi campaign yang mengalami peningkatan otomatis.</li><li>Simpan tanggal migrasi dan baseline performa.</li><li>Catat fitur AI Max yang aktif pada setiap campaign.</li><li>Periksa perubahan prioritas keyword.</li><li>Tambahkan kolom Source pada search terms report.</li><li>Tinjau aset dengan label Added by Google AI.</li><li>Periksa landing page yang dipilih sistem.</li><li>Uji tracking template, redirect, dan conversion.</li><li>Cocokkan conversion platform dengan qualified lead atau penjualan.</li><li>Evaluasi setelah minimal dua minggu, kecuali ada kesalahan teknis.</li></ol>
+
+        <h2>Pertanyaan yang sering diajukan</h2>
+        {faqItems.map(item => <section class="faq-item"><h3>{item.question}</h3><p>{item.answer}</p></section>)}
+
+        <h2>Kesimpulan</h2>
+        <p>Peningkatan otomatis AI Max mengubah cara sebagian campaign Search menemukan kueri dan membuat aset, tetapi tidak memberikan konfigurasi yang sama untuk semua campaign.</p>
+        <p>Audit fitur yang aktif, search term, aset, landing page, dan tracking sampai ke CRM. Setelah itu, ukur CPA atau ROAS bersama kualitas conversion selama periode yang memadai.</p>
+        <p>Dengan pendekatan tersebut, AI Max dapat diperlakukan sebagai sistem yang perlu diarahkan dan dievaluasi, bukan kotak hitam yang diterima atau ditolak tanpa data.</p>
+        <div class="related-article"><span>Case study terkait</span><a href="../case-study/performance-analysis/">Lihat cara metrik lintas channel diterjemahkan menjadi keputusan budget →</a></div>
+      </article>
+
+      <aside class="article-sidebar" aria-label="Informasi artikel">
+        <section class="side-card"><h2>Tentang penulis</h2><p><strong>Nordy Sukmana</strong> adalah Performance Marketing Specialist dengan pengalaman mengelola Google Ads, Meta Ads, tracking, SEO, dan marketing automation.</p><a class="back-link" href="../#about">Lihat profil</a></section>
+        <section class="side-card"><h2>Topik artikel</h2><ul><li>AI Max for Search</li><li>Search Term Matching</li><li>Text Customization</li><li>Final URL Expansion</li></ul></section>
+        <section class="side-card"><h2>Sumber utama</h2><p>Informasi diperiksa melalui pengumuman dan dokumentasi resmi Google Ads tentang peningkatan otomatis AI Max.</p><a class="back-link" href="https://blog.google/products/ads-commerce/dsa-upgrade-to-ai-max-2026/" target="_blank" rel="noopener noreferrer">Buka pengumuman Google ↗</a></section>
+        <section class="side-card"><h2>Artikel sebelumnya</h2><p>Pelajari cara mengaudit migrasi Video Reach Campaign dan laporan YouTube Ads multi format.</p><a class="back-link" href="../update-video-reach-campaign-youtube-ads-2026/">Baca artikel</a></section>
+      </aside>
+    </div>
+  </main>
+  <footer class="article-footer"><div class="article-shell"><span>© 2026 Nordy Sukmana</span><a href="../artikel/">Lihat semua artikel</a></div></footer>
+  <script is:inline src="/assets/analytics-loader.js"></script>
+</BaseLayout>

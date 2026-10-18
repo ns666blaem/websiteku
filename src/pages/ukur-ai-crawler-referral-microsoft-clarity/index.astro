@@ -1,0 +1,311 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyHeader from '../../components/CaseStudyHeader.astro';
+
+const canonical = 'https://nordy-sukmana.vercel.app/ukur-ai-crawler-referral-microsoft-clarity/';
+const image = 'https://nordy-sukmana.vercel.app/assets/brand/open-graph.png';
+const title = "AI Crawler Ramai Belum Tentu Mengirim Traffic, Cek di Microsoft Clarity";
+const description = "AI crawler yang sering mengakses website belum tentu menghasilkan kunjungan. Pelajari cara menghubungkan crawl, citation, referral, dan conversion di Clarity.";
+const faqItems = [
+  {
+    "question": "Apakah sering diakses crawler berarti website akan dikutip AI?",
+    "answer": "Tidak. Crawling hanya menunjukkan bahwa bot meminta resource dari server. Citation memerlukan proses pemilihan lain dan harus diperiksa melalui data citation yang tersedia."
+  },
+  {
+    "question": "Apa perbedaan Bot Activity dan Citations di Clarity?",
+    "answer": "Bot Activity mengukur akses otomatis melalui log server. Citations mengukur ketika halaman digunakan sebagai sumber dalam jawaban yang dihasilkan AI."
+  },
+  {
+    "question": "Mengapa data Scrape to Referral terlihat tidak seimbang?",
+    "answer": "Penyebabnya dapat berupa perbedaan mapped domain, cakupan CDN, banyaknya request terhadap aset, perilaku tanpa klik, atau sedikitnya pengguna yang mengeklik sumber. Periksa coverage context sebelum menyimpulkan."
+  },
+  {
+    "question": "Apakah AI referral dapat diukur sampai menjadi lead?",
+    "answer": "Bisa jika session tracking, conversion event, serta CRM tersambung dengan baik. Gunakan landing page, event, dan identitas lead yang diizinkan untuk mengikuti perjalanan sampai qualified lead atau penjualan."
+  },
+  {
+    "question": "Apakah optimasi halaman menjamin kemunculan di AI Overview?",
+    "answer": "Tidak. Konten yang jelas, akurat, mudah diakses, dan memiliki sumber kuat membantu pembaca serta sistem pencarian memahami halaman, tetapi tidak menjamin citation, ranking, atau kemunculan generatif."
+  }
+];
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      '@id': `${canonical}#article`,
+      headline: title,
+      description,
+      url: canonical,
+      image: [image],
+      inLanguage: 'id-ID',
+      datePublished: '2026-09-08',
+      dateModified: '2026-09-08',
+      author: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      publisher: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      mainEntityOfPage: canonical,
+      articleSection: 'GEO, AIO dan Marketing Analytics',
+      about: ['Microsoft Clarity', 'AI Visibility', 'Bot Analytics', 'AI Citations', 'AI Referral Traffic', 'GEO', 'AIO'],
+      keywords: ['AI Scrape-to-Referral Ratio Microsoft Clarity', 'audit AI visibility Microsoft Clarity', 'perbedaan AI crawling dan AI referral', 'cara mengukur conversion dari platform AI']
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://nordy-sukmana.vercel.app/#person',
+      name: 'Nordy Sukmana',
+      url: 'https://nordy-sukmana.vercel.app/',
+      jobTitle: 'Performance Marketing Specialist'
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {'@type': 'ListItem', position: 1, name: 'Portfolio', item: 'https://nordy-sukmana.vercel.app/'},
+        {'@type': 'ListItem', position: 2, name: 'Artikel', item: 'https://nordy-sukmana.vercel.app/artikel/'},
+        {'@type': 'ListItem', position: 3, name: 'AI Crawler dan Referral di Clarity', item: canonical}
+      ]
+    }
+  ]
+};
+
+const head = `<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${title}</title>
+<meta name="description" content="${description}">
+<meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0C1F4D"><link rel="canonical" href="${canonical}">
+<meta property="og:type" content="article"><meta property="og:locale" content="id_ID"><meta property="og:site_name" content="Portfolio Nordy Sukmana"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Nordy Sukmana, Performance Marketing Specialist">
+<meta property="article:published_time" content="2026-09-08"><meta property="article:modified_time" content="2026-09-08"><meta property="article:section" content="GEO, AIO dan Marketing Analytics">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${title}"><meta name="twitter:description" content="${description}"><meta name="twitter:image" content="${image}">
+<script type="application/ld+json">${JSON.stringify(structuredData)}</script>
+<link rel="icon" href="../assets/brand/nordy-mark.svg" type="image/svg+xml"><link rel="icon" href="../favicon.ico" sizes="any"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/case-study.css"><link rel="stylesheet" href="../assets/article.css">`;
+---
+<BaseLayout head={head}>
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+  <CaseStudyHeader />
+  <main id="main-content">
+    <header class="article-hero">
+      <div class="article-shell">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Portfolio</a><span aria-hidden="true">/</span><a href="../artikel/">Artikel</a></nav>
+        <span class="article-kicker">GEO · AIO · Microsoft Clarity</span>
+        <h1>{title}</h1>
+        <p class="article-lede">Banyaknya kunjungan AI crawler baru menunjukkan aktivitas awal. Hubungkan data crawl dengan citation, referral, dan conversion untuk melihat apakah konten memberi manfaat bisnis.</p>
+        <div class="article-meta"><span>Nordy Sukmana</span><span>8 September 2026</span><span>8 sampai 9 menit baca</span></div>
+      </div>
+    </header>
+    <div class="article-shell article-layout">
+      <article class="article-body">
+        <section class="answer-summary" aria-labelledby="answer-summary-title">
+          <span>Jawaban singkat</span>
+          <h2 id="answer-summary-title">Apakah aktivitas AI crawler berarti website mendapat pengunjung?</h2>
+          <p>AI Scrape to Referral Ratio di Microsoft Clarity membandingkan aktivitas AI crawler dengan traffic rujukan yang dikirim platform AI. Crawling hanya menunjukkan bahwa bot meminta halaman, bukan bukti bahwa konten telah dikutip atau menghasilkan kunjungan. Untuk mengukur manfaat bisnis, hubungkan empat lapisan data: bot request, AI citation, referral session, serta conversion atau qualified lead.</p>
+        </section>
+<p>Ribuan permintaan dari AI crawler dapat terlihat menjanjikan. Artinya, berbagai sistem AI sedang mengakses konten website.</p>
+<p>Namun, pertanyaan yang lebih penting adalah: apakah aktivitas tersebut menghasilkan exposure, pengunjung, atau pelanggan?</p>
+<p>Bot dapat meminta halaman untuk indexing, retrieval preparation, pengembangan layanan, atau kebutuhan teknis lainnya. Tidak semua permintaan berakhir dengan citation dalam jawaban AI. Tidak semua citation menghasilkan klik, dan tidak semua klik menghasilkan conversion.</p>
+<p>Pada 13 Agustus 2026, Microsoft Clarity memperkenalkan AI Scrape to Referral Insights untuk membantu marketer melihat hubungan tersebut dengan lebih utuh.</p>
+<h2>Apa itu AI Scrape to Referral Ratio?</h2>
+<p>AI Scrape to Referral Ratio adalah metrik yang membandingkan aktivitas scraping oleh operator AI dengan referral traffic yang kembali ke website.</p>
+<p>Menurut <a href="https://clarity.microsoft.com/blog/scrape-to-referral-insights/" target="_blank" rel="noopener noreferrer">pengumuman resmi Microsoft Clarity pada 13 Agustus 2026</a>, pembaruan ini tersedia dalam Bot Analytics dan mencakup:</p>
+<ul>
+<li>Perbandingan scraping dengan referral traffic.</li>
+<li>Breakdown berdasarkan operator AI.</li>
+<li>Konteks cakupan mapped domain.</li>
+<li>Tautan langsung menuju session recordings yang sudah difilter.</li>
+<li>Analisis perilaku pengunjung setelah datang dari platform AI.</li>
+</ul>
+<p>Metrik ini tidak sebaiknya diperlakukan sebagai conversion rate biasa. Satu bot dapat membuat banyak request terhadap halaman, gambar, file JSON, atau resource lain, sedangkan satu referral mewakili sesi manusia. Unit dan tujuan keduanya berbeda.</p>
+<p>Nilainya terletak pada kemampuan menemukan ketidakseimbangan: operator mana yang sering mengakses konten, operator mana yang mengirim pengunjung, dan bagaimana kualitas pengunjung tersebut.</p>
+<h2>Crawling, citation, dan referral adalah tiga hal berbeda</h2>
+<p>Crawling adalah akses oleh bot, citation adalah penggunaan halaman sebagai sumber, sedangkan referral adalah kunjungan manusia dari platform AI.</p>
+<p>Alur pengukurannya dapat dibaca seperti berikut:</p>
+<p>Secara konsep, akses bot dapat diikuti penggunaan konten sebagai sumber, klik menuju website, sesi kunjungan, lalu tindakan bisnis. Ini adalah kerangka membaca data, bukan bukti bahwa setiap request dapat ditelusuri langsung sampai menjadi conversion.</p>
+<p>Setiap tahap memerlukan metrik berbeda:</p>
+<div class="table-wrap" role="region" aria-label="Tahapan pengukuran dari crawl sampai outcome bisnis" tabindex="0"><table>
+<thead>
+<tr>
+<th>Tahap</th>
+<th>Metrik yang diperiksa</th>
+<th>Pertanyaan utama</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Crawl</td>
+<td>AI bot requests, pages crawled, request status</td>
+<td>Apakah sistem AI dapat mengakses konten?</td>
+</tr>
+<tr>
+<td>Citation</td>
+<td>Page citations, grounding queries, Share of Authority</td>
+<td>Apakah konten digunakan dalam jawaban AI?</td>
+</tr>
+<tr>
+<td>Referral</td>
+<td>Sesi rujukan AI, operator, landing page</td>
+<td>Apakah pengguna mengunjungi website?</td>
+</tr>
+<tr>
+<td>Outcome</td>
+<td>Form, qualified lead, order, revenue</td>
+<td>Apakah kunjungan menghasilkan nilai bisnis?</td>
+</tr>
+</tbody></table></div>
+<p><a href="https://learn.microsoft.com/en-us/clarity/ai-visibility/bot-activity-overview" target="_blank" rel="noopener noreferrer">Dokumentasi Bot Activity Microsoft Clarity</a> secara tegas menjelaskan bahwa bot request tidak membuktikan konten telah diambil, digunakan untuk grounding, dikutip, atau ditampilkan dalam jawaban generatif.</p>
+<p>Karena itu, laporan yang hanya menunjukkan “AI bots crawled 10.000 pages” belum cukup untuk menyatakan strategi GEO berhasil.</p>
+<h2>Apa yang dapat dilihat melalui Bot Analytics?</h2>
+<p>Bot Analytics menunjukkan skala, sumber, status, dan halaman yang diakses sistem otomatis melalui log server.</p>
+<p>Dalam <a href="https://clarity.microsoft.com/blog/updates-to-bot-activity-in-clarity/" target="_blank" rel="noopener noreferrer">pembaruan Bot Activity pada 26 Mei 2026</a>, Microsoft menambahkan beberapa kelompok data:</p>
+<ul>
+<li>Total AI bot requests.</li>
+<li>AI bot traffic share.</li>
+<li>Persentase halaman yang diakses crawler.</li>
+<li>Operator dan nama bot.</li>
+<li>Status request: berhasil, redirect, atau gagal.</li>
+<li>Path dan jenis resource yang diminta.</li>
+<li>Tren aktivitas dari waktu ke waktu.</li>
+</ul>
+<p>Dalam <a href="https://clarity.microsoft.com/blog/robots-txt-violations-in-bot-analytics/" target="_blank" rel="noopener noreferrer">pembaruan 23 Juni 2026</a>, Microsoft juga menambahkan deteksi permintaan bot ke URL yang dilarang dalam robots.txt.</p>
+<p>Data diperoleh melalui koneksi server atau CDN. Microsoft mencantumkan dukungan untuk Fastly, Amazon CloudFront, Cloudflare, Azure Front Door, dan Akamai. Project WordPress dengan plugin Clarity terbaru dapat memperoleh integrasi secara otomatis.</p>
+<div class="callout"><strong>Status berhasil belum membuktikan citation.</strong> Server berhasil merespons permintaan, tetapi belum tentu halaman kemudian dipakai dalam jawaban AI.</div>
+<h2>Cara mengaudit AI crawler sampai ke conversion</h2>
+<h3>1. Pastikan cakupan domain sudah selaras</h3>
+<p>Jangan membaca rasio sebelum sumber crawl dan sumber referral mencakup domain yang sama.</p>
+<p>Website dapat menggunakan domain utama, subdomain, CDN, atau hostname aset yang berbeda. Jika Bot Analytics mencakup beberapa domain tetapi referral tracking hanya aktif pada salah satunya, perbandingannya dapat menyesatkan.</p>
+<p>Periksa:</p>
+<ul>
+<li>Domain yang dipetakan dalam AI Visibility.</li>
+<li>Domain dan subdomain yang memiliki tracking Clarity.</li>
+<li>Hostname yang tercatat dalam server atau CDN logs.</li>
+<li>Redirect dari HTTP ke HTTPS atau versi www.</li>
+<li>Halaman yang berada di domain pihak ketiga.</li>
+<li>Periode data yang dibandingkan.</li>
+</ul>
+<p>Clarity memberikan coverage context ketika data bot dan referral tidak mencakup domain yang sama. Jangan mengabaikan peringatan tersebut hanya agar laporan terlihat lengkap.</p>
+<h3>2. Audit status request sebelum mengejar volume</h3>
+<p>Pisahkan request menjadi berhasil, redirect, dan gagal.</p>
+<p>Request gagal dalam jumlah besar dapat mengindikasikan halaman rusak, aturan akses, routing, atau konfigurasi CDN yang perlu diperiksa. Redirect berulang juga dapat membuat akses kurang efisien.</p>
+<p>Mulailah dari path yang paling sering diminta, lalu pastikan:</p>
+<ul>
+<li>Halaman memberikan status HTTP yang sesuai.</li>
+<li>Canonical dan redirect tidak saling bertentangan.</li>
+<li>Konten utama dapat diakses tanpa error.</li>
+<li>Resource penting tidak rusak.</li>
+<li>robots.txt sesuai dengan keputusan bisnis.</li>
+<li>Halaman lama tidak menjadi sumber mayoritas request.</li>
+</ul>
+<p>Jangan membuka seluruh path tanpa pertimbangan. Keamanan, privasi, lisensi konten, dan beban infrastruktur tetap perlu dinilai bersama tim teknis.</p>
+<h3>3. Pisahkan hasil berdasarkan operator AI</h3>
+<p>Rincian berdasarkan operator membantu menghindari kesimpulan dari angka agregat.</p>
+<p>Gunakan empat pola berikut sebagai diagnosis:</p>
+<div class="table-wrap" role="region" aria-label="Diagnosis awal berdasarkan crawl dan referral" tabindex="0"><table>
+<thead>
+<tr>
+<th>Pola</th>
+<th>Interpretasi awal</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Crawl tinggi, referral tinggi</td>
+<td>Periksa kualitas session dan conversion</td>
+</tr>
+<tr>
+<td>Crawl tinggi, referral rendah</td>
+<td>Periksa citation, eksposur tanpa klik, dan coverage</td>
+</tr>
+<tr>
+<td>Crawl rendah, referral bernilai</td>
+<td>Sedikit traffic dapat memiliki intent tinggi</td>
+</tr>
+<tr>
+<td>Crawl rendah, referral rendah</td>
+<td>Prioritas relatif lebih rendah sampai ada sinyal baru</td>
+</tr>
+</tbody></table></div>
+<p>Crawl tinggi dan referral rendah tidak otomatis buruk. Sistem AI dapat menjawab pertanyaan tanpa pengguna perlu mengeklik sumber. Namun, kondisi ini juga dapat berarti konten sering diakses tetapi jarang dipilih sebagai citation.</p>
+<p>Gunakan data tersebut sebagai awal investigasi, bukan penilaian akhir.</p>
+<h3>4. Hubungkan dengan AI Citations</h3>
+<p>Dashboard Citations membantu melihat lapisan di antara crawl dan referral.</p>
+<p>Menurut <a href="https://learn.microsoft.com/en-us/clarity/ai-visibility/ai-citations" target="_blank" rel="noopener noreferrer">dokumentasi AI Citations Microsoft Clarity</a>, laporan ini mencakup:</p>
+<ul>
+<li>Jumlah page citations.</li>
+<li>Halaman yang dikutip.</li>
+<li>Grounding queries.</li>
+<li>Share of Authority.</li>
+<li>AI referral traffic.</li>
+<li>Tren citation.</li>
+</ul>
+<p>Citation count menunjukkan berapa kali halaman direferensikan, bukan posisi atau tingkat penonjolannya dalam jawaban AI. Grounding queries juga dapat berbeda dari kalimat persis yang diketik pengguna.</p>
+<p>Sebelum menggunakan dashboard Citations, administrator perlu memverifikasi kepemilikan domain melalui kode Clarity, Google Search Console, atau Bing Webmaster Tools.</p>
+<p>Jika sebuah halaman memiliki crawl tinggi tetapi citation rendah, periksa apakah isinya benar benar menjawab kebutuhan pencarian. Perbaikan yang relevan dapat berupa definisi yang mandiri, fakta dengan sumber primer, konteks tanggal, struktur heading yang jelas, atau penjelasan yang lebih lengkap.</p>
+<p>Perbaikan tersebut meningkatkan kegunaan konten, tetapi tidak menjamin citation atau kemunculan dalam AI Overview.</p>
+<div class="related-article"><span>Artikel terkait</span><a href="../laporan-generative-ai-search-console/">Lengkapi evaluasi visibilitas AI dengan laporan Google Search Console →</a></div>
+<h3>5. Buka session recordings dari referral</h3>
+<p>Referral baru bernilai ketika pengunjung melakukan tindakan yang relevan.</p>
+<p>Dari kartu Scrape to Referral, marketer dapat memilih sumber AI dan membuka Recordings dengan filter yang sudah diterapkan.</p>
+<p>Saat meninjau session, perhatikan:</p>
+<ul>
+<li>Landing page pertama.</li>
+<li>Apakah pengunjung langsung menemukan jawaban.</li>
+<li>Scroll depth dan active time.</li>
+<li>Klik menuju layanan, case study, atau halaman kontak.</li>
+<li>Form yang mulai atau selesai diisi.</li>
+<li>Quick back, dead click, atau error.</li>
+<li>Halaman berikutnya dalam perjalanan pengguna.</li>
+</ul>
+<p>Gunakan rekaman untuk membangun hipotesis. Jangan membuat perubahan besar hanya berdasarkan satu atau dua session yang terlihat menarik.</p>
+<h3>6. Hubungkan referral dengan outcome bisnis</h3>
+<p>Buat lapisan pengukuran yang lebih dekat dengan bisnis:</p>
+<ul>
+<li>AI referral sessions.</li>
+<li>Engaged sessions.</li>
+<li>CTA clicks.</li>
+<li>Form submissions.</li>
+<li>Qualified leads.</li>
+<li>Consultation atau meeting.</li>
+<li>Order dan revenue.</li>
+<li>Conversion rate per landing page.</li>
+<li>Revenue atau pipeline per AI source.</li>
+</ul>
+<p>Cocokkan event website dengan CRM atau backend. Untuk lead generation, referral yang menghasilkan satu qualified lead dapat lebih berharga daripada puluhan session yang hanya membaca satu halaman.</p>
+<p>Tujuannya bukan membuktikan bahwa semua conversion “dimiliki” platform AI. Data referral menunjukkan jalur kunjungan yang teramati, sedangkan pengaruh AI dapat terjadi tanpa klik atau melalui kanal lain. Pelajari juga <a href="../cara-membaca-tiktok-attribution-portfolio/">cara membaca TikTok Attribution Portfolio</a> untuk memahami perbedaan atribusi dan bukti dampak tambahan.</p>
+<h2>Contoh prioritas yang lebih bertanggung jawab</h2>
+<p>Contoh berikut bersifat ilustratif, bukan hasil campaign Nordy.</p>
+<p>Sebuah perusahaan B2B menemukan dua artikel yang sering diakses AI crawler.</p>
+<p>Artikel pertama menerima banyak request dan referral, tetapi pengunjung jarang membuka halaman layanan. Artikel kedua menerima referral lebih sedikit, tetapi pengunjung sering membaca case study dan mengirim formulir konsultasi.</p>
+<p>Tim tidak otomatis memprioritaskan artikel pertama karena volumenya lebih besar. Mereka memperbaiki CTA serta internal link pada artikel pertama, sekaligus memperluas topik artikel kedua karena menunjukkan intent bisnis yang lebih kuat.</p>
+<p>Keputusan akhirnya menggunakan keseluruhan funnel, bukan jumlah crawler request saja.</p>
+<h2>Checklist audit AI Scrape to Referral</h2>
+<ol class="checklist">
+<li>Pastikan tracking Clarity aktif.</li>
+<li>Hubungkan server atau CDN yang didukung.</li>
+<li>Selaraskan seluruh mapped domain.</li>
+<li>Samakan periode crawl dan referral.</li>
+<li>Pisahkan data berdasarkan operator.</li>
+<li>Periksa successful, redirected, dan failed requests.</li>
+<li>Identifikasi path dengan request terbesar.</li>
+<li>Cocokkan halaman tersebut dengan Citation dashboard.</li>
+<li>Pisahkan grounding queries yang menyebut nama brand dan yang tidak.</li>
+<li>Buka session recordings dari AI referral.</li>
+<li>Periksa CTA, form, dan conversion event.</li>
+<li>Cocokkan lead atau transaksi dengan CRM.</li>
+<li>Prioritaskan halaman berdasarkan outcome bisnis.</li>
+<li>Dokumentasikan tanggal setiap perubahan konten.</li>
+</ol>
+
+        <h2>Pertanyaan yang sering diajukan</h2>
+        {faqItems.map(item => <section class="faq-item"><h3>{item.question}</h3><p>{item.answer}</p></section>)}
+        <h2>Kesimpulan</h2>
+<p>AI crawler activity adalah sinyal paling awal, bukan hasil akhir. Nilainya baru terlihat ketika data crawl dihubungkan dengan citation, referral session, dan conversion.</p>
+<p>Gunakan Microsoft Clarity untuk menemukan operator yang mengakses konten, halaman yang dikutip, sumber yang mengirim pengunjung, serta perilaku mereka setelah tiba. Setelah itu, gunakan CRM atau backend untuk menilai kualitas lead dan revenue.</p>
+<p>Dengan kerangka tersebut, investasi GEO dan AIO dapat dibahas sebagai bagian dari funnel yang terukur, bukan sekadar mengejar jumlah crawl atau citation.</p>
+
+        <p>Tempatkan GEO dan AIO dalam <a href="../strategi-digital-marketing-2026/">strategi digital marketing lintas kanal</a>, dengan prioritas yang mengikuti kebutuhan pembaca dan outcome bisnis.</p>
+        <div class="related-article"><span>Case study terkait</span><a href="../case-study/performance-analysis/">Lihat cara traffic, campaign, dan revenue dibaca untuk menentukan prioritas →</a></div>
+      </article>
+      <aside class="article-sidebar" aria-label="Informasi artikel">
+        <section class="side-card"><h2>Tentang penulis</h2><p><strong>Nordy Sukmana</strong> adalah Performance Marketing Specialist dengan pengalaman mengelola Meta Ads, Google Ads, tracking, analytics, dan marketing automation.</p><a class="back-link" href="../#about">Lihat profil</a></section>
+        <section class="side-card"><h2>Topik artikel</h2><ul><li>GEO dan AIO</li><li>Microsoft Clarity</li><li>AI Crawler dan Citations</li><li>Referral dan Conversion</li></ul></section>
+        <section class="side-card"><h2>Sumber utama</h2><p>Dokumentasi Microsoft Clarity dan Microsoft Learn, ditinjau pada 8 September 2026.</p><a class="back-link" href="https://learn.microsoft.com/en-us/clarity/ai-visibility/bot-activity-overview" target="_blank" rel="noopener noreferrer">Baca Bot Activity ↗</a><a class="back-link" href="https://learn.microsoft.com/en-us/clarity/ai-visibility/ai-citations" target="_blank" rel="noopener noreferrer">Baca AI Citations ↗</a></section>
+        <section class="side-card"><h2>Artikel sebelumnya</h2><p>Pelajari cara menguji waktu kirim email personal dan membaca dampaknya dengan control group.</p><a class="back-link" href="../personalized-send-time-klaviyo-control-group/">Baca artikel Klaviyo</a></section>
+      </aside>
+    </div>
+  </main>
+  <footer class="article-footer"><div class="article-shell"><span>© 2026 Nordy Sukmana</span><a href="../artikel/">Lihat semua artikel</a></div></footer>
+  <script is:inline src="/assets/analytics-loader.js"></script>
+</BaseLayout>

@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyHeader from '../../components/CaseStudyHeader.astro';
+import body from './body.html?raw';
+const canonical='https://nordy-sukmana.vercel.app/meta-ads-experiments-uji-creative-audiens/';
+const title='Meta Ads Experiments, Uji Creative dan Audiens sebelum Menambah Budget';
+const description='Pelajari cara memakai Meta Ads Experiments untuk menguji creative dan audiens secara terkontrol, membaca hasil di luar CTR, sebelum menaikkan budget campaign.';
+const head=`<title>${title}</title><meta name="description" content="${description}"><link rel="canonical" href="${canonical}">`;
+---
+<BaseLayout head={head}>
+<CaseStudyHeader />
+<main id="main-content">
+<header class="article-hero"><div class="article-shell"><nav class="breadcrumbs"><a href="../">Portfolio</a><span>/</span><a href="../artikel/">Artikel</a></nav><span class="article-kicker">Paid Social · Meta Ads · Creative Testing</span><h1>{title}</h1><p class="article-lede">Uji creative dan audiens sebelum scale budget dengan eksperimen terkontrol.</p><div class="article-meta"><span>Nordy Sukmana</span><time datetime="2026-09-22">22 September 2026</time><span>10 menit baca</span></div></div></header>
+<div class="article-shell article-layout"><article class="article-body"><div set:html={body}/></article></div>
+</main>
+</BaseLayout>

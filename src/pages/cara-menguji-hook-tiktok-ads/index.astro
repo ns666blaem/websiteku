@@ -1,0 +1,214 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyHeader from '../../components/CaseStudyHeader.astro';
+
+const canonical = 'https://nordy-sukmana.vercel.app/cara-menguji-hook-tiktok-ads/';
+const image = 'https://nordy-sukmana.vercel.app/assets/brand/open-graph.png';
+const title = "Cara Menguji Hook TikTok Ads agar Tidak Sekadar Ramai";
+const description = "Pelajari cara menguji hook TikTok Ads, menyusun dua pembukaan video, dan menilai hasil dari perhatian hingga kualitas lead dengan eksperimen terarah.";
+const faqItems = [
+  {
+    "question": "Apakah hook harus selalu mengejutkan?",
+    "answer": "Tidak. Pertanyaan yang relevan atau demonstrasi yang jelas juga layak diuji. Pilih pendekatan yang sesuai produk dan kebutuhan audiens."
+  },
+  {
+    "question": "Apakah views tinggi berarti hook terbaik?",
+    "answer": "Belum tentu. Untuk lead generation, periksa apakah perhatian tersebut berlanjut menjadi kontak yang relevan dan layak ditindaklanjuti."
+  },
+  {
+    "question": "Bolehkah mengganti CTA saat menguji hook?",
+    "answer": "Jika tujuannya mengisolasi pengaruh hook, pertahankan CTA. Mengubah keduanya berarti Anda menguji kombinasi pesan yang lebih luas."
+  },
+  {
+    "question": "Bagaimana jika tes tidak menghasilkan pemenang?",
+    "answer": "Periksa kecukupan data, besarnya perbedaan variasi, dan gangguan pelaksanaan. Catat hasilnya sebagai belum meyakinkan, lalu susun hipotesis berikutnya."
+  }
+];
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      '@id': `${canonical}#article`,
+      headline: title,
+      description,
+      url: canonical,
+      image: [image],
+      inLanguage: 'id-ID',
+      datePublished: '2026-09-12',
+      dateModified: '2026-09-12',
+      author: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      publisher: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      mainEntityOfPage: canonical,
+      articleSection: 'Video Marketing, Copywriting, dan TikTok Ads',
+      about: ['TikTok Ads Manager', 'Creative Assets', 'Split Testing', 'Hook', 'Copywriting', 'Creative Brief', 'Qualified Lead', 'CRM'],
+      keywords: ['cara menguji hook TikTok Ads', 'A/B testing hook video TikTok', 'contoh hook iklan untuk lead generation', 'memilih creative TikTok berdasarkan kualitas lead']
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://nordy-sukmana.vercel.app/#person',
+      name: 'Nordy Sukmana',
+      url: 'https://nordy-sukmana.vercel.app/',
+      jobTitle: 'Performance Marketing Specialist'
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {'@type': 'ListItem', position: 1, name: 'Portfolio', item: 'https://nordy-sukmana.vercel.app/'},
+        {'@type': 'ListItem', position: 2, name: 'Artikel', item: 'https://nordy-sukmana.vercel.app/artikel/'},
+        {'@type': 'ListItem', position: 3, name: 'Pengujian Hook TikTok Ads', item: canonical}
+      ]
+    }
+  ]
+};
+
+const head = `<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${title}</title>
+<meta name="description" content="${description}">
+<meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0C1F4D"><link rel="canonical" href="${canonical}">
+<meta property="og:type" content="article"><meta property="og:locale" content="id_ID"><meta property="og:site_name" content="Portfolio Nordy Sukmana"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Nordy Sukmana, Performance Marketing Specialist">
+<meta property="article:published_time" content="2026-09-12"><meta property="article:modified_time" content="2026-09-12"><meta property="article:section" content="Video Marketing, Copywriting, dan TikTok Ads">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${title}"><meta name="twitter:description" content="${description}"><meta name="twitter:image" content="${image}">
+<script type="application/ld+json">${JSON.stringify(structuredData)}</script>
+<link rel="icon" href="../assets/brand/nordy-mark.svg" type="image/svg+xml"><link rel="icon" href="../favicon.ico" sizes="any"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/case-study.css"><link rel="stylesheet" href="../assets/article.css">`;
+---
+<BaseLayout head={head}>
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+  <CaseStudyHeader />
+  <main id="main-content">
+    <header class="article-hero">
+      <div class="article-shell">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Portfolio</a><span aria-hidden="true">/</span><a href="../artikel/">Artikel</a></nav>
+        <span class="article-kicker">TikTok Ads · Video Marketing · Copywriting</span>
+        <h1>{title}</h1>
+        <p class="article-lede">Uji dua pembukaan video dengan pesan yang terarah, lalu bandingkan perhatian, biaya, dan kualitas lead untuk menentukan creative berikutnya.</p>
+        <div class="article-meta"><span>Nordy Sukmana</span><time datetime="2026-09-12">12 September 2026</time><span>7 menit baca</span></div>
+      </div>
+    </header>
+    <div class="article-shell article-layout">
+      <article class="article-body">
+        <section class="answer-summary" aria-labelledby="answer-summary-title">
+          <span>Jawaban singkat</span>
+<h2 id="answer-summary-title">Bagaimana cara menguji hook TikTok Ads?</h2>
+<p>Untuk menguji hook TikTok Ads, buat dua pembukaan yang berbeda dengan isi, penawaran, dan CTA yang sama. Tentukan metrik utama sebelum pengujian, gunakan split test yang sesuai, lalu evaluasi hasil bisnis bersama metrik perhatian. Views tinggi saja belum cukup untuk memilih creative.</p>
+</section>
+<p>“Videonya ramai, tetapi yang bertanya kebanyakan tidak cocok.”</p>
+<p>Kalimat ini bisa muncul ketika pembukaan iklan berhasil memancing rasa penasaran, tetapi tidak menjelaskan siapa yang seharusnya tertarik. Tim mendapatkan perhatian, sementara sales menerima pertanyaan yang jauh dari kebutuhan bisnis.</p>
+<p>Solusinya tidak selalu membuat video lebih heboh. Kamu bisa mulai dengan menguji cara membuka pesan: apakah lebih efektif menyebut masalah pelanggan, memperlihatkan proses, atau menjelaskan manfaat tertentu?</p>
+<p>Artikel ini membahas pengujian hook untuk campaign lead generation di TikTok. Fokusnya adalah menghasilkan keputusan creative yang jelas, bukan mengumpulkan variasi video tanpa arah.</p>
+<h2>Apa yang sebenarnya diuji dari sebuah hook?</h2>
+<p>Hook adalah bagian pembuka yang memberi alasan kepada penonton untuk melanjutkan menonton.</p>
+<p>Dalam dokumentasi variabel split testing, TikTok menyebut pembukaan 2 sampai 3 detik sebagai salah satu elemen yang dapat diuji melalui Creative Assets. Ketersediaan pilihan perlu dicocokkan dengan konfigurasi campaign di akun. <a href="https://ads.tiktok.com/resources/help/article/split-testing-variables?lang=en" target="_blank" rel="noopener noreferrer">Dokumentasi variabel split testing TikTok</a>.</p>
+<p>Namun, “menguji hook” perlu diterjemahkan menjadi pertanyaan yang spesifik. Misalnya:</p>
+<blockquote>
+<p>Apakah pembukaan yang menyebut masalah operasional menghasilkan lead lebih relevan dibanding pembukaan yang menawarkan inspirasi produk?</p>
+</blockquote>
+<p>Pertanyaan tersebut membantu tim menentukan apa yang diubah dan hasil apa yang dicari. Mengganti pembukaan, talent, penawaran, dan CTA sekaligus akan membuat pembelajaran tentang hook menjadi kabur.</p>
+<h2>Mulai dari kebutuhan pelanggan, bukan daftar kalimat viral</h2>
+<p>Hook yang layak diuji menghubungkan perhatian dengan kebutuhan yang bisa dilayani bisnis.</p>
+<p>Sebagai ilustrasi, bayangkan supplier bahan minuman yang ingin menjangkau pemilik kafe. Dua pembukaan berikut memiliki sudut berbeda:</p>
+<ul>
+<li><strong>Hook A, masalah operasional:</strong> “Rasa minuman berubah ketika barista berganti shift?” </li>
+<li><strong>Hook B, eksplorasi menu:</strong> “Sedang menyiapkan menu minuman baru untuk kafe Anda?”</li>
+</ul>
+<p>Keduanya menyebut konteks yang relevan, tetapi menarik kebutuhan berbeda. Hook A mengarah pada konsistensi proses; Hook B mengarah pada pengembangan menu.</p>
+<p>Setelah pembukaan, gunakan demonstrasi produk, penawaran, dan CTA yang sama. Misalnya, ajakan meminta katalog untuk kebutuhan usaha.</p>
+<p><strong>Rekomendasi praktis:</strong> ambil bahan hook dari pertanyaan sales, percakapan pelanggan, dan keberatan yang berulang. Hapus identitas pelanggan ketika menyusun brief. Jangan mengubah satu komentar menjadi klaim bahwa seluruh pasar memiliki masalah yang sama.</p>
+<h2>Susun isi video yang memenuhi janji pembukaan</h2>
+<p>Hook, isi, dan CTA harus membentuk satu pesan yang masuk akal.</p>
+<p>TikTok merekomendasikan struktur <em>hook, body, close</em>: pembukaan menarik perhatian, bagian tengah menyampaikan pesan merek, dan penutup memberi ajakan bertindak. Panduan produksinya mencakup format vertikal 9:16, resolusi minimal 720p, serta ruang aman dari elemen antarmuka. <a href="https://ads.tiktok.com/business/en-US/creative-codes" target="_blank" rel="noopener noreferrer">TikTok Creative Codes</a>.</p>
+<p>Untuk contoh supplier tadi, bagian tengah dapat menunjukkan langkah penakaran dan penyajian yang memang didukung produk. Penutup mengarahkan penonton ke katalog, bukan langsung meminta pembelian paket besar.</p>
+<p>Jika hook menjanjikan solusi konsistensi rasa, isi perlu menjelaskan proses yang relevan. Hindari menjanjikan hasil mutlak ketika keberhasilannya juga dipengaruhi resep, penyimpanan, dan pelaksanaan.</p>
+<p>Sebelum produksi, minta seseorang membaca naskah tanpa melihat brief. Tanyakan: produk ini untuk siapa, masalah apa yang dibahas, dan apa langkah berikutnya? Jawaban yang berbeda jauh menandakan pesan masih perlu dirapikan.</p>
+<h2>Lima langkah pengujian hook yang bisa diterapkan</h2>
+<h3>1. Tetapkan keputusan yang ingin diambil</h3>
+<p>Tuliskan satu keputusan, misalnya: memilih pembukaan untuk produksi video berikutnya.</p>
+<p>Kemudian tentukan metrik utama yang sesuai tujuan campaign. Untuk memperoleh permintaan katalog, biaya per lead dapat menjadi metrik platform, sementara kualitas lead menjadi pemeriksaan bisnis di CRM.</p>
+<p>Definisikan lead berkualitas sebelum pengujian. Contohnya, kontak valid, memiliki usaha yang sesuai, berada di area layanan, dan menyampaikan kebutuhan pembelian.</p>
+<p>Gunakan definisi yang sama untuk kedua kelompok. Jangan memperlonggar kriteria hanya karena salah satu video menghasilkan lebih banyak formulir.</p>
+<h3>2. Buat dua versi dengan perubahan yang terkendali</h3>
+<p>Pertahankan isi utama, durasi, penawaran, talent, landing page, dan CTA sejauh memungkinkan. Ubah pesan pembuka serta visual yang diperlukan untuk menyampaikan pesan tersebut.</p>
+<p>Beri nama aset yang mudah ditelusuri, seperti <code>hook_masalah_shift</code> dan <code>hook_menu_baru</code>. Hindari nama file yang hanya berupa “final” dan “final_revisi”.</p>
+<p>Jika pembukaan memerlukan visual berbeda, dokumentasikan bahwa pengujian mencakup paket pembukaan, mencakup teks dan visual.</p>
+<h3>3. Gunakan split test yang sesuai</h3>
+<p>TikTok menjelaskan bahwa split testing membagi audiens menjadi dua kelompok setara, dengan setiap kelompok hanya melihat satu ad group. Pendekatan ini membantu membandingkan variasi tanpa kedua kelompok iklan bersaing langsung untuk audiens yang sama. <a href="https://ads.tiktok.com/resources/help/article/split-testing?lang=en" target="_blank" rel="noopener noreferrer">Tentang split testing TikTok</a>.</p>
+<p>Jangan menyamakan dua video dalam satu ad group dengan eksperimen terkontrol. Perbandingan laporan biasa tetap berguna untuk eksplorasi, tetapi catat keterbatasannya.</p>
+<p>Periksa pilihan pengujian dan metrik yang tersedia pada akun sebelum menentukan rancangan final.</p>
+<h3>4. Siapkan budget dan durasi sebelum mulai</h3>
+<p>Panduan TikTok yang diperbarui Januari 2026 merekomendasikan durasi minimal tujuh hari, maksimal 30 hari, serta <em>estimated testing power</em> setidaknya 80%. Platform juga menyarankan agar pengaturan tidak diubah selama pengujian. Ketentuan ini diperiksa pada 12 September 2026. <a href="https://ads.tiktok.com/resources/help/article/split-test-best-practices" target="_blank" rel="noopener noreferrer">Praktik terbaik split test TikTok</a>.</p>
+<p>Angka tersebut merupakan panduan platform, bukan jaminan bahwa setiap tes menghasilkan pemenang.</p>
+<p>Jika budget tidak memadai, kurangi jumlah hipotesis. Jangan menjalankan banyak tes kecil lalu memperlakukan selisih beberapa lead sebagai kesimpulan kuat.</p>
+<h3>5. Baca perhatian dan hasil bisnis secara terpisah</h3>
+<p>Gunakan metrik tontonan untuk memeriksa kemampuan pembukaan menahan perhatian, klik untuk membaca respons terhadap pesan, serta lead berkualitas untuk menilai relevansi hasil.</p>
+<p>Perhatian tinggi dengan lead lemah menjadi alasan memeriksa janji pembukaan dan kecocokan audiens. Lead sedikit tetapi relevan menjadi alasan meninjau kemampuan distribusi dan kelayakan biaya.</p>
+<p>Jangan menganggap satu pola langsung membuktikan penyebabnya. Cocokkan dengan pesan video, formulir, dan catatan tindak lanjut.</p>
+<h2>Contoh: lead lebih murah belum tentu lebih bernilai</h2>
+<p>Angka berikut digunakan sebagai simulasi evaluasi dua versi video:</p>
+<div class="table-wrap" role="region" aria-label="Simulasi biaya dan kualitas lead dari dua hook video" tabindex="0"><table><caption>Simulasi biaya dan kualitas lead dari dua hook video</caption>
+<thead>
+<tr>
+<th scope="col">Metrik</th>
+<th scope="col">Hook A</th>
+<th scope="col">Hook B</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Biaya iklan</td>
+<td>Rp2.000.000</td>
+<td>Rp2.000.000</td>
+</tr>
+<tr>
+<td>Lead masuk</td>
+<td>40</td>
+<td>60</td>
+</tr>
+<tr>
+<td>Lead berkualitas</td>
+<td>20</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Biaya per lead</td>
+<td>Rp50.000</td>
+<td>Rp33.333</td>
+</tr>
+<tr>
+<td>Biaya per lead berkualitas</td>
+<td>Rp100.000</td>
+<td>Rp166.667</td>
+</tr>
+</tbody></table></div>
+<p>Hook B terlihat lebih efisien jika evaluasi berhenti pada formulir. Setelah kualifikasi, Hook A menghasilkan biaya lebih rendah per lead yang sesuai kebutuhan bisnis.</p>
+<p>Namun, tabel ini belum membuktikan signifikansi statistik. Pastikan kedua kelompok menerima proses tindak lanjut yang sebanding dan sudah memiliki waktu cukup untuk dikualifikasi.</p>
+<p>Pemenang menurut metrik lead platform juga belum otomatis menjadi pemenang menurut penjualan. Lanjutkan pemeriksaan sampai proposal atau transaksi jika siklus bisnis memungkinkan. Untuk memahami kredit conversion dari setiap interaksi, baca <a href="../cara-membaca-tiktok-attribution-portfolio/">panduan TikTok Attribution Portfolio</a>.</p>
+<h2>Ubah hasil tes menjadi brief berikutnya</h2>
+<p>Hasil pengujian yang berguna menjelaskan apa yang dipelajari, bukan hanya video mana yang dilanjutkan.</p>
+<p>Simpan catatan singkat:</p>
+<ul>
+<li>Hipotesis dan elemen yang diubah. </li>
+<li>Periode, budget, serta metrik utama. </li>
+<li>Hasil platform dan kualitas lead. </li>
+<li>Gangguan selama pengujian. </li>
+<li>Keputusan berikutnya beserta keterbatasan bukti.</li>
+</ul>
+<p>Jika belum ada perbedaan yang meyakinkan, tulis “belum cukup bukti”. Hindari memaksakan pemenang.</p>
+<p>Prinsip menghubungkan A/B testing dengan keputusan creative juga dibahas dalam <a href="../case-study/meta-ads-unlabel/">case study Meta Ads Awareness UNLABEL</a>. Objective campaign tersebut berbeda, sehingga ukuran keberhasilannya tidak perlu disamakan.</p>
+
+<h2>Pertanyaan yang sering diajukan</h2>
+        {faqItems.map(item => <section class="faq-item"><h3>{item.question}</h3><p>{item.answer}</p></section>)}
+        <h2>Kesimpulan</h2>
+<p>Pengujian hook menghubungkan keputusan copywriting dengan tujuan bisnis. Mulai dari kebutuhan pelanggan, buat dua pembukaan yang jelas berbeda, pertahankan elemen lain, lalu nilai perhatian bersama kualitas hasil.</p>
+
+<div class="related-article"><span>Case study terkait</span><a href="../case-study/meta-ads-unlabel/">Pelajari A/B testing creative dalam case study Meta Ads Awareness UNLABEL →</a></div>
+      </article>
+      <aside class="article-sidebar" aria-label="Informasi artikel">
+        <section class="side-card"><h2>Tentang penulis</h2><p><strong>Nordy Sukmana</strong> adalah Performance Marketing Specialist dengan pengalaman mengelola Meta Ads, Google Ads, tracking, analytics, dan marketing automation.</p><a class="back-link" href="../#about">Lihat profil</a></section>
+        <section class="side-card"><h2>Topik artikel</h2><ul><li>Hook Video</li><li>Copywriting</li><li>Split Testing</li><li>Kualitas Lead</li></ul></section>
+        <section class="side-card"><h2>Sumber utama</h2><p>Dokumentasi TikTok, ditinjau pada 12 September 2026.</p><a class="back-link" href="https://ads.tiktok.com/resources/help/article/split-testing-variables?lang=en" target="_blank" rel="noopener noreferrer">Variabel split testing ↗</a><a class="back-link" href="https://ads.tiktok.com/business/en-US/creative-codes" target="_blank" rel="noopener noreferrer">TikTok Creative Codes ↗</a><a class="back-link" href="https://ads.tiktok.com/resources/help/article/split-test-best-practices" target="_blank" rel="noopener noreferrer">Praktik terbaik split test ↗</a></section>
+        <section class="side-card"><h2>Artikel sebelumnya</h2><p>Periksa referral dari payment gateway dan validasi transaksi sebelum memakai laporan GA4 untuk evaluasi budget.</p><a class="back-link" href="../referral-payment-gateway-ga4/">Baca audit referral payment gateway</a></section>
+      </aside>
+    </div>
+  </main>
+  <footer class="article-footer"><div class="article-shell"><span>© 2026 Nordy Sukmana</span><a href="../artikel/">Lihat semua artikel</a></div></footer>
+  <script is:inline src="/assets/analytics-loader.js"></script>
+</BaseLayout>

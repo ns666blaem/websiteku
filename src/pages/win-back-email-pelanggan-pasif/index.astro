@@ -1,0 +1,270 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyHeader from '../../components/CaseStudyHeader.astro';
+
+const canonical = 'https://nordy-sukmana.vercel.app/win-back-email-pelanggan-pasif/';
+const image = 'https://nordy-sukmana.vercel.app/assets/brand/open-graph.png';
+const title = "Win Back Email, Aktifkan Pelanggan Pasif dan Jaga Deliverability";
+const description = "Pelajari cara membuat win back email, menentukan pelanggan pasif, menjaga deliverability, dan mengukur pembelian ulang dengan data CRM.";
+const faqItems = [
+  {
+    "question": "Berapa lama sampai pelanggan dianggap tidak aktif?",
+    "answer": "Tidak ada batas universal. Gunakan siklus pembelian, frekuensi email, jenis produk, dan perilaku historis untuk menetapkan periodenya."
+  },
+  {
+    "question": "Apakah pelanggan pasif harus langsung diberi diskon?",
+    "answer": "Tidak. Mulailah dari relevansi pesan. Diskon layak digunakan jika sesuai alasan pelanggan berhenti dan masih masuk dalam batas margin bisnis."
+  },
+  {
+    "question": "Apakah open rate masih berguna?",
+    "answer": "Open rate dapat menjadi sinyal diagnostik, tetapi jangan menggunakannya sendirian. Utamakan klik, pembelian ulang, revenue, serta data CRM."
+  },
+  {
+    "question": "Berapa banyak win back email yang perlu dikirim?",
+    "answer": "Gunakan rangkaian pendek dengan tujuan yang jelas. Jumlah dan jaraknya perlu diuji berdasarkan siklus bisnis, respons penerima, serta risiko keluhan."
+  },
+  {
+    "question": "Apakah kontak pasif harus dihapus?",
+    "answer": "Tidak selalu. Anda dapat menghentikan pengiriman marketing melalui suppression atau archiving sambil mempertahankan data yang masih diperlukan sesuai kebijakan bisnis."
+  }
+];
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      '@id': `${canonical}#article`,
+      headline: title,
+      description,
+      url: canonical,
+      image: [image],
+      inLanguage: 'id-ID',
+      datePublished: '2026-09-13',
+      dateModified: '2026-09-13',
+      author: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      publisher: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      mainEntityOfPage: canonical,
+      articleSection: 'Email Marketing, CRM, dan Retention',
+      about: ['Email Marketing', 'Win Back Campaign', 'CRM', 'Inactive Subscriber', 'Repeat Purchase', 'Deliverability', 'Gmail Postmaster Tools', 'Domain Reputation', 'Unsubscribe'],
+      keywords: ['win-back email', 'cara membuat win-back email', 'segmentasi pelanggan tidak aktif', 'mengukur campaign re-engagement', 'menjaga deliverability email marketing']
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://nordy-sukmana.vercel.app/#person',
+      name: 'Nordy Sukmana',
+      url: 'https://nordy-sukmana.vercel.app/',
+      jobTitle: 'Performance Marketing Specialist'
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {'@type': 'ListItem', position: 1, name: 'Portfolio', item: 'https://nordy-sukmana.vercel.app/'},
+        {'@type': 'ListItem', position: 2, name: 'Artikel', item: 'https://nordy-sukmana.vercel.app/artikel/'},
+        {'@type': 'ListItem', position: 3, name: 'Win Back Email untuk Pelanggan Pasif', item: canonical}
+      ]
+    }
+  ]
+};
+
+const head = `<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${title}</title>
+<meta name="description" content="${description}">
+<meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0C1F4D"><link rel="canonical" href="${canonical}">
+<meta property="og:type" content="article"><meta property="og:locale" content="id_ID"><meta property="og:site_name" content="Portfolio Nordy Sukmana"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Nordy Sukmana, Performance Marketing Specialist">
+<meta property="article:published_time" content="2026-09-13"><meta property="article:modified_time" content="2026-09-13"><meta property="article:section" content="Email Marketing, CRM, dan Retention">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${title}"><meta name="twitter:description" content="${description}"><meta name="twitter:image" content="${image}">
+<script type="application/ld+json">${JSON.stringify(structuredData)}</script>
+<link rel="icon" href="../assets/brand/nordy-mark.svg" type="image/svg+xml"><link rel="icon" href="../favicon.ico" sizes="any"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/case-study.css"><link rel="stylesheet" href="../assets/article.css">`;
+---
+<BaseLayout head={head}>
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+  <CaseStudyHeader />
+  <main id="main-content">
+    <header class="article-hero">
+      <div class="article-shell">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Portfolio</a><span aria-hidden="true">/</span><a href="../artikel/">Artikel</a></nav>
+        <span class="article-kicker">Email Marketing · CRM · Retention</span>
+        <h1>{title}</h1>
+        <p class="article-lede">Kenali pelanggan yang masih relevan, susun pesan reaktivasi, dan ukur pembelian ulang sambil menjaga reputasi pengiriman email.</p>
+        <div class="article-meta"><span>Nordy Sukmana</span><time datetime="2026-09-13">13 September 2026</time><span>9 menit baca</span></div>
+      </div>
+    </header>
+    <div class="article-shell article-layout">
+      <article class="article-body">
+        <section class="answer-summary" aria-labelledby="answer-summary-title">
+          <span>Jawaban singkat</span>
+<h2 id="answer-summary-title">Bagaimana mengaktifkan kembali pelanggan pasif melalui email?</h2>
+<p>Win back email adalah campaign untuk mengajak pelanggan atau subscriber yang tidak lagi aktif agar kembali berinteraksi atau membeli. Mulailah dengan segmentasi berdasarkan siklus pembelian, kirim pesan yang relevan, sediakan unsubscribe yang mudah, lalu ukur klik, pembelian ulang, margin, dan keluhan spam. Kontak yang tetap pasif perlu dikeluarkan dari pengiriman rutin.</p>
+</section>
+<p>Database email yang terus membesar terlihat seperti aset. Namun, jumlah kontak tidak selalu mencerminkan jumlah orang yang masih ingin menerima pesan.</p>
+<p>Di dalam daftar tersebut mungkin ada pelanggan yang terakhir membeli setahun lalu, subscriber yang tidak pernah mengeklik email, atau alamat lama yang sudah jarang digunakan. Jika semuanya terus menerima promosi yang sama, biaya pengiriman bertambah dan risiko keluhan spam ikut meningkat.</p>
+<p>Win back campaign memberi kesempatan kepada kontak yang masih relevan untuk kembali. Pada saat yang sama, campaign ini membantu bisnis menentukan siapa yang sebaiknya tetap menerima komunikasi dan siapa yang perlu dikeluarkan dari pengiriman rutin.</p>
+<h2>Apa itu win back email?</h2>
+<p><strong>Win back email adalah pesan atau rangkaian pesan yang ditujukan kepada pelanggan maupun subscriber yang tidak lagi menunjukkan aktivitas dalam periode tertentu.</strong></p>
+<p>Aktivitas tersebut dapat berupa pembelian, klik email, kunjungan ke halaman penting, penggunaan layanan, atau respons lain yang tersedia di CRM.</p>
+<p>Mailchimp menyarankan agar kontak pasif diidentifikasi melalui segmentasi, lalu diberi campaign reaktivasi sebelum dipertimbangkan untuk diarsipkan. Platform tersebut juga menegaskan bahwa definisi “tidak aktif” bergantung pada frekuensi pengiriman dan siklus produk. <a href="https://mailchimp.com/help/identify-inactive-subscribers/" target="_blank" rel="noopener noreferrer">Panduan mengidentifikasi subscriber pasif</a>.</p>
+<p>Artinya, batas 90 hari tidak otomatis cocok untuk semua bisnis. Kedai dengan pembelian mingguan dan perusahaan yang menjual peralatan berumur panjang membutuhkan definisi berbeda.</p>
+<h2>Bagaimana menentukan pelanggan yang sudah pasif?</h2>
+<p><strong>Gunakan perilaku pelanggan dan siklus pembelian, bukan open rate saja.</strong></p>
+<p>Open rate memiliki keterbatasan. Google menyatakan bahwa Gmail tidak melacak open rate dan tidak dapat memverifikasi akurasi angka yang dilaporkan pihak ketiga. Apple Mail Privacy Protection juga dapat mencegah pengirim mengetahui apakah penerima membuka email. <a href="https://support.google.com/mail/answer/81126?hl=en" target="_blank" rel="noopener noreferrer">Pedoman pengirim Gmail</a>, <a href="https://support.apple.com/guide/iphone/use-mail-privacy-protection-iphf084865c7/ios" target="_blank" rel="noopener noreferrer">penjelasan Mail Privacy Protection</a>.</p>
+<p>Karena itu, kombinasikan beberapa sinyal:</p>
+<div class="table-wrap" role="region" aria-label="Sinyal untuk menentukan pelanggan pasif" tabindex="0"><table><caption>Sinyal untuk menentukan pelanggan pasif</caption>
+<thead>
+<tr>
+<th scope="col">Sinyal</th>
+<th scope="col">Pertanyaan yang dijawab</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Tanggal pembelian terakhir</td>
+<td>Kapan pelanggan terakhir menghasilkan transaksi?</td>
+</tr>
+<tr>
+<td>Jarak pembelian normal</td>
+<td>Apakah pelanggan sudah melewati siklus belanja biasanya?</td>
+</tr>
+<tr>
+<td>Klik email</td>
+<td>Apakah penerima masih merespons isi pesan?</td>
+</tr>
+<tr>
+<td>Aktivitas website atau aplikasi</td>
+<td>Apakah pelanggan masih berinteraksi melalui channel lain?</td>
+</tr>
+<tr>
+<td>Status izin dan unsubscribe</td>
+<td>Apakah kontak masih boleh dan bersedia menerima marketing?</td>
+</tr>
+<tr>
+<td>Nilai serta kategori pembelian</td>
+<td>Pesan apa yang mungkin masih relevan?</td>
+</tr>
+</tbody></table></div>
+<p>Sebagai rekomendasi awal, pisahkan setidaknya tiga kelompok:</p>
+<ul>
+<li>Pelanggan yang berhenti membeli, tetapi masih mengeklik email. </li>
+<li>Pelanggan yang tidak membeli dan tidak mengeklik. </li>
+<li>Kontak lama tanpa histori pembelian yang jelas.</li>
+</ul>
+<p>Kelompok pertama dapat menerima rekomendasi produk atau pengingat penggunaan. Kelompok kedua membutuhkan pesan konfirmasi minat yang lebih langsung. Kelompok ketiga perlu diperiksa sumber serta status izinnya sebelum dipakai.</p>
+<h2>Enam langkah membuat win back campaign yang terukur</h2>
+<h3>1. Tetapkan definisi pasif di CRM</h3>
+<p>Mulailah dengan median atau pola jarak pembelian yang tersedia dalam data bisnis. Jika pelanggan biasanya kembali dalam 30 sampai 45 hari, status pasif dapat dimulai setelah periode yang lebih panjang dari kebiasaan tersebut.</p>
+<p>Jangan mencampur pelanggan musiman dengan pelanggan yang berhenti berinteraksi. Pembeli hampers tahunan, misalnya, tidak adil jika dinilai menggunakan pola pelanggan kebutuhan harian.</p>
+<p>Simpan aturan segmentasi di CRM agar tim dapat mengetahui mengapa seseorang masuk ke win back campaign. Hubungkan segmentasi dengan <a href="../strategi-digital-marketing-2026/">strategi digital marketing</a> agar komunikasi retention konsisten dengan tujuan bisnis.</p>
+<h3>2. Bersihkan kontak yang tidak layak dikirimi</h3>
+<p>Keluarkan alamat yang sudah unsubscribe, mengalami hard bounce, tidak memiliki izin yang sesuai, atau berasal dari sumber yang tidak bisa dijelaskan.</p>
+<p>Mailchimp membedakan kontak pasif dengan alamat <em>stale</em>. Kontak pasif masih memiliki alamat valid, sedangkan alamat stale dapat berasal dari daftar lama yang sudah lama tidak digunakan. Keduanya membutuhkan perlakuan berbeda. <a href="https://mailchimp.com/help/about-inactive-and-stale-addresses/" target="_blank" rel="noopener noreferrer">Penjelasan alamat inactive dan stale</a>.</p>
+<p>Jangan mengunggah kembali kontak yang sebelumnya telah memilih unsubscribe.</p>
+<h3>3. Pilih alasan yang layak untuk kembali</h3>
+<p>Win back tidak harus selalu memakai diskon. Pilihan pesan dapat disesuaikan dengan penyebab pelanggan berhenti:</p>
+<ul>
+<li>Pengingat manfaat yang mungkin terlupakan. </li>
+<li>Informasi produk atau layanan yang berubah. </li>
+<li>Rekomendasi berdasarkan pembelian sebelumnya. </li>
+<li>Panduan untuk mendapatkan hasil lebih baik dari produk. </li>
+<li>Pilihan memperbarui preferensi komunikasi. </li>
+<li>Penawaran terbatas jika margin dan aturan bisnis mendukungnya.</li>
+</ul>
+<p>Hindari subject line manipulatif seperti pemberitahuan transaksi palsu atau urgensi yang tidak nyata. Tujuan campaign adalah membangun kembali relevansi, bukan sekadar mendapatkan satu kali open.</p>
+<h3>4. Buat rangkaian dengan akhir yang jelas</h3>
+<p>Satu alur sederhana dapat terdiri dari tiga tahap:</p>
+<ol>
+<li>Mengingatkan manfaat atau konteks hubungan sebelumnya. </li>
+<li>Menawarkan alasan baru untuk kembali. </li>
+<li>Meminta penerima memperbarui preferensi atau berhenti menerima pesan.</li>
+</ol>
+<p>Beri jarak yang masuk akal antar email. Periksa juga automation lain agar kontak tidak menerima newsletter, promo reguler, dan win back pada hari yang sama.</p>
+<p>Pada email terakhir, jelaskan bahwa frekuensi pesan akan dikurangi atau pengiriman marketing dihentikan jika tidak ada respons. Jangan membuat ancaman palsu jika automation tidak menjalankan tindakan tersebut.</p>
+<h3>5. Pastikan unsubscribe dan reputasi pengiriman terjaga</h3>
+<p>Persyaratan teknis tetap berlaku meskipun isi campaign terasa personal.</p>
+<p>Per 13 September 2026, Google meminta pengirim menjaga spam rate di Postmaster Tools di bawah 0,10% dan menghindari angka 0,30% atau lebih. Yahoo juga menetapkan batas spam rate di bawah 0,30% serta meminta unsubscribe yang mudah untuk pesan marketing. <a href="https://support.google.com/mail/answer/81126?hl=en" target="_blank" rel="noopener noreferrer">Pedoman Gmail</a>, <a href="https://senders.yahooinc.com/" target="_blank" rel="noopener noreferrer">Yahoo Sender Best Practices</a>.</p>
+<p>Gmail Postmaster Tools dapat menampilkan compliance, spam rate, reputasi domain dan IP, authentication, serta delivery errors untuk traffic ke akun Gmail personal. Data dashboard tidak selalu tersedia bagi volume pengiriman yang rendah. <a href="https://support.google.com/mail/answer/14668346?hl=en" target="_blank" rel="noopener noreferrer">Dokumentasi Postmaster Tools</a>.</p>
+<p>Gunakan SPF, DKIM, DMARC, TLS, dan unsubscribe sekali klik sesuai persyaratan yang berlaku bagi skala pengiriman Anda. Libatkan pengelola domain atau penyedia email jika konfigurasi teknis belum jelas.</p>
+<h3>6. Ukur dampak sampai ke pembelian ulang</h3>
+<p>Metrik utama win back sebaiknya mengikuti hasil bisnis, bukan hanya jumlah email yang dibuka.</p>
+<p>Pantau:</p>
+<ul>
+<li>Rasio klik. </li>
+<li>Reactivation rate. </li>
+<li>Repeat purchase rate. </li>
+<li>Revenue dan margin dari pelanggan yang kembali. </li>
+<li>Unsubscribe dan spam complaint. </li>
+<li>Bounce serta delivery error. </li>
+<li>Jumlah kontak yang akhirnya disupresi.</li>
+</ul>
+<p>Jika volume memadai, sisihkan holdout group yang tidak menerima win back selama periode evaluasi. Kelompok ini membantu membedakan pembelian yang dipengaruhi campaign dari pelanggan yang mungkin kembali dengan sendirinya.</p>
+<h2>Contoh membaca hasil win back secara cermat</h2>
+<p>Untuk memudahkan pembahasan, gunakan skenario berikut:</p>
+<div class="table-wrap" role="region" aria-label="Simulasi hasil win back dibandingkan holdout" tabindex="0"><table><caption>Simulasi hasil win back dibandingkan holdout</caption>
+<thead>
+<tr>
+<th scope="col">Metrik</th>
+<th scope="col">Win back</th>
+<th scope="col">Holdout</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Jumlah pelanggan</td>
+<td>2.000</td>
+<td>2.000</td>
+</tr>
+<tr>
+<td>Pelanggan kembali membeli</td>
+<td>70</td>
+<td>44</td>
+</tr>
+<tr>
+<td>Repeat purchase rate</td>
+<td>3,5%</td>
+<td>2,2%</td>
+</tr>
+<tr>
+<td>Nilai transaksi</td>
+<td>Rp21.000.000</td>
+<td>Rp13.200.000</td>
+</tr>
+</tbody></table></div>
+<p>Selisih repeat purchase rate adalah 1,3 poin persentase. Dengan ukuran kelompok yang sama, terlihat selisih 26 pembeli antara kelompok win back dan holdout. Selisih ini perlu dinilai bersama ketidakpastian statistik dan proses pembagian kelompok.</p>
+<p>Namun, keputusan belum selesai. Kurangi diskon, biaya email, biaya pemenuhan, serta refund untuk menilai nilai tambah yang bertahan. Pastikan pula pembagian kelompok dilakukan sebelum campaign dan alokasi dilakukan secara acak jika memungkinkan, serta kedua kelompok memiliki karakteristik yang sebanding.</p>
+<p>Contoh ini merupakan simulasi perhitungan, bukan bukti bahwa setiap win back campaign akan menghasilkan peningkatan serupa.</p>
+<h2>Kapan kontak perlu dikeluarkan dari pengiriman rutin?</h2>
+<p><strong>Kontak layak disupresi ketika tetap tidak merespons setelah upaya reaktivasi yang wajar atau tidak lagi memenuhi dasar pengiriman.</strong></p>
+<p>Google secara resmi menyarankan pengirim mempertimbangkan unsubscribe terhadap penerima yang tidak membuka atau membaca pesan. Google juga menganjurkan pengiriman hanya kepada orang yang memang menginginkan email tersebut serta menyediakan proses unsubscribe yang mudah. <a href="https://support.google.com/mail/answer/14668346?hl=en" target="_blank" rel="noopener noreferrer">Postmaster Tools, troubleshooting spam rate</a>.</p>
+<p>Supresi tidak selalu berarti menghapus seluruh histori pelanggan. Bisnis dapat menyimpan data yang memang masih diperlukan sesuai kebijakan internal, sambil menghentikan penggunaan alamat tersebut untuk campaign marketing rutin.</p>
+<p>Dokumentasikan alasan dan tanggal perubahan status agar automation tidak memasukkan kontak kembali secara tidak sengaja.</p>
+<h2>Checklist sebelum mengaktifkan win back automation</h2>
+<ol class="checklist">
+<li>Definisi pelanggan pasif mengikuti siklus bisnis. </li>
+<li>Kontak baru dan pelanggan musiman tidak salah masuk. </li>
+<li>Status persetujuan berlangganan, unsubscribe, bounce, dan sumber kontak telah diperiksa. </li>
+<li>Segmentasi menggunakan pembelian serta klik, bukan open saja. </li>
+<li>Pesan sesuai dengan histori atau kebutuhan pelanggan. </li>
+<li>Frekuensi tidak bertabrakan dengan automation lain. </li>
+<li>Unsubscribe mudah ditemukan dan berfungsi. </li>
+<li>SPF, DKIM, DMARC, serta domain pengirim telah diperiksa. </li>
+<li>UTM dan event pembelian tersimpan secara konsisten. </li>
+<li>Revenue, margin, refund, serta complaint masuk ke evaluasi. </li>
+<li>Aturan supresi setelah rangkaian selesai sudah dibuat.</li>
+</ol>
+
+<h2>Pertanyaan yang sering diajukan</h2>
+        {faqItems.map(item => <section class="faq-item"><h3>{item.question}</h3><p>{item.answer}</p></section>)}
+        <h2>Kesimpulan</h2>
+<p>Win back email bukan sekadar cara mengirim kupon kepada daftar lama. Campaign ini membantu bisnis membedakan pelanggan yang masih relevan, pelanggan yang perlu diberi pilihan, dan kontak yang sebaiknya tidak lagi menerima promosi.</p>
+<p>Mulailah dari segmentasi CRM, susun pesan berdasarkan kebutuhan pelanggan, lindungi reputasi pengiriman, lalu ukur hasil sampai pembelian ulang dan margin.</p>
+<p>Untuk melihat bagaimana waktu pengiriman dapat diuji setelah segmentasi sudah sehat, baca <a href="../personalized-send-time-klaviyo-control-group/">panduan Personalized Send Time Klaviyo</a>. Pendekatan digital marketing lintas channel juga tersedia dalam <a href="../">portfolio Nordy Sukmana</a>.</p>
+
+<div class="related-article"><span>Artikel terkait</span><a href="../personalized-send-time-klaviyo-control-group/">Pelajari pengujian waktu kirim email dan control group di Klaviyo →</a></div>
+      </article>
+      <aside class="article-sidebar" aria-label="Informasi artikel">
+        <section class="side-card"><h2>Tentang penulis</h2><p><strong>Nordy Sukmana</strong> adalah Performance Marketing Specialist dengan pengalaman mengelola Meta Ads, Google Ads, tracking, analytics, dan marketing automation.</p><a class="back-link" href="../#about">Lihat profil</a></section>
+        <section class="side-card"><h2>Topik artikel</h2><ul><li>Win Back Email</li><li>Segmentasi CRM</li><li>Deliverability</li><li>Retention</li></ul></section>
+        <section class="side-card"><h2>Sumber utama</h2><p>Dokumentasi Mailchimp, Google, Apple, dan Yahoo, diperiksa pada 13 September 2026.</p><a class="back-link" href="https://mailchimp.com/help/identify-inactive-subscribers/" target="_blank" rel="noopener noreferrer">Segmentasi subscriber pasif ↗</a><a class="back-link" href="https://support.google.com/mail/answer/81126?hl=en" target="_blank" rel="noopener noreferrer">Pedoman pengirim Gmail ↗</a><a class="back-link" href="https://senders.yahooinc.com/" target="_blank" rel="noopener noreferrer">Pedoman pengirim Yahoo ↗</a></section>
+        <section class="side-card"><h2>Bacaan terkait</h2><p>Setelah segmentasi sehat, pelajari cara menguji waktu pengiriman email menggunakan kelompok pembanding.</p><a class="back-link" href="../personalized-send-time-klaviyo-control-group/">Baca Personalized Send Time Klaviyo</a></section>
+      </aside>
+    </div>
+  </main>
+  <footer class="article-footer"><div class="article-shell"><span>© 2026 Nordy Sukmana</span><a href="../artikel/">Lihat semua artikel</a></div></footer>
+  <script is:inline src="/assets/analytics-loader.js"></script>
+</BaseLayout>

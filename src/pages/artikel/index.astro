@@ -1,0 +1,474 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyHeader from '../../components/CaseStudyHeader.astro';
+
+const canonical = 'https://nordy-sukmana.vercel.app/artikel/';
+const articles = [
+{
+  "href": "/roas-meta-ads-incrementality-conversion-lift/",
+  "category": "paid-social",
+  "categoryLabel": "Paid Social",
+  "topics": [
+    "Meta Ads",
+    "Incrementality",
+    "Conversion Lift",
+    "Holdout Test",
+    "iROAS",
+    "Marketing Measurement",
+    "Performance Marketing"
+  ],
+  "date": "18 Oktober 2026",
+  "isoDate": "2026-10-18",
+  "readTime": "9–11 menit baca",
+  "title": "ROAS Meta Ads Tinggi Belum Tentu Menguntungkan: Memahami Incrementality dan Conversion Lift",
+  "description": "ROAS Meta Ads tinggi belum tentu berarti seluruh penjualan berasal dari iklan. Pelajari incrementality, Conversion Lift, holdout test, dan iROAS."
+},
+{
+  "href": "/llms-txt-geo-ai-search-2026/",
+  "category": "seo-ai",
+  "categoryLabel": "SEO dan AI",
+  "topics": [
+    "SEO",
+    "GEO",
+    "AI Search",
+    "llms.txt",
+    "Technical SEO",
+    "AI Overviews",
+    "AI Mode",
+    "Search Console"
+  ],
+  "date": "18 Oktober 2026",
+  "isoDate": "2026-10-18",
+  "readTime": "9–11 menit baca",
+  "title": "llms.txt untuk GEO: Apakah Website Harus Memilikinya agar Muncul di AI Search?",
+  "description": "Apakah llms.txt wajib untuk AI Search? Pelajari fungsi llms.txt, perbedaannya dengan robots.txt, dan panduan resmi Google untuk GEO pada 2026."
+},
+{
+  "href": "/leads-meta-ads-closing-rendah-crm-automation/",
+  "category": "email-automation",
+  "categoryLabel": "Email dan Automation",
+  "topics": [
+    "Meta Ads",
+    "Lead Generation",
+    "CRM Automation",
+    "Lead Response Time",
+    "Make",
+    "Zapier",
+    "Sales Funnel",
+    "Marketing Automation"
+  ],
+  "date": "18 Oktober 2026",
+  "isoDate": "2026-10-18",
+  "readTime": "9–11 menit baca",
+  "title": "Leads Meta Ads Banyak tetapi Closing Rendah? Audit Response Time dan Bangun Automation CRM",
+  "description": "Leads Meta Ads banyak tetapi closing rendah? Pelajari cara audit response time, follow-up sales, CRM automation, dan kualitas leads."
+},
+{
+  "href": "/google-ads-eligible-tidak-ada-impression/",
+  "category": "google-ads",
+  "categoryLabel": "Google Ads",
+  "topics": [
+    "Google Ads",
+    "Search Campaign",
+    "Eligible Status",
+    "Zero Impressions",
+    "Ad Rank",
+    "Bidding Strategy",
+    "Campaign Troubleshooting"
+  ],
+  "date": "17 Oktober 2026",
+  "isoDate": "2026-10-17",
+  "readTime": "10–12 menit baca",
+  "title": "Google Ads Eligible tetapi Tidak Mendapat Impresi: Cara Audit Campaign yang Tidak Berjalan",
+  "description": "Google Ads sudah Eligible tetapi impressions dan spend masih 0? Pelajari cara audit status campaign, keyword, bidding, budget, dan Ad Preview."
+},
+{
+  "href": "/conversion-meta-ads-ga4-berbeda/",
+  "category": "analytics",
+  "categoryLabel": "Analytics dan Tracking",
+  "topics": [
+    "Meta Ads",
+    "Google Analytics 4",
+    "Attribution",
+    "Conversion Tracking",
+    "Meta Pixel",
+    "Conversions API",
+    "ROAS",
+    "Marketing Analytics"
+  ],
+  "date": "17 Oktober 2026",
+  "isoDate": "2026-10-17",
+  "readTime": "10–12 menit baca",
+  "title": "Conversion Meta Ads dan GA4 Berbeda: Cara Audit Attribution Tanpa Salah Membaca ROAS",
+  "description": "Mengapa conversion Meta Ads dan GA4 berbeda? Pelajari attribution window, perubahan Meta 2026, UTM, Pixel, CAPI, dan audit ROAS."
+},
+{
+  "href": "/creative-fatigue-meta-ads-cara-audit/",
+  "category": "paid-social",
+  "categoryLabel": "Paid Social",
+  "topics": [
+    "Meta Ads",
+    "Creative Fatigue",
+    "Creative Strategy"
+  ],
+  "date": "17 Oktober 2026",
+  "isoDate": "2026-10-17",
+  "readTime": "9–11 menit baca",
+  "title": "Creative Fatigue Meta Ads: Kapan Harus Mengganti Iklan yang Mulai Kehilangan Performa?",
+  "description": "Pelajari tanda creative fatigue Meta Ads, cara membaca frequency, CTR, CPM, dan CPA, serta strategi mengganti creative tanpa merusak performa."
+},
+  {
+    href: '/negative-keyword-google-ads/',
+    category: 'google-ads',
+    categoryLabel: 'Google Ads',
+    topics: ['Negative Keywords', 'Search Terms Report', 'Search Intent'],
+    date: '18 September 2026',
+    isoDate: '2026-09-18',
+    readTime: '11 sampai 13 menit baca',
+    title: 'Negative Keyword Google Ads: Cara Mengurangi Klik Tidak Relevan Tanpa Mematikan Volume',
+    description: 'Pelajari cara menggunakan negative keyword untuk mengurangi klik tidak relevan tanpa menghambat volume campaign.'
+  },
+  {
+    href: '/meta-ads-experiments-uji-creative-audiens/',
+    category: 'paid-social',
+    categoryLabel: 'Paid Social',
+    topics: ['Meta Ads', 'Creative Testing', 'A/B Testing'],
+    date: '22 September 2026',
+    isoDate: '2026-09-22',
+    readTime: '10 menit baca',
+    title: 'Meta Ads Experiments, Uji Creative dan Audiens sebelum Menambah Budget',
+    description: 'Pelajari cara memakai Meta Ads Experiments untuk menguji creative dan audiens secara terkontrol sebelum menaikkan budget campaign.'
+  },
+  {
+    href: '/instagram-trial-reels-uji-konten/',
+    category: 'digital-marketing',
+    categoryLabel: 'Digital Marketing',
+    topics: ['Instagram', 'Social Media Organik', 'Creative Strategy'],
+    date: '17 September 2026',
+    isoDate: '2026-09-17',
+    readTime: '10 menit baca',
+    title: 'Instagram Trial Reels, Uji Ide sebelum Menambah Budget Konten',
+    description: 'Uji konsep Reels kepada audiens baru sebelum menambah budget produksi dan pengujian iklan.'
+  },
+  {
+    href: '/perubahan-views-youtube-2026/',
+    category: 'analytics',
+    categoryLabel: 'Analytics dan Tracking',
+    topics: ['YouTube Analytics', 'Video Marketing', 'Engaged Views'],
+    date: '16 September 2026',
+    isoDate: '2026-09-16',
+    readTime: '9 menit baca',
+    title: 'Views YouTube Berubah pada Agustus 2026, Cara Audit Performa',
+    description: 'Baca views bersama engaged views, retensi, dan hasil bisnis setelah pembaruan YouTube.'
+  },
+  {
+    href: '/perbedaan-serp-tiap-negara-audit-seo/',
+    category: 'seo-ai',
+    categoryLabel: 'SEO dan AI',
+    topics: ['SERP Regional', 'SEO', 'GEO dan AIO'],
+    date: '15 September 2026',
+    isoDate: '2026-09-15',
+    readTime: '10 menit baca',
+    title: 'SERP Berbeda Tiap Negara, Jangan Asal Meniru Strategi SEO Luar',
+    description: 'Audit fitur regional, intent, dan data negara sebelum menerapkan strategi SEO luar negeri.'
+  },
+  {
+    href: '/meta-partnership-ads-uji-creator/',
+    category: 'paid-social',
+    categoryLabel: 'Paid Social',
+    topics: ['Meta Ads', 'Influencer Marketing', 'Creator Economy'],
+    date: '14 September 2026',
+    isoDate: '2026-09-14',
+    readTime: '10 menit baca',
+    title: 'Meta Partnership Ads, Ukur Creator sebelum Scale Budget',
+    description: 'Uji kecocokan creator, izin iklan, dan biaya akuisisi termasuk fee sebelum menaikkan budget.'
+  },
+  {
+    href: '/win-back-email-pelanggan-pasif/',
+    category: 'email-automation',
+    categoryLabel: 'Email dan Automation',
+    topics: ['Email Marketing', 'CRM', 'Retention'],
+    date: '13 September 2026',
+    isoDate: '2026-09-13',
+    readTime: '9 menit baca',
+    title: 'Win Back Email, Aktifkan Pelanggan Pasif dan Jaga Deliverability',
+    description: 'Aktifkan kembali pelanggan pasif melalui segmentasi CRM, pesan yang relevan, dan evaluasi pembelian ulang.'
+  },
+  {
+    href: '/cara-menguji-hook-tiktok-ads/',
+    category: 'paid-social',
+    categoryLabel: 'Paid Social',
+    topics: ['TikTok Ads', 'Copywriting', 'Creative Testing'],
+    date: '12 September 2026',
+    isoDate: '2026-09-12',
+    readTime: '7 menit baca',
+    title: 'Cara Menguji Hook TikTok Ads agar Tidak Sekadar Ramai',
+    description: 'Uji pembukaan video dan pilih creative berdasarkan perhatian, biaya, serta kualitas lead.'
+  },
+  {
+    href: '/conversion-delay-google-ads-evaluasi-roas/',
+    category: 'google-ads',
+    categoryLabel: 'Google Ads',
+    topics: ['Conversion Delay', 'Evaluasi ROAS', 'Marketing Analytics'],
+    date: '11 September 2026',
+    isoDate: '2026-09-11',
+    readTime: '8 menit baca',
+    title: 'Conversion Delay Google Ads, Jangan Terburu Menilai ROAS',
+    description: 'Pahami jeda conversion, tanggal pelaporan, dan waktu yang tepat untuk mengevaluasi ROAS setelah promo.'
+  },
+  {
+    href: '/seasonality-adjustment-google-ads-promo/',
+    category: 'google-ads',
+    categoryLabel: 'Google Ads',
+    topics: ['Seasonality Adjustment', 'Smart Bidding', 'Persiapan Promo'],
+    date: '11 September 2026',
+    isoDate: '2026-09-11',
+    readTime: '7 sampai 8 menit baca',
+    title: 'Seasonality Adjustment Google Ads, Kapan Perlu Dipakai?',
+    description: 'Kapan adjustment diperlukan, cara menghitung perubahan conversion rate, dan langkah persiapan campaign untuk promo.'
+  },
+  {
+    href: '/referral-payment-gateway-ga4/',
+    category: 'analytics',
+    categoryLabel: 'Analytics dan Tracking',
+    topics: ['GA4', 'Payment Gateway', 'Conversion Tracking'],
+    date: '9 September 2026',
+    isoDate: '2026-09-09',
+    readTime: '7 sampai 8 menit baca',
+    title: 'Payment Gateway Muncul sebagai Referral di GA4? Audit Ini',
+    description: 'Audit alur checkout, unwanted referrals, pengukuran lintas domain, dan transaksi sebelum mengubah budget iklan.'
+  },
+  {
+    href: '/ukur-ai-crawler-referral-microsoft-clarity/',
+    category: 'seo-ai',
+    categoryLabel: 'GEO dan Analytics',
+    topics: ['GEO', 'AIO', 'Microsoft Clarity', 'AI Referral'],
+    date: '8 September 2026',
+    isoDate: '2026-09-08',
+    readTime: '8 sampai 9 menit baca',
+    title: 'AI Crawler Ramai Belum Tentu Mengirim Traffic, Cek di Microsoft Clarity',
+    description: 'Cara menghubungkan aktivitas AI crawler, citation, referral, dan conversion untuk menilai manfaat bisnis konten.'
+  },
+  {
+    href: '/personalized-send-time-klaviyo-control-group/',
+    category: 'email-automation',
+    categoryLabel: 'Email dan Automation',
+    topics: ['Klaviyo', 'Personalized Send Time', 'Control Group'],
+    date: '7 September 2026',
+    isoDate: '2026-09-07',
+    readTime: '8 sampai 9 menit baca',
+    title: 'Biarkan Klaviyo Memilih Waktu Kirim, tetapi Ukur Dampaknya dengan Control Group',
+    description: 'Cara menguji waktu kirim personal Klaviyo dengan control group dan membaca dampaknya sampai ke order serta revenue.'
+  },
+  {
+    href: '/qualified-leads-meta-conversions-api-crm/',
+    category: 'paid-social',
+    categoryLabel: 'Meta Ads',
+    topics: ['Qualified Leads', 'Conversions API', 'CRM'],
+    date: '6 September 2026',
+    isoDate: '2026-09-06',
+    readTime: '8 sampai 9 menit baca',
+    title: 'Mulai Agustus 2026, Optimasi Qualified Leads Meta Harus Terhubung ke CRM',
+    description: 'Cara mengirim status lead dari CRM ke Meta dan mengukur kualitas campaign setelah perubahan performance goal pada 2026.'
+  },
+  {
+    href: '/creative-testing-ai-ad-variants-linkedin-ads/',
+    category: 'paid-social',
+    categoryLabel: 'LinkedIn Ads',
+    topics: ['AI Ad Variants', 'A/B Testing', 'Lead Generation'],
+    date: '5 September 2026',
+    isoDate: '2026-09-05',
+    readTime: '8 sampai 9 menit baca',
+    title: 'AI Bisa Membuat Puluhan Iklan LinkedIn, tetapi Tes Kreatif Tetap Butuh Satu Hipotesis',
+    description: 'Cara memilih AI Ad Variants, Flexible Ads, atau A/B Testing berdasarkan tujuan pengujian dan outcome bisnis.'
+  },
+  {
+    href: '/cara-membaca-tiktok-attribution-portfolio/',
+    category: 'paid-social',
+    categoryLabel: 'TikTok Ads',
+    topics: ['Attribution', 'TikTok Ads', 'Measurement'],
+    date: '4 September 2026',
+    isoDate: '2026-09-04',
+    readTime: '8 sampai 9 menit baca',
+    title: 'TikTok Membantu Konversi tetapi Bukan Klik Terakhir, Begini Cara Membacanya',
+    description: 'Cara membaca Attribution Portfolio, membandingkan hasil dengan GA4, dan mengaudit tracking sebelum mengubah budget.'
+  },
+  {
+    href: '/auto-upgrade-ai-max-google-ads/',
+    category: 'google-ads',
+    categoryLabel: 'Google Ads',
+    topics: ['AI Max', 'Search Campaigns', 'Tracking'],
+    date: '3 September 2026',
+    isoDate: '2026-09-03',
+    readTime: '8 sampai 9 menit baca',
+    title: 'AI Max Mulai Aktif Otomatis di Google Ads pada September 2026',
+    description: 'Cara mengaudit targeting, aset, landing page, tracking, dan reporting setelah campaign Search berpindah otomatis ke AI Max.'
+  },
+  {
+    href: '/update-video-reach-campaign-youtube-ads-2026/',
+    category: 'google-ads',
+    categoryLabel: 'YouTube Ads',
+    topics: ['Video Reach', 'YouTube Shorts', 'Measurement'],
+    date: '2 September 2026',
+    isoDate: '2026-09-02',
+    readTime: '8 sampai 9 menit baca',
+    title: 'Update Video Reach Campaign 2026: Audit Migrasi YouTube Ads',
+    description: 'Cara menjaga histori, memeriksa creative, dan membaca performa in stream, in feed, serta Shorts setelah migrasi Google Ads.'
+  },
+  {
+    href: '/ask-advisor-google-ads-ga4-audit-campaign/',
+    category: 'google-ads',
+    categoryLabel: 'Google Ads dan GA4',
+    topics: ['Ask Advisor', 'Google Ads', 'GA4'],
+    date: '1 September 2026',
+    isoDate: '2026-09-01',
+    readTime: '8 sampai 9 menit baca',
+    title: 'Ask Advisor Google Ads dan GA4 2026: Pakai AI untuk Audit, Bukan Autopilot',
+    description: 'Cara memakai Ask Advisor untuk audit campaign, membuat laporan, dan menemukan insight tanpa menyerahkan keputusan kepada AI.'
+  },
+  {
+    href: '/update-smart-bidding-google-ads-target-cpa-roas-2026/',
+    category: 'google-ads',
+    categoryLabel: 'Google Ads',
+    topics: ['Smart Bidding', 'Target CPA', 'Target ROAS'],
+    date: '31 Agustus 2026',
+    isoDate: '2026-08-31',
+    readTime: '8 sampai 9 menit baca',
+    title: 'Update Smart Bidding Google Ads 2026: Audit Target CPA dan ROAS',
+    description: 'Cara mengaudit Target CPA, Target ROAS, budget, dan conversion tracking setelah perubahan bidding Google Ads.'
+  },
+  {
+    href: '/enhanced-conversions-for-leads-google-ads-2026/',
+    category: 'google-ads',
+    categoryLabel: 'Google Ads',
+    topics: ['Google Ads', 'Tracking', 'CRM'],
+    date: '30 Agustus 2026',
+    isoDate: '2026-08-30',
+    readTime: '8 sampai 9 menit baca',
+    title: 'Enhanced Conversions Google Ads 2026: Jangan Berhenti di Form Submission',
+    description: 'Cara menghubungkan formulir, CRM, dan Google Ads agar bidding mengejar qualified lead, bukan sekadar jumlah form submission.'
+  },
+  {
+    href: '/laporan-generative-ai-search-console/',
+    category: 'seo-ai',
+    categoryLabel: 'SEO dan AI Search',
+    topics: ['SEO', 'Analytics', 'AI Search'],
+    date: '29 Agustus 2026',
+    isoDate: '2026-08-29',
+    readTime: '8 sampai 9 menit baca',
+    title: 'Google Search Console Kini Ukur Visibilitas AI: Cara Membacanya',
+    description: 'Panduan membaca laporan Generative AI dan menghubungkan impressions dengan traffic, engagement, serta konversi.'
+  },
+  {
+    href: '/strategi-digital-marketing-2026/',
+    category: 'digital-marketing',
+    categoryLabel: 'Digital Marketing',
+    topics: ['Digital Marketing', 'SEO', 'Automation'],
+    date: '20 Agustus 2026',
+    isoDate: '2026-08-20',
+    readTime: '8 sampai 9 menit baca',
+    title: 'Strategi Digital Marketing 2026: 9 Langkah Praktis di Era AI Search',
+    description: 'Sembilan langkah praktis untuk menghadapi perubahan SEO, paid ads, automation, first party data, dan kredibilitas konten.'
+  }
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      '@id': `${canonical}#page`,
+      url: canonical,
+      name: 'Artikel Digital Marketing, SEO, Ads dan Analytics',
+      description: 'Kumpulan artikel Nordy Sukmana tentang digital marketing, Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads, SEO, analytics, AI Search, email marketing, dan automation.',
+      inLanguage: 'id-ID',
+      dateModified: '2026-10-18T10:00:00+07:00',
+      mainEntity: {'@id': `${canonical}#article-list`}
+    },
+    {
+      '@type': 'ItemList',
+      '@id': `${canonical}#article-list`,
+      numberOfItems: articles.length,
+      itemListElement: articles.map((article, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: article.title,
+        url: `https://nordy-sukmana.vercel.app${article.href}`
+      }))
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {'@type': 'ListItem', position: 1, name: 'Portfolio', item: 'https://nordy-sukmana.vercel.app/'},
+        {'@type': 'ListItem', position: 2, name: 'Artikel', item: canonical}
+      ]
+    }
+  ]
+};
+
+const head = `<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artikel Digital Marketing, SEO, Ads dan Analytics | Nordy Sukmana</title>
+<meta name="description" content="Kumpulan artikel Nordy Sukmana tentang digital marketing, Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads, SEO, analytics, AI Search, email marketing, dan automation.">
+<meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0C1F4D"><link rel="canonical" href="${canonical}">
+<meta property="og:type" content="website"><meta property="og:locale" content="id_ID"><meta property="og:site_name" content="Portfolio Nordy Sukmana"><meta property="og:title" content="Artikel Digital Marketing, SEO, Ads dan Analytics"><meta property="og:description" content="Insight praktis tentang digital marketing, Google Ads, SEO, analytics, AI Search, email marketing, dan automation."><meta property="og:url" content="${canonical}"><meta property="og:image" content="https://nordy-sukmana.vercel.app/assets/brand/open-graph.png">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Artikel Digital Marketing, SEO, Ads dan Analytics"><meta name="twitter:description" content="Insight praktis tentang digital marketing, Google Ads, SEO, analytics, AI Search, email marketing, dan automation."><meta name="twitter:image" content="https://nordy-sukmana.vercel.app/assets/brand/open-graph.png">
+<script type="application/ld+json">${JSON.stringify(structuredData)}</script>
+<link rel="icon" href="../assets/brand/nordy-mark.svg" type="image/svg+xml"><link rel="icon" href="../favicon.ico" sizes="any"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/case-study.css"><link rel="stylesheet" href="../assets/articles-index.css?v=20260909-1">`;
+---
+<BaseLayout head={head} bodyClass="articles-page">
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+  <CaseStudyHeader />
+  <main id="main-content">
+    <header class="articles-hero">
+      <div class="articles-shell">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Portfolio</a><span aria-hidden="true">/</span><span>Artikel</span></nav>
+        <span class="articles-kicker">Artikel dan Insight</span>
+        <h1>Insight praktis untuk digital marketing yang lebih terukur.</h1>
+        <p>Catatan, panduan, dan analisis dari pengalaman mengelola ads, tracking, SEO, analytics, serta marketing automation.</p>
+      </div>
+    </header>
+
+    <section class="articles-browser articles-shell" aria-labelledby="articles-heading" data-articles-browser>
+      <div class="articles-intro">
+        <div><span class="articles-count">{articles.length} artikel</span><h2 id="articles-heading">Temukan topik yang ingin dipelajari</h2></div>
+        <p>Gunakan pencarian atau pilih kategori untuk menyaring artikel.</p>
+      </div>
+
+      <div class="articles-controls">
+        <label class="articles-search">
+          <span>Cari artikel</span>
+          <span class="articles-search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.4-4.4m2.4-5.1a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"/></svg><input type="search" placeholder="Cari topik, misalnya Google Ads" autocomplete="off" data-article-search></span>
+        </label>
+        <div class="articles-category-filter">
+          <span>Filter kategori</span>
+          <div class="articles-filter-buttons" role="group" aria-label="Filter kategori artikel">
+            <button type="button" data-article-filter="all" aria-pressed="true">Semua</button>
+            <button type="button" data-article-filter="google-ads" aria-pressed="false">Google Ads</button>
+            <button type="button" data-article-filter="paid-social" aria-pressed="false">Paid Social</button>
+            <button type="button" data-article-filter="email-automation" aria-pressed="false">Email dan Automation</button>
+            <button type="button" data-article-filter="analytics" aria-pressed="false">Analytics dan Tracking</button>
+            <button type="button" data-article-filter="seo-ai" aria-pressed="false">SEO dan AI</button>
+            <button type="button" data-article-filter="digital-marketing" aria-pressed="false">Digital Marketing</button>
+          </div>
+        </div>
+      </div>
+
+      <p class="articles-status" data-articles-status aria-live="polite">Menampilkan semua artikel</p>
+      <div class="articles-grid" id="article-list">
+        {articles.map(article => (
+          <article class="article-card" data-article-card data-category={article.category} data-search={`${article.title} ${article.description} ${article.categoryLabel} ${article.topics.join(' ')}`.toLowerCase()}>
+            <div class="article-card-top"><span class={`article-category article-category--${article.category}`}>{article.categoryLabel}</span><time datetime={article.isoDate}>{article.date}</time></div>
+            <h3><a href={article.href}>{article.title}</a></h3>
+            <p>{article.description}</p>
+            <ul class="article-topics" aria-label="Topik artikel">{article.topics.map(topic => <li>{topic}</li>)}</ul>
+            <div class="article-card-footer"><span>{article.readTime}</span><a href={article.href} aria-label={`Baca ${article.title}`}>Baca artikel <span aria-hidden="true">→</span></a></div>
+          </article>
+        ))}
+      </div>
+      <div class="articles-empty" data-articles-empty hidden><strong>Artikel belum ditemukan.</strong><p>Coba gunakan kata kunci atau kategori lain.</p></div>
+    </section>
+  </main>
+  <footer class="articles-footer"><div class="articles-shell"><span>© 2026 Nordy Sukmana</span><div><a href="../#portfolio">Portfolio</a><a href="../#contact">Hubungi Saya</a></div></div></footer>
+  <script is:inline src="/assets/articles-index.js?v=20260830-1"></script>
+  <script is:inline src="/assets/analytics-loader.js"></script>
+</BaseLayout>

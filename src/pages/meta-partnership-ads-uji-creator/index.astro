@@ -1,0 +1,304 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyHeader from '../../components/CaseStudyHeader.astro';
+
+const canonical = 'https://nordy-sukmana.vercel.app/meta-partnership-ads-uji-creator/';
+const image = 'https://nordy-sukmana.vercel.app/assets/brand/open-graph.png';
+const title = "Meta Partnership Ads, Ukur Creator sebelum Scale Budget";
+const description = "Pelajari cara menguji Meta Partnership Ads, memilih creator, mengatur izin, dan menghitung biaya akuisisi termasuk fee serta media spend.";
+const faqItems = [
+  {
+    "question": "Apakah Partnership Ads harus memakai postingan organik yang sudah tayang?",
+    "answer": "Tidak selalu. Cara pembuatan dapat bergantung pada format, permission, dan workflow yang digunakan. Periksa pilihan terbaru di Ads Manager serta panduan Meta sebelum produksi."
+  },
+  {
+    "question": "Apakah creator dengan followers terbesar pasti lebih efektif?",
+    "answer": "Tidak. Followers tidak membuktikan kecocokan audiens, kualitas pesan, atau kemampuan menghasilkan pelanggan dengan biaya yang layak."
+  },
+  {
+    "question": "Apakah paid partnership label tetap diperlukan jika produknya hanya dikirim gratis?",
+    "answer": "Ya. Meta memasukkan hadiah atau produk gratis sebagai pertukaran nilai dalam branded content."
+  },
+  {
+    "question": "Metrik apa yang paling penting?",
+    "answer": "Gunakan metrik yang sesuai objective, lalu hubungkan dengan outcome bisnis. Untuk penjualan, periksa pelanggan baru, CAC total campaign, revenue, margin, dan refund."
+  },
+  {
+    "question": "Kapan Partnership Ads layak ditingkatkan skalanya?",
+    "answer": "Pertimbangkan scale setelah tracking valid, hasil cukup stabil, biaya total memenuhi batas bisnis, dan kualitas conversion tidak menurun. Naikkan budget secara bertahap sambil memantau perubahan delivery."
+  }
+];
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      '@id': `${canonical}#article`,
+      headline: title,
+      description,
+      url: canonical,
+      image: [image],
+      inLanguage: 'id-ID',
+      datePublished: '2026-09-14',
+      dateModified: '2026-09-14',
+      author: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      publisher: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      mainEntityOfPage: canonical,
+      articleSection: 'Influencer Marketing, Meta Ads, dan Creator Economy',
+      about: ['Meta Ads Manager', 'Instagram Creator', 'Partnership Ads', 'Branded Content', 'Paid Partnership Label', 'Creator Fee', 'Customer Acquisition Cost', 'Qualified Lead', 'Incrementality'],
+      keywords: ['Meta Partnership Ads', 'cara mengukur Partnership Ads', 'memilih creator untuk Meta Ads', 'menghitung biaya influencer marketing', 'A/B testing konten creator Instagram']
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://nordy-sukmana.vercel.app/#person',
+      name: 'Nordy Sukmana',
+      url: 'https://nordy-sukmana.vercel.app/',
+      jobTitle: 'Performance Marketing Specialist'
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {'@type': 'ListItem', position: 1, name: 'Portfolio', item: 'https://nordy-sukmana.vercel.app/'},
+        {'@type': 'ListItem', position: 2, name: 'Artikel', item: 'https://nordy-sukmana.vercel.app/artikel/'},
+        {'@type': 'ListItem', position: 3, name: 'Meta Partnership Ads', item: canonical}
+      ]
+    }
+  ]
+};
+
+const head = `<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${title}</title>
+<meta name="description" content="${description}">
+<meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0C1F4D"><link rel="canonical" href="${canonical}">
+<meta property="og:type" content="article"><meta property="og:locale" content="id_ID"><meta property="og:site_name" content="Portfolio Nordy Sukmana"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Nordy Sukmana, Performance Marketing Specialist">
+<meta property="article:published_time" content="2026-09-14"><meta property="article:modified_time" content="2026-09-14"><meta property="article:section" content="Influencer Marketing, Meta Ads, dan Creator Economy">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${title}"><meta name="twitter:description" content="${description}"><meta name="twitter:image" content="${image}">
+<script type="application/ld+json">${JSON.stringify(structuredData)}</script>
+<link rel="icon" href="../assets/brand/nordy-mark.svg" type="image/svg+xml"><link rel="icon" href="../favicon.ico" sizes="any"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/case-study.css"><link rel="stylesheet" href="../assets/article.css">`;
+---
+<BaseLayout head={head}>
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+  <CaseStudyHeader />
+  <main id="main-content">
+    <header class="article-hero">
+      <div class="article-shell">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Portfolio</a><span aria-hidden="true">/</span><a href="../artikel/">Artikel</a></nav>
+        <span class="article-kicker">Influencer Marketing · Meta Ads · Creator Economy</span>
+        <h1>{title}</h1>
+        <p class="article-lede">Pilih creator berdasarkan kecocokan audiens, siapkan izin penggunaan konten, dan nilai biaya akuisisi beserta fee sebelum menaikkan budget.</p>
+        <div class="article-meta"><span>Nordy Sukmana</span><time datetime="2026-09-14">14 September 2026</time><span>10 menit baca</span></div>
+      </div>
+    </header>
+    <div class="article-shell article-layout">
+      <article class="article-body">
+        <section class="answer-summary" aria-labelledby="answer-summary-title">
+          <span>Jawaban singkat</span>
+<h2 id="answer-summary-title">Bagaimana mengukur hasil Meta Partnership Ads?</h2>
+<p>Meta Partnership Ads memungkinkan brand menjalankan iklan bersama creator atau partner bisnis. Untuk mengevaluasinya, tetapkan outcome bisnis, uji konten dengan variabel terkendali, gunakan label dan izin yang sesuai, lalu hitung biaya akuisisi dari media spend serta creator fee. Followers dan engagement organik tidak cukup untuk menentukan pemenang.</p>
+</section>
+<p>Satu video creator dapat terlihat menjanjikan: komentarnya ramai, pembawaannya natural, dan produknya terasa menyatu dengan konten.</p>
+<p>Namun, ketika konten tersebut dipakai sebagai iklan, pertanyaan bisnisnya berubah.</p>
+<p>Apakah audiens yang dijangkau sesuai? Apakah orang hanya menonton atau ikut membeli? Apakah biaya per pelanggan tetap layak setelah fee creator dimasukkan? Dan apakah brand memiliki izin yang cukup untuk menjalankan serta menggunakan kembali konten tersebut?</p>
+<p>Meta Partnership Ads dapat menghubungkan kekuatan konten creator dengan distribusi paid media. Agar budget dapat dipertanggungjawabkan, evaluasinya perlu melampaui jumlah followers dan engagement organik.</p>
+<h2>Apa itu Meta Partnership Ads?</h2>
+<p><strong>Partnership Ads adalah iklan Facebook atau Instagram yang dijalankan advertiser bersama creator, brand, atau partner bisnis lain.</strong></p>
+<p>Meta sebelumnya menggunakan istilah <em>branded content ads</em>. Melalui format ini, iklan dapat menampilkan identitas partner sehingga hubungan antara advertiser dan creator terlihat oleh audiens. <a href="https://www.facebook.com/business/help/342728904797642" target="_blank" rel="noopener noreferrer">Penjelasan resmi Meta tentang Partnership Ads</a>.</p>
+<p>Partnership Ads berbeda dari sekadar mengambil video influencer lalu mengunggahnya ke akun brand. Ada hubungan partner, izin penggunaan untuk iklan, identitas yang tampil pada materi, dan ketentuan format yang perlu dipenuhi.</p>
+<p>Meta mendukung beberapa format, objective, dan placement, tetapi ketersediaannya dapat berbeda menurut konfigurasi akun dan jenis konten. Periksa kembali pilihan yang muncul di Ads Manager sebelum brief produksi dikunci. <a href="https://www.facebook.com/business/help/864398265379023" target="_blank" rel="noopener noreferrer">Format Partnership Ads yang memenuhi syarat</a>.</p>
+<h2>Mengapa followers bukan dasar keputusan yang cukup?</h2>
+<p><strong>Jumlah followers menunjukkan ukuran komunitas, bukan jaminan bahwa konten akan menghasilkan outcome campaign.</strong></p>
+<p>Dua creator dengan jumlah followers serupa dapat memiliki perbedaan besar dalam gaya komunikasi, kecocokan produk, wilayah audiens, kredibilitas, dan kemampuan menyampaikan CTA.</p>
+<p>Sebaliknya, creator dengan komunitas lebih kecil dapat menghasilkan pesan yang lebih relevan bagi segmen tertentu. Itu tetap perlu dibuktikan melalui data campaign, bukan diasumsikan dari label “micro influencer”.</p>
+<p>Sebelum memilih creator, nilai empat lapisan berikut:</p>
+<div class="table-wrap" role="region" aria-label="Empat lapisan penilaian creator" tabindex="0"><table><caption>Empat lapisan penilaian creator</caption>
+<thead>
+<tr>
+<th scope="col">Lapisan</th>
+<th scope="col">Pertanyaan utama</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Audience fit</td>
+<td>Apakah lokasi, kebutuhan, dan karakter audiens sesuai target?</td>
+</tr>
+<tr>
+<td>Message fit</td>
+<td>Apakah creator mampu menjelaskan produk secara masuk akal?</td>
+</tr>
+<tr>
+<td>Content fit</td>
+<td>Apakah formatnya sesuai dengan kebiasaan platform?</td>
+</tr>
+<tr>
+<td>Business fit</td>
+<td>Apakah biaya dan kualitas hasil masuk dalam batas bisnis?</td>
+</tr>
+</tbody></table></div>
+<p>Engagement organik dapat dipakai untuk menyusun hipotesis. Keputusan scale membutuhkan data paid media serta hasil setelah klik.</p>
+<h2>Enam langkah menguji Partnership Ads secara terukur</h2>
+<h3>1. Tentukan outcome sebelum memilih creator</h3>
+<p>Mulailah dari tindakan yang ingin dihasilkan: awareness, kunjungan berkualitas, qualified lead, pembelian, atau hasil lain.</p>
+<p>Untuk campaign penjualan, metrik utamanya dapat berupa pelanggan baru dan margin kontribusi. Untuk lead generation, gunakan lead yang memenuhi kriteria sales, dengan kriteria yang lebih spesifik daripada jumlah formulir.</p>
+<p>Tuliskan batas keputusan sejak awal, misalnya:</p>
+<blockquote>
+<p>Partnership Ads dapat dilanjutkan jika CAC total campaign berada di bawah batas bisnis dan kualitas pelanggan tidak lebih rendah dari campaign pembanding.</p>
+</blockquote>
+<p>Pernyataan tersebut lebih berguna daripada target “mencari creator yang viral”.</p>
+<h3>2. Audit kecocokan creator dan audiens</h3>
+<p>Mintalah informasi yang memang relevan dengan target campaign, seperti distribusi lokasi, kelompok usia, tema konten, dan histori kolaborasi yang dapat diverifikasi.</p>
+<p>Periksa juga:</p>
+<ul>
+<li>Apakah komentar berasal dari audiens yang sesuai? </li>
+<li>Apakah creator rutin membahas kategori terkait? </li>
+<li>Apakah gaya komunikasinya cocok dengan tingkat pertimbangan produk? </li>
+<li>Apakah ada konflik dengan kompetitor? </li>
+<li>Apakah creator bersedia memberi izin iklan selama periode yang diperlukan? </li>
+<li>Apakah hak penggunaan ulang telah disepakati?</li>
+</ul>
+<p>Jangan menganggap screenshot insight sebagai jaminan hasil. Gunakan informasi tersebut untuk menyaring kandidat dan menyusun tes.</p>
+<h3>3. Buat brief yang menjaga suara creator</h3>
+<p>Brief perlu memberikan arah tanpa membuat konten terasa seperti naskah brand yang sekadar dibacakan.</p>
+<p>Sertakan:</p>
+<ul>
+<li>Siapa audiens yang dituju. </li>
+<li>Masalah atau kebutuhan yang dibahas. </li>
+<li>Fakta produk yang boleh disebutkan. </li>
+<li>Klaim yang tidak boleh dibuat. </li>
+<li>Penawaran dan CTA. </li>
+<li>Format serta durasi. </li>
+<li>Elemen wajib untuk disclosure. </li>
+<li>Hak penggunaan, periode, channel, dan wilayah. </li>
+<li>Cara revisi serta batas jumlah revisi.</li>
+</ul>
+<p>Berikan ruang bagi creator untuk menyampaikan pesan dengan bahasa yang biasa digunakan audiensnya. Namun, verifikasi klaim faktual sebelum konten tayang. Untuk menyusun eksperimen pembukaan video, pelajari <a href="../cara-menguji-hook-tiktok-ads/">cara menguji hook TikTok Ads</a>, lalu sesuaikan penerapannya dengan placement Meta.</p>
+<p>Creator tetap perlu menunjukkan hubungan komersial dengan jelas. Meta menganggap pembayaran, produk gratis, produk pinjaman, dan komisi affiliate sebagai pertukaran nilai yang memerlukan <em>paid partnership label</em> pada branded content. <a href="https://www.facebook.com/help/instagram/616901995832907" target="_blank" rel="noopener noreferrer">Ketentuan branded content Meta</a>.</p>
+<h3>4. Pastikan izin dan format siap sebelum launch</h3>
+<p><strong>Kesepakatan kerja sama tidak otomatis menggantikan permission di platform.</strong></p>
+<p>Advertiser dan creator perlu memastikan izin Partnership Ads tersedia untuk akun atau konten yang akan digunakan. Meta menyediakan permission pada level profil maupun konten, serta partnership ad code yang dapat dibagikan kepada partner. <a href="https://help.instagram.com/442108830566254/" target="_blank" rel="noopener noreferrer">Panduan permission Partnership Ads</a>, <a href="https://help.instagram.com/797201308253238" target="_blank" rel="noopener noreferrer">panduan partnership ad code</a>.</p>
+<p>Sebelum launch, periksa:</p>
+<ul>
+<li>Akun dan konten memenuhi syarat. </li>
+<li>Identitas partner yang tampil sudah benar. </li>
+<li>Permission belum kedaluwarsa. </li>
+<li>Placement dan objective didukung. </li>
+<li>CTA serta landing page sesuai brief. </li>
+<li>Teks penting berada di area aman. </li>
+<li>Tracking dan event conversion berjalan. </li>
+<li>Ketentuan penghentian izin tercatat.</li>
+</ul>
+<p>Simpan bukti persetujuan, link konten, periode izin, dan versi creative. Dokumentasi ini membantu ketika iklan harus diperpanjang, direvisi, atau dihentikan.</p>
+<h3>5. Bandingkan dengan baseline yang adil</h3>
+<p>Jangan membandingkan Partnership Ads minggu ini dengan iklan brand pada bulan yang kondisinya berbeda.</p>
+<p>Jika platform dan volume mendukung, gunakan A/B test dengan:</p>
+<ul>
+<li>Objective dan optimization event yang sama. </li>
+<li>Audiens atau metode targeting yang sebanding. </li>
+<li>Budget dan durasi yang seimbang. </li>
+<li>Penawaran serta landing page yang sama. </li>
+<li>Attribution setting yang konsisten. </li>
+<li>Perbedaan utama pada jenis creative atau identitas pengirim.</li>
+</ul>
+<p>Contoh pertanyaan tes:</p>
+<blockquote>
+<p>Apakah menambahkan creative creator melalui Partnership Ads menghasilkan biaya per pelanggan lebih rendah dibandingkan creative dari brand sendiri?</p>
+</blockquote>
+<p>Jika beberapa creator diuji sekaligus, jangan terburu menyimpulkan bahwa perbedaan hasil disebabkan oleh orangnya. Hook, demonstrasi produk, format, dan penawaran juga dapat berbeda.</p>
+<h3>6. Hitung media spend dan biaya creator</h3>
+<p>Ads Manager membantu membaca biaya media serta conversion yang teratribusi. Evaluasi bisnis tetap perlu memasukkan biaya di luar platform. Lihat <a href="../case-study/performance-analysis/">analisis performa iklan lintas channel</a> untuk contoh pembacaan biaya, pelanggan, dan alokasi budget.</p>
+<p>Gunakan perhitungan berikut:</p>
+<p><strong>CAC total campaign = (media spend + fee creator + biaya produksi terkait) ÷ pelanggan baru.</strong></p>
+<p>Perhitungan ini memakai cakupan biaya campaign yang sedang dievaluasi. Alokasikan fee dan biaya produksi secara konsisten jika aset digunakan untuk beberapa campaign atau periode. Untuk lead generation, pembagian biaya dengan qualified lead menghasilkan biaya per qualified lead. Gunakan pelanggan baru yang berhasil diperoleh sebagai pembagi saat menghitung CAC.</p>
+<p>Pantau metrik secara berurutan:</p>
+<ol>
+<li>Reach dan CPM untuk membaca distribusi. </li>
+<li>Video retention atau engagement untuk membaca perhatian. </li>
+<li>CTR dan landing page view untuk membaca respons. </li>
+<li>Conversion rate untuk membaca kelanjutan funnel. </li>
+<li>Qualified lead atau pelanggan baru untuk membaca kualitas. </li>
+<li>CAC total campaign, revenue, dan margin untuk keputusan budget.</li>
+</ol>
+<h2>Contoh: CPA platform termurah belum tentu biaya total terendah</h2>
+<p>Angka berikut digunakan sebagai simulasi evaluasi dua creator:</p>
+<div class="table-wrap" role="region" aria-label="Simulasi biaya akuisisi dua creator" tabindex="0"><table><caption>Simulasi biaya akuisisi dua creator</caption>
+<thead>
+<tr>
+<th scope="col">Komponen</th>
+<th scope="col">Creator A</th>
+<th scope="col">Creator B</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Media spend</td>
+<td>Rp6.000.000</td>
+<td>Rp6.000.000</td>
+</tr>
+<tr>
+<td>Fee dan biaya produksi</td>
+<td>Rp6.000.000</td>
+<td>Rp1.000.000</td>
+</tr>
+<tr>
+<td>Pelanggan baru</td>
+<td>80</td>
+<td>50</td>
+</tr>
+<tr>
+<td>CPA dari media spend</td>
+<td>Rp75.000</td>
+<td>Rp120.000</td>
+</tr>
+<tr>
+<td>CAC total campaign</td>
+<td>Rp150.000</td>
+<td>Rp140.000</td>
+</tr>
+</tbody></table></div>
+<p>Jika laporan hanya melihat media spend, Creator A tampak jauh lebih efisien. Setelah seluruh biaya dimasukkan, Creator B memiliki CAC total campaign yang lebih rendah.</p>
+<p>Itu belum otomatis membuat Creator B menjadi pemenang. Tim masih perlu memeriksa nilai transaksi, margin, refund, dan potensi pembelian ulang.</p>
+<p>Creator A dapat tetap layak dipilih jika pelanggan yang diperoleh memiliki nilai lebih tinggi. Sebaliknya, engagement tinggi tidak cukup mempertahankan Creator A jika biaya totalnya melewati batas profit.</p>
+<h2>Bagaimana membedakan konten creator dan efek media?</h2>
+<p><strong>Hasil Partnership Ads berasal dari kombinasi creative, distribusi iklan, targeting, penawaran, dan kondisi pasar.</strong></p>
+<p>Konten yang sebelumnya tampil organik tidak dapat dibandingkan langsung dengan iklan hanya melalui jumlah views. Distribusi organik dan paid menggunakan mekanisme berbeda.</p>
+<p>Gunakan tiga tingkat pembuktian:</p>
+<ul>
+<li><strong>Laporan campaign:</strong> menunjukkan delivery, klik, dan conversion yang diatribusikan. </li>
+<li><strong>A/B test:</strong> membantu membandingkan dua pendekatan dengan kondisi lebih terkendali. </li>
+<li><strong>Data bisnis:</strong> menunjukkan transaksi, kualitas lead, margin, pembatalan, dan pelanggan baru.</li>
+</ul>
+<p>Untuk keputusan besar, pertimbangkan eksperimen incrementality atau desain holdout jika volume dan fasilitas pengukurannya memadai. Attribution menunjukkan siapa yang menerima kredit; incrementality mencoba menjawab hasil tambahan yang terjadi karena aktivitas marketing.</p>
+<h2>Checklist Partnership Ads sebelum scale</h2>
+<ol class="checklist">
+<li>Objective dan outcome bisnis sudah ditetapkan. </li>
+<li>Kriteria creator tidak hanya berdasarkan followers. </li>
+<li>Audience fit dan histori konten telah diperiksa. </li>
+<li>Klaim produk sudah diverifikasi. </li>
+<li>Fee, biaya produksi, dan hak penggunaan tercatat. </li>
+<li>Paid partnership label digunakan sesuai ketentuan. </li>
+<li>Permission iklan serta periode penggunaan sudah aktif. </li>
+<li>Creative memenuhi format placement. </li>
+<li>Landing page dan conversion tracking telah diuji. </li>
+<li>Baseline pembanding menggunakan kondisi yang sebanding. </li>
+<li>CAC total campaign dihitung bersama revenue dan margin. </li>
+<li>Keputusan scale, revisi, atau stop memiliki batas yang jelas.</li>
+</ol>
+
+<h2>Pertanyaan yang sering diajukan</h2>
+        {faqItems.map(item => <section class="faq-item"><h3>{item.question}</h3><p>{item.answer}</p></section>)}
+        <h2>Kesimpulan</h2>
+<p>Meta Partnership Ads dapat mengubah konten creator menjadi aset performance marketing. Nilainya muncul ketika pemilihan creator, permission, pengujian, dan evaluasi biaya disusun sebagai satu proses.</p>
+<p>Mulailah dari outcome bisnis, jaga keaslian pesan creator, lalu hitung seluruh biaya, termasuk fee creator dan produksi. Dengan begitu, keputusan memperpanjang kerja sama atau menaikkan budget mempunyai dasar yang bisa dijelaskan kepada bisnis maupun klien.</p>
+<p>Lihat <a href="../case-study/meta-ads-unlabel/">case study Meta Ads Awareness UNLABEL</a> untuk contoh bagaimana pengujian creative diterjemahkan menjadi keputusan campaign.</p>
+
+<div class="related-article"><span>Case study terkait</span><a href="../case-study/meta-ads-unlabel/">Pelajari pengujian creative dalam case study Meta Ads Awareness UNLABEL →</a></div>
+      </article>
+      <aside class="article-sidebar" aria-label="Informasi artikel">
+        <section class="side-card"><h2>Tentang penulis</h2><p><strong>Nordy Sukmana</strong> adalah Performance Marketing Specialist dengan pengalaman mengelola Meta Ads, Google Ads, tracking, analytics, dan marketing automation.</p><a class="back-link" href="../#about">Lihat profil</a></section>
+        <section class="side-card"><h2>Topik artikel</h2><ul><li>Partnership Ads</li><li>Pemilihan Creator</li><li>Creative Testing</li><li>Biaya Akuisisi</li></ul></section>
+        <section class="side-card"><h2>Sumber utama</h2><p>Rujukan bantuan Meta dan Instagram. Beberapa halaman dapat meminta login.</p><a class="back-link" href="https://www.facebook.com/business/help/342728904797642" target="_blank" rel="noopener noreferrer">Tentang Partnership Ads ↗</a><a class="back-link" href="https://www.facebook.com/help/instagram/616901995832907" target="_blank" rel="noopener noreferrer">Ketentuan branded content ↗</a><a class="back-link" href="https://help.instagram.com/797201308253238" target="_blank" rel="noopener noreferrer">Partnership ad code ↗</a></section>
+        <section class="side-card"><h2>Bacaan terkait</h2><p>Pelajari cara merancang dua pembukaan video dan membaca kualitas hasilnya untuk menyusun brief creative.</p><a class="back-link" href="../cara-menguji-hook-tiktok-ads/">Baca pengujian hook video</a></section>
+      </aside>
+    </div>
+  </main>
+  <footer class="article-footer"><div class="article-shell"><span>© 2026 Nordy Sukmana</span><a href="../artikel/">Lihat semua artikel</a></div></footer>
+  <script is:inline src="/assets/analytics-loader.js"></script>
+</BaseLayout>

@@ -1,0 +1,294 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyHeader from '../../components/CaseStudyHeader.astro';
+
+const canonical = 'https://nordy-sukmana.vercel.app/perubahan-views-youtube-2026/';
+const image = 'https://nordy-sukmana.vercel.app/assets/brand/open-graph.png';
+const title = "Views YouTube Berubah pada Agustus 2026, Cara Audit Performa";
+const description = "Sejak 24 Agustus 2026, YouTube menghitung views saat video mulai diputar. Pelajari cara membaca engaged views, watch time, dan hasil bisnis.";
+const faqItems = [
+  {
+    "question": "Mengapa views YouTube meningkat setelah Agustus 2026?",
+    "answer": "Salah satu kemungkinan adalah perubahan definisi views: sejak 24 Agustus 2026, view dihitung ketika video mulai diputar. Periksa juga perubahan volume konten, topik, sumber traffic, dan distribusi sebelum menentukan penyebab."
+  },
+  {
+    "question": "Apakah engaged views lebih penting daripada views?",
+    "answer": "Keduanya menjawab pertanyaan berbeda. Views menunjukkan skala pemutaran awal, sedangkan engaged views membantu menilai jumlah penonton Shorts yang bertahan melewati detik awal."
+  },
+  {
+    "question": "Apakah watch time ikut berubah?",
+    "answer": "YouTube tetap menyediakan watch time sebagai jumlah waktu yang digunakan penonton untuk menonton. Gunakan bersama views dan metrik retensi agar perubahan distribusi tidak disamakan dengan perubahan kualitas perhatian."
+  },
+  {
+    "question": "Apakah views dari iklan masuk ke laporan?",
+    "answer": "YouTube Analytics dapat menampilkan YouTube advertising sebagai sumber traffic. Gunakan filter Organic & paid traffic agar distribusi berbayar dan organik dapat dibaca secara terpisah."
+  },
+  {
+    "question": "Berapa stayed to watch yang bagus?",
+    "answer": "Tidak ada angka universal untuk semua channel. Gunakan baseline dari Shorts dengan durasi, tema, audiens, dan tujuan yang sebanding, lalu nilai bersama hasil setelah menonton."
+  }
+];
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      '@id': `${canonical}#article`,
+      headline: title,
+      description,
+      url: canonical,
+      image: [image],
+      inLanguage: 'id-ID',
+      datePublished: '2026-09-16',
+      dateModified: '2026-09-16',
+      author: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      publisher: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      mainEntityOfPage: canonical,
+      articleSection: 'Video Marketing dan Performance Measurement',
+      about: ['YouTube Analytics', 'YouTube Studio', 'Engaged Views', 'Shorts', 'Audience Retention', 'Watch Time', 'UTM', 'Qualified Lead'],
+      keywords: ['perubahan views YouTube 2026', 'cara membaca YouTube Analytics setelah update views', 'perbedaan views dan engaged views YouTube Shorts', 'mengukur performa video YouTube untuk bisnis']
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://nordy-sukmana.vercel.app/#person',
+      name: 'Nordy Sukmana',
+      url: 'https://nordy-sukmana.vercel.app/',
+      jobTitle: 'Performance Marketing Specialist'
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {'@type': 'ListItem', position: 1, name: 'Portfolio', item: 'https://nordy-sukmana.vercel.app/'},
+        {'@type': 'ListItem', position: 2, name: 'Artikel', item: 'https://nordy-sukmana.vercel.app/artikel/'},
+        {'@type': 'ListItem', position: 3, name: 'Audit Views YouTube', item: canonical}
+      ]
+    }
+  ]
+};
+
+const head = `<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${title}</title>
+<meta name="description" content="${description}">
+<meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0C1F4D"><link rel="canonical" href="${canonical}">
+<meta property="og:type" content="article"><meta property="og:locale" content="id_ID"><meta property="og:site_name" content="Portfolio Nordy Sukmana"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Nordy Sukmana, Performance Marketing Specialist">
+<meta property="article:published_time" content="2026-09-16"><meta property="article:modified_time" content="2026-09-16"><meta property="article:section" content="Video Marketing dan Performance Measurement">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${title}"><meta name="twitter:description" content="${description}"><meta name="twitter:image" content="${image}">
+<script type="application/ld+json">${JSON.stringify(structuredData)}</script>
+<link rel="icon" href="../assets/brand/nordy-mark.svg" type="image/svg+xml"><link rel="icon" href="../favicon.ico" sizes="any"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/case-study.css"><link rel="stylesheet" href="../assets/article.css">`;
+---
+<BaseLayout head={head}>
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+  <CaseStudyHeader />
+  <main id="main-content">
+    <header class="article-hero">
+      <div class="article-shell">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Portfolio</a><span aria-hidden="true">/</span><a href="../artikel/">Artikel</a></nav>
+        <span class="article-kicker">YouTube · Video Marketing · Analytics</span>
+        <h1>{title}</h1>
+        <p class="article-lede">Pahami perubahan penghitungan views, lalu nilai performa video melalui perhatian audiens, retensi, dan hasil bisnis.</p>
+        <div class="article-meta"><span>Nordy Sukmana</span><time datetime="2026-09-16">16 September 2026</time><span>9 menit baca</span></div>
+      </div>
+    </header>
+    <div class="article-shell article-layout">
+      <article class="article-body">
+        <section class="answer-summary" aria-labelledby="answer-summary-title">
+          <span>Jawaban singkat</span>
+<h2 id="answer-summary-title">Bagaimana membaca views YouTube setelah pembaruan?</h2>
+<p>Sejak 24 Agustus 2026, YouTube menghitung view ketika video mulai diputar pada Shorts, video panjang, dan live stream. Karena angka views kini lebih dekat dengan jumlah pemutaran awal, evaluasi konten perlu dilengkapi dengan engaged views untuk Shorts, stayed to watch, watch time, retensi, subscriber, serta outcome bisnis. Tandai tanggal perubahan sebelum membandingkan periode.</p>
+</section>
+<p>Dashboard menunjukkan views video naik. Tim konten merasa format baru berhasil, lalu mengusulkan produksi lebih banyak video dengan pola yang sama.</p>
+<p>Namun, ada satu hal yang belum diperiksa: apakah kenaikan tersebut berasal dari respons audiens atau perubahan cara YouTube menghitung views?</p>
+<p>Sejak 24 Agustus 2026, YouTube menggunakan definisi yang lebih luas untuk menghitung pemutaran pada seluruh format. Perubahan ini tidak membuat views menjadi metrik yang tidak berguna. Namun, marketer perlu memperbarui cara membandingkan performa agar kenaikan angka tidak langsung dianggap sebagai peningkatan kualitas konten.</p>
+<h2>Apa yang berubah pada views YouTube?</h2>
+<p><strong>Mulai 24 Agustus 2026, view dihitung ketika sebuah video mulai diputar pada Shorts, video panjang, dan live stream.</strong></p>
+<p>YouTube menyatakan pembaruan tersebut berlaku untuk seluruh format. Platform juga menjelaskan bahwa perubahan ini tidak memengaruhi pendapatan maupun kelayakan YouTube Partner Program. Pendapatan tetap menggunakan <em>engaged Shorts views</em> dan <em>engaged watch hours</em>, sedangkan kelayakan menggunakan <em>qualified Shorts views</em> dan <em>qualified watch hours</em>. <a href="https://support.google.com/youtube/answer/12220281?hl=en" target="_blank" rel="noopener noreferrer">Dokumentasi metrik konten YouTube</a>.</p>
+<p>Perubahan ini melanjutkan penyesuaian yang sebelumnya diterapkan pada Shorts. Sejak 31 Maret 2025, Shorts views dihitung ketika video mulai diputar atau diputar ulang tanpa persyaratan minimum waktu tonton. Metode sebelumnya kemudian disebut <em>engaged views</em>. <a href="https://support.google.com/youtube/answer/9082582" target="_blank" rel="noopener noreferrer">Riwayat pembaruan YouTube Studio</a>.</p>
+<p>Implikasi praktisnya: angka views setelah pembaruan memiliki definisi berbeda dari sebagian laporan historis. Tandai tanggal perubahan sebelum membuat grafik pertumbuhan atau perbandingan tahunan.</p>
+<h2>Apa perbedaan views dan engaged views?</h2>
+<p><strong>Views mencatat pemutaran awal, sedangkan engaged views menunjukkan berapa kali penonton Shorts bertahan melewati detik awal.</strong></p>
+<p>Dokumentasi YouTube mendefinisikan beberapa metrik penting:</p>
+<div class="table-wrap" role="region" aria-label="Definisi metrik performa YouTube" tabindex="0"><table><caption>Definisi metrik performa YouTube</caption>
+<thead>
+<tr>
+<th scope="col">Metrik</th>
+<th scope="col">Arti</th>
+<th scope="col">Kegunaan</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Views</td>
+<td>Pemutaran sah yang dihitung ketika video mulai diputar</td>
+<td>Membaca skala distribusi awal</td>
+</tr>
+<tr>
+<td>Engaged views</td>
+<td>Penonton bertahan melewati detik awal, tanpa menghitung loop</td>
+<td>Menilai perhatian awal pada Shorts</td>
+</tr>
+<tr>
+<td>Stayed to watch</td>
+<td>Persentase pemutaran ketika penonton memilih bertahan</td>
+<td>Membaca kekuatan pembuka Shorts</td>
+</tr>
+<tr>
+<td>Average view duration</td>
+<td>Rerata durasi tonton di antara penonton yang bertahan</td>
+<td>Menilai kemampuan isi mempertahankan perhatian</td>
+</tr>
+<tr>
+<td>Average percentage viewed</td>
+<td>Persentase rerata video yang ditonton oleh penonton yang bertahan</td>
+<td>Membandingkan penyelesaian video dengan durasi berbeda</td>
+</tr>
+<tr>
+<td>Watch time</td>
+<td>Total waktu yang digunakan untuk menonton</td>
+<td>Menilai kedalaman konsumsi konten</td>
+</tr>
+</tbody></table></div>
+<p>YouTube menghitung average view duration dan average percentage viewed berdasarkan engaged views serta waktu tonton yang terkait. <a href="https://support.google.com/youtube/answer/12220281?hl=en" target="_blank" rel="noopener noreferrer">Panduan metrik performa konten YouTube</a>.</p>
+<p>Artinya, views menjawab “berapa kali video mulai diputar”, sedangkan metrik engagement membantu menjawab “apa yang terjadi setelah pemutaran dimulai”.</p>
+<h2>Apakah views tinggi berarti konten membaik?</h2>
+<p><strong>Belum tentu. Views tinggi menunjukkan distribusi, tetapi belum membuktikan perhatian, relevansi, atau dampak bisnis.</strong></p>
+<p>Video dapat memperoleh banyak pemutaran karena topiknya sedang ramai atau distribusinya meluas. Namun, penonton mungkin langsung melewati video, tidak mengingat pesan, atau tidak mengambil tindakan berikutnya.</p>
+<p>Sebaliknya, video dengan views lebih kecil dapat membawa audiens yang lebih relevan, menghasilkan lebih banyak subscriber, atau mendorong permintaan yang sesuai dengan layanan bisnis.</p>
+<p>Gunakan empat lapisan evaluasi:</p>
+<ol>
+<li><strong>Distribusi:</strong> views, unique viewers, dan sumber traffic. </li>
+<li><strong>Perhatian:</strong> engaged views, stayed to watch, watch time, dan retensi. </li>
+<li><strong>Respons:</strong> likes, komentar relevan, subscriber, atau kunjungan lanjutan. </li>
+<li><strong>Outcome bisnis:</strong> inquiry, qualified lead, pendaftaran, atau transaksi.</li>
+</ol>
+<p>Hubungkan lapisan pengukuran ini dengan <a href="../case-study/performance-analysis/">analisis performa lintas channel</a> agar keputusan konten selaras dengan tujuan bisnis.</p>
+<p>Tidak semua video harus menghasilkan lead secara langsung. Namun, tujuan video perlu ditetapkan sebelum performanya dinilai.</p>
+<h2>Enam langkah mengaudit performa YouTube setelah perubahan views</h2>
+<h3>1. Tandai batas perubahan definisi</h3>
+<p>Buat anotasi pada dashboard untuk 24 Agustus 2026. Pisahkan periode sebelum dan sesudah tanggal tersebut ketika melakukan analisis tren.</p>
+<p>Jangan langsung menyimpulkan pertumbuhan organik hanya karena views September lebih tinggi daripada Juli. Periksa pula jumlah video yang diterbitkan, topik, format, sumber traffic, durasi, dan pola distribusinya.</p>
+<p>Jika data historis memakai definisi berbeda, jelaskan perubahan tersebut dalam laporan kepada pemilik bisnis atau klien.</p>
+<h3>2. Pisahkan Shorts, video panjang, dan live stream</h3>
+<p>Ketiga format tersebut memiliki pengalaman konsumsi yang berbeda.</p>
+<p>Shorts berada dalam feed yang dapat dilewati dengan cepat. Video panjang lebih bergantung pada pilihan topik, judul, thumbnail, dan kemampuan mempertahankan penonton. Live stream juga dipengaruhi jadwal serta jumlah penonton bersamaan.</p>
+<p>YouTube Analytics menyediakan laporan per jenis konten. Filter <strong>Organic &amp; paid traffic</strong> pada desktop juga dapat digunakan untuk membedakan traffic tidak berbayar dan traffic dari iklan. <a href="https://support.google.com/youtube/answer/12220281?hl=en" target="_blank" rel="noopener noreferrer">Panduan Content Analytics YouTube</a>.</p>
+<p>Jangan menggabungkan kenaikan views dari iklan dengan pertumbuhan distribusi organik tanpa memberi label yang jelas.</p>
+<h3>3. Untuk Shorts, periksa engaged views dan stayed to watch</h3>
+<p>Gunakan views untuk membaca distribusi awal, kemudian buka metrik engaged views dan laporan <strong>How viewers engaged</strong>.</p>
+<p>Jika views naik tetapi stayed to watch menurun, video mungkin mendapat kesempatan distribusi lebih besar tanpa peningkatan kekuatan pembuka. Jika keduanya meningkat, lanjutkan pemeriksaan terhadap durasi tonton serta respons audiens.</p>
+<p>Hindari menetapkan angka universal seperti “harus mencapai 70%”. Bandingkan video dengan format, durasi, audiens, dan tujuan yang sebanding.</p>
+<h3>4. Audit bagian video yang kehilangan penonton</h3>
+<p>Untuk video panjang, periksa audience retention serta average view duration. Cari penurunan tajam setelah pembukaan, perpindahan topik, penjelasan yang terlalu panjang, atau CTA.</p>
+<p>Untuk Shorts, cocokkan stayed to watch dengan struktur video:</p>
+<ul>
+<li>Apakah konteksnya segera dipahami? </li>
+<li>Apakah teks pembuka sesuai dengan isi? </li>
+<li>Apakah manfaat utama muncul cukup awal? </li>
+<li>Apakah video memerlukan pengetahuan yang belum dijelaskan? </li>
+<li>Apakah CTA mengikuti kebutuhan penonton?</li>
+</ul>
+<p>Gunakan temuan tersebut untuk memperbaiki brief berikutnya. Untuk menyusun pengujian pembuka secara terarah, pelajari juga <a href="../cara-menguji-hook-tiktok-ads/">cara menguji hook TikTok Ads</a>, lalu sesuaikan pendekatannya dengan format dan audiens YouTube.</p>
+<h3>5. Hubungkan konten dengan langkah berikutnya</h3>
+<p>Tentukan tindakan yang diharapkan setelah menonton, misalnya:</p>
+<ul>
+<li>Menonton video lain. </li>
+<li>Berlangganan channel. </li>
+<li>Mengunjungi halaman layanan. </li>
+<li>Mengunduh materi. </li>
+<li>Mengisi formulir. </li>
+<li>Menghubungi tim bisnis.</li>
+</ul>
+<p>Untuk tautan yang memang dapat diklik, gunakan parameter UTM secara konsisten. GA4 dapat membaca <code>utm_source</code>, <code>utm_medium</code>, dan <code>utm_campaign</code> untuk mengidentifikasi traffic dari kampanye atau referensi tertentu. <a href="https://support.google.com/analytics/answer/10917952?hl=en" target="_blank" rel="noopener noreferrer">Panduan URL campaign Google Analytics</a>.</p>
+<p>Cocokkan kunjungan dengan CRM jika tujuan akhirnya adalah lead. Jangan menilai seluruh kontribusi video hanya dari jumlah klik jika siklus pertimbangannya panjang.</p>
+<h3>6. Dokumentasikan keputusan konten</h3>
+<p>YouTube menyediakan Advanced Mode untuk membandingkan performa dan mengekspor data. <a href="https://support.google.com/youtubecreatorstudio/answer/9002587?hl=en-GB" target="_blank" rel="noopener noreferrer">Panduan YouTube Analytics</a>.</p>
+<p>Simpan catatan yang memuat:</p>
+<ul>
+<li>Tanggal dan versi video. </li>
+<li>Format serta durasi. </li>
+<li>Topik dan target audiens. </li>
+<li>Sumber traffic. </li>
+<li>Views dan engaged views. </li>
+<li>Retensi serta watch time. </li>
+<li>Subscriber atau tindakan lanjutan. </li>
+<li>Outcome bisnis yang tersedia. </li>
+<li>Keputusan produksi berikutnya.</li>
+</ul>
+<p>Dengan dokumentasi tersebut, “video ini ramai” dapat diterjemahkan menjadi keputusan yang bisa diperiksa kembali.</p>
+<h2>Contoh: views terbesar tidak selalu memberi hasil terbaik</h2>
+<p>Misalkan sebuah bisnis jasa menerbitkan dua Shorts. Angka berikut digunakan sebagai simulasi evaluasi:</p>
+<div class="table-wrap" role="region" aria-label="Simulasi evaluasi dua video Shorts" tabindex="0"><table><caption>Simulasi evaluasi dua video Shorts</caption>
+<thead>
+<tr>
+<th scope="col">Metrik</th>
+<th scope="col">Shorts A</th>
+<th scope="col">Shorts B</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Views</td>
+<td>120.000</td>
+<td>70.000</td>
+</tr>
+<tr>
+<td>Engaged views</td>
+<td>25.000</td>
+<td>34.000</td>
+</tr>
+<tr>
+<td>Stayed to watch</td>
+<td>23%</td>
+<td>51%</td>
+</tr>
+<tr>
+<td>Subscriber bertambah</td>
+<td>80</td>
+<td>210</td>
+</tr>
+<tr>
+<td>Sesi website teridentifikasi</td>
+<td>90</td>
+<td>260</td>
+</tr>
+<tr>
+<td>Qualified lead</td>
+<td>3</td>
+<td>12</td>
+</tr>
+</tbody></table></div>
+<p>Shorts A memperoleh distribusi awal lebih besar. Namun, Shorts B mempertahankan lebih banyak penonton dan menghasilkan tindakan lanjutan yang lebih kuat.</p>
+<p>Kesimpulan yang bertanggung jawab bukan bahwa Shorts B “pasti lebih baik” untuk semua kebutuhan. Jika tujuannya menjangkau audiens seluas mungkin, Shorts A masih memberi informasi penting. Jika tujuannya membangun audiens relevan dan menghasilkan inquiry, pola Shorts B lebih layak dikembangkan.</p>
+<p>Periksa juga apakah kedua video diterbitkan pada kondisi yang sebanding sebelum menghubungkan perbedaan hasil hanya dengan creative.</p>
+<h2>Checklist evaluasi views YouTube</h2>
+<ol class="checklist">
+<li>Tanggal 24 Agustus 2026 sudah ditandai pada laporan. </li>
+<li>Definisi metrik yang dibandingkan konsisten. </li>
+<li>Shorts, video panjang, dan live stream dipisahkan. </li>
+<li>Organic dan paid traffic tidak dicampur tanpa label. </li>
+<li>Views dibaca bersama engaged views atau retensi. </li>
+<li>Stayed to watch diperiksa untuk Shorts. </li>
+<li>Watch time dan average view duration ikut dievaluasi. </li>
+<li>Tujuan setiap video telah ditentukan. </li>
+<li>Tautan yang relevan menggunakan UTM konsisten. </li>
+<li>Subscriber, sesi website, dan lead diperiksa jika tersedia. </li>
+<li>Keputusan produksi berikutnya mencantumkan dasar datanya.</li>
+</ol>
+
+<h2>Pertanyaan yang sering diajukan</h2>
+        {faqItems.map(item => <section class="faq-item"><h3>{item.question}</h3><p>{item.answer}</p></section>)}
+        <h2>Kesimpulan</h2>
+<p>Pembaruan views YouTube membuat angka pemutaran awal lebih mudah bertambah, tetapi tidak menggantikan kebutuhan membaca kualitas perhatian.</p>
+<p>Tandai perubahan definisi, pisahkan format dan sumber traffic, lalu hubungkan views dengan engaged views, retensi, subscriber, serta outcome bisnis. Dengan kerangka ini, keputusan produksi video tidak berhenti pada angka yang terlihat besar.</p>
+<p>Untuk pengukuran video berbayar, lanjutkan ke <a href="../update-video-reach-campaign-youtube-ads-2026/">panduan audit migrasi Video Reach Campaign YouTube Ads</a>. Anda juga dapat melihat pendekatan digital marketing berbasis data melalui <a href="../">portfolio Nordy Sukmana</a>.</p>
+
+<div class="related-article"><span>Artikel terkait</span><a href="../update-video-reach-campaign-youtube-ads-2026/">Pelajari audit migrasi Video Reach Campaign YouTube Ads →</a></div>
+      </article>
+      <aside class="article-sidebar" aria-label="Informasi artikel">
+        <section class="side-card"><h2>Tentang penulis</h2><p><strong>Nordy Sukmana</strong> adalah Performance Marketing Specialist dengan pengalaman mengelola Meta Ads, Google Ads, tracking, analytics, dan marketing automation.</p><a class="back-link" href="../#about">Lihat profil</a></section>
+        <section class="side-card"><h2>Topik artikel</h2><ul><li>YouTube Analytics</li><li>Engaged Views</li><li>Retensi dan Watch Time</li><li>Outcome Bisnis</li></ul></section>
+        <section class="side-card"><h2>Sumber utama</h2><p>Dokumentasi YouTube dan Google Analytics, diperiksa pada 16 September 2026.</p><a class="back-link" href="https://support.google.com/youtube/answer/12220281?hl=en" target="_blank" rel="noopener noreferrer">Metrik performa YouTube ↗</a><a class="back-link" href="https://support.google.com/youtube/answer/9082582" target="_blank" rel="noopener noreferrer">Riwayat pembaruan YouTube ↗</a><a class="back-link" href="https://support.google.com/analytics/answer/10917952?hl=en" target="_blank" rel="noopener noreferrer">Parameter UTM di GA4 ↗</a></section>
+        <section class="side-card"><h2>Bacaan terkait</h2><p>Audit perubahan campaign video berbayar sebelum membandingkan hasilnya.</p><a class="back-link" href="../update-video-reach-campaign-youtube-ads-2026/">Baca panduan Video Reach Campaign</a></section>
+      </aside>
+    </div>
+  </main>
+  <footer class="article-footer"><div class="article-shell"><span>© 2026 Nordy Sukmana</span><a href="../artikel/">Lihat semua artikel</a></div></footer>
+  <script is:inline src="/assets/analytics-loader.js"></script>
+</BaseLayout>

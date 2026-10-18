@@ -1,0 +1,167 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyHeader from '../../components/CaseStudyHeader.astro';
+
+const canonical = 'https://nordy-sukmana.vercel.app/laporan-generative-ai-search-console/';
+const image = 'https://nordy-sukmana.vercel.app/assets/brand/open-graph.png';
+const faqItems = [
+  {
+    question: 'Apakah semua website sudah mendapatkan laporan Generative AI?',
+    answer: 'Belum. Google masih meluncurkannya secara bertahap ke sebagian website. Tidak munculnya laporan di akunmu belum membuktikan bahwa website sama sekali tidak memperoleh visibilitas dalam fitur AI.'
+  },
+  {
+    question: 'Apakah impressions dari AI Search sama dengan traffic?',
+    answer: 'Tidak. Impressions menunjukkan bahwa URL muncul dalam fitur generative AI. Traffic baru tercatat ketika pengguna benar-benar mengunjungi website.'
+  },
+  {
+    question: 'Apakah GEO menggantikan SEO?',
+    answer: 'Tidak. Untuk ekosistem Google, SEO tetap menjadi fondasi karena fitur generative AI memanfaatkan indeks, sistem ranking, dan kualitas pencarian yang sama. GEO atau AIO lebih tepat dipahami sebagai lapisan tambahan dalam strategi visibilitas.'
+  },
+  {
+    question: 'Apakah perlu menambahkan schema khusus AI?',
+    answer: 'Tidak ada schema khusus yang menjamin website muncul di AI Overview atau AI Mode. Gunakan structured data yang memang sesuai dengan isi halaman.'
+  },
+  {
+    question: 'Mengapa impressions AI Search tiba-tiba turun pada Agustus 2026?',
+    answer: 'Google mengonfirmasi adanya masalah pencatatan impressions pada 13–17 Agustus 2026. Penurunan pada periode tersebut dapat berasal dari gangguan pelaporan, bukan perubahan performa aktual.'
+  }
+];
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      '@id': `${canonical}#article`,
+      headline: 'Google Search Console Kini Ukur Visibilitas AI: Cara Membacanya',
+      description: 'Google Search Console kini menyediakan laporan Generative AI. Pelajari metrik dan cara menggunakannya untuk strategi SEO serta AI Search.',
+      url: canonical,
+      image: [image],
+      inLanguage: 'id-ID',
+      datePublished: '2026-08-29',
+      dateModified: '2026-08-30',
+      author: { '@type': 'Person', name: 'Nordy Sukmana', url: 'https://nordy-sukmana.vercel.app/' },
+      publisher: { '@type': 'Person', name: 'Nordy Sukmana', url: 'https://nordy-sukmana.vercel.app/' },
+      mainEntityOfPage: canonical,
+      articleSection: 'SEO, Analytics & AI Search',
+      keywords: ['Google Search Console', 'Generative AI', 'AI Overviews', 'AI Mode', 'GEO', 'AIO']
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${canonical}#faq`,
+      mainEntity: faqItems.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: { '@type': 'Answer', text: item.answer }
+      }))
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Portfolio', item: 'https://nordy-sukmana.vercel.app/' },
+        { '@type': 'ListItem', position: 2, name: 'Artikel', item: canonical }
+      ]
+    }
+  ]
+};
+const head = `<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Search Console Kini Ukur Visibilitas AI: Cara Membacanya</title>
+<meta name="description" content="Google Search Console kini menyediakan laporan Generative AI. Pelajari metrik dan cara menggunakannya untuk strategi SEO serta AI Search.">
+<meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0C1F4D"><link rel="canonical" href="${canonical}">
+<meta property="og:type" content="article"><meta property="og:locale" content="id_ID"><meta property="og:site_name" content="Portfolio Nordy Sukmana"><meta property="og:title" content="Google Search Console Kini Ukur Visibilitas AI"><meta property="og:description" content="Cara membaca laporan Generative AI untuk mengukur visibilitas website di AI Overviews, AI Mode, dan Discover."><meta property="og:url" content="${canonical}"><meta property="og:image" content="${image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Nordy Sukmana, Performance Marketing Specialist">
+<meta property="article:published_time" content="2026-08-29"><meta property="article:modified_time" content="2026-08-30"><meta property="article:section" content="SEO, Analytics & AI Search">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Google Search Console Kini Ukur Visibilitas AI"><meta name="twitter:description" content="Panduan membaca laporan Generative AI untuk strategi SEO, GEO, dan AIO."><meta name="twitter:image" content="${image}">
+<script type="application/ld+json">${JSON.stringify(structuredData)}</script>
+<link rel="icon" href="../assets/brand/nordy-mark.svg" type="image/svg+xml"><link rel="icon" href="../favicon.ico" sizes="any"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/case-study.css"><link rel="stylesheet" href="../assets/article.css">`;
+---
+<BaseLayout head={head}>
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a><CaseStudyHeader />
+  <main id="main-content">
+    <header class="article-hero"><div class="article-shell"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Portfolio</a><span aria-hidden="true">/</span><a href="../artikel/">Artikel</a></nav><span class="article-kicker">SEO · Analytics · AI Search</span><h1>Google Search Console Kini Ukur Visibilitas AI: Cara Membacanya</h1><p class="article-lede">Laporan baru ini membantu marketer melihat halaman yang mulai muncul di AI Overviews, AI Mode, dan fitur generative AI lainnya—tanpa kehilangan fokus pada traffic dan hasil bisnis.</p><div class="article-meta"><span>Nordy Sukmana</span><span>29 Agustus 2026</span><span>8 sampai 9 menit baca</span></div></div></header>
+    <div class="article-shell article-layout">
+      <article class="article-body">
+        <section class="answer-summary" aria-labelledby="answer-summary-title"><span>Jawaban singkat</span><h2 id="answer-summary-title">Apa yang sekarang bisa diukur?</h2><p>Google Search Console mulai menyediakan laporan khusus untuk mengukur kemunculan halaman website di AI Overviews, AI Mode, dan fitur generative AI lainnya. Laporan ini menampilkan impressions, halaman, negara, perangkat, dan tren waktu, tetapi tetap perlu dikombinasikan dengan GA4 serta data konversi untuk menilai dampak bisnis.</p></section>
+
+        <p>Selama beberapa tahun terakhir, praktisi SEO bisa melihat traffic organik melalui Google Search Console, tetapi kesulitan menjawab satu pertanyaan baru: apakah halaman website benar-benar muncul di AI Overviews atau AI Mode?</p>
+        <p>Pada 3 Juni 2026, Google mulai menjawab pertanyaan tersebut dengan meluncurkan <strong>Search Generative AI performance reports</strong> di Search Console. Laporan ini menyediakan tampilan khusus untuk mengetahui visibilitas website dalam fitur pencarian berbasis AI.</p>
+        <p>Bagi digital marketer, pembaruan ini cukup penting. Visibilitas organik sekarang tidak hanya berbentuk ranking dan klik dari sepuluh tautan biru. Sebuah halaman juga dapat muncul sebagai sumber pendukung dalam jawaban generatif, bahkan ketika pengguna belum mengunjungi website.</p>
+        <p>Namun, laporan baru bukan berarti marketer harus mengejar satu metrik tambahan secara membabi buta. Data tersebut tetap perlu dibaca bersama kualitas halaman, traffic, engagement, dan hasil bisnis.</p>
+
+        <h2>Apa yang berubah di Google Search Console?</h2>
+        <p>Google kini menyediakan laporan terpisah yang menunjukkan seberapa sering URL website muncul di fitur generative AI pada Search dan Discover.</p>
+        <div class="report-preview" aria-label="Cakupan laporan Generative AI Search Console"><div class="report-preview__head"><img src="../assets/tools/googlesearchconsole.svg" alt="" width="44" height="44"><div><span>Laporan Generative AI</span><strong>Visibilitas di Search dan Discover</strong></div></div><div class="report-preview__grid"><span><strong>AI Overviews</strong>Search</span><span><strong>AI Mode</strong>Search</span><span><strong>Generative AI</strong>Discover</span><span><strong>Fitur AI lain</strong>Sesuai pelaporan Google</span></div></div>
+        <p>Sebelumnya, data tersebut sudah menjadi bagian dari laporan performa secara keseluruhan. Sekarang, pemilik website yang mendapatkan akses dapat melihatnya melalui tampilan khusus.</p>
+        <p>Menurut <a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports" target="_blank" rel="noopener noreferrer">pengumuman resmi Google Search Central</a>, laporan ini masih diluncurkan secara bertahap ke sebagian website. Jadi, jika menu tersebut belum muncul di akunmu, hal itu belum tentu berarti website tidak pernah tampil di AI Search.</p>
+
+        <h2>Metrik apa saja yang tersedia?</h2>
+        <p>Pada tahap awal, laporan Generative AI lebih berfokus pada <strong>visibilitas</strong> daripada atribusi penjualan secara lengkap.</p>
+        <div class="table-wrap" role="region" aria-label="Metrik laporan Generative AI" tabindex="0"><table><thead><tr><th>Metrik</th><th>Informasi yang diberikan</th><th>Cara membacanya</th></tr></thead><tbody><tr><td><strong>Impressions</strong></td><td>Frekuensi URL muncul di fitur generative AI</td><td>Mengukur jangkauan awal</td></tr><tr><td><strong>Pages</strong></td><td>URL yang ditampilkan dalam fitur AI</td><td>Menemukan konten dengan visibilitas tertinggi</td></tr><tr><td><strong>Countries</strong></td><td>Negara asal kemunculan</td><td>Melihat relevansi geografis</td></tr><tr><td><strong>Devices</strong></td><td>Perangkat yang digunakan</td><td>Memahami konteks desktop atau mobile</td></tr><tr><td><strong>Dates</strong></td><td>Perubahan performa berdasarkan waktu</td><td>Membandingkan tren sebelum dan sesudah optimasi</td></tr></tbody></table></div>
+        <p>Data waktu dapat dilihat dalam skala per jam, harian, mingguan, atau bulanan. Namun, impressions sebaiknya tidak langsung diterjemahkan sebagai keberhasilan bisnis.</p>
+        <p>Halaman yang memperoleh banyak impressions belum tentu menghasilkan klik berkualitas. Sebaliknya, halaman dengan impressions lebih kecil mungkin membawa pengunjung yang lebih dekat dengan keputusan pembelian.</p>
+
+        <h2>Kenapa laporan ini penting bagi digital marketer?</h2>
+        <p>Jawaban singkatnya: laporan ini membantu marketer membedakan antara <strong>konten yang hanya terindeks</strong> dan <strong>konten yang mulai mendapat visibilitas dalam pencarian berbasis AI</strong>.</p>
+
+        <h3>1. Mengetahui halaman yang dipercaya sebagai sumber pendukung</h3>
+        <p>Laporan Pages membantu menemukan URL yang muncul dalam AI Overviews atau AI Mode. Dari sini, kamu dapat mempelajari karakter halaman tersebut.</p>
+        <p>Periksa apakah halaman dengan performa baik memiliki:</p><ul><li>Pembahasan yang lebih lengkap.</li><li>Jawaban langsung setelah heading.</li><li>Identitas dan kredibilitas penulis.</li><li>Sumber yang mudah diverifikasi.</li><li>Data, contoh, atau analisis yang tidak ditemukan di banyak website lain.</li><li>Struktur halaman yang mudah dipahami.</li></ul>
+        <p>Tujuannya bukan menyalin struktur halaman yang berhasil secara mentah, tetapi menemukan pola kualitas yang dapat diterapkan pada konten berikutnya.</p>
+
+        <h3>2. Mengukur dampak pembaruan konten</h3>
+        <p>Ketika sebuah artikel diperbarui, catat tanggal perubahannya. Setelah itu, bandingkan impressions sebelum dan sesudah pembaruan.</p>
+        <p>Perubahan yang layak diuji meliputi:</p><ul><li>Memperbarui data atau informasi lama.</li><li>Menambahkan contoh konkret.</li><li>Memperjelas jawaban atas pertanyaan utama.</li><li>Menambahkan profil penulis dan sumber resmi.</li><li>Memperbaiki internal link.</li><li>Menghapus bagian yang berulang atau tidak relevan.</li></ul>
+        <p>Jangan langsung menyimpulkan hasil hanya dari satu atau dua hari. Gunakan periode yang cukup panjang dan perhatikan kemungkinan perubahan musiman.</p>
+
+        <h3>3. Membedakan visibilitas dan kualitas kunjungan</h3>
+        <p>Search Console menjawab pertanyaan tentang bagaimana halaman ditemukan. GA4 membantu melihat apa yang dilakukan pengunjung setelah masuk ke website.</p>
+        <p>Karena itu, analisis sebaiknya menggabungkan:</p><ul><li>Impressions dari laporan Generative AI.</li><li>Organic traffic dari GA4.</li><li>Engagement rate.</li><li>Halaman yang dikunjungi berikutnya.</li><li>Form submission atau klik WhatsApp.</li><li>Leads dan konversi yang memenuhi kriteria bisnis.</li></ul>
+        <p>Pendekatan ini penting agar laporan tidak berhenti menjadi kumpulan angka. Seorang performance marketer tetap perlu menghubungkan visibilitas dengan tindakan pengguna.</p>
+
+        <h3>4. Menemukan topik yang layak dikembangkan</h3>
+        <p>Jika satu halaman mulai mendapatkan impressions dari AI Search, periksa pertanyaan lanjutan yang masih berkaitan dengan topik tersebut.</p>
+        <p>Misalnya, sebuah artikel tentang perbandingan Meta Ads, Google Ads, dan TikTok Ads mulai memperoleh visibilitas. Konten berikutnya tidak harus mengulang perbandingan yang sama. Kamu dapat mengembangkan sudut yang lebih spesifik, seperti:</p><ul><li>Kapan budget perlu dipindahkan antar-channel?</li><li>Mengapa channel dengan CAC terendah belum tentu paling menguntungkan?</li><li>Bagaimana membandingkan volume order dan average revenue?</li><li>Metrik apa yang digunakan untuk mengevaluasi cross-channel campaign?</li></ul>
+        <p>Pendekatan ini membangun kedalaman topik tanpa membuat banyak artikel tipis yang sekadar mengejar variasi keyword.</p>
+        <div class="callout">Lihat juga <a href="../case-study/performance-analysis/">Cross-channel Ads Performance Analysis</a> untuk memahami cara menghubungkan metrik channel dengan keputusan budget.</div>
+
+        <h2>Cara membaca laporan Generative AI secara praktis</h2>
+        <p>Berikut alur yang dapat digunakan setiap bulan.</p>
+        <h3>Langkah 1: Buat baseline</h3><p>Catat impressions, halaman yang muncul, negara, perangkat, dan periode pengukuran. Gunakan rentang waktu minimal 28 hari jika datanya tersedia.</p><p>Baseline diperlukan agar perubahan berikutnya tidak dinilai berdasarkan perasaan.</p>
+        <h3>Langkah 2: Kelompokkan halaman berdasarkan search intent</h3><p>Pisahkan halaman menjadi tiga kelompok:</p><ul><li><strong>Informational:</strong> menjawab pertanyaan dan memberi edukasi.</li><li><strong>Commercial investigation:</strong> membantu membandingkan metode, layanan, atau platform.</li><li><strong>Transactional:</strong> mengarahkan pengguna untuk menghubungi, mendaftar, atau membeli.</li></ul><p>Kemunculan dalam AI Search bisa memiliki nilai berbeda pada setiap kelompok. Artikel informasional mungkin menghasilkan impressions besar, sedangkan halaman dengan intent komersial dapat menghasilkan lebih sedikit kunjungan tetapi lebih dekat dengan konversi.</p>
+        <h3>Langkah 3: Bandingkan karakter halaman</h3><p>Cari perbedaan antara halaman yang muncul dan belum muncul di laporan.</p><p>Periksa kualitas pembahasan, originalitas, internal link, tanggal pembaruan, kredibilitas penulis, serta kejelasan struktur. Jangan hanya menghitung panjang artikel atau jumlah keyword.</p><p>Google menjelaskan bahwa konten yang unik, bernilai, dan tidak sekadar mengulang informasi umum menjadi fondasi penting untuk generative AI Search. Google juga menegaskan bahwa SEO tetap relevan karena AI Overviews dan AI Mode masih memanfaatkan sistem pencarian serta indeks Google. Baca <a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" target="_blank" rel="noopener noreferrer">panduan resmi optimasi generative AI Google</a>.</p>
+        <h3>Langkah 4: Hubungkan dengan hasil bisnis</h3><p>Tambahkan data GA4, conversion tracking, CRM, atau laporan leads.</p><div class="metric-examples"><blockquote><strong>5.000 impressions</strong><span>2 kunjungan · 0 interaksi lanjutan</span><p>Visibilitas ada, tetapi kontribusi bisnis belum terlihat.</p></blockquote><blockquote><strong>500 impressions</strong><span>30 kunjungan · 4 klik WhatsApp · 1 qualified lead</span><p>Jangkauan lebih kecil, tetapi nilainya lebih besar bagi bisnis.</p></blockquote></div><p>Dalam konteks performance marketing, halaman kedua mungkin memiliki nilai yang lebih besar.</p>
+        <h3>Langkah 5: Tentukan tindakan berikutnya</h3><p>Setiap laporan harus menghasilkan keputusan. Pilih salah satu:</p><ul><li>Mempertahankan halaman karena performanya sehat.</li><li>Memperbarui informasi yang sudah tertinggal.</li><li>Memperkuat internal link menuju halaman layanan atau case study.</li><li>Menggabungkan dua artikel yang terlalu mirip.</li><li>Membuat konten lanjutan dengan intent berbeda.</li><li>Menghentikan produksi topik yang tidak memberi nilai.</li></ul>
+
+        <h2>Perlu hati-hati dengan data Agustus 2026</h2>
+        <div class="data-warning"><span aria-hidden="true">!</span><div><strong>Anomali pelaporan, bukan penurunan performa</strong><p>Google mencatat kesalahan pencatatan yang menyebabkan penurunan impressions pada laporan Generative AI untuk periode <strong>13–17 Agustus 2026</strong>. Masalah tersebut hanya memengaruhi pelaporan, bukan performa aktual website.</p></div></div>
+        <p>Artinya, jika grafik turun pada periode tersebut, jangan langsung menganggap halaman kehilangan visibilitas atau terkena perubahan algoritma. Periksa dahulu halaman <a href="https://support.google.com/webmasters/answer/6211453" target="_blank" rel="noopener noreferrer">Data anomalies in Search Console</a> sebelum mengambil keputusan besar.</p>
+        <p>Ini contoh sederhana mengapa marketer tidak boleh membaca grafik tanpa konteks.</p>
+
+        <h2>Apa yang tidak perlu dilakukan?</h2>
+        <p>Munculnya laporan AI Search berpotensi melahirkan banyak “trik GEO” baru. Beberapa tindakan berikut justru perlu dihindari:</p><ul><li>Membuat puluhan artikel tipis untuk setiap variasi pertanyaan.</li><li>Menulis ulang seluruh website hanya agar terdengar seperti jawaban AI.</li><li>Menambahkan data yang tidak dapat diverifikasi.</li><li>Menganggap structured data menjamin kemunculan di AI Overview.</li><li>Mengejar impressions tanpa melihat engagement dan konversi.</li><li>Membuat <code>llms.txt</code> dengan harapan meningkatkan ranking di Google.</li></ul>
+        <p>Dalam panduan terbarunya, Google menyatakan bahwa tidak ada schema khusus yang diwajibkan untuk tampil di generative AI Search. Google juga tidak menggunakan <code>llms.txt</code> sebagai faktor visibilitas di Google Search.</p>
+        <p>Fondasinya tetap sama: konten yang berguna, struktur teknis yang jelas, halaman yang dapat diindeks, dan informasi yang memiliki nilai nyata bagi pembaca.</p>
+
+        <h2>Checklist analisis untuk bulan ini</h2>
+        <ol class="checklist"><li>Catat baseline impressions selama 28 hari.</li><li>Identifikasi lima halaman dengan visibilitas tertinggi.</li><li>Kelompokkan halaman berdasarkan search intent.</li><li>Bandingkan data Search Console dengan GA4.</li><li>Periksa leads atau konversi dari organic traffic.</li><li>Evaluasi kualitas serta kebaruan halaman.</li><li>Tambahkan internal link yang relevan.</li><li>Catat setiap perubahan agar dampaknya dapat dibandingkan.</li><li>Periksa data anomalies sebelum menyimpulkan penurunan.</li><li>Ulangi analisis pada bulan berikutnya.</li></ol>
+
+        <h2>Pertanyaan yang Sering Diajukan</h2>
+        {faqItems.map((item) => <section class="faq-item"><h3>{item.question}</h3><p>{item.answer}</p></section>)}
+
+        <h2>Kesimpulan</h2>
+        <p>Laporan Generative AI di Google Search Console memberi digital marketer cara baru untuk melihat bagaimana konten muncul dalam AI Overviews, AI Mode, dan fitur generatif lainnya.</p>
+        <p>Namun, impressions bukan tujuan akhir. Data baru ini tetap perlu dihubungkan dengan kualitas traffic, perilaku pengguna, leads, dan konversi.</p>
+        <p>Prinsipnya masih sama: <strong>setiap metrik harus menghasilkan keputusan, bukan hanya memenuhi dashboard.</strong></p>
+        <p>Mulailah dengan mencatat baseline, menemukan halaman yang memperoleh visibilitas, kemudian membandingkannya dengan data GA4 dan hasil bisnis. Dengan cara ini, optimasi AI Search tetap berjalan sebagai bagian dari performance marketing yang terukur, bukan sekadar mengikuti tren.</p>
+        <div class="related-article"><span>Artikel terkait</span><a href="../strategi-digital-marketing-2026/">Strategi Digital Marketing 2026: 9 Langkah Praktis di Era AI Search →</a></div>
+      </article>
+      <aside class="article-sidebar" aria-label="Informasi artikel">
+        <section class="side-card"><h2>Tentang penulis</h2><p><strong>Nordy Sukmana</strong> adalah Performance Marketing Specialist dengan pengalaman mengelola Meta Ads, Google Ads, tracking, SEO, dan marketing automation.</p><a class="back-link" href="../#about">Lihat profil</a></section>
+        <section class="side-card"><h2>Topik artikel</h2><ul><li>Google Search Console</li><li>AI Overviews &amp; AI Mode</li><li>SEO, GEO &amp; AIO</li><li>GA4 &amp; content performance</li></ul></section>
+        <section class="side-card"><h2>Sumber utama</h2><p>Informasi diverifikasi dari dokumentasi resmi Google Search Central dan catatan anomali Search Console.</p><a class="back-link" href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports" target="_blank" rel="noopener noreferrer">Buka pengumuman Google ↗</a></section>
+        <section class="side-card"><h2>Artikel terbaru</h2><p>Pelajari cara menghubungkan qualified lead dari CRM dengan Google Ads.</p><a class="back-link" href="../enhanced-conversions-for-leads-google-ads-2026/">Baca artikel</a></section>
+        <section class="side-card"><h2>Artikel terkait</h2><p>Pelajari perubahan strategi digital marketing di era AI Search.</p><a class="back-link" href="../strategi-digital-marketing-2026/">Baca artikel</a></section>
+      </aside>
+    </div>
+  </main>
+  <footer class="article-footer"><div class="article-shell"><span>© 2026 Nordy Sukmana</span><a href="../">Kembali ke portfolio</a></div></footer>
+  <script is:inline src="/assets/analytics-loader.js"></script>
+</BaseLayout>

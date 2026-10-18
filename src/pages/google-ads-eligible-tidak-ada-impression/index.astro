@@ -1,0 +1,434 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyHeader from '../../components/CaseStudyHeader.astro';
+
+const canonical = 'https://nordy-sukmana.vercel.app/google-ads-eligible-tidak-ada-impression/';
+const image = 'https://nordy-sukmana.vercel.app/assets/brand/open-graph.png';
+const title = "Google Ads Eligible tapi 0 Impresi? Ini Cara Auditnya";
+const headline = "Google Ads Eligible tetapi Tidak Mendapat Impresi: Cara Audit Campaign yang Tidak Berjalan";
+const description = "Google Ads sudah Eligible tetapi impressions dan spend masih 0? Pelajari cara audit status campaign, keyword, bidding, budget, dan Ad Preview.";
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      '@id': `${canonical}#article`,
+      headline: headline,
+      description,
+      url: canonical,
+      image: [image],
+      inLanguage: 'id-ID',
+      datePublished: '2026-10-17',
+      dateModified: '2026-10-17',
+      author: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      publisher: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      mainEntityOfPage: canonical,
+      articleSection: 'Google Ads · Search Campaign · Troubleshooting',
+      about: ["Google Ads","Search Campaign","Eligible Status","Zero Impressions","Ad Rank","Bidding Strategy","Campaign Troubleshooting"],
+      keywords: ["Google Ads eligible tidak ada impression","Google Ads 0 impressions","Google Ads tidak tayang","Google Ads tidak spend","Ad Preview and Diagnosis"]
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://nordy-sukmana.vercel.app/#person',
+      name: 'Nordy Sukmana',
+      url: 'https://nordy-sukmana.vercel.app/',
+      jobTitle: 'Performance Marketing Specialist'
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {'@type': 'ListItem', position: 1, name: 'Portfolio', item: 'https://nordy-sukmana.vercel.app/'},
+        {'@type': 'ListItem', position: 2, name: 'Artikel', item: 'https://nordy-sukmana.vercel.app/artikel/'},
+        {'@type': 'ListItem', position: 3, name: "Google Ads Eligible tetapi Tidak Mendapat Impresi: Cara Audit Campaign yang Tidak Berjalan", item: canonical}
+      ]
+    }
+  ]
+};
+
+const head = `<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${title}</title>
+<meta name="description" content="${description}">
+<meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0C1F4D"><link rel="canonical" href="${canonical}">
+<meta property="og:type" content="article"><meta property="og:locale" content="id_ID"><meta property="og:site_name" content="Portfolio Nordy Sukmana"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Nordy Sukmana, Performance Marketing Specialist">
+<meta property="article:published_time" content="2026-10-17"><meta property="article:modified_time" content="2026-10-17"><meta property="article:section" content="Google Ads · Search Campaign · Troubleshooting">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${title}"><meta name="twitter:description" content="${description}"><meta name="twitter:image" content="${image}">
+<script type="application/ld+json">${JSON.stringify(structuredData)}</script>
+<link rel="icon" href="../assets/brand/nordy-mark.svg" type="image/svg+xml"><link rel="icon" href="../favicon.ico" sizes="any"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/case-study.css"><link rel="stylesheet" href="../assets/article.css">`;
+---
+<BaseLayout head={head}>
+<a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+<CaseStudyHeader />
+<main id="main-content">
+<header class="article-hero"><div class="article-shell">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Portfolio</a><span aria-hidden="true">/</span><a href="../artikel/">Artikel</a></nav>
+<span class="article-kicker">Google Ads · Search Campaign · Troubleshooting</span>
+<h1>{headline}</h1><p class="article-lede">Status Eligible tidak menjamin iklan akan mendapatkan impressions. Pelajari cara memeriksa campaign Google Ads yang tidak menghasilkan tayangan atau menggunakan budget, mulai dari status akun, keyword, targeting, Ad Rank, hingga bidding strategy.</p>
+<div class="article-meta"><span>Nordy Sukmana</span><time datetime="2026-10-17">17 Oktober 2026</time><span>10–12 menit baca</span></div>
+</div></header>
+<div class="article-shell article-layout"><article class="article-body">
+<section class="answer-summary" aria-labelledby="answer-summary-title"><span>Jawaban singkat</span>
+<h2 id="answer-summary-title">Mengapa Google Ads sudah Eligible tetapi impressions masih 0?</h2>
+<p>Status Eligible menunjukkan bahwa iklan atau keyword memenuhi persyaratan dasar untuk berpartisipasi dalam penayangan. Status tersebut tidak menjamin iklan akan memenangkan auction atau memperoleh impressions.</p>
+<p>Jika campaign masih menunjukkan 0 impressions, periksa status akun dan pembayaran, tanggal campaign, targeting, volume pencarian keyword, Ad Rank, budget, serta bidding strategy.</p>
+<p>Gunakan Ad Preview and Diagnosis untuk membantu mengidentifikasi alasan iklan tidak tampil pada pencarian tertentu. Hindari langsung menaikkan budget atau mengganti bidding sebelum mengetahui penyebabnya.</p>
+</section>
+<h2>Mengapa campaign Google Ads bisa tidak menggunakan budget?</h2>
+<p>Salah satu masalah yang sering ditemui advertiser adalah campaign yang terlihat aktif tetapi tidak menghasilkan aktivitas.</p>
+<p>Status campaign menunjukkan Eligible.</p>
+<p>Keyword juga terlihat Eligible.</p>
+<p>Iklan sudah disetujui.</p>
+<p>Namun setelah beberapa hari, dashboard masih menampilkan:</p>
+<ul>
+<li>Impressions: 0</li>
+<li>Clicks: 0</li>
+<li>Cost: Rp0</li>
+<li>Conversions: 0</li>
+</ul>
+<p>Situasi ini sering menimbulkan pertanyaan apakah sistem Google Ads sedang mengalami masalah.</p>
+<p>Padahal, terdapat perbedaan antara campaign yang memenuhi syarat untuk menayangkan iklan dan campaign yang benar-benar berhasil memperoleh kesempatan penayangan.</p>
+<p>Dalam sistem <a href="https://ads.google.com/?utm_source=chatgpt.com">Google Ads</a>, penayangan dipengaruhi oleh banyak faktor, termasuk relevansi pencarian, targeting, bid, kualitas iklan, dan persaingan dalam auction.</p>
+<p>Google juga menyediakan dokumentasi khusus mengenai campaign yang tidak berjalan atau memiliki traffic rendah. <a href="https://support.google.com/google-ads/answer/12092760?hl=en-GBWe&utm_source=chatgpt.com">Google Help</a></p>
+<p>Karena itu, advertiser perlu melakukan diagnosis secara berurutan.</p>
+<h2>Memahami Arti Status Eligible</h2>
+<p>Status Eligible sering disalahartikan sebagai tanda bahwa iklan pasti akan ditayangkan.</p>
+<p>Padahal, Eligible hanya menunjukkan bahwa suatu komponen memenuhi persyaratan tertentu untuk berpartisipasi dalam penayangan.</p>
+<p>Sebagai contoh, sebuah keyword dapat berstatus Eligible, tetapi tidak menghasilkan impressions karena pencariannya terlalu sedikit atau iklan tidak memenangkan auction yang relevan.</p>
+<p>Perlu juga dibedakan antara status campaign, ad group, keyword, dan iklan.</p>
+<p>Campaign yang aktif tidak otomatis berarti seluruh komponen di dalamnya dapat ditayangkan.</p>
+<p>Sebaliknya, keyword yang Eligible tidak cukup jika iklan yang terkait masih ditolak atau campaign berada di luar jadwal penayangan.</p>
+<p>Google menjelaskan bahwa status keyword memiliki beberapa kategori, termasuk Eligible, Eligible (limited), Low search volume, dan Disapproved. <a href="https://support.google.com/google-ads/answer/2453978?hl=EN-GB&utm_source=chatgpt.com">Google Help</a></p>
+<p>Memahami perbedaan tersebut merupakan langkah awal sebelum melakukan optimasi.</p>
+<h2>Penyebab Google Ads Eligible tetapi Tidak Mendapat Impressions</h2>
+<h3>1. Masalah akun atau pembayaran</h3>
+<p>Mulailah dari level akun.</p>
+<p>Periksa apakah terdapat:</p>
+<ul>
+<li>Penangguhan akun.</li>
+<li>Masalah metode pembayaran.</li>
+<li>Proses verifikasi yang belum selesai.</li>
+<li>Pembatasan penayangan.</li>
+<li>Notifikasi kebijakan yang membutuhkan tindakan.</li>
+</ul>
+<p>Masalah pada level akun dapat memengaruhi penayangan seluruh campaign.</p>
+<p>Karena itu, jangan langsung mengubah keyword atau bidding jika terdapat notifikasi akun yang belum diselesaikan.</p>
+<h3>2. Campaign belum berada dalam periode aktif</h3>
+<p>Periksa tanggal mulai dan berakhirnya campaign.</p>
+<p>Sebuah campaign dapat memiliki status aktif tetapi belum memasuki tanggal penayangan.</p>
+<p>Periksa juga date range pada laporan.</p>
+<p>Jika advertiser melihat periode sebelum campaign dimulai, dashboard tentu tidak akan menampilkan impressions.</p>
+<p>Hal sederhana seperti ini sering terlewat ketika campaign baru diluncurkan.</p>
+<h3>3. Targeting terlalu sempit</h3>
+<p>Targeting menentukan audiens yang memenuhi syarat untuk melihat iklan.</p>
+<p>Pada Search campaign, targeting dapat mencakup:</p>
+<ul>
+<li>Lokasi geografis.</li>
+<li>Bahasa.</li>
+<li>Jadwal penayangan.</li>
+<li>Perangkat.</li>
+<li>Pengaturan audiens tertentu.</li>
+</ul>
+<p>Misalnya sebuah perusahaan menawarkan jasa konsultasi bisnis secara nasional, tetapi campaign hanya menargetkan satu wilayah kecil.</p>
+<p>Jika volume pencarian pada wilayah tersebut rendah, kesempatan penayangan menjadi terbatas.</p>
+<p>Periksa juga pengaturan lokasi berdasarkan keberadaan pengguna atau ketertarikan terhadap lokasi, sesuai kebutuhan bisnis.</p>
+<p>Namun memperluas targeting harus tetap mempertimbangkan wilayah layanan sebenarnya.</p>
+<p>Jangan memperluas lokasi hanya untuk menghasilkan impressions jika bisnis tidak dapat melayani calon pelanggan dari wilayah tersebut.</p>
+<h3>4. Keyword memiliki volume pencarian rendah</h3>
+<p>Keyword yang sangat spesifik belum tentu memiliki permintaan pencarian yang cukup.</p>
+<p>Contohnya, sebuah perusahaan menggunakan keyword:</p>
+<p><code>jasa konsultasi transformasi digital perusahaan manufaktur surabaya harga paket</code></p>
+<p>Keyword tersebut memiliki intent yang cukup jelas, tetapi kombinasi katanya mungkin terlalu spesifik.</p>
+<p>Google memiliki status Low search volume untuk keyword dengan riwayat pencarian yang sangat rendah.</p>
+<p>Keyword dengan status tersebut dapat menjadi tidak aktif sampai volume pencariannya meningkat. <a href="https://support.google.com/google-ads/answer/2616014?hl=en-1&utm_source=chatgpt.com">Google Help</a></p>
+<p>Solusinya bukan selalu menambahkan budget.</p>
+<p>Advertiser dapat menggunakan Keyword Planner untuk mengevaluasi alternatif keyword dengan volume lebih memadai.</p>
+<p>Misalnya:</p>
+<ul>
+<li>jasa transformasi digital</li>
+<li>konsultan digitalisasi perusahaan</li>
+<li>jasa konsultasi IT perusahaan</li>
+<li>konsultan transformasi bisnis</li>
+</ul>
+<p>Namun setiap keyword harus tetap diperiksa berdasarkan relevansi dan commercial intent.</p>
+<h3>5. Negative keyword memblokir pencarian relevan</h3>
+<p>Negative keyword membantu menghindari traffic yang tidak sesuai.</p>
+<p>Namun penerapan yang terlalu luas dapat membatasi kesempatan penayangan.</p>
+<p>Misalnya sebuah campaign menargetkan keyword:</p>
+<p><code>jasa digital marketing</code></p>
+<p>Tetapi daftar negative keyword secara tidak sengaja memblokir istilah yang menjadi bagian dari pencarian relevan.</p>
+<p>Akibatnya, campaign kehilangan kesempatan untuk muncul pada query tertentu.</p>
+<p>Periksa daftar negative keyword pada level ad group, campaign, dan daftar bersama yang diterapkan.</p>
+<p>Jangan menghapus seluruh negative keyword sekaligus.</p>
+<p>Identifikasi aturan yang benar-benar berpotensi menghambat traffic relevan.</p>
+<h2>Mengapa Ad Rank Penting?</h2>
+<p>Setelah memastikan campaign dan targeting benar, langkah berikutnya adalah memahami Ad Rank.</p>
+<p>Ad Rank merupakan sistem yang digunakan Google untuk menentukan apakah iklan memenuhi syarat tampil dan bagaimana posisinya dalam auction.</p>
+<p>Faktor yang memengaruhinya mencakup:</p>
+<ul>
+<li>Bid.</li>
+<li>Kualitas iklan.</li>
+<li>Relevansi iklan terhadap pencarian.</li>
+<li>Pengalaman landing page.</li>
+<li>Ad Rank threshold.</li>
+<li>Tingkat persaingan.</li>
+<li>Konteks pencarian pengguna.</li>
+</ul>
+<p>Google menjelaskan bahwa Ad Rank dihitung ketika auction berlangsung dan dapat berubah berdasarkan konteks pencarian. <a href="https://support.google.com/google-ads/answer/1722122/about-ad-position-and-ad-rank?hl=en-GB&utm_source=chatgpt.com">Google Help</a></p>
+<p>Artinya, sebuah iklan tidak otomatis memperoleh impressions hanya karena keyword sudah Eligible.</p>
+<p>Jika Ad Rank tidak memenuhi persyaratan, iklan mungkin tidak ditampilkan.</p>
+<h3>Apakah menaikkan bid selalu menyelesaikan masalah?</h3>
+<p>Tidak.</p>
+<p>Bid merupakan salah satu faktor dalam auction, tetapi bukan satu-satunya.</p>
+<p>Iklan dengan relevansi rendah dan landing page yang buruk dapat menghadapi kesulitan meskipun bid ditingkatkan.</p>
+<p>Karena itu, perbaikan sebaiknya mempertimbangkan kualitas iklan dan landing page, bukan hanya besarnya biaya yang bersedia dibayar.</p>
+<h2>Peran Bidding Strategy terhadap Penayangan</h2>
+<p>Bidding strategy menentukan cara Google mengoptimalkan penawaran dalam auction.</p>
+<p>Beberapa strategi yang umum digunakan antara lain:</p>
+<ul>
+<li>Maximize Clicks.</li>
+<li>Maximize Conversions.</li>
+<li>Maximize Conversion Value.</li>
+<li>Target Impression Share.</li>
+</ul>
+<p>Setiap strategi memiliki tujuan berbeda.</p>
+<p>Maximize Clicks berfokus memperoleh klik sebanyak mungkin dalam batasan yang berlaku.</p>
+<p>Maximize Conversions berfokus memperoleh conversion sebanyak mungkin berdasarkan sinyal dan batasan campaign.</p>
+<p>Sementara Target Impression Share ditujukan untuk mencapai tingkat visibilitas tertentu pada hasil pencarian.</p>
+<h3>Mengapa Maximize Conversions bisa menghasilkan traffic rendah?</h3>
+<p>Maximize Conversions menggunakan sistem bidding otomatis untuk mencari peluang conversion.</p>
+<p>Dalam kondisi tertentu, strategi ini dapat menghasilkan volume penayangan yang rendah karena kombinasi sinyal conversion, targeting, budget, dan kondisi auction.</p>
+<p>Namun Maximize Conversions tidak otomatis membutuhkan histori conversion dalam jumlah tertentu untuk dapat mulai menayangkan iklan.</p>
+<p>Campaign baru tetap dapat menggunakan strategi tersebut.</p>
+<p>Jika impressions masih 0, advertiser harus memeriksa keseluruhan konfigurasi sebelum menyimpulkan bahwa bidding strategy merupakan penyebabnya.</p>
+<h3>Apakah perlu mengganti Maximize Conversions menjadi Maximize Clicks?</h3>
+<p>Perubahan tersebut dapat dipertimbangkan jika tujuan sementara adalah memperoleh traffic untuk menguji relevansi pencarian dan landing page.</p>
+<p>Namun perubahan bidding tidak boleh dijadikan solusi otomatis.</p>
+<p>Jika masalah sebenarnya berasal dari pembayaran, iklan ditolak, atau targeting yang tidak memungkinkan penayangan, perubahan bidding tidak akan menyelesaikannya.</p>
+<p>Selain itu, perubahan strategi dapat memengaruhi proses adaptasi sistem bidding.</p>
+<p>Karena itu, setiap perubahan perlu memiliki hipotesis yang jelas.</p>
+<h2>Cara Menggunakan Ad Preview and Diagnosis</h2>
+<p>Google menyediakan Ad Preview and Diagnosis untuk membantu advertiser memeriksa penayangan Search Ads.</p>
+<p>Fitur ini dapat digunakan untuk melakukan simulasi pencarian tanpa menambah impressions pada laporan campaign.</p>
+<p>Dokumentasi Google juga menyarankan penggunaan alat tersebut dibandingkan berulang kali mencari iklan sendiri melalui Google Search. <a href="https://support.google.com/google-ads/answer/148778?hl=en&utm_source=chatgpt.com">Google Help</a></p>
+<h3>Langkah pemeriksaan</h3>
+<ol>
+<li>Masuk ke akun Google Ads.</li>
+<li>Buka bagian Tools.</li>
+<li>Cari Ad Preview and Diagnosis.</li>
+<li>Masukkan keyword yang ingin diperiksa.</li>
+<li>Tentukan lokasi, bahasa, dan perangkat.</li>
+<li>Jalankan diagnosis.</li>
+<li>Periksa informasi mengenai kemungkinan penyebab iklan tidak tampil.</li>
+</ol>
+<p>Jika hasil menunjukkan bahwa iklan tidak ditampilkan, gunakan informasi tersebut sebagai dasar pemeriksaan lanjutan.</p>
+<p>Namun hasil simulasi tidak selalu mewakili seluruh auction.</p>
+<p>Iklan yang tidak muncul dalam satu simulasi belum tentu tidak pernah ditayangkan kepada pengguna lain.</p>
+<p>Karena itu, gabungkan hasil diagnosis dengan data campaign.</p>
+<h2>Memahami Status Learning</h2>
+<p>Campaign yang baru menggunakan automated bidding dapat berada dalam periode adaptasi.</p>
+<p>Selama periode tersebut, sistem mempelajari kondisi campaign dan menyesuaikan bidding.</p>
+<p>Performa dapat berubah sebelum menjadi lebih stabil.</p>
+<p>Namun status Learning tidak otomatis menjelaskan mengapa impressions tetap 0.</p>
+<p>Jika campaign tidak menghasilkan aktivitas, tetap periksa masalah mendasar seperti status akun, targeting, keyword, dan eligibility.</p>
+<p>Jangan menjadikan Learning sebagai alasan untuk mengabaikan seluruh masalah teknis.</p>
+<p>Sebaliknya, hindari mengubah banyak pengaturan sekaligus hanya karena campaign belum menghasilkan conversion.</p>
+<h2>Contoh Kasus: Campaign Sudah Eligible tetapi Spend Rp0</h2>
+<p>Bayangkan sebuah perusahaan B2B menjalankan Google Search Ads untuk mendapatkan calon klien.</p>
+<p>Konfigurasi awal:</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabel artikel"><table>
+<thead>
+<tr>
+<th>Komponen</th>
+<th>Kondisi</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Campaign</td>
+<td>Search</td>
+</tr>
+<tr>
+<td>Objective</td>
+<td>Leads</td>
+</tr>
+<tr>
+<td>Budget harian</td>
+<td>Rp150.000</td>
+</tr>
+<tr>
+<td>Bidding</td>
+<td>Maximize Conversions</td>
+</tr>
+<tr>
+<td>Target lokasi</td>
+<td>Surabaya</td>
+</tr>
+<tr>
+<td>Keyword</td>
+<td>8 keyword</td>
+</tr>
+<tr>
+<td>Status keyword</td>
+<td>Eligible</td>
+</tr>
+<tr>
+<td>Impressions</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Spend</td>
+<td>Rp0</td>
+</tr>
+</tbody></table></div>
+<p><em>Contoh ini merupakan simulasi.</em></p>
+<p>Tim marketing kemudian melakukan audit.</p>
+<p>Pertama, status akun dan pembayaran diperiksa.</p>
+<p>Tidak ditemukan masalah.</p>
+<p>Kedua, seluruh iklan diperiksa.</p>
+<p>Iklan telah disetujui.</p>
+<p>Ketiga, advertiser memeriksa keyword menggunakan Keyword Planner.</p>
+<p>Beberapa keyword ternyata memiliki permintaan pencarian yang sangat terbatas.</p>
+<p>Keempat, Ad Preview and Diagnosis digunakan untuk memeriksa query yang relevan.</p>
+<p>Kelima, tim mengevaluasi apakah lokasi dan jadwal penayangan terlalu membatasi volume.</p>
+<p>Setelah menemukan kemungkinan hambatan, tim membuat perubahan secara bertahap.</p>
+<p>Keyword diperluas secara selektif, struktur iklan diperbaiki, dan pengujian dilakukan kembali.</p>
+<p>Pendekatan ini lebih terukur dibanding langsung meningkatkan budget dari Rp150.000 menjadi Rp500.000 tanpa mengetahui penyebab masalah.</p>
+<h2>Apakah Conversion Tracking yang Belum Lengkap Menghentikan Penayangan?</h2>
+<p>Tidak selalu.</p>
+<p>Conversion tracking yang belum lengkap dapat menghambat kemampuan advertiser mengevaluasi hasil dan memengaruhi kualitas sinyal yang digunakan automated bidding.</p>
+<p>Namun kondisi tersebut tidak otomatis berarti Google akan menghentikan seluruh penayangan iklan.</p>
+<p>Misalnya, campaign dengan Maximize Conversions belum memiliki histori conversion yang memadai.</p>
+<p>Campaign tersebut masih mungkin memperoleh impressions dan klik.</p>
+<p>Karena itu, advertiser perlu membedakan dua masalah:</p>
+<p><strong>Masalah delivery:</strong> iklan tidak memperoleh impressions.</p>
+<p><strong>Masalah measurement:</strong> iklan berjalan, tetapi conversion tidak tercatat dengan benar.</p>
+<p>Keduanya membutuhkan proses audit yang berbeda.</p>
+<h2>Checklist Audit Google Ads 0 Impressions</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabel artikel"><table>
+<thead>
+<tr>
+<th>Tahap</th>
+<th>Pemeriksaan</th>
+<th>Prioritas</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Status akun dan pembayaran</td>
+<td>Sangat tinggi</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Tanggal campaign dan date range</td>
+<td>Sangat tinggi</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Status campaign, ad group, dan iklan</td>
+<td>Sangat tinggi</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Kebijakan dan approval</td>
+<td>Sangat tinggi</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Lokasi, bahasa, dan jadwal</td>
+<td>Tinggi</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Volume keyword dan match type</td>
+<td>Tinggi</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Negative keyword</td>
+<td>Tinggi</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Ad Preview and Diagnosis</td>
+<td>Tinggi</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Ad Rank dan kualitas landing page</td>
+<td>Tinggi</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Bidding, budget, dan bid constraints</td>
+<td>Tinggi</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Conversion tracking</td>
+<td>Penting untuk optimasi</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Riwayat perubahan campaign</td>
+<td>Penting untuk evaluasi</td>
+</tr>
+</tbody></table></div>
+<p>Gunakan checklist secara berurutan.</p>
+<p>Jika masalah ditemukan pada tahap awal, selesaikan terlebih dahulu sebelum mengubah komponen lainnya.</p>
+<h2>Kesalahan yang Sering Dilakukan Advertiser</h2>
+<h3>Langsung menaikkan budget</h3>
+<p>Budget lebih besar tidak otomatis menyelesaikan masalah eligibility, keyword, atau targeting.</p>
+<p>Periksa terlebih dahulu apakah campaign memiliki peluang penayangan yang relevan.</p>
+<h3>Mengganti bidding setiap hari</h3>
+<p>Perubahan berulang dapat membuat evaluasi semakin sulit.</p>
+<p>Gunakan satu hipotesis untuk setiap perubahan penting.</p>
+<h3>Menganggap semua keyword Eligible pasti akan tayang</h3>
+<p>Eligible menunjukkan kelayakan dasar, bukan jaminan memenangkan auction.</p>
+<h3>Tidak menggunakan Ad Preview</h3>
+<p>Mencari iklan secara manual berulang kali bukan metode diagnosis yang ideal.</p>
+<p>Gunakan alat diagnosis resmi.</p>
+<h3>Mengabaikan landing page</h3>
+<p>Landing page yang tidak relevan dapat memengaruhi kualitas iklan dan pengalaman pengguna.</p>
+<p>Periksa hubungan antara keyword, pesan iklan, dan halaman tujuan.</p>
+<h2>Pertanyaan yang Sering Diajukan</h2>
+<h3>Mengapa Google Ads Eligible tetapi spend tetap 0?</h3>
+<p>Penyebabnya dapat berupa masalah akun, targeting, volume pencarian rendah, batasan bidding, atau Ad Rank. Status Eligible saja tidak menjamin iklan memperoleh impressions.</p>
+<h3>Apakah campaign harus menunggu 48 jam sebelum menghasilkan impressions?</h3>
+<p>Tidak ada aturan universal bahwa seluruh campaign harus menunggu tepat 48 jam. Waktu penayangan bergantung pada proses review, konfigurasi, kondisi auction, dan faktor lainnya.</p>
+<h3>Apakah Maximize Conversions bisa digunakan tanpa histori conversion?</h3>
+<p>Bisa. Namun kualitas tracking dan ketersediaan sinyal conversion tetap penting untuk evaluasi serta optimasi jangka panjang.</p>
+<h3>Apakah budget kecil menyebabkan impressions 0?</h3>
+<p>Budget dapat membatasi kesempatan penayangan, tetapi bukan satu-satunya penyebab. Periksa juga targeting, keyword, bid constraints, dan status akun.</p>
+<h3>Apakah Google Ads yang tidak muncul di Ad Preview berarti campaign rusak?</h3>
+<p>Tidak selalu. Hasil simulasi hanya menunjukkan kondisi pencarian tertentu. Gunakan informasi diagnosis bersama data campaign untuk menentukan penyebabnya.</p>
+<h3>Apakah mengganti bidding dapat membuat campaign langsung berjalan?</h3>
+<p>Tidak ada jaminan. Perubahan bidding hanya relevan jika strategi atau batasan penawaran memang menjadi salah satu penyebab rendahnya penayangan.</p>
+<h2>Kesimpulan</h2>
+<p>Google Ads dengan status Eligible tetapi tidak menghasilkan impressions merupakan masalah yang harus dianalisis secara sistematis.</p>
+<p>Eligible tidak sama dengan jaminan penayangan.</p>
+<p>Advertiser perlu memeriksa status akun, pembayaran, jadwal, targeting, keyword, Ad Rank, dan bidding strategy.</p>
+<p>Gunakan Ad Preview and Diagnosis untuk membantu menemukan kemungkinan hambatan.</p>
+<p>Jangan langsung meningkatkan budget atau mengganti bidding tanpa mengetahui penyebabnya.</p>
+<p>Pendekatan audit yang terstruktur membantu advertiser mengurangi perubahan yang tidak perlu dan menjaga proses optimasi tetap berbasis data.</p>
+
+<div class="related-article"><span>Artikel terkait</span><a href="../negative-keyword-google-ads/">Negative Keyword Google Ads: Cara Mengurangi Klik Tidak Relevan Tanpa Mematikan Volume →</a></div>
+</article><aside class="article-sidebar" aria-label="Informasi artikel">
+<section class="side-card"><h2>Tentang penulis</h2>
+<p>Nordy Sukmana adalah Performance Marketing Specialist dengan pengalaman mengelola Google Ads, Meta Ads, tracking, analytics, SEO, dan marketing automation.</p>
+<p>Fokus pendekatannya adalah menghubungkan performa advertising dengan data yang dapat digunakan untuk mengambil keputusan bisnis.</p>
+<a class="back-link" href="../#about">Lihat profil</a></section>
+<section class="side-card"><h2>Topik artikel</h2>
+<p>Google Ads · Search Campaign · Eligible Status · Zero Impressions · Ad Rank · Bidding Strategy · Campaign Troubleshooting</p>
+</section>
+<section class="side-card"><h2>Sumber utama</h2>
+<ul>
+<li><a href="https://support.google.com/google-ads/answer/12092760?hl=en-GBWe&utm_source=chatgpt.com">Google Ads Help — Campaigns Not Running or Low Traffic</a></li>
+<li><a href="https://support.google.com/google-ads/answer/148778?hl=en&utm_source=chatgpt.com">Google Ads Help — Ad Preview and Diagnosis</a></li>
+<li><a href="https://support.google.com/google-ads/answer/2453978?hl=EN-GB&utm_source=chatgpt.com">Google Ads Help — Keyword Status</a></li>
+<li><a href="https://support.google.com/google-ads/answer/2616014?hl=en-1&utm_source=chatgpt.com">Google Ads Help — Low Search Volume</a></li>
+<li><a href="https://support.google.com/google-ads/answer/1722122/about-ad-position-and-ad-rank?hl=en-GB&utm_source=chatgpt.com">Google Ads Help — About Ad Rank</a></li>
+</ul>
+</section>
+<section class="side-card"><h2>Bacaan terkait</h2><a class="back-link" href="../negative-keyword-google-ads/">Negative Keyword Google Ads: Cara Mengurangi Klik Tidak Relevan Tanpa Mematikan Volume</a><a class="back-link" href="../creative-fatigue-meta-ads-cara-audit/">Creative Fatigue Meta Ads</a></section>
+</aside></div></main>
+<footer class="article-footer"><div class="article-shell"><span>© 2026 Nordy Sukmana</span><a href="../artikel/">Lihat semua artikel</a></div></footer>
+<script is:inline src="/assets/analytics-loader.js"></script>
+</BaseLayout>

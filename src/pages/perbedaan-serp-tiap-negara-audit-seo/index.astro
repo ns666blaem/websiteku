@@ -1,0 +1,333 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyHeader from '../../components/CaseStudyHeader.astro';
+
+const canonical = 'https://nordy-sukmana.vercel.app/perbedaan-serp-tiap-negara-audit-seo/';
+const image = 'https://nordy-sukmana.vercel.app/assets/brand/open-graph.png';
+const title = "SERP Berbeda Tiap Negara, Jangan Asal Meniru Strategi SEO Luar";
+const description = "Fitur Google Search dapat berbeda menurut wilayah. Pelajari cara mengaudit SERP Indonesia sebelum meniru strategi SEO, GEO, atau schema dari luar negeri.";
+const faqItems = [
+  {
+    "question": "Apakah Google Search menampilkan hasil yang sama di semua negara?",
+    "answer": "Tidak selalu. Google mendokumentasikan beberapa pengalaman Search yang hanya tersedia pada wilayah dan jenis kueri tertentu."
+  },
+  {
+    "question": "Apakah Indonesia tidak memiliki AI Overviews karena tidak tercantum dalam tabel regional?",
+    "answer": "Kesimpulan itu tidak tepat. Tabel regional membahas fitur seperti aggregator, supplier, dan carousel tertentu. Ketersediaan AI Overviews perlu diperiksa melalui dokumentasi serta produk terkait secara terpisah."
+  },
+  {
+    "question": "Apakah perlu memakai VPN untuk audit SERP negara lain?",
+    "answer": "VPN dapat membantu observasi, tetapi hasilnya tetap merupakan snapshot. Catat lokasi, bahasa, perangkat, dan metode pengujian, kemudian validasi dengan dokumentasi serta data Search Console."
+  },
+  {
+    "question": "Apakah schema dapat membuka fitur yang belum tersedia di Indonesia?",
+    "answer": "Tidak ada jaminan. Structured data membantu mesin pencari memahami konten dan dapat menjadi syarat untuk fitur tertentu, tetapi tidak memperluas cakupan geografis fitur."
+  },
+  {
+    "question": "Seberapa sering audit regional perlu dilakukan?",
+    "answer": "Lakukan ketika memasuki pasar baru, melihat perubahan performa besar, atau menemukan pembaruan resmi yang relevan. Untuk kueri prioritas, observasi berkala lebih berguna daripada pemeriksaan acak."
+  }
+];
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      '@id': `${canonical}#article`,
+      headline: title,
+      description,
+      url: canonical,
+      image: [image],
+      inLanguage: 'id-ID',
+      datePublished: '2026-09-15',
+      dateModified: '2026-09-15',
+      author: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      publisher: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      mainEntityOfPage: canonical,
+      articleSection: 'SEO, GEO dan AIO, serta Strategi Konten',
+      about: ['Google Search', 'Regional Search Experience', 'SERP', 'Indonesia', 'EEA', 'Search Console', 'AI Overviews', 'AI Mode', 'Structured Data', 'Search Intent'],
+      keywords: ['perbedaan SERP tiap negara', 'cara mengecek SERP Google Indonesia', 'audit SEO berdasarkan negara', 'perbedaan fitur Google Search antarwilayah', 'strategi GEO untuk pasar Indonesia']
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://nordy-sukmana.vercel.app/#person',
+      name: 'Nordy Sukmana',
+      url: 'https://nordy-sukmana.vercel.app/',
+      jobTitle: 'Performance Marketing Specialist'
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {'@type': 'ListItem', position: 1, name: 'Portfolio', item: 'https://nordy-sukmana.vercel.app/'},
+        {'@type': 'ListItem', position: 2, name: 'Artikel', item: 'https://nordy-sukmana.vercel.app/artikel/'},
+        {'@type': 'ListItem', position: 3, name: 'Audit SERP Berdasarkan Negara', item: canonical}
+      ]
+    }
+  ]
+};
+
+const head = `<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${title}</title>
+<meta name="description" content="${description}">
+<meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0C1F4D"><link rel="canonical" href="${canonical}">
+<meta property="og:type" content="article"><meta property="og:locale" content="id_ID"><meta property="og:site_name" content="Portfolio Nordy Sukmana"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Nordy Sukmana, Performance Marketing Specialist">
+<meta property="article:published_time" content="2026-09-15"><meta property="article:modified_time" content="2026-09-15"><meta property="article:section" content="SEO, GEO dan AIO, serta Strategi Konten">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${title}"><meta name="twitter:description" content="${description}"><meta name="twitter:image" content="${image}">
+<script type="application/ld+json">${JSON.stringify(structuredData)}</script>
+<link rel="icon" href="../assets/brand/nordy-mark.svg" type="image/svg+xml"><link rel="icon" href="../favicon.ico" sizes="any"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/case-study.css"><link rel="stylesheet" href="../assets/article.css">`;
+---
+<BaseLayout head={head}>
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+  <CaseStudyHeader />
+  <main id="main-content">
+    <header class="article-hero">
+      <div class="article-shell">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Portfolio</a><span aria-hidden="true">/</span><a href="../artikel/">Artikel</a></nav>
+        <span class="article-kicker">SEO · GEO/AIO · Strategi Konten</span>
+        <h1>{title}</h1>
+        <p class="article-lede">Periksa cakupan fitur Google, intent pengguna, dan data negara sebelum menerapkan strategi SEO dari pasar lain ke Indonesia.</p>
+        <div class="article-meta"><span>Nordy Sukmana</span><time datetime="2026-09-15">15 September 2026</time><span>10 menit baca</span></div>
+      </div>
+    </header>
+    <div class="article-shell article-layout">
+      <article class="article-body">
+        <section class="answer-summary" aria-labelledby="answer-summary-title">
+          <span>Jawaban singkat</span>
+<h2 id="answer-summary-title">Apakah strategi SEO dari negara lain bisa langsung diterapkan?</h2>
+<p>Google menyediakan sebagian pengalaman Search hanya di wilayah dan jenis kueri tertentu. Sebelum meniru strategi SEO dari luar negeri, tentukan negara target, verifikasi dukungan fitur melalui dokumentasi resmi, periksa SERP secara langsung, lalu cocokkan temuan dengan data negara di Search Console. Screenshot dari negara lain bukan bukti bahwa fitur yang sama tersedia atau penting bagi audiens Indonesia.</p>
+</section>
+<p>Sebuah tim menemukan screenshot hasil pencarian dari Eropa. Di dalamnya terdapat carousel, unit supplier, dan pilihan pembanding yang membuat halaman Google terlihat jauh berbeda dari hasil pencarian biasa.</p>
+<p>Tim kemudian meminta website segera menerapkan schema baru agar dapat memperoleh tampilan serupa di Indonesia.</p>
+<p>Masalahnya, fitur tersebut mungkin memang dibuat untuk wilayah, jenis bisnis, dan kueri tertentu. Menyalin implementasinya tanpa verifikasi dapat menghabiskan waktu developer tanpa peluang hasil yang jelas.</p>
+<p>Pada 8 September 2026, Google memperbarui dokumentasi khusus mengenai perbedaan pengalaman Search berdasarkan wilayah. Pembaruan ini mengingatkan bahwa audit SEO perlu dimulai dari pasar yang benar, bukan hanya dari screenshot atau studi kasus luar negeri.</p>
+<h2>Apakah hasil Google sama di setiap negara?</h2>
+<p><strong>Tidak selalu. Sebagian fitur Google Search hanya tersedia untuk wilayah dan jenis kueri tertentu.</strong></p>
+<p>Dalam dokumentasi terbarunya, Google mencantumkan beberapa contoh:</p>
+<div class="table-wrap" role="region" aria-label="Contoh fitur Search regional dalam dokumentasi Google" tabindex="0"><table><caption>Contoh fitur Search regional dalam dokumentasi Google</caption>
+<thead>
+<tr>
+<th scope="col">Fitur</th>
+<th scope="col">Wilayah yang dicantumkan</th>
+<th scope="col">Jenis kueri</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Aggregator unit</td>
+<td>European Economic Area atau EEA</td>
+<td>Hotel, penerbangan, transportasi darat, produk</td>
+</tr>
+<tr>
+<td>Supplier unit</td>
+<td>EEA</td>
+<td>Hotel, penerbangan, transportasi darat, produk</td>
+</tr>
+<tr>
+<td>Ecosystem carousel</td>
+<td>EEA</td>
+<td>Cuaca, olahraga, keuangan, terjemahan</td>
+</tr>
+<tr>
+<td>Job sites features</td>
+<td>EEA</td>
+<td>Lowongan kerja</td>
+</tr>
+<tr>
+<td>Places sites features</td>
+<td>Türkiye</td>
+<td>Hotel dan bisnis lokal</td>
+</tr>
+<tr>
+<td>Structured data carousel</td>
+<td>EEA, Afrika Selatan, Türkiye</td>
+<td>Tergantung wilayah dan kategori</td>
+</tr>
+</tbody></table></div>
+<p>Daftar tersebut diperiksa pada 15 September 2026. Indonesia tidak tercantum sebagai wilayah yang didukung untuk fitur regional di dalam tabel tersebut. Hal ini tidak berarti seluruh fitur Search atau AI Search tidak tersedia di Indonesia; kesimpulannya terbatas pada fitur regional yang didokumentasikan di halaman itu. <a href="https://developers.google.com/search/docs/appearance/aggregator-features" target="_blank" rel="noopener noreferrer">Dokumentasi Regional Differences in Search Experience</a>.</p>
+<h2>Mengapa perbedaan wilayah penting bagi marketer?</h2>
+<p><strong>Karena bentuk SERP menentukan peluang visibilitas, kompetitor yang muncul, serta tindakan yang dapat dilakukan pengguna.</strong></p>
+<p>Pada hasil pencarian klasik, perhatian mungkin terbagi antara halaman organik, iklan, peta, dan video. Pada tampilan dengan aggregator atau supplier unit, pilihan pengguna dan sumber yang mendapat eksposur dapat berubah.</p>
+<p>Konsekuensinya, strategi yang berhasil di satu wilayah belum tentu menjadi prioritas di wilayah lain.</p>
+<p>Perbedaan tersebut dapat memengaruhi:</p>
+<ul>
+<li>Jenis halaman yang perlu dibuat. </li>
+<li>Entitas yang perlu dijelaskan dalam konten. </li>
+<li>Structured data yang relevan. </li>
+<li>Posisi aggregator dan supplier. </li>
+<li>Ekspektasi terhadap CTR organik. </li>
+<li>Cara menginterpretasikan penurunan atau kenaikan traffic. </li>
+<li>Prioritas antara SEO, marketplace, Business Profile, dan paid media.</li>
+</ul>
+<p>Rekomendasinya bukan mengabaikan tren global. Gunakan tren tersebut sebagai hipotesis, lalu verifikasi terhadap pasar yang benar.</p>
+<h2>Bedakan empat tingkat bukti dalam audit SERP</h2>
+<p>Salah satu penyebab keputusan SEO lemah adalah mencampurkan fakta resmi, pengamatan, dan perkiraan ke dalam satu kesimpulan.</p>
+<p>Gunakan tingkat bukti berikut:</p>
+<div class="table-wrap" role="region" aria-label="Empat tingkat bukti untuk audit SERP" tabindex="0"><table><caption>Empat tingkat bukti untuk audit SERP</caption>
+<thead>
+<tr>
+<th scope="col">Tingkat bukti</th>
+<th scope="col">Contoh</th>
+<th scope="col">Cara memperlakukannya</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Dokumentasi resmi</td>
+<td>Google mencantumkan fitur untuk EEA</td>
+<td>Fakta tentang cakupan yang didokumentasikan</td>
+</tr>
+<tr>
+<td>Observasi SERP</td>
+<td>Tim melihat carousel pada kueri tertentu</td>
+<td>Snapshot yang dapat berubah</td>
+</tr>
+<tr>
+<td>Data website</td>
+<td>Klik Indonesia turun pada kelompok kueri tertentu</td>
+<td>Bukti perubahan performa website</td>
+</tr>
+<tr>
+<td>Analisis</td>
+<td>Penurunan diduga terkait perubahan tampilan SERP</td>
+<td>Hipotesis yang perlu diuji</td>
+</tr>
+</tbody></table></div>
+<p>Screenshot dari konsultan di negara lain termasuk observasi, bukan bukti bahwa fitur tersedia secara global.</p>
+<p>Sebaliknya, tidak melihat fitur dalam satu pencarian juga belum membuktikan fitur tersebut tidak pernah muncul. Tampilan dapat dipengaruhi kueri, perangkat, bahasa, lokasi, dan proses peluncuran.</p>
+<h2>Enam langkah mengaudit SERP untuk pasar Indonesia</h2>
+<h3>1. Tentukan negara dan audiens bisnis</h3>
+<p>Tuliskan pasar utama sebelum membuka alat SEO. Untuk bisnis lokal Surabaya, fokus awalnya berbeda dari perusahaan SaaS yang mencari pengguna Asia Tenggara.</p>
+<p>Catat:</p>
+<ul>
+<li>Negara dan kota prioritas. </li>
+<li>Bahasa pencarian. </li>
+<li>Jenis pelanggan. </li>
+<li>Perangkat dominan. </li>
+<li>Tahap customer journey. </li>
+<li>Outcome yang diharapkan.</li>
+</ul>
+<p>Jika bisnis melayani Indonesia dan Malaysia, pisahkan audit keduanya. Kesamaan bahasa tidak menjamin hasil pencarian atau perilaku pengguna sama.</p>
+<h3>2. Kelompokkan kueri berdasarkan intent</h3>
+<p>Jangan mengambil sepuluh keyword terbesar lalu menganggapnya mewakili seluruh pasar.</p>
+<p>Buat kelompok seperti:</p>
+<ul>
+<li>Informasional: “cara memilih supplier bahan minuman”. </li>
+<li>Commercial investigation: “supplier sirup kafe terbaik”. </li>
+<li>Lokal: “supplier bahan minuman Surabaya”. </li>
+<li>Branded: nama bisnis atau produk tertentu. </li>
+<li>Transactional: “beli bahan minuman grosir”.</li>
+</ul>
+<p>Ambil sampel yang cukup dari setiap kelompok. Catat pula apakah pengguna membutuhkan jawaban, lokasi, perbandingan, video, atau halaman produk.</p>
+<h3>3. Verifikasi fitur melalui sumber resmi</h3>
+<p>Cari dokumentasi tentang fitur yang sedang dibahas. Periksa:</p>
+<ul>
+<li>Wilayah yang didukung. </li>
+<li>Jenis kueri yang memenuhi syarat. </li>
+<li>Kebutuhan structured data. </li>
+<li>Kebijakan konten. </li>
+<li>Tanggal pembaruan dokumentasi. </li>
+<li>Apakah fitur masih eksperimen atau sudah tersedia umum.</li>
+</ul>
+<p>Jika Indonesia tidak disebutkan, jangan mengubahnya menjadi klaim “fitur pasti tidak akan hadir”. Tulis status yang lebih akurat: belum tercantum dalam cakupan resmi yang diperiksa.</p>
+<h3>4. Rekam kondisi SERP secara konsisten</h3>
+<p>Buat lembar observasi dengan kolom:</p>
+<ul>
+<li>Tanggal dan waktu. </li>
+<li>Kueri. </li>
+<li>Negara atau lokasi pengujian. </li>
+<li>Bahasa. </li>
+<li>Perangkat. </li>
+<li>Fitur yang terlihat. </li>
+<li>Domain yang muncul. </li>
+<li>Jenis halaman. </li>
+<li>Catatan perubahan.</li>
+</ul>
+<p>Gunakan metode pengujian yang sama ketika membandingkan dua periode. Jangan membandingkan screenshot desktop berbahasa Inggris dari Eropa dengan pencarian mobile berbahasa Indonesia lalu menyimpulkan ada perubahan algoritma.</p>
+<p>SERP bersifat dinamis. Karena itu, hasil satu hari lebih tepat diperlakukan sebagai snapshot daripada baseline permanen.</p>
+<h3>5. Cocokkan dengan data negara di Search Console</h3>
+<p>Observasi perlu dihubungkan dengan performa website.</p>
+<p>Gunakan filter negara dan kueri di Search Console untuk memeriksa:</p>
+<ul>
+<li>Impressions. </li>
+<li>Clicks. </li>
+<li>CTR. </li>
+<li>Average position. </li>
+<li>Halaman yang tampil. </li>
+<li>Perubahan antarperiode.</li>
+</ul>
+<p>Prioritaskan negara yang menyumbang audiens atau peluang bisnis. Kenaikan impressions dari negara yang tidak dilayani belum tentu layak menjadi alasan membuat banyak halaman baru.</p>
+<p>Untuk AI features, Google menjelaskan bahwa prinsip SEO dasar tetap berlaku dan tidak ada persyaratan teknis tambahan atau schema khusus untuk AI Overviews maupun AI Mode. Halaman tetap perlu terindeks dan memenuhi syarat untuk ditampilkan dengan snippet. <a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener noreferrer">Panduan resmi AI Features and Your Website</a>.</p>
+<h3>6. Tentukan tindakan berdasarkan peluang nyata</h3>
+<p>Setelah audit, pilih tindakan yang sesuai:</p>
+<ul>
+<li>Mempertahankan halaman jika intent dan performanya sehat. </li>
+<li>Memperjelas informasi lokal seperti wilayah layanan. </li>
+<li>Menambahkan harga, spesifikasi, atau perbandingan yang memang dibutuhkan pengguna. </li>
+<li>Memperkuat internal link. </li>
+<li>Memperbarui Business Profile atau Merchant Center. </li>
+<li>Menerapkan structured data yang sesuai konten dan didukung. </li>
+<li>Menunda implementasi fitur regional yang belum relevan. </li>
+<li>Menjalankan paid search jika ruang organik pada kueri komersial terbatas.</li>
+</ul>
+<p>Setiap keputusan perlu memiliki alasan, penanggung jawab, dan metrik evaluasi. Hubungkan temuan dengan <a href="../strategi-digital-marketing-2026/">strategi digital marketing lintas channel</a> agar prioritas SEO selaras dengan tujuan bisnis.</p>
+<h2>Contoh: fitur luar negeri belum tentu menjadi prioritas Indonesia</h2>
+<p>Bayangkan sebuah website travel Indonesia menargetkan 100 kueri komersial.</p>
+<p>Tim menemukan bahwa hasil pencarian EEA menampilkan supplier unit untuk kategori perjalanan. Mereka kemudian mempertimbangkan pembangunan integrasi baru agar terlihat pada unit tersebut.</p>
+<p>Sebelum menyetujui proyek, audit menemukan:</p>
+<ul>
+<li>Dokumentasi resmi mencantumkan supplier unit untuk EEA. </li>
+<li>Indonesia tidak tercantum pada cakupan fitur tersebut. </li>
+<li>Sebagian besar impressions website berasal dari pengguna Indonesia. </li>
+<li>Masalah utama halaman saat ini adalah informasi harga dan jadwal yang tidak lengkap. </li>
+<li>Conversion rate mobile juga lebih lemah daripada desktop.</li>
+</ul>
+<p>Kesimpulan yang bertanggung jawab adalah memperbaiki informasi dan funnel mobile untuk pasar Indonesia terlebih dahulu. Tim dapat tetap memantau perkembangan supplier unit, tetapi belum memiliki dasar kuat untuk menjadikannya prioritas teknis.</p>
+<p>Skenario ini bersifat ilustratif. Angka serta urutan prioritas perlu disesuaikan dengan data bisnis aktual.</p>
+<h2>Apa hubungannya dengan GEO dan AI Overview?</h2>
+<p><strong>Untuk AI Overviews dan AI Mode di Google, konten perlu memenuhi dasar kelayakan Google Search.</strong></p>
+<p>Google menyatakan bahwa AI Overviews dan AI Mode menggunakan sistem pencarian yang mendukung penemuan sumber relevan. Tidak ada schema khusus, file AI khusus, atau optimasi tambahan yang diwajibkan untuk tampil. Google juga menegaskan bahwa respons dan tautan dapat berbeda karena AI Overviews dan AI Mode mungkin memakai model serta teknik yang berbeda. <a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener noreferrer">Dokumentasi AI features Google</a>.</p>
+<p>Prioritas yang masuk akal tetap mencakup:</p>
+<ul>
+<li>Menjawab kebutuhan pengguna secara jelas. </li>
+<li>Menyediakan fakta yang dapat diverifikasi. </li>
+<li>Menampilkan identitas penulis. </li>
+<li>Memperbarui informasi sensitif waktu. </li>
+<li>Menggunakan internal link yang membantu navigasi. </li>
+<li>Memastikan konten penting tersedia dalam teks. </li>
+<li>Menjaga structured data sesuai isi yang terlihat.</li>
+</ul>
+<p>Untuk membedakan aktivitas crawler, kunjungan, dan hasil bisnis, baca <a href="../ukur-ai-crawler-referral-microsoft-clarity/">panduan AI crawler dan referral di Microsoft Clarity</a>.</p>
+<p>Google juga memperingatkan bahwa membuat banyak halaman generatif tanpa nilai tambahan dapat melanggar kebijakan scaled content abuse. <a href="https://developers.google.com/search/docs/fundamentals/using-gen-ai-content" target="_blank" rel="noopener noreferrer">Panduan penggunaan konten AI Google Search</a>.</p>
+<h2>Checklist audit regional Search</h2>
+<ol class="checklist">
+<li>Pasar dan lokasi target telah ditentukan. </li>
+<li>Bahasa serta perangkat pengujian tercatat. </li>
+<li>Kueri sudah dikelompokkan berdasarkan intent. </li>
+<li>Cakupan fitur diperiksa melalui dokumentasi resmi. </li>
+<li>Fakta, observasi, dan analisis dipisahkan. </li>
+<li>SERP direkam menggunakan metode yang konsisten. </li>
+<li>Data Search Console difilter berdasarkan negara. </li>
+<li>Perubahan impressions dibaca bersama clicks dan conversion. </li>
+<li>Structured data hanya digunakan jika sesuai isi halaman. </li>
+<li>Prioritas teknis mengikuti peluang pasar aktual. </li>
+<li>Tanggal audit serta batasan temuan didokumentasikan.</li>
+</ol>
+
+<h2>Pertanyaan yang sering diajukan</h2>
+        {faqItems.map(item => <section class="faq-item"><h3>{item.question}</h3><p>{item.answer}</p></section>)}
+        <h2>Kesimpulan</h2>
+<p>Strategi SEO tidak dapat dipindahkan antarnegara hanya dengan menyalin screenshot, schema, atau checklist.</p>
+<p>Mulailah dari wilayah bisnis, intent pengguna, dokumentasi resmi, kondisi SERP, dan data website. Dengan cara ini, tim dapat membedakan tren yang layak dipantau dari perubahan yang memang membutuhkan tindakan sekarang.</p>
+<p>Untuk melanjutkan evaluasi, baca <a href="../laporan-generative-ai-search-console/">cara mengukur visibilitas AI di Search Console</a> dan hubungkan data negara dengan traffic serta outcome bisnis.</p>
+
+<div class="related-article"><span>Artikel terkait</span><a href="../laporan-generative-ai-search-console/">Pelajari pengukuran visibilitas AI di Search Console →</a></div>
+      </article>
+      <aside class="article-sidebar" aria-label="Informasi artikel">
+        <section class="side-card"><h2>Tentang penulis</h2><p><strong>Nordy Sukmana</strong> adalah Performance Marketing Specialist dengan pengalaman mengelola Meta Ads, Google Ads, tracking, analytics, dan marketing automation.</p><a class="back-link" href="../#about">Lihat profil</a></section>
+        <section class="side-card"><h2>Topik artikel</h2><ul><li>SERP Regional</li><li>Search Intent</li><li>Search Console</li><li>SEO dan AI</li></ul></section>
+        <section class="side-card"><h2>Sumber utama</h2><p>Dokumentasi Google Search Central, diperiksa pada 15 September 2026.</p><a class="back-link" href="https://developers.google.com/search/docs/appearance/aggregator-features" target="_blank" rel="noopener noreferrer">Perbedaan fitur regional ↗</a><a class="back-link" href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener noreferrer">AI features dan website ↗</a><a class="back-link" href="https://developers.google.com/search/docs/fundamentals/using-gen-ai-content" target="_blank" rel="noopener noreferrer">Panduan konten generatif ↗</a></section>
+        <section class="side-card"><h2>Bacaan terkait</h2><p>Bedakan akses AI crawler, referral pengunjung, dan conversion saat mengevaluasi visibilitas website.</p><a class="back-link" href="../ukur-ai-crawler-referral-microsoft-clarity/">Baca panduan Microsoft Clarity</a></section>
+      </aside>
+    </div>
+  </main>
+  <footer class="article-footer"><div class="article-shell"><span>© 2026 Nordy Sukmana</span><a href="../artikel/">Lihat semua artikel</a></div></footer>
+  <script is:inline src="/assets/analytics-loader.js"></script>
+</BaseLayout>

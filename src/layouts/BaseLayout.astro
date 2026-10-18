@@ -1,0 +1,20 @@
+---
+interface Props {
+  lang?: string;
+  head: string;
+  bodyClass?: string;
+}
+
+const { lang = 'id', head, bodyClass } = Astro.props;
+const versionedHead = head
+  .replace(/assets\/main\.css/g, 'assets/main.css?v=20260912-ai-cert')
+  .replace(/assets\/case-study\.css/g, 'assets/case-study.css?v=20260821-4')
+  .replace(/assets\/article\.css/g, 'assets/article.css?v=20260901-1');
+---
+<!doctype html>
+<html lang={lang}>
+  <head><Fragment set:html={versionedHead} /></head>
+  <body class={bodyClass}>
+    <slot />
+  </body>
+</html>

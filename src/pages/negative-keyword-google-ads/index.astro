@@ -1,0 +1,587 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyHeader from '../../components/CaseStudyHeader.astro';
+
+const canonical = 'https://nordy-sukmana.vercel.app/negative-keyword-google-ads/';
+const image = 'https://nordy-sukmana.vercel.app/assets/brand/open-graph.png';
+const title = "Negative Keyword Google Ads: Cara Mengurangi Klik Tidak Relevan Tanpa Mematikan Volume";
+const description = "Pelajari cara menggunakan negative keyword Google Ads untuk mengurangi klik tidak relevan, menjaga kualitas traffic, dan mengoptimalkan budget campaign.";
+const faqItems = [
+  {
+    "question": "Berapa banyak negative keyword yang sebaiknya digunakan?",
+    "answer": "Tidak ada jumlah ideal yang berlaku untuk semua campaign. Campaign sebaiknya memiliki negative keyword sebanyak yang dibutuhkan untuk mengontrol traffic yang memang tidak relevan. Daftar yang panjang tidak otomatis lebih baik. Yang lebih penting adalah kualitas dan relevansi setiap negative keyword."
+  },
+  {
+    "question": "Apakah search term yang tidak menghasilkan conversion harus dijadikan negative keyword?",
+    "answer": "Tidak selalu. Jika search term masih memiliki intent yang relevan, jangan langsung memblokirnya hanya karena belum menghasilkan conversion. Periksa jumlah klik, biaya, intent, dan volume data terlebih dahulu."
+  },
+  {
+    "question": "Apa perbedaan negative keyword dengan keyword biasa?",
+    "answer": "Keyword biasa membantu Google Ads memahami pencarian yang ingin ditargetkan. Negative keyword membantu advertiser menentukan pencarian yang tidak ingin ditargetkan. Keduanya digunakan bersama untuk mengontrol relevansi traffic."
+  },
+  {
+    "question": "Apakah negative broad match aman digunakan?",
+    "answer": "Negative broad match dapat berguna, tetapi perlu digunakan dengan hati-hati. Semakin umum istilah yang dimasukkan, semakin besar kemungkinan query yang sebenarnya relevan ikut terblokir. Gunakan analisis Search Terms Report sebelum membuat negative broad keyword yang luas."
+  },
+  {
+    "question": "Seberapa sering Search Terms Report perlu diperiksa?",
+    "answer": "Frekuensinya tergantung traffic dan budget campaign. Campaign dengan volume tinggi biasanya membutuhkan review lebih sering. Campaign dengan traffic lebih kecil dapat diperiksa dengan interval yang lebih panjang. Fokusnya bukan pada jadwal tertentu, tetapi memastikan search term baru tidak dibiarkan menghabiskan budget tanpa evaluasi."
+  },
+  {
+    "question": "Apakah negative keyword bisa meningkatkan ROAS?",
+    "answer": "Negative keyword dapat membantu meningkatkan efisiensi dengan mengurangi traffic yang tidak relevan. Namun ROAS juga dipengaruhi oleh banyak faktor seperti conversion rate, CPC, bidding, landing page, margin, product feed, tracking, dan conversion value. Karena itu, negative keyword sebaiknya dilihat sebagai bagian dari sistem optimasi campaign secara keseluruhan."
+  }
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      '@id': `${canonical}#article`,
+      headline: title,
+      description,
+      url: canonical,
+      image: [image],
+      inLanguage: 'id-ID',
+      datePublished: '2026-09-18',
+      dateModified: '2026-09-18',
+      author: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      publisher: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      mainEntityOfPage: canonical,
+      articleSection: 'Google Ads dan Search Campaign Optimization',
+      about: ['Google Ads', 'Negative Keywords', 'Search Terms Report', 'Keyword Match Types', 'Search Intent'],
+      keywords: ['negative keyword Google Ads', 'keyword negatif Google Ads', 'search terms report', 'negative broad match', 'negative phrase match', 'negative exact match', 'optimasi Google Ads']
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://nordy-sukmana.vercel.app/#person',
+      name: 'Nordy Sukmana',
+      url: 'https://nordy-sukmana.vercel.app/',
+      jobTitle: 'Performance Marketing Specialist'
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${canonical}#faq`,
+      mainEntity: faqItems.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: { '@type': 'Answer', text: item.answer }
+      }))
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {'@type': 'ListItem', position: 1, name: 'Portfolio', item: 'https://nordy-sukmana.vercel.app/'},
+        {'@type': 'ListItem', position: 2, name: 'Artikel', item: 'https://nordy-sukmana.vercel.app/artikel/'},
+        {'@type': 'ListItem', position: 3, name: 'Negative Keyword Google Ads', item: canonical}
+      ]
+    }
+  ]
+};
+
+const head = `<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${title}</title>
+<meta name="description" content="${description}">
+<meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0C1F4D"><link rel="canonical" href="${canonical}">
+<meta property="og:type" content="article"><meta property="og:locale" content="id_ID"><meta property="og:site_name" content="Portfolio Nordy Sukmana"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Nordy Sukmana, Performance Marketing Specialist">
+<meta property="article:published_time" content="2026-09-18"><meta property="article:modified_time" content="2026-09-18"><meta property="article:section" content="Google Ads dan Search Campaign Optimization">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${title}"><meta name="twitter:description" content="${description}"><meta name="twitter:image" content="${image}">
+<script type="application/ld+json">${JSON.stringify(structuredData)}</script>
+<link rel="icon" href="../assets/brand/nordy-mark.svg" type="image/svg+xml"><link rel="icon" href="../favicon.ico" sizes="any"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/case-study.css"><link rel="stylesheet" href="../assets/article.css">`;
+---
+<BaseLayout head={head}>
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+  <CaseStudyHeader />
+  <main id="main-content">
+    <header class="article-hero">
+      <div class="article-shell">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Portfolio</a><span aria-hidden="true">/</span><a href="../artikel/">Artikel</a></nav>
+        <span class="article-kicker">Google Ads · Search Campaign · Optimization</span>
+        <h1>{title}</h1>
+        <p class="article-lede">Negative keyword membantu mencegah iklan tampil pada pencarian yang tidak relevan. Pelajari cara membaca Search Terms Report, memilih match type, dan membangun negative keyword tanpa menghambat volume campaign.</p>
+        <div class="article-meta"><span>Nordy Sukmana</span><time datetime="2026-09-18">18 September 2026</time><span>11 sampai 13 menit baca</span></div>
+      </div>
+    </header>
+
+    <div class="article-shell article-layout">
+      <article class="article-body">
+        <section class="answer-summary" aria-labelledby="answer-summary-title">
+          <span>Jawaban singkat</span>
+          <h2 id="answer-summary-title">Bagaimana memakai negative keyword tanpa mematikan volume?</h2>
+          <p>Negative keyword membantu mencegah iklan tampil pada pencarian yang tidak relevan dengan tujuan campaign. Gunakan Search Terms Report untuk menemukan pola intent yang jelas tidak sesuai, pilih negative match type secara hati-hati, lalu evaluasi dampaknya pada volume dan conversion. Jangan memblokir search term hanya karena belum menghasilkan conversion jika intent-nya masih relevan.</p>
+        </section>
+
+        <p>Traffic yang tinggi belum tentu berarti campaign Google Ads bekerja
+dengan baik. Campaign Search dapat menghasilkan banyak klik, tetapi
+sebagian pencarian mungkin berasal dari pengguna dengan intent yang
+tidak sesuai dengan produk atau layanan yang ditawarkan.</p>
+<p>Salah satu cara paling efektif untuk mengontrol kualitas traffic
+tersebut adalah menggunakan <strong>negative keyword Google
+Ads</strong>.</p>
+<p>Negative keyword memungkinkan advertiser memberi sinyal kepada Google
+mengenai pencarian tertentu yang tidak seharusnya memicu iklan. Jika
+diterapkan dengan benar, strategi ini dapat membantu mengurangi klik
+yang tidak relevan, menjaga efisiensi budget, dan membuat data campaign
+lebih bersih untuk dianalisis.</p>
+<p>Masalahnya, penggunaan negative keyword yang terlalu agresif juga
+dapat menghilangkan traffic potensial. Karena itu, optimasi bukan
+sekadar menambahkan sebanyak mungkin keyword negatif, tetapi memahami
+search intent dan pola pencarian pengguna.</p>
+
+        <h2 id="apa-itu-negative-keyword-google-ads">Apa Itu Negative Keyword
+Google Ads?</h2>
+<p>Negative keyword adalah keyword yang memberi tahu Google Ads bahwa
+iklan tidak perlu ditampilkan pada pencarian tertentu.</p>
+<p>Definisi dan penerapan dasarnya dapat diperiksa melalui <a href="https://support.google.com/google-ads/answer/2453972?hl=en" target="_blank" rel="noopener noreferrer">panduan resmi Google Ads tentang negative keywords</a>.</p>
+<p>Konsepnya merupakan kebalikan dari keyword targeting.</p>
+<p>Keyword biasa digunakan untuk membantu Google memahami pencarian apa
+yang relevan dengan campaign. Negative keyword digunakan untuk
+menentukan pencarian yang sebaiknya dikecualikan.</p>
+<p>Misalnya sebuah bisnis menawarkan:</p>
+<p><strong>Jasa digital marketing untuk perusahaan</strong></p>
+<p>Campaign tersebut mungkin menggunakan keyword seperti:</p>
+<ul>
+<li>digital marketing agency</li>
+<li>jasa digital marketing</li>
+<li>marketing agency</li>
+<li>jasa Google Ads</li>
+</ul>
+<p>Namun Search Terms Report dapat menunjukkan pencarian seperti:</p>
+<ul>
+<li>lowongan digital marketing agency</li>
+<li>gaji digital marketing</li>
+<li>kursus digital marketing gratis</li>
+<li>magang digital marketing</li>
+</ul>
+<p>Semua pencarian tersebut masih mengandung istilah “digital
+marketing”, tetapi intent pengguna berbeda dengan target bisnis yang
+mencari calon klien.</p>
+<p>Dalam situasi tersebut, istilah seperti <strong>lowongan</strong>,
+<strong>gaji</strong>, <strong>kursus</strong>, dan
+<strong>magang</strong> dapat dipertimbangkan sebagai negative
+keyword.</p>
+<h2 id="mengapa-negative-keyword-penting">Mengapa Negative Keyword
+Penting?</h2>
+<p>Negative keyword bukan sekadar fitur untuk mengurangi jumlah klik.
+Fungsi utamanya adalah meningkatkan relevansi traffic yang masuk ke
+website.</p>
+<h3 id="mengurangi-klik-yang-tidak-relevan">Mengurangi Klik yang Tidak
+Relevan</h3>
+<p>Advertiser membayar ketika seseorang mengklik iklan pada campaign
+berbasis CPC.</p>
+<p>Jika sebagian besar klik berasal dari pengguna yang sebenarnya tidak
+membutuhkan produk atau layanan yang ditawarkan, budget akan digunakan
+untuk traffic dengan kemungkinan conversion yang rendah.</p>
+<p>Negative keyword membantu mengurangi kondisi tersebut.</p>
+<h3 id="membuat-data-campaign-lebih-bersih">Membuat Data Campaign Lebih
+Bersih</h3>
+<p>Campaign dengan banyak pencarian tidak relevan akan menghasilkan data
+yang lebih sulit dianalisis.</p>
+<p>Contohnya, conversion rate terlihat rendah bukan karena landing page
+buruk, melainkan karena sebagian besar traffic berasal dari intent yang
+salah.</p>
+<p>Setelah pencarian yang jelas tidak relevan dibatasi, advertiser dapat
+mengevaluasi performa keyword dan landing page berdasarkan traffic yang
+lebih sesuai dengan target market.</p>
+<h3 id="membantu-mengontrol-search-intent">Membantu Mengontrol Search
+Intent</h3>
+<p>Dua keyword yang terlihat serupa dapat memiliki intent yang sangat
+berbeda.</p>
+<p>Contoh:</p>
+<ul>
+<li>software accounting</li>
+<li>software accounting gratis</li>
+<li>belajar membuat software accounting</li>
+<li>lowongan software accounting developer</li>
+</ul>
+<p>Semua mengandung tema yang sama, tetapi hanya sebagian yang mungkin
+relevan untuk perusahaan SaaS yang menjual accounting software.</p>
+<p>Negative keyword membantu advertiser mengontrol perbedaan intent
+tersebut.</p>
+<h2 id="perbedaan-keyword-dan-search-term">Perbedaan Keyword dan Search
+Term</h2>
+<p>Sebelum membuat negative keyword, penting memahami perbedaan antara
+<strong>keyword</strong> dan <strong>search term</strong>.</p>
+<p>Keyword adalah istilah yang digunakan advertiser dalam targeting
+campaign.</p>
+<p>Search term adalah pencarian sebenarnya yang diketik pengguna di
+Google.</p>
+<p>Misalnya advertiser memiliki keyword:</p>
+<p><strong>jasa seo</strong></p>
+<p>Pengguna mungkin menemukan iklan melalui pencarian seperti:</p>
+<ul>
+<li>jasa seo website</li>
+<li>jasa seo ecommerce</li>
+<li>harga jasa seo</li>
+<li>jasa seo murah</li>
+<li>belajar jasa seo</li>
+<li>lowongan jasa seo</li>
+</ul>
+<p>Keyword advertiser tetap sama, tetapi search term yang memicu iklan
+dapat berbeda.</p>
+<p>Karena itu, analisis negative keyword sebaiknya dilakukan melalui
+<strong>Search Terms Report</strong>, bukan hanya dengan melihat daftar
+keyword campaign.</p>
+<p>Google juga menyediakan <a href="https://support.google.com/google-ads/answer/2472708?hl=en" target="_blank" rel="noopener noreferrer">dokumentasi Search Terms Report</a> untuk melihat pencarian yang benar-benar memicu iklan.</p>
+<div class="related-article"><span>Artikel terkait</span><a href="../auto-upgrade-ai-max-google-ads/">AI Max Mulai Aktif Otomatis di Google Ads pada September 2026 →</a></div>
+
+<h2 id="cara-menemukan-negative-keyword-dari-search-terms-report">Cara
+Menemukan Negative Keyword dari Search Terms Report</h2>
+<p>Search Terms Report merupakan salah satu sumber utama untuk menemukan
+pencarian yang tidak relevan.</p>
+<p>Jangan hanya mencari search term dengan biaya tinggi. Fokus utama
+adalah menemukan pola intent yang tidak sesuai dengan bisnis.</p>
+<h3 id="1-cari-intent-yang-jelas-tidak-relevan">1. Cari Intent yang
+Jelas Tidak Relevan</h3>
+<p>Mulai dari pencarian yang secara jelas berada di luar target
+bisnis.</p>
+<p>Beberapa pola yang sering muncul antara lain:</p>
+<ul>
+<li>pekerjaan</li>
+<li>lowongan</li>
+<li>internship</li>
+<li>tutorial</li>
+<li>download</li>
+<li>gratis</li>
+<li>contoh</li>
+<li>template</li>
+<li>definisi</li>
+</ul>
+<p>Namun tidak semua bisnis harus memblokir istilah tersebut.</p>
+<p>Contohnya, keyword <strong>template</strong> mungkin tidak relevan
+untuk perusahaan konsultasi, tetapi sangat relevan untuk perusahaan yang
+menjual template desain.</p>
+<p>Negative keyword selalu bergantung pada business model.</p>
+<h3 id="2-kelompokkan-berdasarkan-tema">2. Kelompokkan Berdasarkan
+Tema</h3>
+<p>Jangan langsung menambahkan puluhan search term satu per satu.</p>
+<p>Kelompokkan berdasarkan intent.</p>
+<p>Contoh Search Terms Report:</p>
+<ul>
+<li>lowongan seo</li>
+<li>loker seo specialist</li>
+<li>kerja digital marketing</li>
+<li>karir performance marketing</li>
+</ul>
+<p>Semua dapat dimasukkan ke kelompok intent <strong>job
+seeker</strong>.</p>
+<p>Advertiser kemudian dapat mempertimbangkan negative keyword
+seperti:</p>
+<ul>
+<li>lowongan</li>
+<li>loker</li>
+<li>kerja</li>
+<li>karir</li>
+</ul>
+<p>Cara ini lebih scalable dibanding memblokir setiap search query satu
+per satu.</p>
+<h3
+id="3-periksa-apakah-keyword-negatif-bisa-menghambat-traffic-relevan">3.
+Periksa Apakah Keyword Negatif Bisa Menghambat Traffic Relevan</h3>
+<p>Sebelum menambahkan keyword negatif, tanyakan:</p>
+<p>“Apakah ada calon pelanggan potensial yang mungkin menggunakan kata
+ini?”</p>
+<p>Misalnya sebuah agency mendapatkan pencarian:</p>
+<p><strong>jasa Google Ads murah</strong></p>
+<p>Kata “murah” mungkin terlihat kurang menarik.</p>
+<p>Namun memblokir <strong>murah</strong> secara langsung dapat
+menghilangkan pengguna yang sebenarnya sedang membandingkan harga agency
+dan memiliki niat membeli.</p>
+<p>Sebaliknya, pencarian seperti:</p>
+<p><strong>cara belajar Google Ads gratis</strong></p>
+<p>memiliki intent edukasi yang jauh lebih jelas.</p>
+<div class="callout"><strong>Gunakan search intent sebagai filter utama.</strong> Keputusan negative keyword sebaiknya berbasis intent, bukan hanya asumsi mengenai kualitas pengguna.</div>
+<h2 id="memahami-negative-keyword-match-type">Memahami Negative Keyword
+Match Type</h2>
+<p>Sebelum memilih negative broad, phrase, atau exact, lihat juga <a href="https://support.google.com/google-ads/answer/7478529?hl=en" target="_blank" rel="noopener noreferrer">dokumentasi Google tentang keyword matching options</a> sebagai referensi aturan pencocokan.</p>
+<p>Google Ads menyediakan beberapa cara untuk menentukan seberapa luas
+negative keyword diterapkan.</p>
+<h3 id="negative-broad-match">Negative Broad Match</h3>
+<p>Negative broad match akan mencegah iklan tampil ketika seluruh kata
+dalam negative keyword terdapat dalam pencarian, meskipun urutannya
+berbeda dan terdapat kata tambahan.</p>
+<p>Misalnya negative keyword:</p>
+<p><strong>kursus google ads</strong></p>
+<p>Pencarian yang mengandung ketiga istilah tersebut dapat dicegah
+sesuai aturan negative broad match.</p>
+<p>Jenis ini dapat digunakan untuk memblokir kombinasi intent yang cukup
+luas.</p>
+<p>Namun advertiser perlu berhati-hati karena semakin umum kata yang
+digunakan, semakin besar kemungkinan traffic yang sebenarnya relevan
+ikut terblokir.</p>
+<h3 id="negative-phrase-match">Negative Phrase Match</h3>
+<p>Negative phrase match bekerja ketika pencarian mengandung frasa
+negatif dalam urutan yang sama.</p>
+<p>Contohnya:</p>
+<p><strong>"kursus google ads"</strong></p>
+<p>Pendekatan ini memberikan kontrol lebih ketat dibanding broad
+negative.</p>
+<p>Negative phrase cocok ketika advertiser ingin memblokir pola
+pencarian tertentu tetapi tidak ingin memblokir seluruh variasi yang
+menggunakan kata yang sama.</p>
+<h3 id="negative-exact-match">Negative Exact Match</h3>
+<p>Negative exact match merupakan opsi paling spesifik.</p>
+<p>Contohnya:</p>
+<p><strong>[kursus google ads]</strong></p>
+<p>Jenis ini biasanya digunakan jika advertiser hanya ingin
+mengecualikan query tertentu tanpa memblokir variasi lain.</p>
+<p>Negative exact dapat berguna ketika sebuah search term sudah terbukti
+tidak relevan tetapi kata-kata di dalamnya masih dapat muncul pada
+pencarian lain yang berpotensi menghasilkan conversion.</p>
+<h2 id="contoh-strategi-negative-keyword">Contoh Strategi Negative
+Keyword</h2>
+<p>Bayangkan sebuah perusahaan B2B menjual software inventory management
+dengan paket berbayar.</p>
+<p>Campaign menargetkan keyword:</p>
+<p><strong>inventory management software</strong></p>
+<p>Setelah campaign berjalan, Search Terms Report menunjukkan:</p>
+<ul>
+<li>inventory management software</li>
+<li>inventory management software for warehouse</li>
+<li>inventory management software pricing</li>
+<li>free inventory management software</li>
+<li>inventory management software open source</li>
+<li>inventory management software tutorial</li>
+<li>inventory management software jobs</li>
+</ul>
+<p>Tiga pencarian pertama masih memiliki commercial intent yang relatif
+jelas.</p>
+<p>Pencarian berikutnya memiliki intent berbeda.</p>
+<p>Advertiser dapat mengelompokkannya:</p>
+<p><strong>Free seekers</strong></p>
+<ul>
+<li>free</li>
+<li>gratis</li>
+</ul>
+<p><strong>Open-source seekers</strong></p>
+<ul>
+<li>open source</li>
+</ul>
+<p><strong>Educational intent</strong></p>
+<ul>
+<li>tutorial</li>
+<li>course</li>
+<li>belajar</li>
+</ul>
+<p><strong>Job seekers</strong></p>
+<ul>
+<li>jobs</li>
+<li>career</li>
+<li>lowongan</li>
+</ul>
+<p>Kemudian advertiser dapat menentukan kategori mana yang benar-benar
+tidak relevan dengan business model.</p>
+<p>Pendekatan berbasis intent seperti ini biasanya lebih aman dibanding
+sekadar memblokir search term berdasarkan conversion.</p>
+<h2
+id="campaign-level-vs-ad-group-level-negative-keyword">Campaign-Level vs
+Ad Group-Level Negative Keyword</h2>
+<p>Negative keyword dapat digunakan pada level yang berbeda tergantung
+kebutuhan struktur campaign.</p>
+<h3 id="campaign-level">Campaign-Level</h3>
+<p>Gunakan campaign-level negative keyword ketika istilah tersebut tidak
+relevan untuk seluruh campaign.</p>
+<p>Contoh campaign menjual software premium.</p>
+<p>Jika perusahaan sama sekali tidak menawarkan produk gratis, istilah
+tertentu terkait produk gratis mungkin dapat dikecualikan pada seluruh
+campaign setelah dianalisis.</p>
+<h3 id="ad-group-level">Ad Group-Level</h3>
+<p>Ad group-level negative keyword berguna ketika sebuah istilah masih
+relevan bagi bisnis tetapi tidak relevan dengan ad group tertentu.</p>
+<p>Misalnya campaign ecommerce memiliki dua ad group:</p>
+<ul>
+<li>sepatu lari</li>
+<li>sepatu hiking</li>
+</ul>
+<p>Advertiser dapat menggunakan negative keyword secara strategis untuk
+membantu memisahkan intent antara kedua kelompok tersebut.</p>
+<p>Tujuannya bukan semata-mata memblokir traffic, tetapi memastikan
+traffic diarahkan ke struktur iklan yang lebih sesuai.</p>
+
+<h2 id="kesalahan-yang-sering-terjadi">Kesalahan yang Sering
+Terjadi</h2>
+<h3 id="menambahkan-negative-keyword-terlalu-cepat">Menambahkan Negative
+Keyword Terlalu Cepat</h3>
+<p>Satu search term yang tidak menghasilkan conversion belum tentu
+buruk.</p>
+<p>Jumlah datanya mungkin terlalu sedikit untuk membuat kesimpulan.</p>
+<p>Bedakan antara:</p>
+<p><strong>tidak relevan secara intent</strong></p>
+<p>dan</p>
+<p><strong>relevan tetapi belum menghasilkan conversion</strong>.</p>
+<p>Search term yang jelas mencari pekerjaan dapat dikecualikan tanpa
+menunggu banyak data jika campaign bertujuan mencari customer.</p>
+<p>Sebaliknya, search term seperti “harga software CRM” memiliki
+commercial intent yang kuat meskipun belum menghasilkan conversion.</p>
+<h3 id="memblokir-kata-yang-terlalu-umum">Memblokir Kata yang Terlalu
+Umum</h3>
+<p>Negative keyword seperti:</p>
+<ul>
+<li>murah</li>
+<li>harga</li>
+<li>terbaik</li>
+<li>review</li>
+</ul>
+<p>dapat menghilangkan calon customer yang sedang berada pada tahap
+comparison.</p>
+<p>Pengguna yang mencari:</p>
+<p><strong>harga software CRM terbaik</strong></p>
+<p>bisa saja memiliki purchase intent yang kuat.</p>
+<p>Karena itu, hindari membuat keputusan hanya berdasarkan satu
+kata.</p>
+<h3 id="hanya-melihat-cost">Hanya Melihat Cost</h3>
+<p>Search term mahal tidak otomatis harus menjadi negative keyword.</p>
+<p>Cost tinggi bisa muncul karena:</p>
+<ul>
+<li>CPC tinggi,</li>
+<li>competition tinggi,</li>
+<li>conversion delay,</li>
+<li>landing page kurang efektif,</li>
+<li>tracking bermasalah,</li>
+<li>atau volume data masih kecil.</li>
+</ul>
+<p>Negative keyword sebaiknya digunakan untuk mengontrol relevansi,
+bukan sebagai solusi otomatis untuk semua masalah performance.</p>
+<div class="related-article"><span>Evaluasi performa</span><a href="../conversion-delay-google-ads-evaluasi-roas/">Conversion Delay Google Ads, Jangan Terburu Menilai ROAS →</a></div>
+<h3 id="tidak-memeriksa-daftar-negative-keyword-lama">Tidak Memeriksa
+Daftar Negative Keyword Lama</h3>
+<p>Campaign dapat berubah.</p>
+<p>Produk baru dapat diluncurkan.</p>
+<p>Target market dapat berkembang.</p>
+<p>Keyword yang dianggap tidak relevan enam bulan lalu mungkin relevan
+sekarang.</p>
+<p>Karena itu, negative keyword list juga perlu diaudit secara
+berkala.</p>
+<h2 id="best-practice-negative-keyword-google-ads">Best Practice
+Negative Keyword Google Ads</h2>
+<h3 id="gunakan-search-intent-sebagai-dasar-utama">Gunakan Search Intent
+sebagai Dasar Utama</h3>
+<p>Pertanyaan utama bukan:</p>
+<p>“Apakah keyword ini menghasilkan conversion?”</p>
+<p>Melainkan:</p>
+<p>“Apakah orang yang menggunakan pencarian ini merupakan calon customer
+yang masuk akal?”</p>
+<p>Intent memberikan konteks yang lebih baik dibanding melihat
+conversion secara terisolasi.</p>
+<h3 id="buat-kategori-negative-keyword">Buat Kategori Negative
+Keyword</h3>
+<p>Kelompokkan negative keyword seperti:</p>
+<ul>
+<li>job seekers</li>
+<li>education</li>
+<li>free products</li>
+<li>research</li>
+<li>competitor tertentu</li>
+<li>lokasi tidak dilayani</li>
+<li>produk yang tidak tersedia</li>
+</ul>
+<p>Struktur ini membuat audit lebih mudah.</p>
+<h3 id="review-search-terms-secara-berkala">Review Search Terms Secara
+Berkala</h3>
+<p>Frekuensi review tergantung volume campaign.</p>
+<p>Campaign dengan traffic besar membutuhkan pemeriksaan lebih sering
+dibanding campaign dengan volume pencarian rendah.</p>
+<p>Yang penting adalah memiliki proses rutin untuk mengevaluasi:</p>
+<ul>
+<li>search term baru,</li>
+<li>pola intent,</li>
+<li>perubahan biaya,</li>
+<li>conversion,</li>
+<li>dan relevansi.</li>
+</ul>
+<h3
+id="jangan-gunakan-negative-keyword-untuk-menutupi-masalah-lain">Jangan
+Gunakan Negative Keyword untuk Menutupi Masalah Lain</h3>
+<p>Jika traffic relevan tetapi tidak menghasilkan conversion, masalahnya
+mungkin bukan keyword.</p>
+<p>Periksa juga:</p>
+<ul>
+<li>landing page,</li>
+<li>offer,</li>
+<li>harga,</li>
+<li>tracking,</li>
+<li>conversion action,</li>
+<li>bidding,</li>
+<li>lokasi,</li>
+<li>device,</li>
+<li>dan kualitas leads.</li>
+</ul>
+<p>Negative keyword adalah salah satu alat optimasi, bukan solusi untuk
+seluruh masalah campaign.</p>
+<div class="related-article"><span>Tracking dan kualitas lead</span><a href="../enhanced-conversions-for-leads-google-ads-2026/">Enhanced Conversions Google Ads 2026: Jangan Berhenti di Form Submission →</a></div>
+
+<h2 id="cara-mengevaluasi-dampak-negative-keyword">Cara Mengevaluasi
+Dampak Negative Keyword</h2>
+<p>Setelah menambahkan negative keyword, jangan hanya melihat apakah
+jumlah klik turun.</p>
+<p>Perhatikan perubahan pada kualitas traffic.</p>
+<p>Beberapa metric yang dapat dievaluasi antara lain:</p>
+<ul>
+<li>conversion rate,</li>
+<li>cost per conversion,</li>
+<li>jumlah conversion,</li>
+<li>click quality,</li>
+<li>search term relevance,</li>
+<li>conversion value,</li>
+<li>dan volume campaign.</li>
+</ul>
+<p>Misalnya klik turun 15%, tetapi conversion tetap stabil.</p>
+<p>Kondisi tersebut dapat menunjukkan bahwa sebagian traffic yang
+dihilangkan memang tidak memberikan nilai berarti.</p>
+<p>Sebaliknya, jika klik dan conversion sama-sama turun drastis setelah
+penambahan negative keyword, periksa apakah ada keyword yang terlalu
+luas.</p>
+<p>Audit negative keyword list dapat membantu menemukan kemungkinan
+over-blocking.</p>
+<div class="related-article"><span>Bidding dan target</span><a href="../update-smart-bidding-google-ads-target-cpa-roas-2026/">Update Smart Bidding Google Ads 2026: Saatnya Audit Target CPA dan ROAS →</a></div>
+<h2 id="workflow-sederhana-untuk-optimasi-negative-keyword">Workflow
+Sederhana untuk Optimasi Negative Keyword</h2>
+<p>Advertiser dapat menggunakan proses berikut:</p>
+<ol class="checklist">
+<li>Buka Search Terms Report.</li>
+<li>Identifikasi query dengan intent yang jelas tidak relevan.</li>
+<li>Kelompokkan query berdasarkan tema.</li>
+<li>Tentukan kata atau frasa yang mewakili pola tersebut.</li>
+<li>Pilih negative match type yang sesuai.</li>
+<li>Periksa kemungkinan traffic relevan ikut terblokir.</li>
+<li>Tambahkan negative keyword.</li>
+<li>Pantau perubahan volume dan conversion.</li>
+<li>Audit daftar negative keyword secara berkala.</li>
+</ol>
+<p>Workflow ini membantu membuat keputusan berdasarkan pola, bukan
+reaksi terhadap satu atau dua klik.</p>
+<div class="related-article"><span>Audit campaign</span><a href="../ask-advisor-google-ads-ga4-audit-campaign/">Ask Advisor Google Ads dan GA4 2026: Pakai AI untuk Audit, Bukan Autopilot →</a></div>
+
+        <h2>Pertanyaan yang sering diajukan</h2>
+        {faqItems.map(item => <section class="faq-item"><h3>{item.question}</h3><p>{item.answer}</p></section>)}
+
+        <h2>Kesimpulan</h2>
+        <p>Negative keyword Google Ads adalah salah satu kontrol penting untuk
+menjaga kualitas traffic Search campaign.</p>
+<p>Strategi yang efektif bukan berarti membuat daftar keyword negatif
+sebanyak mungkin. Tujuannya adalah membedakan pencarian yang benar-benar
+tidak relevan dari pencarian yang masih memiliki potensi commercial
+intent.</p>
+<p>Mulailah dari Search Terms Report, kelompokkan query berdasarkan
+intent, lalu pilih negative keyword dan match type secara hati-hati.</p>
+<p>Hindari memblokir keyword hanya karena belum menghasilkan conversion.
+Periksa apakah masalahnya benar-benar berasal dari kualitas search term
+atau justru dari landing page, tracking, bidding, atau offer.</p>
+<p>Negative keyword yang dikelola dengan disiplin dapat membuat campaign
+lebih bersih, lebih mudah dianalisis, dan membantu budget difokuskan
+pada pencarian yang lebih relevan dengan tujuan bisnis.</p>
+
+      </article>
+
+      <aside class="article-sidebar" aria-label="Informasi artikel">
+        <section class="side-card"><h2>Tentang penulis</h2><p><strong>Nordy Sukmana</strong> adalah Performance Marketing Specialist dengan pengalaman mengelola Google Ads, Meta Ads, tracking, analytics, SEO, dan marketing automation.</p><a class="back-link" href="../#about">Lihat profil</a></section>
+        <section class="side-card"><h2>Topik artikel</h2><ul><li>Negative Keywords</li><li>Search Terms Report</li><li>Keyword Match Types</li><li>Search Intent</li></ul></section>
+        <section class="side-card"><h2>Sumber utama</h2><p>Dokumentasi resmi Google Ads tentang negative keywords, Search Terms Report, dan keyword matching options.</p><a class="back-link" href="https://support.google.com/google-ads/answer/2453972?hl=en" target="_blank" rel="noopener noreferrer">Negative keywords ↗</a><a class="back-link" href="https://support.google.com/google-ads/answer/2472708?hl=en" target="_blank" rel="noopener noreferrer">Search Terms Report ↗</a><a class="back-link" href="https://support.google.com/google-ads/answer/7478529?hl=en" target="_blank" rel="noopener noreferrer">Keyword matching options ↗</a></section>
+        <section class="side-card"><h2>Artikel sebelumnya</h2><p>Pelajari cara menguji ide konten melalui Trial Reels sebelum menambah budget atau distribusi.</p><a class="back-link" href="../instagram-trial-reels-uji-konten/">Baca artikel Instagram Trial Reels</a></section>
+      </aside>
+    </div>
+  </main>
+  <footer class="article-footer"><div class="article-shell"><span>© 2026 Nordy Sukmana</span><a href="../artikel/">Lihat semua artikel</a></div></footer>
+  <script is:inline src="/assets/analytics-loader.js"></script>
+</BaseLayout>

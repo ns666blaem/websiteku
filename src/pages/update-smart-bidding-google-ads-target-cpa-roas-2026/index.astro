@@ -1,0 +1,162 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyHeader from '../../components/CaseStudyHeader.astro';
+
+const canonical = 'https://nordy-sukmana.vercel.app/update-smart-bidding-google-ads-target-cpa-roas-2026/';
+const image = 'https://nordy-sukmana.vercel.app/assets/brand/open-graph.png';
+const faqItems = [
+  {
+    question: 'Apakah semua campaign Target CPA dan Target ROAS terdampak?',
+    answer: 'Fokus perubahan ini adalah campaign berstatus Limited by budget yang memakai strategi berbasis target pada jenis campaign yang memenuhi syarat. Campaign Target CPA dan Target ROAS yang tidak terbatas budget tidak mengalami perubahan perilaku ini.'
+  },
+  {
+    question: 'Apakah Google otomatis menaikkan budget atau mengganti target?',
+    answer: 'Tidak. Google menyatakan budget dan target tidak diubah otomatis. Sistem hanya mengoptimalkan delivery secara lebih konsisten menuju target yang sudah ditetapkan advertiser.'
+  },
+  {
+    question: 'Apakah target harus disamakan dengan CPA atau ROAS aktual?',
+    answer: 'Tidak selalu. Performa aktual dapat menjadi referensi, tetapi target sebaiknya mengikuti batas profitabilitas dan tujuan pertumbuhan. Target yang terlalu ketat dapat menurunkan spend serta volume.'
+  },
+  {
+    question: 'Mengapa rekomendasi target tidak muncul?',
+    answer: 'Tidak adanya rekomendasi bukan berarti campaign pasti aman. Google tidak menghitung rekomendasi untuk campaign dengan kurang dari tujuh conversion karena performanya lebih sulit diprediksi.'
+  },
+  {
+    question: 'Berapa lama perlu menunggu setelah mengubah target?',
+    answer: 'Google menyarankan menunggu satu sampai dua conversion cycle. Bisnis dengan jeda conversion panjang memerlukan waktu evaluasi lebih lama daripada bisnis dengan transaksi pada hari yang sama.'
+  }
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      '@id': `${canonical}#article`,
+      headline: 'Update Smart Bidding Google Ads 2026: Audit Target CPA dan ROAS',
+      description: 'Google mengubah Smart Bidding sejak 17 Agustus 2026. Audit Target CPA, Target ROAS, budget, dan tracking agar performa sesuai tujuan bisnis.',
+      url: canonical,
+      image: [image],
+      inLanguage: 'id-ID',
+      datePublished: '2026-08-31',
+      dateModified: '2026-08-31',
+      author: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      publisher: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      mainEntityOfPage: canonical,
+      articleSection: 'Google Ads, Smart Bidding dan Performance Measurement',
+      about: ['Google Ads', 'Smart Bidding', 'Target CPA', 'Target ROAS', 'Limited by budget'],
+      keywords: ['update Smart Bidding Google Ads 2026', 'Target CPA', 'Target ROAS', 'Limited by budget', 'Bid Target Adjustment Tool']
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://nordy-sukmana.vercel.app/#person',
+      name: 'Nordy Sukmana',
+      url: 'https://nordy-sukmana.vercel.app/',
+      jobTitle: 'Performance Marketing Specialist'
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {'@type': 'ListItem', position: 1, name: 'Portfolio', item: 'https://nordy-sukmana.vercel.app/'},
+        {'@type': 'ListItem', position: 2, name: 'Artikel', item: 'https://nordy-sukmana.vercel.app/artikel/'},
+        {'@type': 'ListItem', position: 3, name: 'Update Smart Bidding Google Ads 2026', item: canonical}
+      ]
+    }
+  ]
+};
+
+const head = `<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Update Smart Bidding Google Ads 2026: Audit Target CPA dan ROAS</title>
+<meta name="description" content="Google mengubah Smart Bidding sejak 17 Agustus 2026. Audit Target CPA, Target ROAS, budget, dan tracking agar performa sesuai tujuan bisnis.">
+<meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0C1F4D"><link rel="canonical" href="${canonical}">
+<meta property="og:type" content="article"><meta property="og:locale" content="id_ID"><meta property="og:site_name" content="Portfolio Nordy Sukmana"><meta property="og:title" content="Update Smart Bidding Google Ads 2026"><meta property="og:description" content="Cara mengaudit Target CPA, Target ROAS, budget, dan tracking setelah perubahan bidding Google Ads."><meta property="og:url" content="${canonical}"><meta property="og:image" content="${image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Nordy Sukmana, Performance Marketing Specialist">
+<meta property="article:published_time" content="2026-08-31"><meta property="article:modified_time" content="2026-08-31"><meta property="article:section" content="Google Ads, Smart Bidding dan Performance Measurement">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Update Smart Bidding Google Ads 2026"><meta name="twitter:description" content="Audit Target CPA, Target ROAS, budget, dan tracking setelah perubahan Smart Bidding."><meta name="twitter:image" content="${image}">
+<script type="application/ld+json">${JSON.stringify(structuredData)}</script>
+<link rel="icon" href="../assets/brand/nordy-mark.svg" type="image/svg+xml"><link rel="icon" href="../favicon.ico" sizes="any"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/case-study.css"><link rel="stylesheet" href="../assets/article.css">`;
+---
+<BaseLayout head={head}>
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+  <CaseStudyHeader />
+  <main id="main-content">
+    <header class="article-hero"><div class="article-shell"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Portfolio</a><span aria-hidden="true">/</span><a href="../artikel/">Artikel</a></nav><span class="article-kicker">Google Ads · Smart Bidding · Performance Measurement</span><h1>Update Smart Bidding Google Ads 2026: Saatnya Audit Target CPA dan ROAS</h1><p class="article-lede">Target yang tersimpan di Google Ads sekarang semakin tegas berfungsi sebagai instruksi bisnis. Pastikan angkanya masih sesuai dengan profitabilitas, kualitas conversion, dan tujuan pertumbuhan.</p><div class="article-meta"><span>Nordy Sukmana</span><span>31 Agustus 2026</span><span>8 sampai 9 menit baca</span></div></div></header>
+
+    <div class="article-shell article-layout">
+      <article class="article-body">
+        <section class="answer-summary" aria-labelledby="answer-summary-title"><span>Jawaban singkat</span><h2 id="answer-summary-title">Apa dampak pembaruan Smart Bidding ini?</h2><p>Sejak 17 Agustus 2026, campaign berstatus Limited by budget yang memakai strategi berbasis target dioptimalkan lebih konsisten menuju Target CPA atau Target ROAS yang ditetapkan. Jika performa aktual selama ini jauh lebih efisien daripada target, CPA dapat naik atau ROAS dapat turun mendekati target. Audit target, budget, conversion tracking, dan batas profitabilitas, kemudian tunggu satu sampai dua conversion cycle sebelum menilai hasil.</p></section>
+
+        <p>Bayangkan sebuah campaign memiliki Target CPA Rp250.000, tetapi selama beberapa minggu menghasilkan CPA aktual Rp140.000. Selisih tersebut mungkin terasa seperti bonus. Setelah perubahan Smart Bidding mulai berlaku, Google dapat mengoptimalkan campaign yang terbatas budget agar performanya lebih dekat ke target Rp250.000.</p>
+        <div class="metric-examples" aria-label="Contoh perbedaan target dan performa aktual"><blockquote><strong>Rp250.000</strong><span>Target CPA</span><p>Angka yang tersimpan sebagai sasaran campaign.</p></blockquote><blockquote><strong>Rp140.000</strong><span>CPA aktual</span><p>Performa yang dicapai campaign dalam beberapa minggu terakhir.</p></blockquote></div>
+        <p>Jika CPA kemudian naik, penyebabnya belum tentu creative memburuk atau tracking rusak. Sistem mungkin sedang memperlakukan target yang dimasukkan sebagai sasaran yang benar benar ingin dicapai.</p>
+        <p>Pembaruan ini menegaskan satu hal: <strong>Target CPA dan Target ROAS tidak boleh menjadi angka lama yang dibiarkan tanpa konteks bisnis.</strong> Keduanya perlu mencerminkan nilai lead, margin, kapasitas penjualan, dan pertumbuhan yang benar benar diinginkan.</p>
+
+        <h2>Apa yang berubah pada Smart Bidding Google Ads?</h2>
+        <p>Mulai 17 Agustus 2026, Google memperbarui sistem bidding untuk campaign berstatus <strong>Limited by budget</strong> yang menggunakan strategi berbasis target. Sistem akan mencoba menghasilkan performa yang lebih konsisten terhadap target, termasuk ketika budget disesuaikan.</p>
+        <p>Perubahan ini berlaku untuk Target CPA, Target ROAS, serta Target CPC khusus Demand Gen. Jenis campaign yang tercakup meliputi Search, Shopping, Performance Max, Demand Gen, dan Travel. Untuk Performance Max dan Demand Gen, distribusi traffic antar channel juga dapat berubah.</p>
+        <p>Google tidak otomatis mengganti target atau budget akun. Angka lama tetap digunakan sampai advertiser memutuskan untuk mengubahnya. Rincian cakupan dan pilihan tindakan tersedia dalam <a href="https://support.google.com/google-ads/answer/17061251?hl=en" target="_blank" rel="noopener noreferrer">dokumentasi perubahan strategi bidding berbasis target</a>.</p>
+        <div class="callout">Per 31 Agustus 2026, perubahan ini masih diluncurkan secara bertahap secara global. Karena itu, perilaku baru mungkin belum terlihat seragam pada setiap akun atau campaign.</div>
+
+        <h2>Mengapa target lama sekarang berisiko menyesatkan?</h2>
+        <p>Target yang terlalu longgar dapat memberi ruang bagi sistem untuk membeli conversion yang lebih mahal, walaupun campaign sebelumnya jauh lebih efisien. Sebaliknya, target yang terlalu ketat dapat membatasi spend dan volume.</p>
+        <p>Misalnya, bisnis menetapkan Target ROAS 300%, sedangkan campaign konsisten menghasilkan ROAS aktual 500%. Setelah pembaruan, performa dapat bergerak lebih dekat ke 300% jika campaign terbatas budget. Itu bukan berarti sistem sengaja menghabiskan uang tanpa kendali. Google Ads menjalankan target yang diberikan.</p>
+        <p>Target sebaiknya berasal dari batas profitabilitas dan tujuan pertumbuhan, bukan hanya menyalin performa terbaik di dashboard.</p>
+
+        <h2>Cara audit Target CPA dan Target ROAS</h2>
+        <h3>1. Temukan campaign yang benar benar terdampak</h3>
+        <p>Prioritaskan campaign yang memakai strategi berbasis target dan berstatus Limited by budget. Susun tabel audit dengan informasi berikut:</p>
+        <ul><li>Nama dan jenis campaign.</li><li>Strategi bidding yang digunakan.</li><li>Target CPA atau Target ROAS.</li><li>CPA atau ROAS aktual selama 30 sampai 60 hari.</li><li>Budget dan rata rata spend harian.</li><li>Volume serta nilai conversion.</li><li>Conversion lag atau jeda conversion.</li><li>Status Limited by budget.</li></ul>
+        <p>Jangan mencampur campaign baru dengan campaign yang memiliki riwayat stabil. Data dengan volume sangat rendah juga perlu dibaca hati hati. Google tidak menghitung rekomendasi target untuk campaign dengan kurang dari tujuh conversion karena hasilnya lebih sulit diprediksi.</p>
+
+        <h3>2. Hitung target dari ekonomi bisnis</h3>
+        <p>Tentukan batas CPA atau ROAS yang masih masuk akal sebelum membuka Bid Target Adjustment Tool.</p>
+        <p>Untuk lead generation, jangan hanya memakai cost per form. Hubungkan campaign dengan CRM untuk melihat qualified lead atau penjualan. Jika 20% form menjadi qualified lead, CPA formulir Rp100.000 setara dengan cost per qualified lead Rp500.000.</p>
+        <p>Untuk ecommerce, pertimbangkan margin kotor, biaya produk, diskon, subsidi ongkir, retur, dan biaya operasional yang relevan. ROAS 400% belum tentu menguntungkan jika margin setelah seluruh biaya terlalu tipis.</p>
+
+        <h3>3. Pilih tindakan sesuai tujuan</h3>
+        <div class="table-wrap" role="region" aria-label="Pilihan tindakan berdasarkan kondisi campaign" tabindex="0"><table><thead><tr><th>Kondisi</th><th>Tindakan yang dapat dipertimbangkan</th></tr></thead><tbody><tr><td>Target sesuai batas bisnis</td><td>Pertahankan target, kemudian pantau volume dan efisiensi.</td></tr><tr><td>Performa aktual lebih baik dan ingin dipertahankan</td><td>Sesuaikan target mendekati performa terbaru.</td></tr><tr><td>Perlu keseimbangan efisiensi dan pertumbuhan</td><td>Tetapkan target khusus berdasarkan batas profitabilitas.</td></tr><tr><td>Budget kaku dan prioritasnya volume</td><td>Pertimbangkan Maximize Conversions atau Maximize Conversion Value dengan menerima fluktuasi CPA atau ROAS.</td></tr><tr><td>Tracking belum valid</td><td>Perbaiki measurement sebelum mengubah bidding.</td></tr></tbody></table></div>
+        <p>Bid Target Adjustment Tool dapat dibuka dari notifikasi <strong>Review your campaign targets</strong> atau melalui Campaigns, Settings, Bidding, lalu Review campaigns. Pilihannya mencakup mempertahankan target, mengikuti performa terbaru, memasukkan target khusus, atau mengganti strategi bidding.</p>
+
+        <h3>4. Ubah satu keputusan utama, lalu beri waktu</h3>
+        <p>Hindari menaikkan budget, mengganti target, mengubah conversion goal, dan merombak landing page pada hari yang sama. Jika hasil berubah, penyebabnya akan sulit dipisahkan.</p>
+        <p>Google menyarankan menunggu <strong>satu sampai dua conversion cycle</strong> sebelum mengevaluasi performa setelah perubahan target. Conversion cycle adalah waktu yang biasanya dibutuhkan sejak klik sampai conversion. Jika mayoritas conversion terjadi dalam tujuh hari, evaluasi yang wajar membutuhkan sekitar satu sampai dua siklus tersebut. Lihat <a href="https://support.google.com/google-ads/answer/10433846?hl=en" target="_blank" rel="noopener noreferrer">panduan penyesuaian target Smart Bidding</a>.</p>
+        <div class="data-warning"><span>!</span><div><strong>Perhatikan forecast selama masa transisi</strong><p>Google meminta advertiser berhati hati menggunakan forecast budget dan bidding pada 17 sampai 31 Agustus 2026 karena proyeksi dapat memiliki ketidakakuratan sementara. Bandingkan forecast dengan data aktual.</p></div></div>
+
+        <h3>5. Periksa kualitas sinyal conversion</h3>
+        <p>Target yang tepat tidak akan membantu jika conversion yang dikirim ke Google Ads keliru. Periksa apakah:</p>
+        <ul><li>Conversion utama sesuai dengan tujuan bisnis.</li><li>Form spam atau duplikat tidak menjadi sinyal bidding.</li><li>Nilai transaksi dikirim secara konsisten.</li><li>Qualified lead atau penjualan offline kembali masuk dari CRM.</li><li>Perubahan consent, GTM, GA4, atau landing page tidak memutus tracking.</li></ul>
+        <p>Untuk Target ROAS, Google memakai conversion value yang dilaporkan untuk memprediksi nilai dan mengatur bid. Data nilai yang keliru akan menghasilkan keputusan yang terlihat canggih, tetapi dibangun di atas input yang salah. Mekanismenya dijelaskan dalam <a href="https://support.google.com/google-ads/answer/6268637?hl=en" target="_blank" rel="noopener noreferrer">panduan resmi Target ROAS</a>.</p>
+        <div class="related-article"><span>Pengukuran lanjutan</span><a href="../enhanced-conversions-for-leads-google-ads-2026/">Hubungkan Google Ads dengan qualified lead dari CRM →</a></div>
+
+        <h2>Contoh keputusan yang lebih bertanggung jawab</h2>
+        <p>Contoh berikut bersifat ilustratif, bukan hasil campaign Nordy.</p>
+        <p>Sebuah bisnis jasa memiliki Target CPA Rp250.000, CPA aktual Rp140.000, dan status Limited by budget. Setelah menghitung tingkat qualified lead serta margin, bisnis menetapkan CPA maksimum yang sehat sebesar Rp175.000.</p>
+        <p>Menurunkan target langsung ke Rp140.000 mungkin menjaga efisiensi historis, tetapi berpotensi membatasi volume. Membiarkan target di Rp250.000 memberi ruang biaya terlalu besar. Target Rp175.000 menjadi hipotesis yang lebih dekat dengan ekonomi bisnis.</p>
+        <p>Tim mencatat tanggal perubahan, mempertahankan conversion goal, lalu menilai hasil setelah satu sampai dua conversion cycle. Target CPA tetap bekerja sebagai rata rata. Sebagian conversion dapat lebih mahal atau lebih murah daripada target.</p>
+
+        <h2>Kesalahan yang perlu dihindari</h2>
+        <ul><li>Menganggap Target CPA sebagai batas biaya untuk setiap conversion.</li><li>Membiarkan target lama hanya karena campaign masih menghasilkan conversion.</li><li>Menurunkan target tanpa menghitung dampaknya terhadap volume.</li><li>Membandingkan tiga hari setelah perubahan dengan satu bulan sebelumnya.</li><li>Mengubah target dan budget sekaligus tanpa catatan.</li><li>Menilai lead mentah tanpa memeriksa kualitasnya melalui CRM.</li><li>Menerapkan data exclusion atau bid limit hanya untuk merespons pembaruan. Google tidak merekomendasikan tindakan tersebut karena dapat memicu fluktuasi tambahan.</li></ul>
+
+        <h2>Checklist audit minggu ini</h2>
+        <ol class="checklist"><li>Filter campaign dengan status Limited by budget.</li><li>Tandai penggunaan Target CPA, Target ROAS, atau Target CPC Demand Gen.</li><li>Bandingkan target dengan performa aktual selama 30 sampai 60 hari.</li><li>Hitung batas CPA atau ROAS berdasarkan margin dan kualitas lead.</li><li>Validasi conversion action, conversion value, dan data CRM.</li><li>Tentukan satu tindakan untuk setiap campaign.</li><li>Catat tanggal perubahan pada dashboard.</li><li>Tunggu satu sampai dua conversion cycle sebelum menyimpulkan hasil.</li><li>Pantau volume, CPA atau ROAS, serta kualitas conversion secara bersamaan.</li></ol>
+
+        <h2>Pertanyaan yang sering diajukan</h2>
+        {faqItems.map(item => <section class="faq-item"><h3>{item.question}</h3><p>{item.answer}</p></section>)}
+
+        <h2>Kesimpulan</h2>
+        <p>Pembaruan Smart Bidding Agustus 2026 membuat Target CPA dan Target ROAS semakin berfungsi sebagai instruksi bisnis, bukan sekadar angka referensi. Campaign yang sebelumnya jauh lebih efisien daripada target dapat bergerak mendekati target yang ditetapkan, terutama ketika terbatas budget.</p>
+        <p>Mulailah dari audit sederhana. Bandingkan target, performa aktual, dan batas profitabilitas. Pilih perubahan yang dapat dijelaskan, catat waktunya, lalu ukur hasil setelah conversion cycle yang memadai.</p>
+        <p>Jika setiap target memiliki dasar bisnis dan tracking yang bersih, keputusan scaling akan lebih mudah dipertanggungjawabkan.</p>
+        <div class="related-article"><span>Case study terkait</span><a href="../case-study/performance-analysis/">Lihat analisis performa dan alokasi budget lintas platform →</a></div>
+      </article>
+
+      <aside class="article-sidebar" aria-label="Informasi artikel">
+        <section class="side-card"><h2>Tentang penulis</h2><p><strong>Nordy Sukmana</strong> adalah Performance Marketing Specialist dengan pengalaman mengelola Google Ads, Meta Ads, tracking, SEO, dan marketing automation.</p><a class="back-link" href="../#about">Lihat profil</a></section>
+        <section class="side-card"><h2>Topik artikel</h2><ul><li>Smart Bidding Google Ads</li><li>Target CPA dan Target ROAS</li><li>Limited by budget</li><li>Conversion measurement</li></ul></section>
+        <section class="side-card"><h2>Sumber utama</h2><p>Informasi diperiksa melalui dokumentasi resmi Google Ads tentang perubahan strategi bidding berbasis target.</p><a class="back-link" href="https://support.google.com/google-ads/answer/17061251?hl=en" target="_blank" rel="noopener noreferrer">Buka panduan Google ↗</a></section>
+        <section class="side-card"><h2>Artikel sebelumnya</h2><p>Pelajari cara menghubungkan formulir dan CRM agar bidding mengejar qualified lead.</p><a class="back-link" href="../enhanced-conversions-for-leads-google-ads-2026/">Baca artikel</a></section>
+      </aside>
+    </div>
+  </main>
+  <footer class="article-footer"><div class="article-shell"><span>© 2026 Nordy Sukmana</span><a href="../artikel/">Lihat semua artikel</a></div></footer>
+  <script is:inline src="/assets/analytics-loader.js"></script>
+</BaseLayout>

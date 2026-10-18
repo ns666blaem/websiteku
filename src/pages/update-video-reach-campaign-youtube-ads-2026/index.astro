@@ -1,0 +1,175 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyHeader from '../../components/CaseStudyHeader.astro';
+
+const canonical = 'https://nordy-sukmana.vercel.app/update-video-reach-campaign-youtube-ads-2026/';
+const image = 'https://nordy-sukmana.vercel.app/assets/brand/open-graph.png';
+const faqItems = [
+  {
+    question: 'Apakah campaign hasil migrasi langsung tayang di YouTube Shorts?',
+    answer: 'Tidak. Campaign hasil migrasi tetap memakai in stream secara default. Advertiser perlu melengkapi headline dan description, lalu mengaktifkan Shorts atau in feed pada pengaturan format.'
+  },
+  {
+    question: 'Apakah seluruh histori campaign akan hilang?',
+    answer: 'Tidak. Histori pada level campaign tetap tersedia, tetapi histori ad group dan ads direset karena Google membuat struktur responsive video ad baru. Ekspor data lama sebelum migrasi jika analisis rinci masih diperlukan.'
+  },
+  {
+    question: 'Apakah semua Video Reach Campaign ikut dimigrasikan?',
+    answer: 'Tidak. Pembaruan ini berfokus pada efficient reach campaign yang hanya memakai in stream. Campaign dengan shared budget tidak mengikuti proses peningkatan otomatis yang sama.'
+  },
+  {
+    question: 'Apakah multi format menjamin CPM lebih rendah?',
+    answer: 'Tidak. Inventory yang lebih luas memberi sistem lebih banyak pilihan, tetapi hasil tetap dipengaruhi audiens, creative, bid, budget, persaingan, dan kondisi pasar.'
+  },
+  {
+    question: 'Apakah conversion tetap perlu diukur untuk campaign awareness?',
+    answer: 'Conversion dapat digunakan sebagai sinyal tambahan, tetapi KPI utama perlu mengikuti objective. Untuk campaign reach, unique users, frequency, impressions, dan CPM biasanya lebih relevan.'
+  }
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      '@id': `${canonical}#article`,
+      headline: 'Update Video Reach Campaign 2026: Audit Migrasi YouTube Ads',
+      description: 'Google mulai memigrasikan Video Reach Campaign ke multi format. Pelajari dampaknya pada creative, histori data, Shorts, dan audit YouTube Ads.',
+      url: canonical,
+      image: [image],
+      inLanguage: 'id-ID',
+      datePublished: '2026-09-02',
+      dateModified: '2026-09-02',
+      author: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      publisher: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      mainEntityOfPage: canonical,
+      articleSection: 'YouTube Ads dan Performance Measurement',
+      about: ['Google Ads', 'YouTube Ads', 'Video Reach Campaign', 'YouTube Shorts', 'Performance Measurement'],
+      keywords: ['update Video Reach Campaign Google Ads 2026', 'migrasi Video Reach Campaign multi format', 'audit YouTube Ads', 'laporan performa YouTube Shorts Ads']
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://nordy-sukmana.vercel.app/#person',
+      name: 'Nordy Sukmana',
+      url: 'https://nordy-sukmana.vercel.app/',
+      jobTitle: 'Performance Marketing Specialist'
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {'@type': 'ListItem', position: 1, name: 'Portfolio', item: 'https://nordy-sukmana.vercel.app/'},
+        {'@type': 'ListItem', position: 2, name: 'Artikel', item: 'https://nordy-sukmana.vercel.app/artikel/'},
+        {'@type': 'ListItem', position: 3, name: 'Update Video Reach Campaign 2026', item: canonical}
+      ]
+    }
+  ]
+};
+
+const head = `<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Update Video Reach Campaign 2026: Audit Migrasi YouTube Ads</title>
+<meta name="description" content="Google mulai memigrasikan Video Reach Campaign ke multi format. Pelajari dampaknya pada creative, histori data, Shorts, dan audit YouTube Ads.">
+<meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0C1F4D"><link rel="canonical" href="${canonical}">
+<meta property="og:type" content="article"><meta property="og:locale" content="id_ID"><meta property="og:site_name" content="Portfolio Nordy Sukmana"><meta property="og:title" content="Update Video Reach Campaign 2026"><meta property="og:description" content="Audit histori, creative, format, dan pengukuran setelah migrasi Video Reach Campaign."><meta property="og:url" content="${canonical}"><meta property="og:image" content="${image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Nordy Sukmana, Performance Marketing Specialist">
+<meta property="article:published_time" content="2026-09-02"><meta property="article:modified_time" content="2026-09-02"><meta property="article:section" content="YouTube Ads dan Performance Measurement">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Update Video Reach Campaign 2026"><meta name="twitter:description" content="Panduan audit migrasi Video Reach Campaign dan laporan YouTube Ads multi format."><meta name="twitter:image" content="${image}">
+<script type="application/ld+json">${JSON.stringify(structuredData)}</script>
+<link rel="icon" href="../assets/brand/nordy-mark.svg" type="image/svg+xml"><link rel="icon" href="../favicon.ico" sizes="any"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/case-study.css"><link rel="stylesheet" href="../assets/article.css">`;
+---
+<BaseLayout head={head}>
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+  <CaseStudyHeader />
+  <main id="main-content">
+    <header class="article-hero"><div class="article-shell"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Portfolio</a><span aria-hidden="true">/</span><a href="../artikel/">Artikel</a></nav><span class="article-kicker">YouTube Ads · Video Reach · Performance Measurement</span><h1>Update Video Reach Campaign 2026: Audit Migrasi YouTube Ads</h1><p class="article-lede">Google mulai mengubah campaign in stream menjadi struktur multi format. Simpan baseline, periksa creative, lalu pisahkan laporan tiap format agar perubahan performa dapat dijelaskan dengan benar.</p><div class="article-meta"><span>Nordy Sukmana</span><span>2 September 2026</span><span>8 sampai 9 menit baca</span></div></div></header>
+
+    <div class="article-shell article-layout">
+      <article class="article-body">
+        <section class="answer-summary" aria-labelledby="answer-summary-title"><span>Jawaban singkat</span><h2 id="answer-summary-title">Apa yang berubah pada Video Reach Campaign?</h2><p>Mulai Agustus 2026, Google otomatis memigrasikan Video Reach Campaign efficient reach yang hanya memakai in stream ke struktur multi format. Pengaturan dan histori laporan pada level campaign dipertahankan, tetapi histori ad group serta ads direset. Campaign hasil migrasi tetap memakai in stream sampai advertiser melengkapi aset teks dan mengaktifkan in feed atau Shorts.</p></section>
+
+        <p>Campaign YouTube dapat terlihat tetap aktif, budget tidak berubah, dan targeting masih sama. Namun, ketika laporan dibuka, histori pada level ad group dan ads tidak lagi tersambung seperti sebelumnya.</p>
+        <p>Situasi tersebut bukan selalu masalah tracking. Google membuat ad group baru bertipe responsive video ad sebagai bagian dari peningkatan otomatis. Perubahan ini membuka pilihan inventory yang lebih luas, sekaligus mengubah cara marketer membaca histori dan performa creative.</p>
+
+        <div class="update-timeline" aria-label="Tahapan migrasi Video Reach Campaign">
+          <div><span>Sebelum migrasi</span><p>Campaign memakai in stream, histori ad group dan ads masih mengikuti struktur lama.</p></div>
+          <div><span>Saat migrasi</span><p>Google membuat ad group baru, menghentikan ad group lama selama tujuh hari, lalu menghapusnya setelah proses selesai.</p></div>
+          <div><span>Setelah migrasi</span><p>Campaign tetap menggunakan in stream secara default sampai aset teks dan format tambahan diaktifkan.</p></div>
+        </div>
+
+        <h2>Detail perubahan yang perlu diperhatikan</h2>
+        <p>Menurut <a href="https://support.google.com/google-ads/answer/15274526?hl=en" target="_blank" rel="noopener noreferrer">dokumentasi migrasi resmi Google Ads</a>, nama, budget, jadwal, targeting, bidding, dan pengaturan measurement pada level campaign tetap dipertahankan. Histori laporan campaign juga tetap tersedia.</p>
+        <p>Perubahan penting terjadi pada level di bawah campaign:</p>
+        <ul><li>Google membuat ad group baru bertipe responsive video ad.</li><li>Histori ad group dan ads lama direset.</li><li>Ad group lama dihentikan sementara selama tujuh hari, lalu dihapus.</li><li>Video berdurasi kurang dari lima detik tidak disalin.</li><li>Ads hasil migrasi menjalani pemeriksaan kebijakan kembali.</li><li>Nama dan logo bisnis dapat diambil dari channel YouTube yang menampung video.</li><li>Campaign dengan shared budget tidak mengikuti peningkatan otomatis yang sama.</li></ul>
+        <div class="callout"><strong>Multi format tidak berarti semua format langsung aktif.</strong> Campaign hasil migrasi tetap menggunakan in stream. Headline dan description perlu dilengkapi sebelum in feed atau Shorts dapat digunakan.</div>
+
+        <h2>Mengapa pembaruan ini penting bagi marketer?</h2>
+        <p>Risiko terbesarnya bukan hanya perubahan tampilan campaign, tetapi hilangnya konteks saat membandingkan performa. Baris ads baru tidak dapat dibaca sebagai kelanjutan langsung dari baris ads lama.</p>
+        <p>Jika in feed dan Shorts kemudian diaktifkan, angka gabungan juga mencerminkan pengalaman pengguna yang berbeda. In stream muncul di sela video, in feed mengajak pengguna memilih video dari area discovery, sedangkan Shorts berada di feed vertikal yang dapat dilewati dengan cepat.</p>
+        <p>CPM, view rate, watch time, dan interaksi dari ketiga format tersebut tidak sebaiknya dibaca seolah berasal dari lingkungan yang sama.</p>
+
+        <h2>Cara audit campaign sebelum migrasi</h2>
+        <h3>1. Temukan campaign yang memenuhi kriteria</h3>
+        <p>Filter campaign berdasarkan jenis Video dan strategi bidding Target CPM. Periksa apakah subtype yang digunakan adalah Video Reach Campaign dengan efficient reach dan hanya memakai in stream.</p>
+        <p>Tandai campaign yang menggunakan shared budget. Google menyatakan campaign tersebut tidak ikut dimigrasikan melalui proses yang sama dan merekomendasikan pembuatan campaign pengganti.</p>
+
+        <h3>2. Simpan baseline performa</h3>
+        <p>Ekspor data minimal 30 hari terakhir pada level campaign, ad group, ads, video, perangkat, lokasi, audiens, dan placement jika relevan. Sertakan tanggal ekspor serta rentang data.</p>
+        <div class="report-preview" aria-label="Contoh komponen baseline laporan"><div class="report-preview__head"><img src="/assets/tools/googleads.svg" alt="" width="44" height="44"><div><span>Baseline audit</span><strong>Video Reach Campaign</strong></div></div><div class="report-preview__grid"><span><strong>Reach</strong>Unique users dan frequency</span><span><strong>Cost</strong>Spend dan CPM</span><span><strong>Video</strong>Views, view rate, dan watch time</span><span><strong>Context</strong>Device, audience, dan placement</span></div></div>
+        <p>Baseline menjadi pembanding jika histori ad group dan ads tidak lagi tersedia pada struktur baru. Simpan file tersebut di luar Google Ads agar perubahan antarmuka tidak menghilangkan konteks analisis.</p>
+
+        <h3>3. Periksa kelengkapan creative</h3>
+        <p><a href="https://support.google.com/google-ads/answer/10581234?hl=en" target="_blank" rel="noopener noreferrer">Panduan Video Reach Campaign</a> mencantumkan headline dan description maksimal 90 karakter, serta CTA opsional maksimal 10 karakter.</p>
+        <p>Untuk jangkauan lintas format, siapkan:</p>
+        <ul><li>Video horizontal 16:9 untuk in stream dan in feed.</li><li>Video vertikal 9:16 untuk Shorts.</li><li>Versi singkat yang menyampaikan pesan utama sejak awal.</li><li>Headline yang tetap jelas tanpa bergantung pada audio.</li><li>Description yang konsisten dengan penawaran.</li><li>Logo, nama bisnis, CTA, dan final URL yang telah diperiksa.</li></ul>
+        <p>Google dapat membuat versi vertikal melalui video enhancements, yang aktif secara default pada campaign baru. Periksa kembali hasil otomatis agar produk, teks, wajah, dan elemen penting tidak terpotong.</p>
+
+        <h3>4. Periksa durasi dan status kebijakan</h3>
+        <p>Video kurang dari lima detik tidak disalin saat migrasi. Buat daftar aset berdasarkan durasi agar tidak ada creative yang tertinggal.</p>
+        <p>Ads hasil migrasi juga menjalani pemeriksaan kebijakan baru. Setelah proses selesai, cek kolom status dan policy details, bukan hanya memastikan campaign berstatus enabled.</p>
+
+        <h2>Cara membaca performa setelah multi format aktif</h2>
+        <h3>Pisahkan laporan berdasarkan ad format</h3>
+        <p>Jangan menilai Shorts, in feed, dan in stream hanya dari angka gabungan. Google menyediakan dimensi <strong>Ad format</strong> pada tabel campaign, ad group, ads, video, dan Report Editor.</p>
+        <div class="table-wrap" role="region" aria-label="Struktur laporan YouTube Ads multi format" tabindex="0"><table><thead><tr><th>Dimensi</th><th>Metrik yang diperiksa</th><th>Tujuan analisis</th></tr></thead><tbody><tr><td>Ad format</td><td>Spend, impressions, CPM, views, clicks</td><td>Membandingkan in stream, in feed, dan Shorts</td></tr><tr><td>Campaign</td><td>Unique users, frequency, total spend</td><td>Menilai jangkauan dan distribusi budget</td></tr><tr><td>Video</td><td>View rate dan watch time</td><td>Memeriksa kemampuan creative mempertahankan perhatian</td></tr><tr><td>Device</td><td>Mobile, desktop, tablet, CTV</td><td>Memahami konteks layar dan konsumsi video</td></tr><tr><td>Periode</td><td>Sebelum dan sesudah migrasi</td><td>Membandingkan hasil setelah data stabil</td></tr></tbody></table></div>
+        <p><a href="https://support.google.com/google-ads/answer/16923669?hl=en" target="_blank" rel="noopener noreferrer">Panduan segmentasi ad format Google Ads</a> menjelaskan bahwa view rate kini menggunakan kolom khusus format. Viewable rate juga dapat kosong pada laporan tanpa segmentasi karena cara pengukurannya berbeda antar format.</p>
+
+        <h3>Baca Shorts melalui watch time</h3>
+        <p>Untuk Shorts, gunakan Watch Time, Average Watch Time per Impression, dan persentase impressions yang bertahan sampai detik tertentu. Data ini tersedia melalui Assets, Videos, Analytics, lalu Shorts.</p>
+        <p><a href="https://support.google.com/google-ads/answer/16042063?hl=en" target="_blank" rel="noopener noreferrer">Dokumentasi laporan YouTube Shorts</a> menegaskan bahwa laporan tanpa segmentasi merupakan gabungan atau rata rata seluruh format.</p>
+        <div class="data-warning"><span>!</span><div><strong>Jangan langsung menyalahkan targeting</strong><p>Jika penonton meninggalkan video sebelum pesan utama muncul, masalahnya mungkin berada pada pembuka, pacing, atau penempatan pesan di dalam creative.</p></div></div>
+
+        <h2>Metrik apa yang sebaiknya menjadi KPI?</h2>
+        <p>Video Reach Campaign terutama dirancang untuk awareness dan jangkauan. Karena itu, CPA tidak sebaiknya menjadi satu satunya ukuran keberhasilan.</p>
+        <div class="metric-examples" aria-label="Lapisan metrik campaign awareness"><blockquote><strong>KPI utama</strong><span>Awareness</span><p>Unique users, frequency, impressions, CPM, dan distribusi reach terhadap audiens target.</p></blockquote><blockquote><strong>Metrik pendukung</strong><span>Diagnostik</span><p>View rate per format, watch time, retensi video, click through rate, dan conversion yang relevan.</p></blockquote></div>
+        <p>Data reach memakai pemodelan untuk memperhitungkan penggunaan lintas perangkat dan co viewing pada connected TV. Hindari mengambil keputusan dari laporan hari yang sama karena data reach dapat memerlukan waktu untuk lengkap.</p>
+
+        <h2>Contoh evaluasi yang bertanggung jawab</h2>
+        <p>Contoh berikut bersifat ilustratif, bukan hasil campaign Nordy.</p>
+        <p>Sebelum migrasi, sebuah campaign in stream mencatat CPM Rp18.000 dan average frequency 2,1. Setelah tim mengaktifkan in feed dan Shorts, CPM gabungan turun menjadi Rp14.500.</p>
+        <p>Angka tersebut belum membuktikan creative menjadi lebih efektif. Penurunan CPM mungkin berasal dari inventory yang lebih luas dan lebih murah.</p>
+        <p>Setelah laporan dipisahkan, Shorts menghasilkan CPM terendah, tetapi watch time turun tajam pada tiga detik pertama. In stream lebih mahal, tetapi mempertahankan perhatian lebih lama.</p>
+        <p>Keputusan yang lebih bertanggung jawab adalah memperbaiki pembuka video vertikal, mempertahankan format yang berkontribusi pada unique reach, lalu membandingkan hasil pada periode berikutnya.</p>
+        <div class="related-article"><span>Audit dengan AI</span><a href="../ask-advisor-google-ads-ga4-audit-campaign/">Gunakan Ask Advisor untuk menemukan perubahan performa dan laporan pendukung →</a></div>
+
+        <h2>Checklist migrasi Video Reach Campaign</h2>
+        <ol class="checklist"><li>Filter campaign Video dengan Target CPM.</li><li>Tandai efficient reach campaign yang hanya memakai in stream.</li><li>Periksa penggunaan shared budget.</li><li>Ekspor histori campaign, ad group, ads, dan video.</li><li>Catat baseline reach, frequency, CPM, dan view rate.</li><li>Periksa video berdurasi kurang dari lima detik.</li><li>Siapkan aset horizontal dan vertikal.</li><li>Lengkapi headline, description, logo, CTA, dan URL.</li><li>Periksa status kebijakan setelah migrasi.</li><li>Aktifkan in feed dan Shorts jika creative sudah sesuai.</li><li>Segmentasikan laporan berdasarkan ad format.</li><li>Tunggu data reach lengkap sebelum menarik kesimpulan.</li></ol>
+
+        <h2>Pertanyaan yang sering diajukan</h2>
+        {faqItems.map(item => <section class="faq-item"><h3>{item.question}</h3><p>{item.answer}</p></section>)}
+
+        <h2>Kesimpulan</h2>
+        <p>Migrasi Video Reach Campaign bukan sekadar perubahan struktur Google Ads. Pembaruan ini memengaruhi histori ads, kebutuhan creative, dan cara marketer membaca performa lintas format.</p>
+        <p>Simpan baseline sebelum migrasi, periksa aset setelah proses selesai, lalu pisahkan in stream, in feed, dan Shorts dalam laporan. Dengan cara ini, perubahan CPM atau view rate dapat dijelaskan berdasarkan data.</p>
+        <p>Tujuan audit bukan mencari format dengan angka termurah, tetapi memastikan setiap format membantu campaign mencapai jangkauan yang tepat dengan creative yang sesuai.</p>
+        <div class="related-article"><span>Case study terkait</span><a href="../case-study/meta-ads-unlabel/">Lihat cara KPI awareness dibaca melalui reach, impressions, dan CPM →</a></div>
+      </article>
+
+      <aside class="article-sidebar" aria-label="Informasi artikel">
+        <section class="side-card"><h2>Tentang penulis</h2><p><strong>Nordy Sukmana</strong> adalah Performance Marketing Specialist dengan pengalaman mengelola Google Ads, Meta Ads, tracking, SEO, dan marketing automation.</p><a class="back-link" href="../#about">Lihat profil</a></section>
+        <section class="side-card"><h2>Topik artikel</h2><ul><li>Video Reach Campaign</li><li>YouTube Ads multi format</li><li>YouTube Shorts</li><li>Performance measurement</li></ul></section>
+        <section class="side-card"><h2>Sumber utama</h2><p>Informasi diperiksa melalui dokumentasi resmi Google Ads tentang migrasi Video Reach Campaign.</p><a class="back-link" href="https://support.google.com/google-ads/answer/15274526?hl=en" target="_blank" rel="noopener noreferrer">Buka panduan Google ↗</a></section>
+        <section class="side-card"><h2>Artikel sebelumnya</h2><p>Pelajari cara memakai Ask Advisor untuk audit campaign tanpa menyerahkan keputusan kepada AI.</p><a class="back-link" href="../ask-advisor-google-ads-ga4-audit-campaign/">Baca artikel</a></section>
+      </aside>
+    </div>
+  </main>
+  <footer class="article-footer"><div class="article-shell"><span>© 2026 Nordy Sukmana</span><a href="../artikel/">Lihat semua artikel</a></div></footer>
+  <script is:inline src="/assets/analytics-loader.js"></script>
+</BaseLayout>

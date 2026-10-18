@@ -1,0 +1,23 @@
+---
+import LanguagePicker from './LanguagePicker.astro';
+---
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo" aria-label="Nordy Sukmana — kembali ke atas">
+      <img class="logo-mark" src="/assets/brand/nordy-mark.svg" alt="" width="64" height="64">
+      <span class="logo-text">Nordy Sukmana</span>
+    </a>
+    <nav class="links" id="primary-nav" aria-label="Navigasi utama">
+      <a href="#results">Hasil</a><a href="#about">Tentang</a><a href="#experience">Pengalaman</a><a href="#portfolio">Portfolio</a><a href="/artikel/">Artikel</a>
+      <div class="nav-more">
+        <button class="nav-more-toggle" type="button" aria-expanded="false" aria-controls="nav-more-menu">Lainnya <span aria-hidden="true">⌄</span></button>
+        <div class="nav-more-menu" id="nav-more-menu">
+          <a href="#brands">Brand</a><a href="#skills">Skill</a><a href="#education">Pendidikan</a>
+        </div>
+      </div>
+    </nav>
+    <LanguagePicker />
+    <a class="nav-cta" href="#contact"><span class="long">Hubungi</span> Saya</a>
+    <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Buka menu navigasi"><span class="nav-toggle-icon" aria-hidden="true"></span></button>
+  </div>
+</header>

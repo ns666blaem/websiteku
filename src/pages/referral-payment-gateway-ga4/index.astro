@@ -1,0 +1,218 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyHeader from '../../components/CaseStudyHeader.astro';
+
+const canonical = 'https://nordy-sukmana.vercel.app/referral-payment-gateway-ga4/';
+const image = 'https://nordy-sukmana.vercel.app/assets/brand/open-graph.png';
+const title = "Payment Gateway Muncul sebagai Referral di GA4? Audit Ini";
+const description = "Payment gateway muncul sebagai sumber penjualan di GA4? Pelajari audit referral, pengukuran lintas domain, dan validasi transaksi sebelum mengubah budget iklan.";
+const faqItems = [
+  {
+    "question": "Apakah referral tinggi berarti ada masalah?",
+    "answer": "Belum tentu. Periksa fungsi sumber tersebut dan alasan perubahannya. Kenaikan dari liputan media memiliki konteks berbeda dari kenaikan sesudah checkout diganti."
+  },
+  {
+    "question": "Apakah unwanted referrals menyambungkan dua domain?",
+    "answer": "Tidak. Kebutuhan menyambungkan identitas antar domain ditangani melalui pengukuran lintas domain dengan pemasangan tag yang sesuai."
+  },
+  {
+    "question": "Apakah audit ini langsung menaikkan penjualan?",
+    "answer": "Audit memperbaiki dasar evaluasi. Pertumbuhan penjualan tetap perlu dibuktikan melalui transaksi, kemudian dihubungkan dengan tindakan marketing yang dilakukan."
+  },
+  {
+    "question": "Apakah revenue GA4 harus persis sama dengan backend?",
+    "answer": "Jadikan pencocokan transaksi sebagai pemeriksaan utama. Selidiki perbedaan cakupan tracking, definisi revenue, periode, pembayaran, dan refund sebelum menyimpulkan."
+  },
+  {
+    "question": "Apakah pengecualian referral memperbaiki laporan lama?",
+    "answer": "Pengaturan ini tidak otomatis menulis ulang atribusi transaksi lama. Gunakan tanggal implementasi sebagai batas evaluasi, lalu periksa data baru. Sumber yang dikecualikan juga masih dapat muncul pada kunjungan kembali karena histori atribusi sebelumnya."
+  }
+];
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      '@id': `${canonical}#article`,
+      headline: title,
+      description,
+      url: canonical,
+      image: [image],
+      inLanguage: 'id-ID',
+      datePublished: '2026-09-09',
+      dateModified: '2026-09-09',
+      author: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      publisher: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      mainEntityOfPage: canonical,
+      articleSection: 'Analytics dan Conversion Tracking',
+      about: ['Google Analytics 4', 'Payment Gateway', 'Unwanted Referrals', 'Cross-domain Measurement', 'Attribution', 'Ecommerce Tracking'],
+      keywords: ['referral payment gateway GA4', 'cara mengatasi referral payment gateway di GA4', 'audit sumber penjualan GA4', 'tracking checkout lintas domain']
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://nordy-sukmana.vercel.app/#person',
+      name: 'Nordy Sukmana',
+      url: 'https://nordy-sukmana.vercel.app/',
+      jobTitle: 'Performance Marketing Specialist'
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {'@type': 'ListItem', position: 1, name: 'Portfolio', item: 'https://nordy-sukmana.vercel.app/'},
+        {'@type': 'ListItem', position: 2, name: 'Artikel', item: 'https://nordy-sukmana.vercel.app/artikel/'},
+        {'@type': 'ListItem', position: 3, name: 'Audit Referral Payment Gateway GA4', item: canonical}
+      ]
+    }
+  ]
+};
+
+const head = `<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${title}</title>
+<meta name="description" content="${description}">
+<meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0C1F4D"><link rel="canonical" href="${canonical}">
+<meta property="og:type" content="article"><meta property="og:locale" content="id_ID"><meta property="og:site_name" content="Portfolio Nordy Sukmana"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Nordy Sukmana, Performance Marketing Specialist">
+<meta property="article:published_time" content="2026-09-09"><meta property="article:modified_time" content="2026-09-09"><meta property="article:section" content="Analytics dan Conversion Tracking">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${title}"><meta name="twitter:description" content="${description}"><meta name="twitter:image" content="${image}">
+<script type="application/ld+json">${JSON.stringify(structuredData)}</script>
+<link rel="icon" href="../assets/brand/nordy-mark.svg" type="image/svg+xml"><link rel="icon" href="../favicon.ico" sizes="any"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/case-study.css"><link rel="stylesheet" href="../assets/article.css">`;
+---
+<BaseLayout head={head}>
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+  <CaseStudyHeader />
+  <main id="main-content">
+    <header class="article-hero">
+      <div class="article-shell">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Portfolio</a><span aria-hidden="true">/</span><a href="../artikel/">Artikel</a></nav>
+        <span class="article-kicker">Analytics · GA4 · Conversion Tracking</span>
+        <h1>{title}</h1>
+        <p class="article-lede">Nama penyedia pembayaran dalam laporan sumber penjualan bisa mengaburkan evaluasi campaign. Telusuri checkout, pengaturan referral, dan data transaksi sebelum memindahkan budget.</p>
+        <div class="article-meta"><span>Nordy Sukmana</span><span>9 September 2026</span><span>7 sampai 8 menit baca</span></div>
+      </div>
+    </header>
+    <div class="article-shell article-layout">
+      <article class="article-body">
+        <section class="answer-summary" aria-labelledby="answer-summary-title">
+          <span>Jawaban singkat</span>
+          <h2 id="answer-summary-title">Apa yang perlu diperiksa saat payment gateway muncul sebagai referral?</h2>
+          <p>Audit referral payment gateway GA4 dengan memetakan checkout, memeriksa unwanted referrals serta pengukuran lintas domain sesuai kebutuhan, dan mencocokkan transaksi dengan backend. Gunakan hasil audit untuk menilai keandalan laporan sebelum mengubah budget.</p>
+        </section>
+<p>Campaign membawa pengunjung ke website. Pengunjung memilih produk, membayar, lalu pesanan masuk. Namun, ketika laporan dibuka, sebagian penjualan justru muncul di bawah nama penyedia pembayaran.</p>
+<p>Situasi ini bisa membuat rapat evaluasi melenceng. Tim mempertanyakan efektivitas iklan, padahal ada persoalan pengukuran yang belum selesai diperiksa.</p>
+<p>Laporan seperti ini perlu diperiksa dari awal perjalanan pelanggan. Telusuri bagaimana pengunjung datang, menyelesaikan pembayaran, dan akhirnya tercatat sebagai pembeli.</p>
+<p>Panduan ini membahas cara memeriksa alur tersebut berdasarkan dokumentasi yang diakses pada 9 September 2026. Langkah audit ini disusun untuk membantu tim menilai kualitas pengukuran sebelum mengambil keputusan.</p>
+<h2>Mengapa masalah ini penting untuk keputusan budget?</h2>
+<p><strong>Sumber penjualan yang keliru dapat membuat penilaian kontribusi channel ikut keliru.</strong></p>
+<p>Bayangkan tim melihat penjualan dari paid social turun, sementara referral meningkat. Jika perubahan langsung dianggap sebagai perubahan perilaku pelanggan, budget berpotensi dipindahkan sebelum penyebab sebenarnya diketahui.</p>
+<p>Mulailah dengan tiga pertanyaan: sejak kapan pola muncul, metode pembayaran apa yang terlibat, dan apakah jumlah pesanan di sistem toko ikut berubah?</p>
+<p>Jika perubahan bertepatan dengan pergantian checkout, catat sebagai hipotesis pengukuran. Jika pesanan juga turun, selidiki proses transaksi dan kondisi campaign secara terpisah. Dua masalah dapat terjadi bersamaan.</p>
+<h2>Pastikan kamu membaca sumber pada tingkat yang tepat</h2>
+<p><strong>Gunakan dimensi yang menjawab pertanyaan auditmu.</strong> GA4 membedakan sumber akuisisi pengguna, sumber sesi, dan atribusi pada event. <a href="https://support.google.com/analytics/answer/11080067?hl=en" target="_blank" rel="noopener noreferrer">Sumber: cakupan dimensi sumber traffic</a>.</p>
+<div class="table-wrap" role="region" aria-label="Perbedaan dimensi sumber traffic di GA4" tabindex="0"><table>
+<thead>
+<tr>
+<th>Dimensi</th>
+<th>Pertanyaan yang dijawab</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>First user source / medium</td>
+<td>Dari mana pengguna pertama kali diperoleh?</td>
+</tr>
+<tr>
+<td>Session source / medium</td>
+<td>Sumber apa yang diatribusikan pada sesi tersebut?</td>
+</tr>
+<tr>
+<td>Source / medium pada laporan atribusi event</td>
+<td>Channel mana yang menerima kredit untuk key event?</td>
+</tr>
+</tbody></table></div>
+<p>Untuk pemeriksaan awal, buka laporan Traffic acquisition dan gunakan Session source / medium. Cari domain pembayaran, lalu periksa sesi serta pembelian yang terkait.</p>
+<p>Perpindahan ke halaman pembayaran tidak selalu berarti sumber sesi langsung berubah. Google menjelaskan bahwa sesi dimulai ketika tidak ada sesi aktif; batas tidak aktif default adalah 30 menit. Karena itu, audit waktu pelanggan kembali dan kesinambungan identitasnya. <a href="https://support.google.com/analytics/answer/9191807?hl=en" target="_blank" rel="noopener noreferrer">Sumber: About Analytics sessions</a>.</p>
+<h2>Unwanted referrals atau pengukuran lintas domain?</h2>
+<p><strong>Keduanya menyelesaikan kebutuhan yang berbeda.</strong> Unwanted referrals mengabaikan referrer yang memenuhi aturan. Pengukuran lintas domain membantu mempertahankan identitas pengguna dan sesi antar domain. <a href="https://support.google.com/analytics/answer/10327750?hl=en" target="_blank" rel="noopener noreferrer">Unwanted referrals</a>, <a href="https://support.google.com/analytics/answer/10071811?hl=id" target="_blank" rel="noopener noreferrer">pengukuran lintas domain</a>.</p>
+<div class="table-wrap" role="region" aria-label="Memilih unwanted referrals atau pengukuran lintas domain" tabindex="0"><table>
+<thead>
+<tr>
+<th>Situasi</th>
+<th>Pemeriksaan utama</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Pelanggan kembali dari penyedia pembayaran eksternal</td>
+<td>Aturan unwanted referrals untuk domain terkait</td>
+</tr>
+<tr>
+<td>Website dan checkout berada pada domain berbeda yang dikelola bisnis</td>
+<td>Pengukuran lintas domain dan pemasangan tag</td>
+</tr>
+<tr>
+<td>Artikel media atau partner mengirim calon pembeli</td>
+<td>Pertahankan sebagai referral yang sah</td>
+</tr>
+<tr>
+<td>Domain sendiri muncul sebagai referral</td>
+<td>Audit tag, cookie, dan alur lintas domain</td>
+</tr>
+</tbody></table></div>
+<p>Pengukuran lintas domain membutuhkan tag dengan ID pengukuran yang sama dari web data stream yang sama pada domain terkait. Memasukkan domain penyedia pembayaran ke daftar domain saja tidak menggantikan kebutuhan pemasangan tag tersebut. <a href="https://support.google.com/analytics/answer/10071811?hl=id" target="_blank" rel="noopener noreferrer">Sumber: panduan lintas domain Google</a>.</p>
+<h2>Enam langkah audit sebelum mengubah campaign</h2>
+<h3>1. Rekam alur checkout yang sebenarnya dilalui</h3>
+<p>Lakukan penelusuran dari landing page sampai konfirmasi pesanan. Catat domain, waktu perpindahan, halaman kembali, serta metode pembayaran.</p>
+<p>Uji desktop dan ponsel. Perhatikan apakah pelanggan berpindah ke aplikasi pembayaran, membuka browser lain, atau tidak kembali ke toko. Gunakan hasilnya untuk menentukan bagian perjalanan yang masih dapat diamati.</p>
+<h3>2. Simpan baseline yang bisa dibandingkan</h3>
+<p>Ambil periode yang cukup mewakili transaksi, misalnya dua minggu jika volumenya memadai. Catat jumlah order dibayar, nilai penjualan, pembelian di GA4, serta distribusi sumber sesi.</p>
+<p>Pisahkan hari promosi besar. Perubahan tracking yang bertepatan dengan kampanye 9.9 akan sulit dibaca jika seluruh perubahan angka dianggap berasal dari konfigurasi baru.</p>
+<p>Simpan pula tanggal perubahan checkout, tag, dan integrasi pembayaran. Catatan ini membantu tim menemukan urutan kejadian tanpa mengandalkan ingatan.</p>
+<h3>3. Terapkan pengecualian secara spesifik</h3>
+<p>Dengan akses Editor atau lebih tinggi, buka <strong>Admin → Data streams → pilih web stream → Configure tag settings → Show all → List unwanted referrals</strong>. Pilih aturan pencocokan, masukkan domain terverifikasi, lalu simpan. <a href="https://support.google.com/analytics/answer/10327750?hl=en" target="_blank" rel="noopener noreferrer">Sumber: konfigurasi unwanted referrals</a>.</p>
+<p>Sebagai kontrol kerja, tulis alasan setiap pengecualian dan siapa yang memeriksanya. Hindari menambahkan daftar domain dari internet tanpa mencocokkannya dengan alur pembayaran bisnis sendiri.</p>
+<h3>4. Periksa sambungan antar domain milik bisnis</h3>
+<p>Untuk alur lintas domain, periksa <strong>Configure your domains</strong> pada pengaturan tag. Saat berpindah melalui tautan atau formulir, pastikan parameter penghubung <code>_gl</code> sampai ke domain tujuan. Redirect dapat menghilangkannya. <a href="https://support.google.com/analytics/answer/10071811?hl=id" target="_blank" rel="noopener noreferrer">Sumber: verifikasi lintas domain</a>.</p>
+<p>Minta bantuan developer jika parameter hilang. Berikan langkah reproduksi, URL asal, URL tujuan, dan perangkat yang digunakan agar masalah mudah diuji ulang.</p>
+<h3>5. Validasi transaksi, bukan hanya nama sumber</h3>
+<p>Dokumentasi ecommerce Google menggunakan event <code>purchase</code> dengan informasi seperti <code>transaction_id</code>, <code>value</code>, <code>currency</code>, dan <code>items</code>. Refund memiliki event tersendiri yang merujuk transaksi terkait. <a href="https://developers.google.com/analytics/devguides/collection/ga4/ecommerce" target="_blank" rel="noopener noreferrer">Sumber: Measure ecommerce</a>.</p>
+<p>Pilih transaksi uji dan cocokkan ID serta nilainya dengan backend. Periksa juga apa yang terjadi saat halaman konfirmasi dimuat ulang, pembayaran gagal, atau pelanggan menutup halaman setelah membayar.</p>
+<div class="callout"><strong>Validasi pesanan sampai ke backend.</strong> Pesanan sah perlu tercatat dengan nilai benar, sementara percobaan yang gagal tidak dianggap sebagai penjualan. Hilangnya nama payment gateway saja belum cukup untuk menyatakan audit berhasil.</div>
+<h3>6. Evaluasi setelah tersedia data baru yang memadai</h3>
+<p>Buat batas waktu sebelum dan sesudah implementasi. Bandingkan periode dengan komposisi hari, promo, dan metode pembayaran yang sebanding.</p>
+<p>Catat bahwa perubahan aturan referral tidak otomatis memperbaiki atribusi transaksi lama. Google menjelaskan bahwa sumber yang sudah dikecualikan masih bisa muncul pada kunjungan kembali karena histori atribusi sebelumnya. Jangan menjadikan hilangnya seluruh referral lama sebagai satu satunya syarat keberhasilan. <a href="https://support.google.com/analytics/answer/10327750?hl=en" target="_blank" rel="noopener noreferrer">Sumber: penjelasan returning users</a>.</p>
+<h2>Contoh membaca hasil secara proporsional</h2>
+<p>Gunakan simulasi toko berikut untuk memahami perbedaan perbaikan atribusi dan pertumbuhan penjualan.</p>
+<p>Sebuah toko memiliki 200 pesanan dibayar pada periode awal. GA4 mencatat 180 transaksi, dan sebagian dikaitkan dengan domain pembayaran.</p>
+<p>Sesudah audit, proporsi referral pembayaran pada data baru menurun. Namun, pencocokan ID tetap menemukan pesanan yang belum masuk GA4 karena alur konfirmasi tertentu belum terukur.</p>
+<p>Kesimpulan yang tepat: satu masalah sumber traffic mulai teratasi, sementara cakupan transaksi masih perlu diperbaiki. Tim belum mempunyai dasar untuk menyatakan bahwa iklan menghasilkan tambahan penjualan.</p>
+<p>Jika pendapatan yang diatribusikan ke paid social naik tanpa kenaikan penjualan backend, perlakukan dahulu sebagai perubahan pembacaan kontribusi channel. Klaim pertumbuhan membutuhkan bukti outcome bisnis yang berbeda.</p>
+<p>Pelajari juga <a href="../cara-membaca-tiktok-attribution-portfolio/">cara membaca TikTok Attribution Portfolio</a> untuk memahami batas antara pembacaan kontribusi channel dan bukti dampak tambahan.</p>
+<h2>Checklist sebelum laporan dipakai untuk alokasi budget</h2>
+<ol class="checklist">
+<li>Domain pembayaran sudah dibuktikan melalui alur checkout.</li>
+<li>Referral dari media dan partner tetap terjaga.</li>
+<li>Dimensi sumber yang dibandingkan konsisten.</li>
+<li>Perpindahan domain dan perangkat sudah diuji.</li>
+<li>Pesanan uji memiliki ID dan nilai yang sesuai backend.</li>
+<li>Pembayaran gagal dan pemuatan ulang sudah diperiksa.</li>
+<li>Tanggal perubahan tracking tercatat.</li>
+<li>Dampak promosi dipisahkan dari perubahan pengukuran.</li>
+<li>Selisih transaksi yang tersisa dijelaskan kepada pengambil keputusan.</li>
+</ol>
+
+        <h2>Pertanyaan yang sering diajukan</h2>
+        {faqItems.map(item => <section class="faq-item"><h3>{item.question}</h3><p>{item.answer}</p></section>)}
+        <h2>Kesimpulan</h2>
+<p>Audit referral pembayaran membantu memastikan evaluasi marketing dimulai dari data yang lebih dapat dijelaskan. Petakan alur checkout, pilih pengaturan yang sesuai, lalu cocokkan transaksi dengan sistem toko.</p>
+<p>Keputusan budget menjadi lebih kuat ketika tim bisa menjelaskan sumber penjualan sekaligus keterbatasan pengukurannya.</p>
+
+        <div class="related-article"><span>Case study terkait</span><a href="../case-study/performance-analysis/">Pelajari analisis performa iklan lintas kanal, dari CPC dan CAC hingga revenue dan alokasi budget →</a></div>
+      </article>
+      <aside class="article-sidebar" aria-label="Informasi artikel">
+        <section class="side-card"><h2>Tentang penulis</h2><p><strong>Nordy Sukmana</strong> adalah Performance Marketing Specialist dengan pengalaman mengelola Meta Ads, Google Ads, tracking, analytics, dan marketing automation.</p><a class="back-link" href="../#about">Lihat profil</a></section>
+        <section class="side-card"><h2>Topik artikel</h2><ul><li>Google Analytics 4</li><li>Referral Payment Gateway</li><li>Pengukuran Lintas Domain</li><li>Validasi Transaksi</li></ul></section>
+        <section class="side-card"><h2>Sumber utama</h2><p>Dokumentasi Google Analytics dan Google for Developers, ditinjau pada 9 September 2026.</p><a class="back-link" href="https://support.google.com/analytics/answer/10327750?hl=en" target="_blank" rel="noopener noreferrer">Baca unwanted referrals ↗</a><a class="back-link" href="https://support.google.com/analytics/answer/10071811?hl=id" target="_blank" rel="noopener noreferrer">Baca pengukuran lintas domain ↗</a></section>
+        <section class="side-card"><h2>Artikel sebelumnya</h2><p>Pelajari cara menghubungkan aktivitas AI crawler dengan citation, referral, dan conversion di Microsoft Clarity.</p><a class="back-link" href="../ukur-ai-crawler-referral-microsoft-clarity/">Baca artikel Microsoft Clarity</a></section>
+      </aside>
+    </div>
+  </main>
+  <footer class="article-footer"><div class="article-shell"><span>© 2026 Nordy Sukmana</span><a href="../artikel/">Lihat semua artikel</a></div></footer>
+  <script is:inline src="/assets/analytics-loader.js"></script>
+</BaseLayout>

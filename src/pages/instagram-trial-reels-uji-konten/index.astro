@@ -1,0 +1,304 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyHeader from '../../components/CaseStudyHeader.astro';
+
+const canonical = 'https://nordy-sukmana.vercel.app/instagram-trial-reels-uji-konten/';
+const image = 'https://nordy-sukmana.vercel.app/assets/brand/open-graph.png';
+const title = "Instagram Trial Reels, Uji Ide sebelum Menambah Budget Konten";
+const description = "Pelajari cara memakai Instagram Trial Reels untuk menguji ide kepada audiens baru, membaca insight, dan memilih konten sebelum menambah budget.";
+const faqItems = [
+  {
+    "question": "Apakah Trial Reels hanya dapat dilihat orang yang belum mengikuti akun?",
+    "answer": "Trial Reels ditujukan kepada orang yang belum mengikuti akun terlebih dahulu dan tidak tampil di feed followers atau grid publik. Namun, followers masih mungkin menemukannya jika konten dibagikan melalui DM atau muncul pada halaman audio, lokasi, maupun filter yang sama."
+  },
+  {
+    "question": "Berapa lama harus menunggu sebelum mengevaluasi Trial Reel?",
+    "answer": "Insight awal tersedia sekitar 24 jam setelah publikasi. Instagram menggunakan performa views selama 72 jam pertama untuk pilihan automatic sharing. Jadwal evaluasi bisnis dapat diperpanjang jika Anda memerlukan waktu untuk menilai inquiry."
+  },
+  {
+    "question": "Apakah views tertinggi selalu menjadi pemenang?",
+    "answer": "Tidak. Gunakan metrik yang sesuai tujuan. Untuk edukasi, watch time dan shares dapat lebih berarti. Untuk lead generation, periksa tindakan lanjutan serta kualitas inquiry."
+  },
+  {
+    "question": "Apakah Trial Reel yang bagus layak langsung dipromosikan sebagai iklan?",
+    "answer": "Belum tentu. Hasil organik dapat menjadi dasar hipotesis creative, tetapi performa berbayar juga dipengaruhi objective, audiens, placement, bid, dan landing page. Jalankan pengujian iklan secara terpisah."
+  },
+  {
+    "question": "Apakah Trial Reels dapat menggantikan riset pelanggan?",
+    "answer": "Tidak. Fitur ini memberikan sinyal perilaku konten. Gunakan bersama data pelanggan, pertanyaan sales, pencarian, komentar, dan outcome bisnis."
+  }
+];
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      '@id': `${canonical}#article`,
+      headline: title,
+      description,
+      url: canonical,
+      image: [image],
+      inLanguage: 'id-ID',
+      datePublished: '2026-09-17',
+      dateModified: '2026-09-17',
+      author: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      publisher: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      mainEntityOfPage: canonical,
+      articleSection: 'Social Media Organik dan Content Marketing',
+      about: ['Instagram', 'Trial Reels', 'Reels Insights', 'Watch Time', 'Accounts Reached', 'Creative Strategy', 'Meta Ads'],
+      keywords: ['Instagram Trial Reels', 'cara menggunakan Trial Reels Instagram', 'menguji Reels kepada audiens baru', 'mengukur Trial Reels untuk bisnis']
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://nordy-sukmana.vercel.app/#person',
+      name: 'Nordy Sukmana',
+      url: 'https://nordy-sukmana.vercel.app/',
+      jobTitle: 'Performance Marketing Specialist'
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {'@type': 'ListItem', position: 1, name: 'Portfolio', item: 'https://nordy-sukmana.vercel.app/'},
+        {'@type': 'ListItem', position: 2, name: 'Artikel', item: 'https://nordy-sukmana.vercel.app/artikel/'},
+        {'@type': 'ListItem', position: 3, name: 'Instagram Trial Reels', item: canonical}
+      ]
+    }
+  ]
+};
+
+const head = `<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${title}</title>
+<meta name="description" content="${description}">
+<meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0C1F4D"><link rel="canonical" href="${canonical}">
+<meta property="og:type" content="article"><meta property="og:locale" content="id_ID"><meta property="og:site_name" content="Portfolio Nordy Sukmana"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Nordy Sukmana, Performance Marketing Specialist">
+<meta property="article:published_time" content="2026-09-17"><meta property="article:modified_time" content="2026-09-17"><meta property="article:section" content="Social Media Organik dan Content Marketing">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${title}"><meta name="twitter:description" content="${description}"><meta name="twitter:image" content="${image}">
+<script type="application/ld+json">${JSON.stringify(structuredData)}</script>
+<link rel="icon" href="../assets/brand/nordy-mark.svg" type="image/svg+xml"><link rel="icon" href="../favicon.ico" sizes="any"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/case-study.css"><link rel="stylesheet" href="../assets/article.css">`;
+---
+<BaseLayout head={head}>
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+  <CaseStudyHeader />
+  <main id="main-content">
+    <header class="article-hero">
+      <div class="article-shell">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Portfolio</a><span aria-hidden="true">/</span><a href="../artikel/">Artikel</a></nav>
+        <span class="article-kicker">Instagram · Social Media Organik</span>
+        <h1>{title}</h1>
+        <p class="article-lede">Uji ide kepada audiens baru, baca perhatian dan tindakan lanjutan, lalu pilih konsep yang layak dikembangkan.</p>
+        <div class="article-meta"><span>Nordy Sukmana</span><time datetime="2026-09-17">17 September 2026</time><span>10 menit baca</span></div>
+      </div>
+    </header>
+    <div class="article-shell article-layout">
+      <article class="article-body">
+        <section class="answer-summary" aria-labelledby="answer-summary-title">
+          <span>Jawaban singkat</span>
+<h2 id="answer-summary-title">Bagaimana menggunakan Trial Reels untuk menguji konten?</h2>
+<p>Instagram Trial Reels memungkinkan akun menguji Reel kepada orang yang belum mengikuti akun sebelum membagikannya kepada pengikut. Tetapkan hipotesis dan metrik terlebih dahulu, evaluasi views bersama watch time, reach, shares, serta tindakan lanjutan, lalu bagikan konten yang relevan kepada followers. Hasil Trial Reels merupakan validasi organik awal, bukan jaminan performa iklan.</p>
+</section>
+<p>Tim memiliki sepuluh ide Reels, tetapi kapasitas produksi hanya cukup untuk mengembangkan tiga di antaranya. Masalahnya, setiap orang memiliki pendapat berbeda tentang konsep yang paling berpotensi berhasil.</p>
+<p>Marketing memilih konten edukasi. Sales menginginkan video yang langsung menawarkan konsultasi. Tim kreatif merasa cerita ringan akan memperoleh jangkauan lebih luas.</p>
+<p>Instagram Trial Reels dapat membantu mengubah perdebatan tersebut menjadi proses pengujian. Konten diperlihatkan kepada orang yang belum mengikuti akun terlebih dahulu, lalu hasilnya digunakan untuk menentukan konsep yang layak dikembangkan.</p>
+<p>Namun, Trial Reels bukan mesin yang otomatis memilih creative terbaik. Tim tetap membutuhkan hipotesis, metrik yang sesuai, serta hubungan yang jelas antara perhatian dan tujuan bisnis.</p>
+<h2>Apa itu Instagram Trial Reels?</h2>
+<p><strong>Trial Reels adalah fitur untuk membagikan Reel kepada orang yang belum mengikuti akun terlebih dahulu sebelum konten tersebut dibagikan kepada followers.</strong></p>
+<p>Meta menjelaskan bahwa Trial Reels dapat digunakan untuk mencoba genre, format cerita, atau topik baru. Reel tidak tampil pada grid utama, tab Reels, maupun feed followers kecuali kemudian dibagikan kepada semua orang. Sebagian followers masih mungkin menemukannya melalui pesan langsung atau halaman audio, lokasi, dan filter yang sama. <a href="https://about.fb.com/news/2024/12/trial-reels-try-content-non-followers-first-see-what-perfoms-best/" target="_blank" rel="noopener noreferrer">Penjelasan resmi Meta tentang Trial Reels</a>.</p>
+<p>Sekitar 24 jam setelah publikasi, creator dapat melihat metrik seperti views, likes, comments, dan shares. Reel kemudian dapat dibagikan secara manual kepada followers.</p>
+<p>Instagram juga menyediakan pilihan pembagian otomatis. Jika diaktifkan, platform dapat membagikan Trial Reel kepada followers apabila performanya dinilai baik berdasarkan views selama 72 jam pertama.</p>
+<p>Pada Juni 2025, Meta menyatakan Trial Reels telah tersedia untuk semua pengguna. Ketersediaan menu tetap perlu diperiksa pada akun dan versi aplikasi yang digunakan. <a href="https://about.fb.com/news/2025/06/inspiring-creativity-that-brings-people-together/" target="_blank" rel="noopener noreferrer">Pembaruan produk Instagram</a>.</p>
+<h2>Kapan Trial Reels berguna bagi bisnis?</h2>
+<p><strong>Trial Reels berguna ketika bisnis ingin memvalidasi topik, sudut pesan, atau format kepada audiens baru tanpa langsung memenuhi feed followers dengan eksperimen.</strong></p>
+<p>Beberapa penggunaannya antara lain:</p>
+<ul>
+<li>Membandingkan topik edukasi dan promosi. </li>
+<li>Mencoba sudut masalah pelanggan yang berbeda. </li>
+<li>Menguji format demonstrasi, cerita, atau daftar tips. </li>
+<li>Memeriksa respons terhadap kategori produk baru. </li>
+<li>Mencari konsep yang layak diproduksi dalam beberapa versi. </li>
+<li>Menyaring ide sebelum masuk ke pengujian paid media.</li>
+</ul>
+<p>Fitur ini kurang tepat jika bisnis memerlukan pengumuman yang harus diterima followers, seperti perubahan jam operasional atau informasi acara pelanggan. Untuk kebutuhan tersebut, publikasi langsung lebih masuk akal.</p>
+<p>Trial Reels juga bukan pengganti riset pelanggan. Respons orang yang belum mengikuti akun perlu dilengkapi dengan percakapan sales, pertanyaan pelanggan, data pencarian, dan hasil bisnis.</p>
+<h2>Trial Reels bukan A/B test terkontrol</h2>
+<p><strong>Perbandingan dua Trial Reels tidak otomatis membuktikan bahwa satu elemen tertentu menyebabkan perbedaan performa.</strong></p>
+<p>Reel yang diterbitkan pada hari berbeda dapat menerima distribusi, kompetisi, dan komposisi audiens yang berbeda. Instagram juga tidak menjanjikan bahwa dua Trial Reels akan diperlihatkan kepada kelompok orang yang belum mengikuti akun yang identik.</p>
+<p>Karena itu, gunakan Trial Reels sebagai validasi eksploratif: mencari sinyal yang cukup kuat untuk menentukan pengujian berikutnya.</p>
+<p>Jika Anda ingin membandingkan dua pesan, pertahankan beberapa elemen agar tetap sebanding:</p>
+<ul>
+<li>Tujuan konten. </li>
+<li>Durasi. </li>
+<li>Tingkat kualitas produksi. </li>
+<li>Penawaran. </li>
+<li>CTA. </li>
+<li>Tahap customer journey. </li>
+<li>Rentang waktu publikasi.</li>
+</ul>
+<p>Tidak perlu membuat kedua video identik. Tujuannya memastikan perbedaan hasil masih dapat dibaca secara masuk akal.</p>
+<h2>Enam langkah menggunakan Trial Reels secara terukur</h2>
+<h3>1. Tuliskan hipotesis sebelum produksi</h3>
+<p>Mulailah dengan satu pertanyaan yang dapat dijawab melalui konten.</p>
+<p>Contoh:</p>
+<blockquote>
+<p>Apakah orang yang belum mengikuti akun lebih tertarik pada penjelasan masalah biaya iklan atau demonstrasi dashboard campaign?</p>
+</blockquote>
+<p>Hipotesis seperti ini lebih berguna daripada sekadar “mencoba video baru”. Tim mengetahui dua konsep yang dibandingkan serta keputusan yang akan diambil sesudahnya.</p>
+<p>Gunakan masukan dari percakapan pelanggan, search query, komentar, dan keberatan sales untuk menyusun hipotesis.</p>
+<h3>2. Tentukan peran konten dalam funnel</h3>
+<p>Jangan meminta setiap Reel sekaligus menghasilkan reach, follower, lead, dan penjualan.</p>
+<p>Hubungkan tujuan dengan metrik yang relevan:</p>
+<div class="table-wrap" role="region" aria-label="Tujuan konten dan metrik evaluasi" tabindex="0"><table><caption>Tujuan konten dan metrik evaluasi</caption>
+<thead>
+<tr>
+<th scope="col">Peran konten</th>
+<th scope="col">Pertanyaan</th>
+<th scope="col">Metrik awal</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Discovery</td>
+<td>Apakah ide menarik perhatian audiens baru?</td>
+<td>Accounts reached, views</td>
+</tr>
+<tr>
+<td>Education</td>
+<td>Apakah orang bertahan dan memahami pesan?</td>
+<td>Watch time, average watch time, shares</td>
+</tr>
+<tr>
+<td>Consideration</td>
+<td>Apakah orang ingin mengetahui lebih lanjut?</td>
+<td>Profile activity, saves, komentar relevan</td>
+</tr>
+<tr>
+<td>Lead generation</td>
+<td>Apakah penonton mengambil tindakan bisnis?</td>
+<td>Inquiry, qualified lead, kunjungan teridentifikasi</td>
+</tr>
+</tbody></table></div>
+<p>Instagram mendefinisikan views sebagai jumlah Reel mulai diputar atau diputar ulang. Watch time mencakup total waktu pemutaran, termasuk replay. Karena itu, views dan reach tidak perlu diperlakukan sebagai ukuran yang sama. <a href="https://help.instagram.com/202865988324236/" target="_blank" rel="noopener noreferrer">Dokumentasi Instagram Reels Insights</a>.</p>
+<h3>3. Buat variasi konsep yang cukup berbeda</h3>
+<p>Trial Reels lebih berguna ketika perbedaannya dapat dijelaskan.</p>
+<p>Misalnya, sebuah konsultan pemasaran menguji:</p>
+<ul>
+<li><strong>Konsep A, masalah:</strong> “Tiga tanda budget iklan bocor tanpa disadari.” </li>
+<li><strong>Konsep B, proses:</strong> “Cara membaca dashboard campaign dalam satu menit.”</li>
+</ul>
+<p>Keduanya membahas pengukuran iklan, tetapi memenuhi kebutuhan yang berbeda. Konsep A membangun urgensi, sedangkan konsep B menunjukkan cara kerja.</p>
+<p>Pertahankan format vertikal, kualitas audio, identitas visual, dan CTA agar perbandingannya tidak terlalu kabur.</p>
+<h3>4. Jangan memilih pemenang dari views saja</h3>
+<p>Views membantu membaca distribusi, tetapi pemutaran ulang juga masuk dalam metrik tersebut. Periksa metrik lain untuk memahami respons.</p>
+<p>Gunakan urutan berikut sesuai metrik yang tersedia pada akun. Tampilan insight Trial Reels dapat berbeda dari laporan Reels lengkap; catat inquiry melalui sistem bisnis jika tidak tersedia di Instagram:</p>
+<ol>
+<li>Accounts reached untuk memperkirakan jumlah akun unik. </li>
+<li>Views untuk melihat volume pemutaran. </li>
+<li>Watch time atau average watch time untuk membaca perhatian. </li>
+<li>Shares dan saves untuk melihat nilai yang ingin dibawa atau disimpan. </li>
+<li>Profile activity untuk memeriksa ketertarikan lanjutan. </li>
+<li>Inquiry atau lead untuk tujuan bisnis.</li>
+</ol>
+<p>Komentar juga perlu dibaca secara kualitatif. Lima pertanyaan relevan dari calon pelanggan dapat lebih berguna daripada puluhan komentar yang tidak berkaitan dengan penawaran.</p>
+<h3>5. Pilih manual share jika outcome lebih penting daripada views</h3>
+<p>Pembagian otomatis menggunakan penilaian performa berdasarkan views selama 72 jam pertama. Pilihan tersebut praktis jika tujuan utamanya adalah distribusi.</p>
+<p>Namun, bisnis yang mengejar kualitas audiens dapat memilih evaluasi manual. Reel dengan views lebih kecil mungkin menghasilkan watch time, shares, atau inquiry yang lebih baik.</p>
+<p>Tunggu sampai data yang diperlukan tersedia, lalu putuskan:</p>
+<ul>
+<li>Bagikan kepada followers. </li>
+<li>Revisi pesan sebelum dibagikan. </li>
+<li>Kembangkan menjadi seri. </li>
+<li>Hentikan konsep. </li>
+<li>Bawa konsep ke pengujian iklan terpisah.</li>
+</ul>
+<p>Catat alasan keputusan agar tim tidak mengganti kriteria setelah melihat hasil.</p>
+<h3>6. Validasi kembali setelah dibagikan kepada followers</h3>
+<p>Audiens baru dan followers bukan kelompok yang sama. Konten yang kuat untuk discovery belum tentu menghasilkan respons serupa dari komunitas yang sudah mengenal brand.</p>
+<p>Setelah Reel dibagikan kepada semua orang, bandingkan:</p>
+<ul>
+<li>Perubahan reach dan watch time. </li>
+<li>Respons followers. </li>
+<li>Pertumbuhan profile activity. </li>
+<li>Pertanyaan yang masuk. </li>
+<li>Kualitas lead. </li>
+<li>Dampak terhadap halaman atau penawaran terkait.</li>
+</ul>
+<p>Jika konten akan digunakan sebagai iklan, jalankan pengujian paid media tersendiri. Distribusi organik tidak membuktikan CPA atau conversion rate yang akan diperoleh melalui Meta Ads. Lihat juga <a href="../case-study/meta-ads-unlabel/">case study Meta Ads Awareness UNLABEL</a> untuk konteks campaign berbayar.</p>
+<h2>Contoh membaca hasil tanpa terpaku pada views</h2>
+<p>Sebuah bisnis jasa mencoba dua konsep Trial Reels. Tabel berikut menggunakan angka simulasi:</p>
+<div class="table-wrap" role="region" aria-label="Simulasi perbandingan dua konsep Trial Reels" tabindex="0"><table><caption>Simulasi perbandingan dua konsep Trial Reels</caption>
+<thead>
+<tr>
+<th scope="col">Metrik</th>
+<th scope="col">Konsep A: Masalah</th>
+<th scope="col">Konsep B: Proses</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Accounts reached</td>
+<td>16.000</td>
+<td>10.000</td>
+</tr>
+<tr>
+<td>Views</td>
+<td>20.000</td>
+<td>13.000</td>
+</tr>
+<tr>
+<td>Average watch time</td>
+<td>6,5 detik</td>
+<td>10,8 detik</td>
+</tr>
+<tr>
+<td>Shares</td>
+<td>55</td>
+<td>130</td>
+</tr>
+<tr>
+<td>Profile activity</td>
+<td>170</td>
+<td>290</td>
+</tr>
+<tr>
+<td>Inquiry relevan</td>
+<td>2</td>
+<td>8</td>
+</tr>
+</tbody></table></div>
+<p>Konsep A memperoleh distribusi lebih luas. Konsep B menjangkau lebih sedikit akun, tetapi penonton bertahan lebih lama dan lebih banyak orang mengambil tindakan lanjutan.</p>
+<p>Jika tujuan konten adalah awareness, Konsep A masih layak dipelajari. Jika bisnis ingin menghasilkan percakapan dengan calon klien, Konsep B memberikan sinyal yang lebih kuat.</p>
+<p>Hasil ini belum membuktikan bahwa format proses akan selalu menang. Tim dapat mengembangkan Konsep B menjadi beberapa topik, mempertahankan strukturnya, lalu mengevaluasi apakah pola yang sama muncul kembali.</p>
+<h2>Checklist sebelum menjalankan Trial Reels</h2>
+<ol class="checklist">
+<li>Hipotesis konten sudah ditulis. </li>
+<li>Hipotesis tentang audiens baru sesuai dengan tujuan brand. </li>
+<li>Tahap funnel setiap Reel sudah ditentukan. </li>
+<li>Metrik keputusan dipilih sebelum publikasi. </li>
+<li>Durasi dan kualitas produksi cukup sebanding. </li>
+<li>Klaim dalam konten dapat dibuktikan. </li>
+<li>CTA sesuai dengan isi dan kebutuhan audiens. </li>
+<li>Evaluasi tidak berhenti pada views. </li>
+<li>Watch time, shares, dan profile activity diperiksa. </li>
+<li>Inquiry menggunakan definisi kualitas yang konsisten. </li>
+<li>Manual atau automatic sharing sudah dipilih dengan alasan jelas. </li>
+<li>Hasil organik tidak dianggap sebagai jaminan performa iklan. </li>
+<li>Pembelajaran disimpan untuk brief berikutnya.</li>
+</ol>
+
+<h2>Pertanyaan yang sering diajukan</h2>
+        {faqItems.map(item => <section class="faq-item"><h3>{item.question}</h3><p>{item.answer}</p></section>)}
+        <h2>Kesimpulan</h2>
+<p>Instagram Trial Reels membantu bisnis menguji ide kepada audiens baru tanpa langsung menjadikannya bagian utama dari feed followers.</p>
+<p>Nilainya bukan sekadar mendapatkan views. Gunakan fitur ini untuk menguji hipotesis, membaca perhatian, menemukan pesan yang relevan, dan memilih konsep yang layak dikembangkan. Setelah itu, validasi kembali pada followers dan paid media sebelum menambah budget.</p>
+<p>Untuk melanjutkan pengujian pada channel berbayar, baca <a href="../cara-menguji-hook-tiktok-ads/">cara menguji hook TikTok Ads</a> dan <a href="../meta-partnership-ads-uji-creator/">panduan mengukur Meta Partnership Ads</a>.</p>
+
+<div class="related-article"><span>Artikel terkait</span><a href="../meta-partnership-ads-uji-creator/">Pelajari pengujian creator melalui Meta Partnership Ads →</a></div>
+      </article>
+      <aside class="article-sidebar" aria-label="Informasi artikel">
+        <section class="side-card"><h2>Tentang penulis</h2><p><strong>Nordy Sukmana</strong> adalah Performance Marketing Specialist dengan pengalaman mengelola Meta Ads, Google Ads, tracking, analytics, dan marketing automation.</p><a class="back-link" href="../#about">Lihat profil</a></section>
+        <section class="side-card"><h2>Topik artikel</h2><ul><li>Instagram Trial Reels</li><li>Social Media Organik</li><li>Creative Strategy</li><li>Outcome Bisnis</li></ul></section>
+        <section class="side-card"><h2>Sumber utama</h2><p>Referensi resmi Meta dan Instagram.</p><a class="back-link" href="https://about.fb.com/news/2024/12/trial-reels-try-content-non-followers-first-see-what-perfoms-best/" target="_blank" rel="noopener noreferrer">Panduan Trial Reels ↗</a><a class="back-link" href="https://about.fb.com/news/2025/06/inspiring-creativity-that-brings-people-together/" target="_blank" rel="noopener noreferrer">Pembaruan Instagram ↗</a><a class="back-link" href="https://help.instagram.com/202865988324236/" target="_blank" rel="noopener noreferrer">Reels Insights ↗</a></section>
+        <section class="side-card"><h2>Bacaan terkait</h2><p>Lanjutkan validasi konsep organik dengan pengujian konten creator dalam paid media.</p><a class="back-link" href="../meta-partnership-ads-uji-creator/">Baca panduan Meta Partnership Ads</a></section>
+      </aside>
+    </div>
+  </main>
+  <footer class="article-footer"><div class="article-shell"><span>© 2026 Nordy Sukmana</span><a href="../artikel/">Lihat semua artikel</a></div></footer>
+  <script is:inline src="/assets/analytics-loader.js"></script>
+</BaseLayout>

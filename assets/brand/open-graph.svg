@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0C1F4D"/>
+  <path d="M0 504 188 400l150 54 196-190 164 78 236-234 266 123v399H0Z" fill="#132A63" opacity=".55"/>
+  <g opacity=".12" stroke="#F7F3EA">
+    <path d="M0 126h1200M0 252h1200M0 378h1200M0 504h1200"/>
+    <path d="M240 0v630M480 0v630M720 0v630M960 0v630"/>
+  </g>
+
+  <g transform="translate(72 72)">
+    <rect width="112" height="112" rx="27" fill="#081637" stroke="#C6A15B" stroke-width="2"/>
+    <path d="M78 36c-6-8-23-8-29 1-7 10 3 16 14 18 12 3 20 9 15 19-5 10-23 10-31 1" fill="none" stroke="#C6A15B" stroke-width="10" stroke-linecap="round"/>
+    <path d="M32 80V34l48 46V47" fill="none" stroke="#F7F3EA" stroke-width="11" stroke-linecap="square" stroke-linejoin="miter"/>
+  </g>
+
+  <text x="72" y="264" fill="#C6A15B" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="5">PERFORMANCE MARKETING SPECIALIST</text>
+  <text x="72" y="337" fill="#F7F3EA" font-family="Arial, sans-serif" font-size="62" font-weight="700" letter-spacing="-2">Nordy Sukmana</text>
+  <text x="72" y="387" fill="#B7C3E8" font-family="Arial, sans-serif" font-size="25">Paid ads, tracking, SEO, dan automation</text>
+  <text x="72" y="422" fill="#B7C3E8" font-family="Arial, sans-serif" font-size="25">untuk hasil yang terukur.</text>
+
+  <g transform="translate(72 480)" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="1.5">
+    <rect width="126" height="44" rx="22" fill="#F7F3EA"/><text x="63" y="28" text-anchor="middle" fill="#0C1F4D">META ADS</text>
+    <rect x="140" width="148" height="44" rx="22" fill="#F7F3EA"/><text x="214" y="28" text-anchor="middle" fill="#0C1F4D">GOOGLE ADS</text>
+    <rect x="302" width="78" height="44" rx="22" fill="#C6A15B"/><text x="341" y="28" text-anchor="middle" fill="#0C1F4D">SEO</text>
+  </g>
+
+  <g transform="translate(760 116)">
+    <rect width="360" height="398" rx="28" fill="#F7F3EA"/>
+    <text x="36" y="53" fill="#647180" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2">CAREER SNAPSHOT</text>
+    <path d="M36 76h288" stroke="#DCE2E9"/>
+    <text x="36" y="157" fill="#0C1F4D" font-family="Arial, sans-serif" font-size="58" font-weight="700">10×</text>
+    <text x="36" y="185" fill="#54606F" font-family="Arial, sans-serif" font-size="17">ROAS tertinggi</text>
+    <text x="211" y="157" fill="#0C1F4D" font-family="Arial, sans-serif" font-size="58" font-weight="700">13</text>
+    <text x="211" y="185" fill="#54606F" font-family="Arial, sans-serif" font-size="17">brand ditangani</text>
+    <path d="M36 218h288" stroke="#DCE2E9"/>
+    <text x="36" y="286" fill="#0C1F4D" font-family="Arial, sans-serif" font-size="45" font-weight="700">4+ tahun</text>
+    <text x="36" y="318" fill="#54606F" font-family="Arial, sans-serif" font-size="17">pengalaman performance marketing</text>
+    <path d="M36 350h214" stroke="#C6A15B" stroke-width="7" stroke-linecap="round"/>
+    <path d="m241 333 20 17-20 17" fill="none" stroke="#C6A15B" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="72" y="586" fill="#8FA3E0" font-family="Arial, sans-serif" font-size="17" letter-spacing="1">nordy-sukmana.vercel.app</text>
+</svg>

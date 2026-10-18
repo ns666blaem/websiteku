@@ -1,0 +1,215 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyHeader from '../../components/CaseStudyHeader.astro';
+
+const canonical = 'https://nordy-sukmana.vercel.app/seasonality-adjustment-google-ads-promo/';
+const image = 'https://nordy-sukmana.vercel.app/assets/brand/open-graph.png';
+const title = "Seasonality Adjustment Google Ads, Kapan Perlu Dipakai?";
+const description = "Pahami kapan seasonality adjustment Google Ads diperlukan, cara menghitung perubahan conversion rate, dan persiapan promo berbasis data.";
+const faqItems = [
+  {
+    "question": "Apakah setiap promo tanggal kembar membutuhkan adjustment?",
+    "answer": "Tidak. Tentukan kebutuhan dari bukti perubahan conversion rate dan kesiapan data, bukan nama event."
+  },
+  {
+    "question": "Apakah diskon 30% berarti adjustment 30%?",
+    "answer": "Tidak. Persentase diskon mengukur perubahan harga, sedangkan estimasi adjustment berasal dari perubahan relatif conversion rate."
+  },
+  {
+    "question": "Apakah adjustment menggantikan keputusan budget?",
+    "answer": "Tidak. Tetap tetapkan batas spend dan kriteria evaluasi terpisah agar tim tidak menyamakan estimasi conversion dengan izin menambah pengeluaran."
+  },
+  {
+    "question": "Bagaimana jika belum punya data promo sebelumnya?",
+    "answer": "Gunakan campaign berikutnya untuk membangun pembanding. Pertahankan definisi conversion, dokumentasikan penawaran, dan hindari estimasi agresif tanpa dasar."
+  }
+];
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      '@id': `${canonical}#article`,
+      headline: title,
+      description,
+      url: canonical,
+      image: [image],
+      inLanguage: 'id-ID',
+      datePublished: '2026-09-11',
+      dateModified: '2026-09-11',
+      author: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      publisher: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      mainEntityOfPage: canonical,
+      articleSection: 'Google Ads dan Perencanaan Campaign',
+      about: ['Google Ads', 'Seasonality Adjustments', 'Smart Bidding', 'Conversion Rate', 'Target CPA', 'Target ROAS', 'Performance Max', 'Data Exclusions'],
+      keywords: ['seasonality adjustment Google Ads', 'cara menghitung seasonality adjustment', 'persiapan Google Ads untuk promo tanggal kembar', 'seasonality adjustment dan data exclusion']
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://nordy-sukmana.vercel.app/#person',
+      name: 'Nordy Sukmana',
+      url: 'https://nordy-sukmana.vercel.app/',
+      jobTitle: 'Performance Marketing Specialist'
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {'@type': 'ListItem', position: 1, name: 'Portfolio', item: 'https://nordy-sukmana.vercel.app/'},
+        {'@type': 'ListItem', position: 2, name: 'Artikel', item: 'https://nordy-sukmana.vercel.app/artikel/'},
+        {'@type': 'ListItem', position: 3, name: 'Seasonality Adjustment Google Ads', item: canonical}
+      ]
+    }
+  ]
+};
+
+const head = `<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${title}</title>
+<meta name="description" content="${description}">
+<meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0C1F4D"><link rel="canonical" href="${canonical}">
+<meta property="og:type" content="article"><meta property="og:locale" content="id_ID"><meta property="og:site_name" content="Portfolio Nordy Sukmana"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Nordy Sukmana, Performance Marketing Specialist">
+<meta property="article:published_time" content="2026-09-11"><meta property="article:modified_time" content="2026-09-11"><meta property="article:section" content="Google Ads dan Perencanaan Campaign">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${title}"><meta name="twitter:description" content="${description}"><meta name="twitter:image" content="${image}">
+<script type="application/ld+json">${JSON.stringify(structuredData)}</script>
+<link rel="icon" href="../assets/brand/nordy-mark.svg" type="image/svg+xml"><link rel="icon" href="../favicon.ico" sizes="any"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/case-study.css"><link rel="stylesheet" href="../assets/article.css">`;
+---
+<BaseLayout head={head}>
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+  <CaseStudyHeader />
+  <main id="main-content">
+    <header class="article-hero">
+      <div class="article-shell">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Portfolio</a><span aria-hidden="true">/</span><a href="../artikel/">Artikel</a></nav>
+        <span class="article-kicker">Google Ads · Perencanaan Campaign</span>
+        <h1>{title}</h1>
+        <p class="article-lede">Menjelang promo, periksa apakah conversion rate memang akan berubah. Pelajari kapan adjustment layak dipakai, cara menghitung estimasinya, dan cara mengevaluasi hasil.</p>
+        <div class="article-meta"><span>Nordy Sukmana</span><time datetime="2026-09-11">11 September 2026</time><span>7 sampai 8 menit baca</span></div>
+      </div>
+    </header>
+    <div class="article-shell article-layout">
+      <article class="article-body">
+        <section class="answer-summary" aria-labelledby="answer-summary-title">
+          <span>Jawaban singkat</span>
+          <h2 id="answer-summary-title">Apakah setiap promo perlu seasonality adjustment?</h2>
+          <p>Seasonality adjustment memberi Smart Bidding informasi tentang perkiraan perubahan conversion rate selama event mendatang. Dasarnya adalah perubahan peluang konversi, bukan persentase diskon. Gunakan riwayat promo yang sebanding, tracking yang valid, serta batas budget dan evaluasi yang jelas.</p>
+        </section>
+<p>Diskon 30% tidak otomatis membuat peluang pembelian naik 30%. Namun, angka diskon mudah terbawa ke keputusan campaign: penawaran dipotong sekian persen, lalu penyesuaian iklan dibuat dengan angka yang sama.</p>
+<p>Padahal, keduanya menjawab pertanyaan berbeda. Diskon berbicara tentang harga. Conversion rate berbicara tentang seberapa sering interaksi iklan menghasilkan tindakan yang dihitung sebagai conversion.</p>
+<p>Setelah promo 9.9, Anda bisa mulai menyiapkan campaign berikutnya dengan pertanyaan yang lebih berguna: apakah penawaran secara nyata mengubah peluang conversion, atau hanya mendatangkan lebih banyak traffic?</p>
+<p>Jawaban itulah yang perlu disiapkan sebelum memakai seasonality adjustment Google Ads.</p>
+<h2>Apa fungsi seasonality adjustment?</h2>
+<p>Seasonality adjustment memberi tahu Smart Bidding tentang perkiraan perubahan conversion rate pada event mendatang. Google menyarankan penggunaannya hanya untuk perubahan besar; pola musiman biasa sudah ditangani Smart Bidding. Durasi idealnya 1 sampai 7 hari, dan penggunaan lebih dari 14 hari dapat kurang efektif. <a href="https://support.google.com/google-ads/answer/10369906?hl=en" target="_blank" rel="noopener noreferrer">Panduan resmi Google</a>.</p>
+<p>Fitur ini tersedia pada Search, Standard Shopping, dan Display dengan Target CPA atau Target ROAS, serta Performance Max dan App, yang masih berstatus beta untuk fitur ini, dengan semua strategi bidding. Travel tidak didukung. Cakupan tersebut diperiksa pada 10 September 2026. <a href="https://support.google.com/google-ads/answer/10369906?hl=en" target="_blank" rel="noopener noreferrer">Sumber Google Ads</a>.</p>
+<p>Implikasi praktisnya: keberadaan tanggal promo bukan alasan yang cukup. Tim perlu menjelaskan mengapa perilaku conversion diperkirakan berbeda.</p>
+<h2>Kapan layak dipertimbangkan, kapan sebaiknya ditunda?</h2>
+<p>Gunakan bukti perubahan conversion rate sebagai dasar keputusan, bukan antusiasme terhadap besarnya event.</p>
+<p>Tabel berikut merupakan kerangka rekomendasi untuk menilai kesiapan campaign:</p>
+<div class="table-wrap" role="region" aria-label="Kesiapan campaign untuk seasonality adjustment" tabindex="0"><table><caption>Kesiapan campaign untuk seasonality adjustment</caption>
+<thead>
+<tr>
+<th scope="col">Kondisi</th>
+<th scope="col">Keputusan awal</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Promo singkat dengan riwayat peningkatan conversion rate yang konsisten</td>
+<td>Pertimbangkan adjustment dengan estimasi terdokumentasi</td>
+</tr>
+<tr>
+<td>Klik dan order naik, tetapi conversion rate tetap</td>
+<td>Evaluasi kebutuhan budget; jangan menyimpulkan peluang conversion meningkat</td>
+</tr>
+<tr>
+<td>Promo pertama tanpa pembanding yang layak</td>
+<td>Bangun baseline dan hindari angka adjustment yang ditebak</td>
+</tr>
+<tr>
+<td>Conversion mendadak turun setelah perubahan tag</td>
+<td>Selidiki tracking sebelum menilai dampak promo</td>
+</tr>
+</tbody></table></div>
+<p>Untuk masalah data, Google menyediakan data exclusions guna mengurangi pengaruh conversion yang keliru terhadap Smart Bidding. Fitur tersebut berbeda tujuan dan tidak menghapus conversion dari laporan. <a href="https://support.google.com/google-ads/answer/10370710?hl=en" target="_blank" rel="noopener noreferrer">Dokumentasi data exclusions</a>.</p>
+<p>Jangan memakai pengecualian untuk menutupi hari dengan performa buruk yang memang nyata.</p>
+<h2>Cara menghitung perubahan conversion rate</h2>
+<p>Hitung perubahan relatif terhadap baseline. Jangan tertukar dengan selisih poin persentase.</p>
+<p>Google mendefinisikan conversion rate sebagai jumlah conversion dibagi interaksi yang memenuhi syarat, misalnya klik iklan. Gunakan conversion action dan basis interaksi yang konsisten. <a href="https://support.google.com/google-ads/answer/6270625?hl=en" target="_blank" rel="noopener noreferrer">Penjelasan metrik Google Ads</a>.</p>
+<p>Angka berikut digunakan sebagai simulasi perhitungan untuk campaign Search dengan interaksi berupa klik:</p>
+<div class="table-wrap" role="region" aria-label="Simulasi perubahan conversion rate pada campaign Search" tabindex="0"><table><caption>Simulasi perubahan conversion rate pada campaign Search</caption>
+<thead>
+<tr>
+<th scope="col">Periode</th>
+<th scope="col">Klik yang memenuhi syarat</th>
+<th scope="col">Conversion</th>
+<th scope="col">Conversion rate</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Baseline tanpa promo</td>
+<td>2.000</td>
+<td>80</td>
+<td>4%</td>
+</tr>
+<tr>
+<td>Promo pembanding</td>
+<td>2.000</td>
+<td>120</td>
+<td>6%</td>
+</tr>
+</tbody></table></div>
+<p>Perubahan relatifnya:</p>
+<div class="callout"><strong>((6% ÷ 4%) − 1) × 100% = 50%.</strong> Kenaikan dari 4% menjadi 6% setara dengan dua poin persentase, atau 50% secara relatif.</div>
+<p>Besarnya diskon tidak masuk rumus tersebut.</p>
+<p>Namun, hasil hitungan belum otomatis menjadi angka yang harus diterapkan. Periksa apakah produk, audiens, penawaran, dan kualitas tracking pada promo mendatang cukup sebanding. Riwayat membantu membangun estimasi, bukan menjamin pengulangan hasil.</p>
+<h2>Lima langkah persiapan sebelum mengaktifkan adjustment</h2>
+<p>Langkah berikut adalah rekomendasi kerja agar keputusan dapat ditinjau kembali oleh tim, pemilik bisnis, atau klien.</p>
+<h3>1. Buat baseline yang adil</h3>
+<p>Pilih periode tanpa promo dengan komposisi hari yang mendekati event. Pisahkan campaign brand dan nonbrand bila tersedia, karena perubahan komposisi traffic dapat mengubah rata rata conversion rate.</p>
+<p>Jangan mengambil hari terburuk sebagai pembanding agar kenaikan terlihat besar. Catat pula perubahan harga, stok, area target, dan penawaran.</p>
+<p>Jika satu periode hanya menghasilkan sedikit conversion, perlakukan estimasinya sebagai bukti yang lemah. Lebih baik mengakui ketidakpastian daripada memasukkan angka yang terlihat presisi tetapi rapuh.</p>
+<h3>2. Pastikan sinyal conversion tetap sama</h3>
+<p>Tuliskan tindakan yang menjadi sasaran: pembelian, lead berkualitas, atau tindakan lain yang relevan.</p>
+<p>Bandingkan definisi yang sama antarperiode. Jika sebelumnya campaign menghitung pembelian lalu sekarang ikut menghitung klik WhatsApp, perubahan conversion rate tidak lagi menjelaskan perilaku yang sama.</p>
+<p>Untuk lead generation, cek juga apakah tim sales mampu menindaklanjuti tambahan lead. Form yang bertambah tanpa kapasitas tindak lanjut belum tentu meningkatkan pelanggan. Pelajari <a href="../enhanced-conversions-for-leads-google-ads-2026/">Enhanced Conversions for Leads</a> untuk menghubungkan evaluasi campaign dengan kualitas lead.</p>
+<h3>3. Pisahkan estimasi dari batas bisnis</h3>
+<p>Siapkan tiga angka dalam brief: baseline conversion rate, estimasi saat promo, dan batas pengeluaran yang disetujui.</p>
+<p>Tambahkan target hasil seperti biaya per pelanggan atau nilai penjualan setelah diskon. Gunakan <a href="../update-smart-bidding-google-ads-target-cpa-roas-2026/">panduan audit Target CPA dan ROAS</a> untuk meninjau sasaran bidding bersama batas bisnis. Jangan menjadikan kenaikan volume sebagai alasan tunggal menerima biaya yang lebih tinggi.</p>
+<p>Tulis kondisi untuk meninjau keputusan, misalnya tracking bermasalah atau produk utama tidak lagi tersedia. Penanggung jawabnya harus jelas sebelum campaign berjalan.</p>
+<h3>4. Masukkan jadwal dan cakupan secara spesifik</h3>
+<p>Menurut petunjuk Google, buka <strong>Tools → Budgets and bidding → Adjustments → Seasonal</strong>, lalu tambahkan adjustment. Pilih <strong>Conversion rate</strong>, isi nama dan waktu event, tentukan cakupan campaign, kemudian masukkan estimasi perubahan conversion rate. Periksa kembali sebelum menyimpan. <a href="https://support.google.com/google-ads/answer/9352512?hl=en" target="_blank" rel="noopener noreferrer">Langkah konfigurasi resmi</a>.</p>
+<p>Sebagai kontrol kerja, cocokkan jam event dengan zona waktu akun dan jadwal penawaran. Jangan menerapkan pengaturan ke seluruh campaign jika hanya sebagian produk mengikuti promo.</p>
+<p>Simpan alasan pemilihan persentase bersama nama periode pembanding agar anggota tim lain dapat memeriksanya.</p>
+<h3>5. Tentukan cara membaca hasil sejak awal</h3>
+<p>Siapkan laporan yang memuat spend, conversion rate, jumlah conversion, biaya per conversion, dan outcome dari backend atau CRM.</p>
+<p>Google menjelaskan bahwa conversion dapat dilaporkan setelah interaksi awal; laporan terbaru mungkin belum lengkap karena conversion delay. <a href="https://support.google.com/google-ads/answer/6239119?hl=en" target="_blank" rel="noopener noreferrer">Panduan jeda conversion</a>.</p>
+<p>Karena itu, jangan menjadikan data pagi setelah promo sebagai kesimpulan final. Untuk hasil 9.9 yang diperiksa pada 10 September 2026, tandai laporan sebagai sementara bila jeda conversion bisnis belum terlewati.</p>
+<h2>Setelah promo, apa yang perlu dievaluasi?</h2>
+<p>Bandingkan estimasi dengan hasil yang sudah cukup lengkap, lalu periksa kualitas hasil bisnisnya.</p>
+<p>Google menyatakan tidak diperlukan adjustment negatif hanya karena periode promo selesai. <a href="https://support.google.com/google-ads/answer/10369906?hl=en" target="_blank" rel="noopener noreferrer">Penjelasan akhir periode adjustment</a>.</p>
+<p>Checklist evaluasi:</p>
+<ol class="checklist">
+<li>Apakah conversion rate mendekati estimasi? </li>
+<li>Apakah spend berada dalam batas yang disetujui? </li>
+<li>Apakah tambahan order tetap bernilai setelah diskon dan pembatalan? </li>
+<li>Apakah komposisi traffic berubah besar? </li>
+<li>Apakah tracking atau conversion goal berubah? </li>
+<li>Apa yang perlu diperbaiki untuk promo berikutnya?</li>
+</ol>
+<p>Analisis sebelum dan sesudah tidak otomatis membuktikan bahwa adjustment menyebabkan kenaikan penjualan. Harga, creative, kompetitor, dan permintaan pasar juga dapat berubah. Dokumentasikan kontribusi yang teramati dengan kesimpulan yang proporsional.</p>
+
+        <h2>Pertanyaan yang sering diajukan</h2>
+        {faqItems.map(item => <section class="faq-item"><h3>{item.question}</h3><p>{item.answer}</p></section>)}
+        <h2>Kesimpulan</h2>
+<p>Seasonality adjustment membutuhkan alasan yang lebih kuat daripada “sedang ada promo”. Mulai dari baseline yang layak, hitung perubahan relatif conversion rate, tetapkan cakupan, lalu evaluasi outcome bisnis dengan data yang cukup lengkap.</p>
+
+        <div class="related-article"><span>Case study terkait</span><a href="../case-study/performance-analysis/">Pelajari analisis performa iklan lintas channel untuk membaca efisiensi, pelanggan, revenue, dan prioritas budget →</a></div>
+      </article>
+      <aside class="article-sidebar" aria-label="Informasi artikel">
+        <section class="side-card"><h2>Tentang penulis</h2><p><strong>Nordy Sukmana</strong> adalah Performance Marketing Specialist dengan pengalaman mengelola Meta Ads, Google Ads, tracking, analytics, dan marketing automation.</p><a class="back-link" href="../#about">Lihat profil</a></section>
+        <section class="side-card"><h2>Topik artikel</h2><ul><li>Seasonality Adjustment</li><li>Smart Bidding</li><li>Conversion Rate</li><li>Persiapan Promo</li></ul></section>
+        <section class="side-card"><h2>Sumber utama</h2><p>Dokumentasi Google Ads, ditinjau pada 10 September 2026.</p><a class="back-link" href="https://support.google.com/google-ads/answer/10369906?hl=en" target="_blank" rel="noopener noreferrer">Panduan seasonality adjustment ↗</a><a class="back-link" href="https://support.google.com/google-ads/answer/9352512?hl=en" target="_blank" rel="noopener noreferrer">Langkah konfigurasi ↗</a><a class="back-link" href="https://support.google.com/google-ads/answer/10370710?hl=en" target="_blank" rel="noopener noreferrer">Panduan data exclusions ↗</a></section>
+        <section class="side-card"><h2>Artikel sebelumnya</h2><p>Periksa referral dari payment gateway dan validasi transaksi sebelum memakai laporan GA4 untuk evaluasi budget.</p><a class="back-link" href="../referral-payment-gateway-ga4/">Baca audit referral payment gateway</a></section>
+      </aside>
+    </div>
+  </main>
+  <footer class="article-footer"><div class="article-shell"><span>© 2026 Nordy Sukmana</span><a href="../artikel/">Lihat semua artikel</a></div></footer>
+  <script is:inline src="/assets/analytics-loader.js"></script>
+</BaseLayout>

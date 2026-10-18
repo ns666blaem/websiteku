@@ -1,0 +1,235 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyHeader from '../../components/CaseStudyHeader.astro';
+
+const canonical = 'https://nordy-sukmana.vercel.app/creative-testing-ai-ad-variants-linkedin-ads/';
+const image = 'https://nordy-sukmana.vercel.app/assets/brand/open-graph.png';
+const faqItems = [
+  {
+    question: 'Apakah lebih banyak variasi selalu meningkatkan performa?',
+    answer: 'Tidak. Variasi memberi sistem lebih banyak pilihan, tetapi setiap aset tetap membutuhkan delivery yang cukup untuk menghasilkan sinyal. Banyak variasi yang terlalu mirip juga tidak memberikan pembelajaran baru.'
+  },
+  {
+    question: 'Apakah AI Ad Variants dapat menggantikan copywriter?',
+    answer: 'Tidak sepenuhnya. AI dapat membuat draft dan alternatif, tetapi manusia tetap perlu memeriksa strategi pesan, diferensiasi, akurasi klaim, konteks audiens, dan kesesuaian dengan brand.'
+  },
+  {
+    question: 'Apa perbedaan utama Flexible Ads dan A/B Testing?',
+    answer: 'Flexible Ads mengoptimalkan banyak kombinasi aset secara otomatis. A/B Testing membandingkan dua kondisi dengan satu variabel yang lebih terkontrol. Gunakan Flexible Ads untuk efisiensi delivery dan A/B Testing untuk pembelajaran yang lebih jelas.'
+  },
+  {
+    question: 'Berapa lama A/B test LinkedIn harus berjalan?',
+    answer: 'LinkedIn menetapkan durasi minimal dua minggu dan maksimal 90 hari. Kebutuhan aktual tetap bergantung pada volume impression, conversion rate, budget, serta panjang siklus conversion.'
+  },
+  {
+    question: 'Metrik apa yang penting untuk LinkedIn Lead Gen Ads?',
+    answer: 'Qualified lead, cost per qualified lead, opportunity, pipeline, dan revenue biasanya lebih berguna untuk keputusan bisnis daripada CTR atau jumlah form saja. Metrik awal tetap berguna untuk diagnosis.'
+  }
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      '@id': `${canonical}#article`,
+      headline: 'AI Bisa Membuat Puluhan Iklan LinkedIn, tetapi Tes Kreatif Tetap Butuh Satu Hipotesis',
+      description: 'LinkedIn dapat membuat puluhan variasi iklan dengan AI. Pelajari cara memilih AI Ad Variants, Flexible Ads, atau A/B Testing agar hasilnya terukur.',
+      url: canonical,
+      image: [image],
+      inLanguage: 'id-ID',
+      datePublished: '2026-09-05',
+      dateModified: '2026-09-05',
+      author: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      publisher: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      mainEntityOfPage: canonical,
+      articleSection: 'LinkedIn Ads dan Creative Testing',
+      about: ['LinkedIn Campaign Manager', 'AI Ad Variants', 'Flexible Ads', 'A/B Testing', 'Lead Gen Forms', 'Qualified Leads'],
+      keywords: ['creative testing LinkedIn Ads', 'AI Ad Variants LinkedIn', 'Flexible Ads LinkedIn', 'A/B Testing LinkedIn', 'qualified leads LinkedIn Ads']
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://nordy-sukmana.vercel.app/#person',
+      name: 'Nordy Sukmana',
+      url: 'https://nordy-sukmana.vercel.app/',
+      jobTitle: 'Performance Marketing Specialist'
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {'@type': 'ListItem', position: 1, name: 'Portfolio', item: 'https://nordy-sukmana.vercel.app/'},
+        {'@type': 'ListItem', position: 2, name: 'Artikel', item: 'https://nordy-sukmana.vercel.app/artikel/'},
+        {'@type': 'ListItem', position: 3, name: 'Creative Testing LinkedIn Ads', item: canonical}
+      ]
+    }
+  ]
+};
+
+const head = `<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Ad Variants dan Creative Testing LinkedIn Ads</title>
+<meta name="description" content="LinkedIn dapat membuat puluhan variasi iklan dengan AI. Pelajari cara memilih AI Ad Variants, Flexible Ads, atau A/B Testing agar hasilnya terukur.">
+<meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0C1F4D"><link rel="canonical" href="${canonical}">
+<meta property="og:type" content="article"><meta property="og:locale" content="id_ID"><meta property="og:site_name" content="Portfolio Nordy Sukmana"><meta property="og:title" content="AI Bisa Membuat Puluhan Iklan LinkedIn, tetapi Tes Kreatif Tetap Butuh Satu Hipotesis"><meta property="og:description" content="Cara memilih AI Ad Variants, Flexible Ads, atau A/B Testing berdasarkan tujuan pengujian dan outcome bisnis."><meta property="og:url" content="${canonical}"><meta property="og:image" content="${image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Nordy Sukmana, Performance Marketing Specialist">
+<meta property="article:published_time" content="2026-09-05"><meta property="article:modified_time" content="2026-09-05"><meta property="article:section" content="LinkedIn Ads dan Creative Testing">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="AI Ad Variants dan Creative Testing LinkedIn Ads"><meta name="twitter:description" content="Panduan menguji creative LinkedIn berdasarkan satu hipotesis dan outcome bisnis."><meta name="twitter:image" content="${image}">
+<script type="application/ld+json">${JSON.stringify(structuredData)}</script>
+<link rel="icon" href="../assets/brand/nordy-mark.svg" type="image/svg+xml"><link rel="icon" href="../favicon.ico" sizes="any"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/case-study.css"><link rel="stylesheet" href="../assets/article.css">`;
+---
+<BaseLayout head={head}>
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+  <CaseStudyHeader />
+  <main id="main-content">
+    <header class="article-hero">
+      <div class="article-shell">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Portfolio</a><span aria-hidden="true">/</span><a href="../artikel/">Artikel</a></nav>
+        <span class="article-kicker">LinkedIn Ads · Creative Testing · AI</span>
+        <h1>AI Bisa Membuat Puluhan Iklan LinkedIn, tetapi Tes Kreatif Tetap Butuh Satu Hipotesis</h1>
+        <p class="article-lede">Semakin banyak elemen yang berubah bersamaan, semakin sulit mengetahui alasan performa meningkat. Karena itu, produksi creative yang cepat tetap membutuhkan pertanyaan bisnis yang jelas.</p>
+        <div class="article-meta"><span>Nordy Sukmana</span><span>5 September 2026</span><span>8 sampai 9 menit baca</span></div>
+      </div>
+    </header>
+
+    <div class="article-shell article-layout">
+      <article class="article-body">
+        <section class="answer-summary" aria-labelledby="answer-summary-title">
+          <span>Jawaban singkat</span>
+          <h2 id="answer-summary-title">Apakah AI Ad Variants sama dengan A/B Testing?</h2>
+          <p>Tidak. AI Ad Variants membantu mengeksplorasi beberapa versi pesan, Flexible Ads mencari kombinasi aset yang efisien, sedangkan A/B Testing membandingkan dua kondisi dengan satu variabel. Pilih fitur berdasarkan pertanyaan yang ingin dijawab, lalu nilai hasil sampai ke qualified lead, pipeline, atau revenue, bukan CTR saja.</p>
+        </section>
+
+        <p>Membuat banyak variasi iklan kini jauh lebih mudah. Satu headline dapat dikembangkan menjadi beberapa versi, gambar dan copy dapat dikombinasikan otomatis, lalu sistem mengarahkan delivery ke creative yang dinilai lebih efektif.</p>
+        <p>Masalahnya, jika gambar, headline, dan introductory text berubah bersamaan, marketer dapat menemukan iklan pemenang tanpa memahami alasan kemenangan tersebut.</p>
+
+        <h2>Apa yang berubah dalam pembuatan creative LinkedIn Ads?</h2>
+        <p>Pada 1 Juli 2026, LinkedIn memperkenalkan <a href="https://www.linkedin.com/business/marketing/blog/linkedin-ads/introducing-linkedins-new-creative-tools-draft-with-ai-brand-kit-and-ad-variants" target="_blank" rel="noopener noreferrer">rangkaian creative tools baru</a> yang mencakup Brand Kit, Draft with AI, Ads Personalization, AI Ad Variants, dan Flexible Ad Creation.</p>
+        <div class="table-wrap" role="region" aria-label="Perbandingan creative tools LinkedIn Ads" tabindex="0">
+          <table>
+            <thead><tr><th>Fitur</th><th>Fungsi utama</th><th>Cocok digunakan untuk</th></tr></thead>
+            <tbody>
+              <tr><td>Brand Kit</td><td>Menyimpan warna, font, dan brand voice</td><td>Menjaga konsistensi aset</td></tr>
+              <tr><td>Draft with AI</td><td>Membuat draft copy dan visual awal</td><td>Memulai proses ideasi</td></tr>
+              <tr><td>AI Ad Variants</td><td>Membuat variasi dari iklan yang sudah ada</td><td>Mengeksplorasi sudut pesan</td></tr>
+              <tr><td>Ads Personalization</td><td>Menyesuaikan pesan dengan atribut profesional</td><td>Meningkatkan relevansi pesan</td></tr>
+              <tr><td>Flexible Ads</td><td>Mengombinasikan beberapa media dan copy</td><td>Mengoptimalkan creative dalam skala besar</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Dalam <a href="https://www.linkedin.com/help/lms/answer/a422234" target="_blank" rel="noopener noreferrer">panduan single image ads</a>, LinkedIn menjelaskan bahwa AI Ad Variants menggunakan introductory text dan headline yang sudah ada untuk membuat tiga variasi dalam ad set yang sama. Advertiser dapat meninjau, mengedit, atau menghapus hasilnya.</p>
+        <p><a href="https://www.linkedin.com/help/lms/answer/a9594242" target="_blank" rel="noopener noreferrer">Flexible Ads</a> dapat menghasilkan hingga 64 versi dari beberapa media, headline, dan description. Fitur ini tersedia untuk single image dan video, membutuhkan campaign baru serta Dynamic Group Budget, dan tidak dapat digabungkan dengan regular ads dalam campaign yang sama.</p>
+        <div class="report-preview" aria-label="Tiga pendekatan creative testing LinkedIn Ads">
+          <div class="report-preview__head"><img src="/assets/brand/linkedin-ads.svg" alt="" width="44" height="44"><div><span>LinkedIn Campaign Manager</span><strong>Tiga cara menggunakan variasi creative</strong></div></div>
+          <div class="report-preview__grid"><span><strong>AI Ad Variants</strong>Eksplorasi sudut pesan</span><span><strong>Flexible Ads</strong>Optimasi kombinasi aset</span><span><strong>A/B Testing</strong>Uji satu hipotesis</span><span><strong>CRM outcome</strong>Validasi kualitas hasil</span></div>
+        </div>
+
+        <h2>Mengapa optimasi delivery berbeda dari eksperimen?</h2>
+        <p>AI Ad Variants menempatkan beberapa iklan dalam satu ad set agar algoritma mempelajari versi yang memberikan hasil lebih baik. Flexible Ads bahkan dapat mencampur media, headline, dan introductory text secara otomatis. Tujuan utamanya adalah efisiensi delivery.</p>
+        <p>Menurut dokumentasi LinkedIn, Flexible Ads menjalani fase pembelajaran sekitar satu minggu. Setelah itu, creative yang dinilai kurang efektif dapat dihentikan otomatis.</p>
+        <p>Proses tersebut berguna untuk performa, tetapi tidak selalu menghasilkan pembelajaran yang mudah dijelaskan. Distribusi impression tidak harus sama dan beberapa elemen dapat berubah bersamaan.</p>
+        <p><a href="https://www.linkedin.com/help/lms/answer/a525922" target="_blank" rel="noopener noreferrer">A/B Testing LinkedIn</a> memakai dua ad set dengan budget terpisah yang berbeda pada satu variabel. Jika variabel Ad dipilih, advertiser dapat membandingkan dua creative, format, atau isi iklan dalam kondisi yang lebih terkontrol.</p>
+        <div class="callout"><strong>Optimasi menjawab apa yang bekerja, eksperimen membantu menjelaskan mengapa.</strong> Keduanya berguna, tetapi tidak boleh dipakai untuk menjawab pertanyaan yang sama tanpa memahami perbedaan metodenya.</div>
+
+        <h2>Kapan sebaiknya memakai setiap fitur?</h2>
+        <h3>Gunakan AI Ad Variants untuk eksplorasi pesan</h3>
+        <p>Pilih fitur ini ketika sudah ada iklan utama dan tim membutuhkan beberapa alternatif headline atau introductory text. Gunakan untuk mengeksplorasi pain point, benefit, tone, serta cara menjelaskan penawaran yang sama.</p>
+        <p>Hasilnya berguna untuk menemukan kandidat creative, tetapi belum cukup untuk menyimpulkan hubungan sebab akibat.</p>
+
+        <h3>Gunakan Flexible Ads untuk optimasi kombinasi aset</h3>
+        <p>Flexible Ads cocok ketika tim memiliki beberapa gambar atau video yang layak tayang, mempunyai volume dan budget yang memadai, serta lebih membutuhkan kecepatan menemukan kombinasi potensial daripada isolasi variabel.</p>
+        <p>Fitur ini kurang cocok jika laporan harus menjawab secara spesifik apakah visual, headline, atau CTA yang menyebabkan perbedaan performa.</p>
+
+        <h3>Gunakan A/B Testing untuk pembelajaran terkontrol</h3>
+        <p>A/B Testing lebih tepat ketika satu hipotesis akan memengaruhi keputusan campaign berikutnya. Contohnya, pesan yang menekankan penghematan waktu diperkirakan menghasilkan cost per qualified lead lebih rendah daripada pesan yang menekankan kelengkapan fitur.</p>
+        <p>Dalam pengujian itu, audiens, visual, format, CTA, bidding, dan form dipertahankan. Variabel yang berubah hanya sudut pesan.</p>
+
+        <h2>Cara menjalankan creative testing LinkedIn Ads</h2>
+        <h3>1. Mulai dengan pertanyaan bisnis</h3>
+        <p>Hindari pertanyaan terlalu luas seperti creative mana yang paling bagus. Gunakan pertanyaan yang dapat diuji, misalnya apakah studi kasus lebih efektif daripada daftar fitur, atau apakah video demo menghasilkan qualified lead lebih banyak daripada single image.</p>
+        <p>Satu test sebaiknya menjawab satu pertanyaan utama.</p>
+
+        <h3>2. Tentukan KPI sebelum membuat variasi</h3>
+        <div class="table-wrap" role="region" aria-label="KPI creative testing berdasarkan tujuan campaign" tabindex="0">
+          <table>
+            <thead><tr><th>Tujuan</th><th>KPI utama</th><th>Metrik diagnostik</th></tr></thead>
+            <tbody>
+              <tr><td>Awareness</td><td>Reach atau impressions</td><td>CPM dan video completion</td></tr>
+              <tr><td>Website visits</td><td>Landing page clicks</td><td>CTR dan CPC</td></tr>
+              <tr><td>Lead generation</td><td>Qualified leads</td><td>Form completion dan CPL</td></tr>
+              <tr><td>Recruitment</td><td>Qualified applicants</td><td>Completed applications</td></tr>
+              <tr><td>Pipeline</td><td>Opportunity atau revenue</td><td>Lead to opportunity rate dan ROAS</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>CTR tinggi belum tentu berarti iklan menghasilkan calon pelanggan atau kandidat yang tepat. Creative yang menyaring audiens lebih tegas dapat memiliki CTR lebih rendah, tetapi kualitas lead lebih baik.</p>
+
+        <h3>3. Tetapkan satu variabel</h3>
+        <p>Pilih satu variabel seperti headline, introductory text, gambar, video, CTA, format, sudut pesan, atau social proof. Hindari mengubah semuanya sekaligus jika tujuan utamanya adalah pembelajaran.</p>
+
+        <h3>4. Gunakan AI untuk membuat kandidat</h3>
+        <p>AI Ad Variants dapat mempercepat ideasi, tetapi setiap hasil tetap perlu diperiksa secara manual. Tinjau akurasi klaim, kesesuaian dengan landing page, konsistensi istilah, tone of voice, CTA, serta janji yang tidak dapat dibuktikan.</p>
+        <p><a href="https://www.linkedin.com/help/lms/answer/a10147021" target="_blank" rel="noopener noreferrer">Brand Kit LinkedIn</a> membantu menyimpan warna, font, dan brand voice. LinkedIn dapat menyusun brand voice dari kehadiran brand di platform, termasuk konten lama dan Company Page, lalu advertiser tetap dapat mengeditnya.</p>
+
+        <h3>5. Siapkan tracking sampai ke outcome akhir</h3>
+        <p>Gunakan parameter URL berbeda untuk setiap versi. Pastikan conversion tracking, Lead Gen Form, atau event yang relevan sudah aktif sebelum test dimulai.</p>
+        <p>Untuk B2B lead generation, hubungkan lead dengan CRM dan catat pergerakannya dari lead masuk, marketing qualified lead, sales qualified lead, meeting, opportunity, hingga closed won.</p>
+        <p>LinkedIn mendukung qualified lead melalui Conversions API atau CRM Sync. Dalam <a href="https://www.linkedin.com/help/lms/answer/a7126307" target="_blank" rel="noopener noreferrer">panduan qualified leads optimization</a>, platform merekomendasikan satu sumber qualified lead agar reporting dan optimasi lebih akurat.</p>
+        <div class="related-article"><span>Pengukuran lintas kanal</span><a href="../cara-membaca-tiktok-attribution-portfolio/">Pelajari perbedaan antara performa platform dan outcome bisnis →</a></div>
+
+        <h3>6. Jangan mengubah test di tengah jalan</h3>
+        <p>Catat hipotesis, variabel, versi kontrol dan challenger, KPI utama, tanggal, batas data, serta kondisi penghentian sebelum test diluncurkan. Hindari mengganti budget, targeting, bidding, atau creative hanya karena satu versi terlihat tertinggal dalam beberapa hari pertama.</p>
+        <p>Masalah seperti URL rusak, klaim keliru, atau tracking tidak aktif tetap harus diperbaiki segera.</p>
+
+        <h3>7. Baca hasil sesuai funnel</h3>
+        <p>LinkedIn menetapkan A/B test berjalan minimal dua minggu dan maksimal 90 hari. Hasil menampilkan pemenang, perbedaan metrik, serta kekuatan statistik, tetapi hasil konklusif tetap tidak dijamin.</p>
+        <ul>
+          <li>Apakah perbedaan KPI utama cukup meyakinkan?</li>
+          <li>Apakah hasil konsisten pada tahap berikutnya di funnel?</li>
+          <li>Apakah jumlah data mencukupi?</li>
+          <li>Apakah kualitas lead atau kandidat ikut meningkat?</li>
+          <li>Apakah pembelajaran dapat diterapkan pada campaign lain?</li>
+        </ul>
+        <div class="data-warning"><span>!</span><div><strong>Pemenang CTR belum tentu memenangkan pipeline</strong><p>Baca creative sebagai bagian dari perjalanan bisnis, bukan sebagai unit yang berhenti pada klik atau form submission.</p></div></div>
+
+        <h2>Contoh creative test yang dapat dipertanggungjawabkan</h2>
+        <p>Contoh berikut bersifat ilustratif, bukan hasil campaign Nordy.</p>
+        <p>Sebuah perusahaan B2B ingin menguji LinkedIn Lead Gen Ads. Versi kontrol menekankan fitur software, sedangkan challenger menekankan pengurangan waktu kerja manual. Keduanya memakai audiens, visual, CTA, Lead Gen Form, budget, bidding, dan jadwal yang sama.</p>
+        <p>Jika challenger menghasilkan CTR lebih tinggi tetapi qualified lead rate lebih rendah, pesan tersebut mungkin menarik rasa ingin tahu tanpa menyaring kebutuhan. Tim tidak perlu menetapkannya sebagai pemenang hanya karena CPC lebih murah.</p>
+        <p>Keputusan akhir menggunakan cost per qualified lead dan kontribusi pipeline.</p>
+        <div class="related-article"><span>Case study creative</span><a href="../case-study/meta-ads-unlabel/">Lihat contoh evaluasi creative dan efisiensi media pada Meta Ads →</a></div>
+
+        <h2>Checklist creative testing LinkedIn Ads</h2>
+        <ol class="checklist">
+          <li>Tulis satu pertanyaan bisnis.</li>
+          <li>Tentukan satu hipotesis.</li>
+          <li>Pilih KPI utama sebelum membuat creative.</li>
+          <li>Bedakan eksplorasi AI dari A/B test terkontrol.</li>
+          <li>Pertahankan satu variabel utama.</li>
+          <li>Periksa semua output AI secara manual.</li>
+          <li>Pastikan pesan sesuai dengan landing page atau form.</li>
+          <li>Terapkan parameter URL pada setiap variasi.</li>
+          <li>Validasi conversion tracking dan CRM.</li>
+          <li>Jalankan test selama periode yang memadai.</li>
+          <li>Nilai hasil sampai ke qualified lead, applicant, pipeline, atau revenue.</li>
+          <li>Dokumentasikan pembelajaran untuk campaign berikutnya.</li>
+        </ol>
+
+        <h2>Pertanyaan yang sering diajukan</h2>
+        {faqItems.map(item => <section class="faq-item"><h3>{item.question}</h3><p>{item.answer}</p></section>)}
+
+        <h2>Kesimpulan</h2>
+        <p>AI Ad Variants dan Flexible Ads membuat produksi creative LinkedIn jauh lebih cepat. Namun, kecepatan menghasilkan variasi tidak otomatis menghasilkan pembelajaran yang berkualitas.</p>
+        <p>Gunakan AI untuk memperluas pilihan, Flexible Ads untuk mencari kombinasi efisien, dan A/B Testing ketika bisnis membutuhkan jawaban yang dapat dipertanggungjawabkan tentang satu perubahan.</p>
+        <p>Creative terbaik bukan yang sekadar mendapat klik paling banyak, melainkan yang membantu campaign mencapai qualified lead, pipeline, atau revenue yang benar.</p>
+        <div class="related-article"><span>Analisis performa</span><a href="../case-study/performance-analysis/">Lihat cara creative, biaya media, dan hasil bisnis dibaca dalam satu kerangka →</a></div>
+      </article>
+
+      <aside class="article-sidebar" aria-label="Informasi artikel">
+        <section class="side-card"><h2>Tentang penulis</h2><p><strong>Nordy Sukmana</strong> adalah Performance Marketing Specialist dengan pengalaman mengelola paid media, tracking, SEO, analytics, dan marketing automation.</p><a class="back-link" href="../#about">Lihat profil</a></section>
+        <section class="side-card"><h2>Topik artikel</h2><ul><li>LinkedIn AI Ad Variants</li><li>Flexible Ads</li><li>A/B Testing</li><li>Qualified Leads</li></ul></section>
+        <section class="side-card"><h2>Sumber utama</h2><p>Informasi diperiksa melalui pengumuman dan dokumentasi resmi LinkedIn Marketing Solutions.</p><a class="back-link" href="https://www.linkedin.com/business/marketing/blog/linkedin-ads/introducing-linkedins-new-creative-tools-draft-with-ai-brand-kit-and-ad-variants" target="_blank" rel="noopener noreferrer">Buka pengumuman LinkedIn ↗</a></section>
+        <section class="side-card"><h2>Artikel sebelumnya</h2><p>Pelajari cara membaca kontribusi TikTok sebelum dan menjelang conversion.</p><a class="back-link" href="../cara-membaca-tiktok-attribution-portfolio/">Baca artikel</a></section>
+      </aside>
+    </div>
+  </main>
+  <footer class="article-footer"><div class="article-shell"><span>© 2026 Nordy Sukmana</span><a href="../artikel/">Lihat semua artikel</a></div></footer>
+  <script is:inline src="/assets/analytics-loader.js"></script>
+</BaseLayout>
