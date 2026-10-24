@@ -1,0 +1,92 @@
+---
+import articleBody from '../../content/articles/brand-vs-non-brand-google-ads-roas.html?raw';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyHeader from '../../components/CaseStudyHeader.astro';
+
+const canonical = 'https://nordy-sukmana.vercel.app/brand-vs-non-brand-google-ads-roas/';
+const image = 'https://nordy-sukmana.vercel.app/assets/brand/open-graph.png';
+const title = "Brand vs Non-Brand Google Ads: Cara Audit ROAS";
+const headline = "Brand vs Non-Brand Google Ads: ROAS Tinggi Belum Tentu Berarti Akuisisi Pelanggan Baru";
+const description = "Pelajari perbedaan branded dan non-branded search Google Ads, cara membaca ROAS, mengatur brand exclusions, dan mengevaluasi akuisisi pelanggan.";
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      '@id': `${canonical}#article`,
+      headline: headline,
+      description,
+      url: canonical,
+      image: [image],
+      inLanguage: 'id-ID',
+      datePublished: '2026-10-24',
+      dateModified: '2026-10-24',
+      author: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      publisher: {'@id': 'https://nordy-sukmana.vercel.app/#person'},
+      mainEntityOfPage: canonical,
+      articleSection: 'Google Ads · Search Campaign · Performance Measurement',
+      about: ["Google Ads","Branded Search","Non-Branded Search","ROAS","Brand Inclusions","Brand Exclusions","Customer Acquisition"],
+      keywords: ["brand vs non-brand Google Ads","branded search","non-branded search","Google Ads ROAS","brand exclusions","brand inclusions"]
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://nordy-sukmana.vercel.app/#person',
+      name: 'Nordy Sukmana',
+      url: 'https://nordy-sukmana.vercel.app/',
+      jobTitle: 'Performance Marketing Specialist'
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {'@type': 'ListItem', position: 1, name: 'Portfolio', item: 'https://nordy-sukmana.vercel.app/'},
+        {'@type': 'ListItem', position: 2, name: 'Artikel', item: 'https://nordy-sukmana.vercel.app/artikel/'},
+        {'@type': 'ListItem', position: 3, name: "Brand vs Non-Brand Google Ads: ROAS Tinggi Belum Tentu Berarti Akuisisi Pelanggan Baru", item: canonical}
+      ]
+    }
+  ]
+};
+
+const head = `<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${title}</title>
+<meta name="description" content="${description}">
+<meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#0C1F4D"><link rel="canonical" href="${canonical}">
+<meta property="og:type" content="article"><meta property="og:locale" content="id_ID"><meta property="og:site_name" content="Portfolio Nordy Sukmana"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Nordy Sukmana, Performance Marketing Specialist">
+<meta property="article:published_time" content="2026-10-24"><meta property="article:modified_time" content="2026-10-24"><meta property="article:section" content="Google Ads · Search Campaign · Performance Measurement">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${title}"><meta name="twitter:description" content="${description}"><meta name="twitter:image" content="${image}">
+<script type="application/ld+json">${JSON.stringify(structuredData)}</script>
+<link rel="icon" href="../assets/brand/nordy-mark.svg" type="image/svg+xml"><link rel="icon" href="../favicon.ico" sizes="any"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/case-study.css"><link rel="stylesheet" href="../assets/article.css">`;
+---
+<BaseLayout head={head}>
+<a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+<CaseStudyHeader />
+<main id="main-content">
+<header class="article-hero"><div class="article-shell">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Portfolio</a><span aria-hidden="true">/</span><a href="../artikel/">Artikel</a></nav>
+<span class="article-kicker">Google Ads · Search Campaign · Performance Measurement</span>
+<h1>{headline}</h1><p class="article-lede">Campaign Google Ads dengan ROAS tinggi belum tentu menghasilkan banyak pelanggan baru. Pelajari perbedaan branded dan non-branded search, cara memisahkan performanya, serta penggunaan brand inclusions dan exclusions agar keputusan budget tidak bias.</p>
+<div class="article-meta"><span>Nordy Sukmana</span><time datetime="2026-10-24">24 Oktober 2026</time><span>10–12 menit baca</span></div>
+</div></header>
+<div class="article-shell article-layout"><article class="article-body">
+<Fragment set:html={articleBody} />
+<div class="related-article"><span>Artikel terkait</span><a href="../roas-meta-ads-incrementality-conversion-lift/">Memahami Incrementality dan Conversion Lift →</a></div>
+</article><aside class="article-sidebar" aria-label="Informasi artikel">
+<section class="side-card"><h2>Tentang penulis</h2>
+<p>Nordy Sukmana adalah Performance Marketing Specialist dengan pengalaman mengelola Google Ads, Meta Ads, tracking, analytics, SEO, dan marketing automation.</p>
+<p>Fokus pendekatannya adalah menghubungkan performa advertising dengan data yang dapat digunakan untuk mengambil keputusan bisnis.</p>
+<a class="back-link" href="../#about">Lihat profil</a></section>
+<section class="side-card"><h2>Topik artikel</h2>
+<p>Google Ads · Branded Search · Non-Branded Search · ROAS · Brand Inclusions · Brand Exclusions · Customer Acquisition</p>
+</section>
+<section class="side-card"><h2>Sumber utama</h2>
+<ul>
+<li><a href="https://support.google.com/google-ads/answer/13721847?hl=en-AU8&utm_source=chatgpt.com">Google Ads Help — About Brand Settings for Search and Performance Max</a></li>
+<li><a href="https://support.google.com/google-ads/answer/14453047?hl=en-GB&utm_source=chatgpt.com">Google Ads Help — Apply Brand Inclusions to Search Campaigns</a></li>
+<li><a href="https://support.google.com/google-ads/answer/14505308?hl=en-au&utm_source=chatgpt.com">Google Ads Help — Apply Brand Exclusions to Search and Performance Max</a></li>
+<li><a href="https://support.google.com/google-ads/answer/14996208?hl=en&utm_source=chatgpt.com">Google Ads Help — How to Steer Branded Traffic</a></li>
+</ul>
+</section>
+<section class="side-card"><h2>Bacaan terkait</h2><a class="back-link" href="../roas-meta-ads-incrementality-conversion-lift/">Memahami Incrementality dan Conversion Lift</a><a class="back-link" href="../creative-fatigue-meta-ads-cara-audit/">Creative Fatigue Meta Ads</a></section>
+</aside></div></main>
+<footer class="article-footer"><div class="article-shell"><span>© 2026 Nordy Sukmana</span><a href="../artikel/">Lihat semua artikel</a></div></footer>
+<script is:inline src="/assets/analytics-loader.js"></script>
+</BaseLayout>
